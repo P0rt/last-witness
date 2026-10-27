@@ -1,12 +1,14 @@
 #!/usr/bin/env python3
-"""The promo's score, synthesized: tape hiss, a low radio drone, Morse, and a
-thump on the big cards. No samples, so nothing to license.
+"""The promo's soundtrack, synthesized: tape hiss and Morse over the cold open,
+then the music from music.py, with the voice-over on top. No samples, so
+nothing to license.
 
     python3 video/sound.py video/out/cues.json video/out/score.wav
 """
 import json
 import sys
 import wave
+from pathlib import Path
 
 import numpy as np
 
@@ -36,14 +38,6 @@ def brown(n):
     b = np.cumsum(w)
     b -= np.convolve(b, np.ones(4410) / 4410, mode="same")  # remove drift
     return b / (np.abs(b).max() + 1e-9)
-
-
-def drone(n, t):
-    out = np.zeros(n)
-    for f, g in [(55.0, .5), (55.4, .35), (82.41, .3), (110.0, .18), (130.81, .12), (164.81, .06)]:
-        lfo = .65 + .35 * np.sin(2 * np.pi * (0.05 + f / 4000) * t + f)
-        out += g * lfo * np.sin(2 * np.pi * f * t + rng.uniform(0, 6.28))
-    return out / 1.5
 
 
 MORSE = {"L": ".-..", "W": ".--", "C": "-.-.", "S": "..."}
@@ -94,31 +88,28 @@ def main():
     n = int(SR * total)
     t = np.arange(n) / SR
 
-    # hiss louder on title cards, quieter under the game footage
-    card_level = np.full(n, .35)
-    for c in cues["cues"]:
-        i, j = int(c["start"] * SR), int((c["start"] + c["dur"]) * SR)
-        card_level[i:j] = 1.0 if c["card"] else .45
-    card_level = np.convolve(card_level, np.ones(SR // 2) / (SR // 2), mode="same")
-    hiss = lowpass(rng.standard_normal(n) * .6 + brown(n) * .4, 3200) * card_level * .10
+    sys.path.insert(0, str(Path(__file__).parent))
+    from music import score
+    m_left, m_right, m_start = score(n, cues["cues"])
+    peak = max(np.abs(m_left).max(), np.abs(m_right).max(), 1e-9)
+    m_left, m_right = m_left / peak, m_right / peak
 
-    pad = drone(n, t) * env(n, 4.0, 5.0) * .22
-    # the drone opens up for the second half
-    pad *= np.clip(.55 + t / total, 0, 1.2)
+    # the tape hiss carries the cold open, then gives way to the music
+    hiss_level = np.clip(1 - (t - m_start) / 5.0, 0.1, 1.0)
+    hiss = lowpass(rng.standard_normal(n) * .6 + brown(n) * .4, 3200)
+    hiss = hiss / (np.sqrt((hiss ** 2).mean()) + 1e-9) * .09 * hiss_level
 
-    left = hiss + pad
-    right = hiss * .9 + np.roll(pad, int(.012 * SR))
+    left = hiss + m_left
+    right = hiss * .95 + m_right
 
     radio = morse("LW LW")
-    place(left, radio, .6, .10)
-    place(right, radio, .6, .10)
+    place(left, radio, .6, .12)
+    place(right, radio, .6, .12)
     for c in cues["cues"]:
-        if c["name"] in ("tape", "reveal", "numbers", "end"):
+        if c["name"] == "tape":
             th = thump()
-            place(left, th, c["start"] + .15, .55)
-            place(right, th, c["start"] + .15, .55)
-        if c["name"] == "partner":
-            place(left, morse("CS"), c["start"] + .3, .06)
+            place(left, th, c["start"] + .15, .5)
+            place(right, th, c["start"] + .15, .5)
 
     # the voice-over sits on top; the music ducks under it
     voice = np.zeros(n)
@@ -129,7 +120,7 @@ def main():
         v = read_voice(c["vo"])
         place(voice, v, c["vo_at"], 1.0)
         i, j = int((c["vo_at"] - .25) * SR), int((c["vo_at"] + len(v) / SR + .3) * SR)
-        duck[max(0, i):j] = .38
+        duck[max(0, i):j] = .45
     k = int(.25 * SR)
     duck = np.convolve(duck, np.ones(k) / k, mode="same")
     music_peak = max(np.abs(left).max(), np.abs(right).max(), 1e-9)
