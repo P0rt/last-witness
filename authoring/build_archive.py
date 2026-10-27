@@ -27,6 +27,7 @@ ROOT = Path(__file__).resolve().parent.parent
 SOURCE = ROOT / "world" / "source"
 DATASET = ROOT / "dataset" / "archive.json"
 QUESTIONS = ROOT / "dataset" / "questions.json"
+HYPOTHESES = ROOT / "dataset" / "hypotheses.json"
 TRUTH = ROOT / "world" / "truth.json"
 ID_MAP = ROOT / "world" / "build" / "id_map.json"
 
@@ -362,6 +363,8 @@ def main() -> int:
     truth = json.loads(TRUTH.read_text(encoding="utf-8"))
     form = [{"id": q["id"], "text": q["text"], "options": q["options"]} for q in truth["questions"]]
     QUESTIONS.write_text(json.dumps(form, ensure_ascii=False, indent=1), encoding="utf-8")
+    hyps = [{"id": h["id"], "title": h["public_title"]} for h in truth["hypotheses"]]
+    HYPOTHESES.write_text(json.dumps(hyps, ensure_ascii=False, indent=1), encoding="utf-8")
     m = out["archive"]["meta"]
     print(f"seed {m['seed']}: {m['recovered']} recovered / {m['originals']} originals "
           f"({m['lost_percent']}% lost), {m['missing']} known-missing paths")
