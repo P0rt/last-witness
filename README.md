@@ -73,7 +73,7 @@ make serve     # build the UI and play at http://localhost:8000 (Ollama running,
 make demo      # no model at all: "echo" mode just quotes matching sentences, for UI work
 ```
 
-`LW_MODEL`, `LW_NUM_CTX` (default 32768; the whole archive is about 16K tokens)
+`LW_MODEL`, `LW_NUM_CTX` (default 32768; the whole archive is about 28K tokens)
 and `OLLAMA_HOST` override the defaults.
 
 ## Repository map
