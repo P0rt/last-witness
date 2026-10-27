@@ -35,7 +35,11 @@ _llm: LLM | None = None
 def get_llm() -> LLM:
     global _llm
     if _llm is None:
-        _llm = Ollama()
+        if os.environ.get("LW_MODEL") == "echo":
+            from .echo import Echo
+            _llm = Echo()
+        else:
+            _llm = Ollama()
     return _llm
 
 
@@ -100,7 +104,7 @@ def _model_call(fn, *args, **kwargs):
 def meta():
     a = archive.load()
     return {"meta": a["meta"], "questions": list(QUESTIONS.values()), "hypotheses": HYPOTHESES,
-            "model": os.environ.get("LW_MODEL", "gemma4:e4b")}
+            "model": get_llm().model_id}
 
 
 @app.get("/api/artifacts")
@@ -294,6 +298,8 @@ if WEB.exists():
 
     @app.get("/{path:path}")
     def spa(path: str):
+        if path.startswith("api/"):
+            raise HTTPException(404, "not found")
         f = WEB / path
         if path and f.is_file() and WEB in f.resolve().parents:
             return FileResponse(f)
