@@ -1,0 +1,126 @@
+@@@ recovery-readme
+type: text_file
+title: RECOVERY NOTES — read me first
+author: archivist
+date: 2026-10-27T09:00:00-07:00
+path: /RECOVERY_NOTES.txt
+role: critical
+---
+RECOVERY NOTES
+==============
+Source media, bought together as one lot at a Seattle hardware
+surplus auction, 2026:
+
+  1. One HP DAT24 tape, hand-labelled "BEACON FULL 17-OCT-99".
+     Readable to about 38% of its length. Everything after that
+     point is unreadable.
+  2. One 1U rack server from a colocation facility, with a 9 GB
+     disk. It holds a partial restore of the tape above, plus a
+     few files written to it in October 1999.
+
+What follows is everything that could be read from both.
+File dates are the dates inside the files, not recovery dates.
+Where bytes were unreadable, they are shown as ▒.
+Where a page links to something that was not recovered, the link
+is kept and marked missing. Missing does not mean deleted. It
+means we don't have it. Those are different things.
+
+The Lighthouse Network was a small online community of radio
+listeners on the Oregon and Washington coast, 1997-1999. It went
+offline in October 1999. Nobody wrote down why.
+
+@@@ stub-cs0903
+type: file_stub
+title: CS-0903.wav (header only)
+author: -
+date: 1999-09-04T00:02:00-07:00
+path: /signals/CS-0903.wav
+role: critical
+---
+FILE: /signals/CS-0903.wav
+STATUS: audio data unreadable. Only the first 412 bytes (RIFF header and
+        LIST/INFO chunk) were recovered, from a partial copy in the
+        restored server's trash directory.
+
+RIFF size ....... 2,117,412 bytes
+format .......... PCM, 1 channel, 22050 Hz, 16 bit
+duration ........ ~48 s
+
+LIST/INFO chunk:
+  INAM  "Cape Sorrow 2182"
+  IART  "E. Ward"
+  ICRD  "1999-08-29"
+  ISFT  "Cool Edit 96"
+  ICMT  ""
+
+[audio samples not recovered]
+
+@@@ tomb-041
+type: html_page
+title: Thread removed
+author: -
+date: 1999-10-16T23:41:12-07:00
+path: /forum/signals/thread_041.html
+role: critical
+---
+<html><head><title>Lighthouse Forum</title></head>
+<body bgcolor="#000033" text="#e0e0c0">
+<p><b>This thread has been removed by an administrator.</b></p>
+<p><font size="2">WebBBS 4.2 &middot; thread 041 &middot; removed 10/16/99 23:41</font></p>
+<p><a href="/forum/">Back to the forum</a></p>
+</body></html>
+
+@@@ tomb-044
+type: html_page
+title: Thread removed
+author: -
+date: 1999-10-16T23:43:30-07:00
+path: /forum/signals/thread_044.html
+role: flavor
+---
+<html><head><title>Lighthouse Forum</title></head>
+<body bgcolor="#000033" text="#e0e0c0">
+<p><b>This thread has been removed by an administrator.</b></p>
+<p><font size="2">WebBBS 4.2 &middot; thread 044 &middot; removed 10/16/99 23:43</font></p>
+<p><a href="/forum/">Back to the forum</a></p>
+</body></html>
+
+@@@ tomb-047
+type: html_page
+title: Thread removed
+author: -
+date: 1999-10-16T23:45:02-07:00
+path: /forum/signals/thread_047.html
+role: critical
+---
+<html><head><title>Lighthouse Forum</title></head>
+<body bgcolor="#000033" text="#e0e0c0">
+<p><b>This thread has been removed by an administrator.</b></p>
+<p><font size="2">WebBBS 4.2 &middot; thread 047 &middot; removed 10/16/99 23:45</font></p>
+<p><a href="/forum/">Back to the forum</a></p>
+</body></html>
+
+@@@ elias-confession-full
+type: email
+title: Re: We need to talk (original, undamaged)
+author: eward
+date: 1999-10-16T19:44:00-07:00
+path: /sealed/elias-confession-full.eml
+role: sealed
+---
+Mara,
+
+Thank you for listening on the phone. I meant everything I said.
+
+I never meant for it to go this far. I made it on the 29th of August,
+on Dad's reel deck, from the box 3 tapes. Drill 47, 1978. It's him
+on the tape. I wanted to hear him say his station's name one more
+time on a real radio, and I wanted people to come back. The forum
+was dying and everyone was so excited, and then nightjar was me too,
+and then the newspaper, and I couldn't find the place to stop.
+It was never a signal. It was his voice.
+
+Do whatever you think is right with the site. I won't fight it.
+Please don't let them print my name.
+
+Eli
