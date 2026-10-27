@@ -117,6 +117,61 @@ def form_schema(options: list[str], sentence_ids: list[str] | None) -> dict:
     return {"type": "object", "properties": props, "required": required}
 
 
+STATUSES = ["strongly_supported", "plausible", "weakly_supported", "contradicted", "insufficient_evidence"]
+
+
+def hypotheses_schema(hyp_ids: list[str], sentence_ids: list[str]) -> dict:
+    cit = {"type": "array", "items": citation_schema(sentence_ids)}
+    return {
+        "type": "object",
+        "properties": {"hypotheses": {"type": "array", "items": {
+            "type": "object",
+            "properties": {
+                "id": {"type": "string", "enum": hyp_ids},
+                "status": {"type": "string", "enum": STATUSES},
+                "reason": {"type": "string"},
+                "supporting": cit,
+                "contradicting": cit,
+                "would_falsify": {"type": "string"},
+            },
+            "required": ["id", "status", "reason", "supporting", "contradicting", "would_falsify"],
+        }}},
+        "required": ["hypotheses"],
+    }
+
+
+def timeline_schema(sentence_ids: list[str]) -> dict:
+    return {
+        "type": "object",
+        "properties": {"events": {"type": "array", "items": {
+            "type": "object",
+            "properties": {
+                "date": {"type": "string", "pattern": r"^(\d{4}(-\d{2}(-\d{2})?)?|unknown)$"},
+                "date_is_certain": {"type": "boolean"},
+                "description": {"type": "string"},
+                "classification": {"type": "string", "enum": CLASSES},
+                "citations": {"type": "array", "items": citation_schema(sentence_ids)},
+            },
+            "required": ["date", "date_is_certain", "description", "classification", "citations"],
+        }}},
+        "required": ["events"],
+    }
+
+
+def objection_schema(sentence_ids: list[str]) -> dict:
+    return {
+        "type": "object",
+        "properties": {
+            "verdict": {"type": "string", "enum": ["stands", "revised", "withdrawn"]},
+            "explanation": {"type": "string"},
+            "revised_text": {"type": "string"},
+            "classification": {"type": "string", "enum": CLASSES},
+            "citations": {"type": "array", "items": citation_schema(sentence_ids)},
+        },
+        "required": ["verdict", "explanation", "revised_text", "classification", "citations"],
+    }
+
+
 @dataclass
 class CheckedCitation:
     sentence_id: str
@@ -160,7 +215,7 @@ class Investigator:
         return index, text
 
     def ask(self, question: str, discovered: list[str] | None = None, history: list[dict] | None = None,
-            include_hidden: bool = True) -> dict:
+            include_hidden: bool | set[str] = True) -> dict:
         index, docs = self._evidence(discovered, include_hidden)
         messages = [{"role": "system", "content": SYSTEM},
                     {"role": "user", "content": f"<archive>\n{docs}\n</archive>"}]
@@ -188,7 +243,7 @@ class Investigator:
         }
 
     def answer(self, question: dict, discovered: list[str] | None = None, closed_book: bool = False,
-               include_hidden: bool = True) -> dict:
+               include_hidden: bool | set[str] = True) -> dict:
         """Answer one form question. `question` = {"id", "text", "options": {key: label}}."""
         opts = "\n".join(f"- {k}: {v}" for k, v in question["options"].items())
         task = (f"Question {question['id']}: {question['text']}\n\nChoose exactly one option key:\n{opts}\n\n"
@@ -217,6 +272,75 @@ class Investigator:
             "meta": {"model": self.llm.model_id, "prompt_version": PROMPT_VERSION,
                      "closed_book": closed_book, "seconds": round(time.time() - t0, 1),
                      **self.llm.config()},
+        }
+
+    def _with_archive(self, discovered, include_hidden, task):
+        index, docs = self._evidence(discovered, include_hidden)
+        messages = [{"role": "system", "content": SYSTEM},
+                    {"role": "user", "content": f"<archive>\n{docs}\n</archive>\n\n{task}"}]
+        return index, messages
+
+
+    def _meta(self, t0, **extra):
+        return {"model": self.llm.model_id, "prompt_version": PROMPT_VERSION,
+                "seconds": round(time.time() - t0, 1), **self.llm.config(), **extra}
+
+
+    def assess_hypotheses(self, hypotheses: list[dict], discovered: list[str] | None = None,
+                          include_hidden: bool | set[str] = True) -> dict:
+        """Re-rate the fixed list of competing explanations against the evidence found so far."""
+        listing = "\n".join(f"- {h['id']}: {h['title']}" for h in hypotheses)
+        task = ("Here are competing explanations for why the Lighthouse Network disappeared:\n"
+                f"{listing}\n\nFor each one, give its status given ONLY the documents above, the reason, "
+                "citations for and against, and what evidence would falsify it. Do not use percentages. "
+                "Several explanations can be supported at once.")
+        index, messages = self._with_archive(discovered, include_hidden, task)
+        t0 = time.time()
+        raw = self.llm.chat(messages, hypotheses_schema([h["id"] for h in hypotheses], sorted(index)))
+        out = []
+        for h in raw.get("hypotheses", []):
+            out.append({**h,
+                        "supporting": [vars(c) for c in check_citations(h.get("supporting", []), index)],
+                        "contradicting": [vars(c) for c in check_citations(h.get("contradicting", []), index)]})
+        return {"hypotheses": out, "meta": self._meta(t0)}
+
+
+    def extract_timeline(self, discovered: list[str] | None = None, include_hidden: bool | set[str] = True) -> dict:
+        task = ("List the events you can date from the documents above, oldest first. Use the most precise date "
+                "the documents justify (YYYY-MM-DD, YYYY-MM or YYYY) and set date_is_certain to false when you are "
+                "estimating. Never invent a precise date. Cite every event.")
+        index, messages = self._with_archive(discovered, include_hidden, task)
+        t0 = time.time()
+        raw = self.llm.chat(messages, timeline_schema(sorted(index)))
+        events = []
+        for e in raw.get("events", []):
+            checked = check_citations(e.get("citations", []), index)
+            events.append({**e, "citations": [vars(c) for c in checked],
+                           "ghost": is_ghost(e.get("classification", ""), checked)})
+        events.sort(key=lambda e: e.get("date", "9999"))
+        return {"events": events, "meta": self._meta(t0)}
+
+
+    def object_to(self, claim: dict, discovered: list[str] | None = None, include_hidden: bool | set[str] = True) -> dict:
+        """The player's Objection: produce the exact words that support this claim, or take it back."""
+        cited = ", ".join(c["sentence_id"] for c in claim.get("citations", [])) or "none"
+        task = (f'You previously claimed: "{claim["text"]}" (classified as {claim["classification"]}, citing {cited}).\n'
+                "OBJECTION. Quote, word for word, the sentences in the archive that support this claim. "
+                "If you cannot, revise the claim to what the documents actually say, or withdraw it. "
+                "Withdrawing is better than defending something the archive does not say.")
+        index, messages = self._with_archive(discovered, include_hidden, task)
+        t0 = time.time()
+        raw = self.llm.chat(messages, objection_schema(sorted(index)))
+        checked = check_citations(raw.get("citations", []), index)
+        verdict = raw.get("verdict", "withdrawn")
+        return {
+            "verdict": verdict,
+            "explanation": raw.get("explanation", ""),
+            "revised_text": raw.get("revised_text", ""),
+            "classification": raw.get("classification", "unknown"),
+            "citations": [vars(c) for c in checked],
+            "ghost": verdict != "withdrawn" and is_ghost(raw.get("classification", ""), checked),
+            "meta": self._meta(t0),
         }
 
 

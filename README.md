@@ -26,8 +26,10 @@ the archive supports are the ghosts.
 | Seeded controlled destruction + dataset validation | done |
 | Investigator core: sentence-id citations, quote checking, ghost detection | done |
 | Local model check (`scripts/spike.py`) | ready to run |
-| FastAPI server, archive UI, Objection, Reveal | next |
-| Ablation benchmark, static replay on GitHub Pages | next |
+| FastAPI server (investigation state, Objection, hypotheses, timeline, form, Reveal) | done |
+| Archive UI | in progress |
+| Ablation benchmark (`benchmarks/run_benchmark.py`) | ready to run |
+| Static replay on GitHub Pages | next |
 
 ## How it works
 
@@ -64,6 +66,10 @@ make test
 ollama pull gemma4:e4b
 python scripts/spike.py                     # 6 questions, prints citation validity and ghosts
 python scripts/spike.py --model gemma4:12b  # compare a larger model
+python benchmarks/run_benchmark.py --models gemma4:e4b --repeats 3   # ablation -> benchmarks/results.md
+
+pip install -r requirements.txt
+uvicorn lastwitness.app:app --app-dir server --port 8000   # API (+ the built UI from web/dist)
 ```
 
 `LW_MODEL`, `LW_NUM_CTX` (default 32768; the whole archive is about 16K tokens)
