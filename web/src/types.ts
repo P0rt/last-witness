@@ -13,7 +13,7 @@ export interface Missing { path: string; title: string; author: string; date: st
 export interface Question { id: string; text: string; options: Record<string, string> }
 export interface Hypothesis { id: string; title: string }
 
-export interface Citation { sentence_id: string; quote: string; valid: boolean; reason: string }
+export interface Citation { sentence_id: string; quote: string; valid: boolean; reason: string; found_at?: string | null }
 export interface Claim {
   id: string; text: string; classification: Klass; citations: Citation[]; ghost: boolean;
   withdrawn?: boolean; history: Array<Partial<Claim> & { objection: string; explanation: string }>;

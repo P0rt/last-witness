@@ -8,7 +8,7 @@ ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT / "server"))
 
 from lastwitness import archive  # noqa: E402
-from lastwitness.investigator import Investigator, quote_matches  # noqa: E402
+from lastwitness.investigator import Investigator, check_citations, is_ghost, quote_matches  # noqa: E402
 from lastwitness.llm import Ollama, Scripted  # noqa: E402
 
 
@@ -25,6 +25,24 @@ def test_quote_matching_tolerates_punctuation_not_paraphrase():
     assert quote_matches("it should not have 60Hz lines", s)
     assert not quote_matches("the recording was faked by Elias", s)
     assert not quote_matches("▒▒▒▒▒▒▒▒", "▒▒▒▒▒▒▒▒ some text")
+
+
+def test_misfiled_citations_point_to_the_real_sentence_but_stay_invalid():
+    index = archive.sentence_index()
+    real, _ = find("I was there.")
+    doc, n = real.split(":")
+    before = f"{doc}:s{int(n[1:]) - 1}"
+    span_from, _ = find("To anyone reading this file")
+    cits = check_citations([
+        {"sentence_id": before, "quote": "I was there."},               # off by one
+        {"sentence_id": span_from, "quote": "the Cape Sorrow recording is genuine"},  # runs into the next sentence
+        {"sentence_id": real, "quote": "The recording was faked by Elias Ward."},     # invented
+    ], index)
+    assert [c.valid for c in cits] == [False, False, False]
+    assert cits[0].found_at == real and real in cits[0].reason
+    assert cits[1].found_at == span_from and "runs past" in cits[1].reason
+    assert cits[2].found_at is None
+    assert is_ghost("observed", cits)
 
 
 def test_ask_marks_ghosts_and_rejects_fake_ids():
