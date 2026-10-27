@@ -88,7 +88,8 @@ def test_full_loop_and_sealed_truth(client):
 def test_bad_ids(client):
     assert client.get("/api/artifacts/..%2F..%2Fworld%2Ftruth.json").status_code in (400, 404)
     assert client.get("/api/artifacts/A99").status_code == 404
-    assert client.get("/api/artifacts/../../etc/passwd").status_code == 404
+    r = client.get("/api/artifacts/../../etc/passwd")  # normalised away by the client; must not leak files
+    assert "root:" not in r.text and "canonical" not in r.text
     iid = client.post("/api/investigations").json()["id"]
     assert client.post(f"/api/investigations/{iid}/open", json={"artifact": "../truth"}).status_code == 404
     assert client.put(f"/api/investigations/{iid}/form/player", json={"answers": {"Q1": "maybe"}}).status_code == 400

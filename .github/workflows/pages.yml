@@ -1,0 +1,36 @@
+name: replay on GitHub Pages
+# Builds the static replay and publishes it to the gh-pages branch.
+# GitHub turns Pages on for a repository when a gh-pages branch first appears.
+on:
+  push:
+    branches: [main]
+    paths: ["web/**", ".github/workflows/pages.yml"]
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: pages
+  cancel-in-progress: true
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Recorded run present?
+        id: rec
+        run: |
+          if [ -f web/public/replay/session.json ]; then echo "ok=true" >> "$GITHUB_OUTPUT";
+          else echo "No recorded run yet (scripts/record_replay.py); skipping."; echo "ok=false" >> "$GITHUB_OUTPUT"; fi
+      - uses: actions/setup-node@v4
+        if: steps.rec.outputs.ok == 'true'
+        with:
+          node-version: "22"
+      - run: npm ci && npm run build:replay
+        if: steps.rec.outputs.ok == 'true'
+        working-directory: web
+      - uses: peaceiris/actions-gh-pages@v4
+        if: steps.rec.outputs.ok == 'true'
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: web/dist
+          force_orphan: true

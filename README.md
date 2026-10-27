@@ -27,9 +27,9 @@ the archive supports are the ghosts.
 | Investigator core: sentence-id citations, quote checking, ghost detection | done |
 | Local model check (`scripts/spike.py`) | ready to run |
 | FastAPI server (investigation state, Objection, hypotheses, timeline, form, Reveal) | done |
-| Archive UI | in progress |
+| Game UI: archive, 1999 pages + View Source, investigator, Objection, timeline, hypotheses, form, Reveal, In memoriam | done |
 | Ablation benchmark (`benchmarks/run_benchmark.py`) | ready to run |
-| Static replay on GitHub Pages | next |
+| Static replay on GitHub Pages (`scripts/record_replay.py`, `.github/workflows/pages.yml`) | waiting for a recorded Gemma run |
 
 ## How it works
 
@@ -69,7 +69,8 @@ python scripts/spike.py --model gemma4:12b  # compare a larger model
 python benchmarks/run_benchmark.py --models gemma4:e4b --repeats 3   # ablation -> benchmarks/results.md
 
 pip install -r requirements.txt
-uvicorn lastwitness.app:app --app-dir server --port 8000   # API (+ the built UI from web/dist)
+make serve     # build the UI and play at http://localhost:8000 (Ollama running, gemma4:e4b pulled)
+make demo      # no model at all: "echo" mode just quotes matching sentences, for UI work
 ```
 
 `LW_MODEL`, `LW_NUM_CTX` (default 32768; the whole archive is about 16K tokens)
@@ -81,7 +82,9 @@ and `OLLAMA_HOST` override the defaults.
 world/        SPOILERS. truth.json (canon + answer key) and source/ (undamaged originals)
 authoring/    build_archive.py (destruction), validate_dataset.py (fairness checks)
 dataset/      archive.json and questions.json: everything the investigator may see
-server/       investigator core (Python); API next
+server/       investigator, evaluator and FastAPI server (Python, stdlib + FastAPI)
+web/          the game (Vite + React + TypeScript); `npm run build:replay` makes the static version
+benchmarks/   ablation benchmark and its raw runs
 scripts/      spike.py: local model check
 tests/        pytest
 ```

@@ -39,6 +39,8 @@ CONDITIONS = ("closed_book", "archive", "validated")
 
 
 def run(model: str, repeats: int, temperature: float, num_ctx: int | None, only: list[str] | None) -> Path:
+    if model == "echo":
+        raise SystemExit("echo is not a model; benchmark a real one")
     questions = json.loads((ROOT / "dataset" / "questions.json").read_text(encoding="utf-8"))
     if only:
         questions = [q for q in questions if q["id"] in only]
