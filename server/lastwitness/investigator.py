@@ -178,6 +178,7 @@ class CheckedCitation:
     quote: str
     valid: bool
     reason: str = ""
+    found_at: str | None = None  # where the quote really is, if it is verbatim elsewhere in the evidence
 
 
 @dataclass
@@ -187,16 +188,43 @@ class Result:
     meta: dict = field(default_factory=dict)
 
 
+def locate_quote(quote: str, index: dict[str, str], near: str = "") -> str | None:
+    """The sentence a rejected quote really comes from, if it is verbatim in the evidence.
+
+    Small models often quote real text under the neighbouring id, or run a quote
+    across a sentence boundary. That is a misfiled pointer, not an invented fact,
+    and the player deserves to see the difference. Only exact (normalized) text
+    counts, and the citation stays invalid: the claim is still a ghost.
+    """
+    q = _norm(quote)
+    if len(q) < 8 or "▒" in q:
+        return None
+    doc = near.split(":")[0]
+    keys = list(index)
+    norms = [_norm(index[k]) for k in keys]
+    hits = [k for k, n in zip(keys, norms) if q in n]
+    hits += [a for a, b, na, nb in zip(keys, keys[1:], norms, norms[1:])
+             if a.split(":")[0] == b.split(":")[0] and q in f"{na} {nb}" and a not in hits and b not in hits]
+    if not hits:
+        return None
+    same_doc = [k for k in hits if k.split(":")[0] == doc]
+    return (same_doc or hits)[0]
+
+
 def check_citations(cits: list[dict], index: dict[str, str]) -> list[CheckedCitation]:
     out = []
     for c in cits or []:
         sid, quote = c.get("sentence_id", ""), c.get("quote", "")
-        if sid not in index:
-            out.append(CheckedCitation(sid, quote, False, "no such sentence in the evidence shown"))
-        elif not quote_matches(quote, index[sid]):
-            out.append(CheckedCitation(sid, quote, False, "quote not found in that sentence"))
-        else:
+        if sid in index and quote_matches(quote, index[sid]):
             out.append(CheckedCitation(sid, quote, True))
+            continue
+        reason = "no such sentence in the evidence shown" if sid not in index else "quote not found in that sentence"
+        found = locate_quote(quote, index, sid)
+        if found == sid:
+            reason = "quote runs past the end of that sentence"
+        elif found:
+            reason += f"; the words are real, at {found}"
+        out.append(CheckedCitation(sid, quote, False, reason, found))
     return out
 
 

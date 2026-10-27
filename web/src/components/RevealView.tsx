@@ -76,12 +76,14 @@ export default function RevealView(props: {
 
       <section>
         <h3>The ghosts</h3>
-        <p className="dim">Things the investigator stated as fact that nothing in the surviving archive says.
-          They sounded right. That's what makes them ghosts.</p>
+        <p className="dim">Things the investigator stated as fact without a citation that holds up.
+          They sounded right. That's what makes them ghosts. A <i>misfiled</i> ghost quotes real words under the
+          wrong sentence: the pointer is the lie, not the words.</p>
         {ghosts.length === 0 && ev.ai.ghosts === 0 && <p>None. Every factual claim it made could be traced to a sentence.</p>}
         <ul className="ghosts">
           {ghosts.map((c) => (
-            <li key={c.id} className="ghost">“{c.text}” <span className="dim small">· <Cites list={c.citations} onCite={onCite} /></span></li>
+            <li key={c.id} className="ghost">“{c.text}” <span className="dim small">· <Cites list={c.citations} onCite={onCite} />
+              {c.citations.some((x) => x.found_at) && <span className="misfiled-tag"> misfiled</span>}</span></li>
           ))}
           {ev.ai.rows.filter((r) => r.ghost).map((r) => (
             <li key={r.id} className="ghost">{r.id}: “{r.options[r.choice ?? ""]}” <span className="dim small">· answered as fact, no surviving citation</span></li>

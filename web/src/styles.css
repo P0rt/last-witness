@@ -139,6 +139,7 @@ mark { background: rgba(232,176,74,.25); color: inherit; }
 .badge.unknown, .badge.withdrawn { color: var(--dim); }
 .cite { font-family: var(--mono); font-size: 11px; padding: 0 5px; margin: 0 2px; color: var(--amber); border-color: rgba(232,176,74,.4); }
 .cite.bad { color: var(--red); border: 1px solid rgba(224,103,90,.4); border-radius: 4px; cursor: help; }
+.cite.misfiled { opacity: .75; border-style: dashed; margin-left: 0; }
 .nocite { font-size: 11.5px; font-family: var(--mono); }
 .starters { padding: 0 14px 8px; display: flex; flex-wrap: wrap; gap: 6px; }
 .starters button { font-size: 12.5px; }
@@ -225,3 +226,5 @@ li.ghost { color: var(--ghost); animation: ghost 3.5s ease-in-out infinite; }
 .replay-bar a { color: var(--amber); }
 .replay-qs { flex-direction: column; align-items: stretch; padding-top: 8px; border-top: 1px solid var(--line); }
 .replay-qs button { text-align: left; }
+
+.misfiled-tag { font-family: var(--mono); font-size: 11px; color: var(--amber); }

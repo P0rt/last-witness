@@ -3,10 +3,17 @@ import type { Citation, Klass } from "../types";
 export function Cite({ c, onCite }: { c: Citation; onCite: (artifact: string, sentence?: string) => void }) {
   const [artifact, sentence] = c.sentence_id.split(":");
   if (!c.valid) {
-    return (
+    const bad = (
       <span className="cite bad" title={`${c.reason}: “${c.quote}”`}>
         <s>{c.sentence_id}</s>
       </span>
+    );
+    if (!c.found_at || c.found_at === c.sentence_id) return bad;
+    // Real words under the wrong id: a misfiled pointer, still not valid evidence.
+    const [fa, fs] = c.found_at.split(":");
+    return (
+      <>{bad}<button className="cite misfiled" title={`misfiled: the quote is really at ${c.found_at}`}
+        onClick={() => onCite(fa, fs)}>→{c.found_at}</button></>
     );
   }
   return (
