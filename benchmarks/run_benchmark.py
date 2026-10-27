@@ -3,13 +3,15 @@
 
 For each model, each of the 10 reconstruction questions is asked under:
 
+  guess         no documents, and "unknown" is not an option: the model's best guess,
+                i.e. what it believes about this story before reading anything
   closed_book   no documents at all; the model answers from its own judgement
   archive       the full surviving archive, citations requested
   validated     the same answers as `archive`, but any answer whose citations do
                 not survive checking is replaced by "unknown" (what the game does)
 
 `archive` and `validated` share one model call, so a run costs
-questions x repeats x 2 calls per model.
+questions x repeats x 3 calls per model.
 
     python benchmarks/run_benchmark.py                          # gemma4:e4b, 3 repeats
     python benchmarks/run_benchmark.py --models gemma4:e4b gemma4:12b --repeats 3
@@ -22,6 +24,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import statistics
 import sys
 import time
 from pathlib import Path
@@ -30,16 +33,35 @@ ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT / "server"))
 
 from lastwitness.evaluator import grade_form  # noqa: E402  (benchmark is on the sealed side)
-from lastwitness.investigator import Investigator  # noqa: E402
+from lastwitness.investigator import SYSTEM, Investigator, form_schema  # noqa: E402
 from lastwitness.llm import LLMError, Ollama  # noqa: E402
 
 RUNS = ROOT / "benchmarks" / "runs"
 RESULTS = ROOT / "benchmarks" / "results.md"
-CONDITIONS = ("closed_book", "archive", "validated")
+CONDITIONS = ("guess", "closed_book", "archive", "validated")
+RUN_CONDITIONS = ("archive", "closed_book", "guess")  # validated is derived from archive
+
+
+def guess(llm, q: dict) -> dict:
+    """Closed book with "unknown" removed: the model's prior about this kind of story."""
+    opts = {k: v for k, v in q["options"].items() if k != "unknown"}
+    listed = "\n".join(f"- {k}: {v}" for k, v in opts.items())
+    task = (f"Question {q['id']}: {q['text']}\n\nChoose exactly one option key:\n{listed}\n\n"
+            "You have no documents, and \"unknown\" is not an option here: give your best guess. "
+            "First give your reasoning in two or three sentences.")
+    messages = [{"role": "system", "content": SYSTEM.split("Rules:")[0] +
+                 "No documents are available to you. Answer from your own judgement."},
+                {"role": "user", "content": task}]
+    t0 = time.time()
+    raw = llm.chat(messages, form_schema(list(opts), None))
+    return {"question": q["id"], "choice": raw.get("choice"), "classification": raw.get("classification", "unknown"),
+            "reasoning": raw.get("reasoning", ""), "citations": [], "supported": False,
+            "meta": {"model": llm.model_id, "forced_guess": True, "seconds": round(time.time() - t0, 1),
+                     **llm.config()}}
 
 
 def run(model: str, repeats: int, temperature: float, num_ctx: int | None, only: list[str] | None,
-        think: bool | None = None) -> Path:
+        think: bool | None = None, conditions: tuple[str, ...] = RUN_CONDITIONS) -> Path:
     if model == "echo":
         raise SystemExit("echo is not a model; benchmark a real one")
     questions = json.loads((ROOT / "dataset" / "questions.json").read_text(encoding="utf-8"))
@@ -52,11 +74,10 @@ def run(model: str, repeats: int, temperature: float, num_ctx: int | None, only:
     log = {"model": model, "started": stamp, "repeats": repeats, "temperature": temperature,
            "questions": [q["id"] for q in questions], "calls": []}
 
-    # All archive calls first, then all closed-book ones. Every archive call starts with the
-    # same ~28K-token prefix (system prompt + archive), so Ollama's prompt cache reads the
+    # All archive calls first, then the ones without documents. Every archive call starts with
+    # the same ~28K-token prefix (system prompt + archive), so Ollama's prompt cache reads the
     # archive once; interleaving closed-book calls would evict it and re-read it every time.
-    for closed in (False, True):
-        cond = "closed_book" if closed else "archive"
+    for cond in [c for c in RUN_CONDITIONS if c in conditions]:
         for rep in range(repeats):
             llm = Ollama(model=model, num_ctx=num_ctx, temperature=temperature, seed=1000 + rep, think=think)
             log["config"] = llm.config() | {"seed": "1000 + repeat"}
@@ -64,7 +85,7 @@ def run(model: str, repeats: int, temperature: float, num_ctx: int | None, only:
             for q in questions:
                 t0 = time.time()
                 try:
-                    r = inv.answer(q, closed_book=closed)
+                    r = guess(llm, q) if cond == "guess" else inv.answer(q, closed_book=cond == "closed_book")
                     entry = {"repeat": rep, "condition": cond, **r}
                 except LLMError as e:
                     entry = {"repeat": rep, "condition": cond, "question": q["id"], "error": str(e)}
@@ -86,8 +107,8 @@ def score(log: dict) -> dict:
         if "error" in call:
             continue
         rep = call["repeat"]
-        if call["condition"] == "closed_book":
-            by["closed_book"].setdefault(rep, {})[call["question"]] = {**call, "supported": False}
+        if call["condition"] in ("closed_book", "guess"):
+            by[call["condition"]].setdefault(rep, {})[call["question"]] = {**call, "supported": False}
         else:
             by["archive"].setdefault(rep, {})[call["question"]] = call
             v = dict(call)
@@ -113,25 +134,39 @@ def score(log: dict) -> dict:
             "wrong": round(sum(g["counts"].get("wrong", 0) + g["counts"].get("lucky", 0) for g in grades) / n, 2),
             "unsupported_answers": round(sum(unsupported) / n, 2),
             "per_question": {r["id"]: [g["rows"][i]["grade"] for g in grades] for i, r in enumerate(grades[0]["rows"])},
+            "choices": {r["id"]: [g["rows"][i]["choice"] for g in grades] for i, r in enumerate(grades[0]["rows"])},
         }
-    secs = [c["wall_seconds"] for c in log["calls"] if "error" not in c]
-    label = log["model"] + (" (thinking)" if log.get("config", {}).get("think") is True else "")
-    return {"model": label, "file": None, "conditions": out,
-            "errors": sum("error" in c for c in log["calls"]),
-            "avg_seconds": round(sum(secs) / len(secs), 1) if secs else None}
+        secs = [c["wall_seconds"] for c in log["calls"] if "error" not in c and
+                c["condition"] == ("archive" if cond == "validated" else cond)]
+        out[cond]["seconds"] = round(statistics.median(secs), 1) if secs else None
+    return {"model": label(log), "file": None, "conditions": out,
+            "errors": sum("error" in c for c in log["calls"])}
+
+
+def label(log: dict) -> str:
+    return log["model"] + (" (thinking)" if log.get("config", {}).get("think") is True else "")
 
 
 def summarize() -> str:
-    rows = []
+    # Runs of the same model and settings are pooled, so a condition added later (say, guess)
+    # can live in its own file. Each condition still comes from exactly one set of repeats.
+    pooled: dict[str, dict] = {}
     for f in sorted(RUNS.glob("bench-*.json")):
         log = json.loads(f.read_text(encoding="utf-8"))
-        s = score(log)
-        s["file"] = f.name
+        p = pooled.setdefault(label(log), {**log, "calls": [], "files": []})
+        p["calls"] += log["calls"]
+        p["files"].append(f.name)
+    rows = []
+    for p in pooled.values():
+        s = score(p)
+        s["file"] = ", ".join(p["files"])
         rows.append(s)
     lines = ["# Benchmark results", "",
              "Generated by `benchmarks/run_benchmark.py --summarize` from the raw runs in `benchmarks/runs/`.",
              "Ten reconstruction questions; nine are answerable from the surviving archive, one (Q10) is not, "
-             "so the honest answer to it is `unknown`. Numbers are means over repeats.", "",
+             "so the honest answer to it is `unknown`. Numbers are means over repeats; s/call is the median wall time "
+             "per call on the machine that ran it (the first archive call of a run also reads the whole archive "
+             "into the prompt cache).", "",
              "| model | condition | correct (of 9) | honest unknown (Q10) | wrong | ghosts | committed answers without a valid citation | s/call | run |",
              "|---|---|---|---|---|---|---|---|---|"]
     for s in rows:
@@ -140,8 +175,10 @@ def summarize() -> str:
             if not c:
                 continue
             lines.append(f"| {s['model']} | {cond} | {c['correct']} | {c['honest_unknown']} | {c['wrong']} | "
-                         f"{c['ghosts']} | {c['unsupported_answers']} | {s['avg_seconds']} | {s['file']} |")
-    lines += ["", "*ghost*: a wrong answer stated as observed or inferred, with no citation that survives checking. "
+                         f"{c['ghosts']} | {c['unsupported_answers']} | {c['seconds']} | {s['file']} |")
+    lines += ["", "*guess*: no documents and `unknown` is not allowed, so it shows what the model would assume. "
+              "*closed_book*: no documents, `unknown` allowed. "
+              "*ghost*: a wrong answer stated as observed or inferred, with no citation that survives checking. "
               "*validated*: answers whose citations fail are turned into `unknown`, as the game does.", ""]
     for s in rows:
         lines.append(f"## {s['model']} · {s['file']}")
@@ -150,7 +187,9 @@ def summarize() -> str:
         lines.append("|---|" + "---|" * len(CONDITIONS))
         qids = next(iter(s["conditions"].values()))["per_question"].keys() if s["conditions"] else []
         for qid in qids:
-            cells = [", ".join(s["conditions"][c]["per_question"][qid]) if c in s["conditions"] else "" for c in CONDITIONS]
+            cells = [", ".join(f"{g} ({ch})" if g in ("wrong", "lucky") else g
+                               for g, ch in zip(s["conditions"][c]["per_question"][qid], s["conditions"][c]["choices"][qid]))
+                     if c in s["conditions"] else "" for c in CONDITIONS]
             lines.append(f"| {qid} | " + " | ".join(cells) + " |")
         lines.append("")
     text = "\n".join(lines)
@@ -168,12 +207,15 @@ def main() -> int:
     ap.add_argument("--only", nargs="*", help="question ids, e.g. Q1 Q3")
     ap.add_argument("--think", choices=["on", "off"], default=None,
                     help="Gemma 4 thinking (default: LW_THINK, off unless set)")
+    ap.add_argument("--conditions", nargs="+", choices=RUN_CONDITIONS, default=list(RUN_CONDITIONS),
+                    help="which conditions to run (validated is computed from archive)")
     ap.add_argument("--summarize", action="store_true", help="only rebuild results.md from saved runs")
     args = ap.parse_args()
     if not args.summarize:
         for m in args.models:
             think = None if args.think is None else args.think == "on"
-            print("saved", run(m, args.repeats, args.temperature, args.num_ctx, args.only, think))
+            print("saved", run(m, args.repeats, args.temperature, args.num_ctx, args.only, think,
+                               tuple(args.conditions)))
     print(summarize())
     return 0
 
