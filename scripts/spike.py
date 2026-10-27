@@ -37,9 +37,12 @@ def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--model", default=None)
     ap.add_argument("--num-ctx", type=int, default=None)
+    ap.add_argument("--think", choices=["on", "off"], default=None,
+                    help="Gemma 4 thinking (default: LW_THINK, off unless set)")
     args = ap.parse_args()
 
-    llm = Ollama(model=args.model, num_ctx=args.num_ctx)
+    llm = Ollama(model=args.model, num_ctx=args.num_ctx,
+                 think=None if args.think is None else args.think == "on")
     inv = Investigator(llm)
     questions = {q["id"]: q for q in json.loads((ROOT / "dataset/questions.json").read_text())}
     log: dict = {"model": llm.model_id, "config": llm.config(), "free": [], "form": [], "errors": []}
@@ -58,7 +61,7 @@ def main() -> int:
             continue
         ok += 1
         seconds.append(r["meta"]["seconds"])
-        log["free"].append({"question": q, **r})
+        log["free"].append({"question": q, **r, "ollama": llm.last_stats})
         print("   ", r["answer"][:300])
         for c in r["claims"]:
             claims += 1
@@ -82,7 +85,7 @@ def main() -> int:
             continue
         ok += 1
         seconds.append(r["meta"]["seconds"])
-        log["form"].append(r)
+        log["form"].append({**r, "ollama": llm.last_stats})
         for x in r["citations"]:
             cits += 1
             valid += x["valid"]

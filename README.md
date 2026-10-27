@@ -73,8 +73,9 @@ make serve     # build the UI and play at http://localhost:8000 (Ollama running,
 make demo      # no model at all: "echo" mode just quotes matching sentences, for UI work
 ```
 
-`LW_MODEL`, `LW_NUM_CTX` (default 32768; the whole archive is about 28K tokens)
-and `OLLAMA_HOST` override the defaults.
+`LW_MODEL`, `LW_NUM_CTX` (default 40960; the whole archive is about 28K tokens),
+`LW_THINK` (Gemma 4 thinking, default off; `LW_THINK=1` turns it on),
+`LW_TIMEOUT` (seconds per model call, default 3600) and `OLLAMA_HOST` override the defaults.
 
 ## Repository map
 

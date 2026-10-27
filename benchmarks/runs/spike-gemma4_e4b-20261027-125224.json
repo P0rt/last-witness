@@ -1,0 +1,695 @@
+{
+ "model": "gemma4:e4b",
+ "config": {
+  "num_ctx": 32768,
+  "temperature": 0.0,
+  "seed": 7,
+  "think": false
+ },
+ "free": [
+  {
+   "question": "Why did the Lighthouse Network disappear?",
+   "answer": "The Lighthouse Network went offline in October 1999 because the server move did not go well, resulting in data loss, and the community eventually decided to cease operations.",
+   "claims": [
+    {
+     "text": "The Lighthouse Network was a small online community of radio listeners on the Oregon and Washington coast, 1997-1999.",
+     "classification": "observed",
+     "citations": [
+      {
+       "sentence_id": "A54:s16",
+       "quote": "The Lighthouse Network was a small online community of radio listeners on the Oregon and Washington coast, 1997-1999.",
+       "valid": true,
+       "reason": ""
+      }
+     ],
+     "ghost": false
+    },
+    {
+     "text": "It went offline in October 1999.",
+     "classification": "observed",
+     "citations": [
+      {
+       "sentence_id": "A54:s17",
+       "quote": "It went offline in October 1999.",
+       "valid": true,
+       "reason": ""
+      }
+     ],
+     "ghost": false
+    },
+    {
+     "text": "The server move did not go well.",
+     "classification": "observed",
+     "citations": [
+      {
+       "sentence_id": "A45:s2",
+       "quote": "The Lighthouse Network moved to a new server this weekend and the move did not go well.",
+       "valid": true,
+       "reason": ""
+      }
+     ],
+     "ghost": false
+    },
+    {
+     "text": "The move resulted in data loss.",
+     "classification": "observed",
+     "citations": [
+      {
+       "sentence_id": "A52:s13",
+       "quote": "So: what's on the new server is whatever came off the first 38% of the tape.",
+       "valid": true,
+       "reason": ""
+      },
+      {
+       "sentence_id": "A52:s14",
+       "quote": "The forum database is in pieces.",
+       "valid": true,
+       "reason": ""
+      },
+      {
+       "sentence_id": "A52:s15",
+       "quote": "Most of the homepages are gone.",
+       "valid": true,
+       "reason": ""
+      }
+     ],
+     "ghost": false
+    },
+    {
+     "text": "The community eventually decided to cease operations.",
+     "classification": "observed",
+     "citations": [
+      {
+       "sentence_id": "A39:s16",
+       "quote": "The Lighthouse Network is going dark.",
+       "valid": true,
+       "reason": ""
+      }
+     ],
+     "ghost": false
+    }
+   ],
+   "unresolved_questions": [
+    "The archive does not state the definitive reason for the decision to go dark, only that the founder felt unable to rebuild after the server issues (A39:s15)."
+   ],
+   "meta": {
+    "model": "gemma4:e4b",
+    "prompt_version": "2026-10-27.1",
+    "evidence_ids": [
+     "A01",
+     "A02",
+     "A03",
+     "A04",
+     "A05",
+     "A06",
+     "A07",
+     "A08",
+     "A09",
+     "A10",
+     "A11",
+     "A12",
+     "A13",
+     "A14",
+     "A15",
+     "A16",
+     "A17",
+     "A18",
+     "A19",
+     "A20",
+     "A21",
+     "A22",
+     "A23",
+     "A24",
+     "A25",
+     "A26",
+     "A27",
+     "A28",
+     "A29",
+     "A30",
+     "A31",
+     "A32",
+     "A33",
+     "A34",
+     "A35",
+     "A36",
+     "A37",
+     "A38",
+     "A39",
+     "A40",
+     "A41",
+     "A42",
+     "A43",
+     "A44",
+     "A45",
+     "A46",
+     "A47",
+     "A48",
+     "A49",
+     "A50",
+     "A51",
+     "A52",
+     "A53",
+     "A54",
+     "A55",
+     "A56",
+     "A57",
+     "A58"
+    ],
+    "seconds": 176.0,
+    "num_ctx": 32768,
+    "temperature": 0.0,
+    "seed": 7,
+    "think": false
+   },
+   "ollama": {
+    "prompt_eval_count": 27818,
+    "prompt_eval_cached_count": 27801,
+    "prompt_eval_duration": 2286192000,
+    "eval_count": 561,
+    "eval_duration": 172715992000,
+    "total_duration": 175953895898,
+    "load_duration": 2929318,
+    "thinking_chars": 0
+   }
+  },
+  {
+   "question": "Who is nightjar?",
+   "answer": "Nightjar is a member of the Lighthouse Network who posted in the guestbook on September 4, 1999, from Astoria, OR, and later posted in the forum on September 5, 1999, regarding hearing the Cape Sorrow signal.",
+   "claims": [
+    {
+     "text": "nightjar (guest log, added by keeper) [05/Sep/1999:22:41:03 -0700] \"POST /cgi-bin/forum/post.cgi HTTP/1.0\" 302 0 \"board=signals&thread=new\" \"Mozilla/4.08 [en] (Win98; I)\"",
+     "classification": "observed",
+     "citations": [
+      {
+       "sentence_id": "A25:s9",
+       "quote": "nightjar [05/Sep/1999:22:41:03 -0700] \"POST /cgi-bin/forum/post.cgi HTTP/1.0\" 302 0 \"board=signals&thread=new\" \"Mozilla/4.08 [en] (Win98; I)\"",
+       "valid": true,
+       "reason": ""
+      }
+     ],
+     "ghost": false
+    },
+    {
+     "text": "LB-213 ... Logged by : nightjar (guest log, added by keeper)",
+     "classification": "observed",
+     "citations": [
+      {
+       "sentence_id": "A22:s6",
+       "quote": "Logged by : nightjar (guest log, added by keeper)",
+       "valid": true,
+       "reason": ""
+      }
+     ],
+     "ghost": false
+    },
+    {
+     "text": "nightjar ... I live in Astoria and I was up late friday with my Sangean on 2182 and I heard it. the same words. \"the light is out\". then four seven.",
+     "classification": "observed",
+     "citations": [
+      {
+       "sentence_id": "A42:s13",
+       "quote": "I live in Astoria and I was up late friday with my Sangean on 2182 and I heard it. the same words. \"the light is out\". then four seven.",
+       "valid": false,
+       "reason": "quote not found in that sentence"
+      }
+     ],
+     "ghost": true
+    },
+    {
+     "text": "nightjar ... #220 09/05/99 \"nightjar\" (Astoria, OR) I heard it too!! friday night on 2182, same words, from Astoria. I'm going to post on the forum. it was real.",
+     "classification": "observed",
+     "citations": [
+      {
+       "sentence_id": "A18:s2",
+       "quote": "#220 09/05/99 \"nightjar\" (Astoria, OR) I heard it too!! friday night on 2182, same words, from Astoria. I'm going to post on the forum. it was real.",
+       "valid": false,
+       "reason": "quote not found in that sentence"
+      }
+     ],
+     "ghost": true
+    },
+    {
+     "text": "nightjar ... #213 04/19/99 \"kb_radio_kid\" (Boise, ID) first numbers station ever last nite!!! thanks for the schedule henrik",
+     "classification": "unknown",
+     "citations": [],
+     "ghost": false
+    }
+   ],
+   "unresolved_questions": [
+    "The archive does not state nightjar's full name."
+   ],
+   "meta": {
+    "model": "gemma4:e4b",
+    "prompt_version": "2026-10-27.1",
+    "evidence_ids": [
+     "A01",
+     "A02",
+     "A03",
+     "A04",
+     "A05",
+     "A06",
+     "A07",
+     "A08",
+     "A09",
+     "A10",
+     "A11",
+     "A12",
+     "A13",
+     "A14",
+     "A15",
+     "A16",
+     "A17",
+     "A18",
+     "A19",
+     "A20",
+     "A21",
+     "A22",
+     "A23",
+     "A24",
+     "A25",
+     "A26",
+     "A27",
+     "A28",
+     "A29",
+     "A30",
+     "A31",
+     "A32",
+     "A33",
+     "A34",
+     "A35",
+     "A36",
+     "A37",
+     "A38",
+     "A39",
+     "A40",
+     "A41",
+     "A42",
+     "A43",
+     "A44",
+     "A45",
+     "A46",
+     "A47",
+     "A48",
+     "A49",
+     "A50",
+     "A51",
+     "A52",
+     "A53",
+     "A54",
+     "A55",
+     "A56",
+     "A57",
+     "A58"
+    ],
+    "seconds": 221.7,
+    "num_ctx": 32768,
+    "temperature": 0.0,
+    "seed": 7,
+    "think": false
+   },
+   "ollama": {
+    "prompt_eval_count": 27816,
+    "prompt_eval_cached_count": 27806,
+    "prompt_eval_duration": 1488081000,
+    "eval_count": 772,
+    "eval_duration": 219984834000,
+    "total_duration": 221691766784,
+    "load_duration": 7544385,
+    "thinking_chars": 0
+   }
+  },
+  {
+   "question": "What happened on October 16 and 17, 1999?",
+   "answer": "On October 16, 1999, the Lighthouse Network was undergoing a planned hosting move to a rack box at NorthCoast Colo in Seattle, which was scheduled for the weekend of October 16-17 (A01:s6, A34:s8, A53:s8). The backup of the old disk was scheduled to start around 1 am on October 17 (A03:s23). On October 16, keeper removed several threads from the site: thread 041, thread 044, and thread 047 (A27:s5, A27:s6, A27:s7). Furthermore, keeper deleted the file `/signals/CS-0903.wav` on October 16 (A27:s8). On October 17, the entire server went down (A19:s8, A51:s12). The backup process on October 17 failed due to write errors on the DAT tape (A28:s8, A28:s10, A28:s12). Following the server failure, keeper posted a message stating that material was removed from the site on the 16th, and that the network was going dark (A39:s11, A39:s16). The site was confirmed to be temporarily offline on October 18 (A45:s1, A45:s2).",
+   "claims": [
+    {
+     "text": "The Lighthouse Network was undergoing a planned hosting move to a rack box at NorthCoast Colo in Seattle, which was scheduled for the weekend of October 16-17",
+     "classification": "observed",
+     "citations": [
+      {
+       "sentence_id": "A01:s6",
+       "quote": "They can give me a slot the weekend of Oct 16-17.",
+       "valid": true,
+       "reason": ""
+      },
+      {
+       "sentence_id": "A34:s8",
+       "quote": "I've booked a slot at NorthCoast Colo for the weekend of October 16-17.",
+       "valid": true,
+       "reason": ""
+      },
+      {
+       "sentence_id": "A53:s8",
+       "quote": "Moving to NorthCoast Colo (Seattle) weekend of Oct 16-17.",
+       "valid": true,
+       "reason": ""
+      }
+     ],
+     "ghost": false
+    },
+    {
+     "text": "The backup of the old disk was scheduled to start around 1 am on October 17",
+     "classification": "observed",
+     "citations": [
+      {
+       "sentence_id": "A03:s23",
+       "quote": "Backup starts around 1am.",
+       "valid": true,
+       "reason": ""
+      }
+     ],
+     "ghost": false
+    },
+    {
+     "text": "On October 16, keeper removed several threads from the site: thread 041, thread 044, and thread 047",
+     "classification": "observed",
+     "citations": [
+      {
+       "sentence_id": "A27:s5",
+       "quote": "cb-dsl-12.coosbay.harbornet.example - keeper [16/Oct/1999:23:41:12 -0700] \"POST /cgi-bin/forum/admin.cgi HTTP/1.0\" 200 401 \"action=purge&thread=041\" \"Mozilla/4.7 [en] (Win98; I)\"",
+       "valid": true,
+       "reason": ""
+      },
+      {
+       "sentence_id": "A27:s6",
+       "quote": "cb-dsl-12.coosbay.harbornet.example - keeper [16/Oct/1999:23:43:30 -0700] \"POST /cgi-bin/forum/admin.cgi HTTP/1.0\" 200 401 \"action=purge&thread=044\" \"Mozilla/4.7 [en] (Win98; I)\"",
+       "valid": true,
+       "reason": ""
+      },
+      {
+       "sentence_id": "A27:s7",
+       "quote": "cb-dsl-12.coosbay.harbornet.example - keeper [16/Oct/1999:23:45:02 -0700] \"POST /cgi-bin/forum/admin.cgi HTTP/1.0\" 200 401 \"action=purge&thread=047\" \"Mozilla/4.7 [en] (Win98; I)\"",
+       "valid": true,
+       "reason": ""
+      }
+     ],
+     "ghost": false
+    },
+    {
+     "text": "Furthermore, keeper deleted the file /signals/CS-0903.wav on October 16",
+     "classification": "observed",
+     "citations": [
+      {
+       "sentence_id": "A27:s8",
+       "quote": "cb-dsl-12.coosbay.harbornet.example - keeper [16/Oct/1999:23:49:57 -0700] \"POST /cgi-bin/filemgr.cgi HTTP/1.0\" 200 233 \"action=delete&file=/signals/CS-0903.wav\" \"Mozilla/4.7 [en] (Win98; I)\"",
+       "valid": true,
+       "reason": ""
+      }
+     ],
+     "ghost": false
+    },
+    {
+     "text": "On October 17, the entire server went down",
+     "classification": "observed",
+     "citations": [
+      {
+       "sentence_id": "A19:s8",
+       "quote": "Everything about Cape Sorrow was deleted on the 16th and the server \"died\" on the 17th.",
+       "valid": true,
+       "reason": ""
+      },
+      {
+       "sentence_id": "A51:s12",
+       "quote": "Oct 17 - THE WHOLE SERVER GOES DOWN. Ray says \"hardware\".",
+       "valid": true,
+       "reason": ""
+      }
+     ],
+     "ghost": false
+    },
+    {
+     "text": "The backup process on October 17 failed due to write errors on the DAT tape",
+     "classification": "observed",
+     "citations": [
+      {
+       "sentence_id": "A28:s8",
+       "quote": "st0: Error with sense data: Current error st09:00: sense key Medium Error",
+       "valid": true,
+       "reason": ""
+      },
+      {
+       "sentence_id": "A28:s10",
+       "quote": "tar: /dev/st0: Cannot write: Input/output error",
+       "valid": true,
+       "reason": ""
+      }
+     ],
+     "ghost": false
+    },
+    {
+     "text": "Following the server failure, keeper posted a message stating that material was removed from the site on the 16th, and that the network was going dark",
+     "classification": "observed",
+     "citations": [
+      {
+       "sentence_id": "A39:s11",
+       "quote": "Before the move, on the 16th, I removed some material from the site myself.",
+       "valid": true,
+       "reason": ""
+      },
+      {
+       "sentence_id": "A39:s16",
+       "quote": "The Lighthouse Network is going dark.",
+       "valid": true,
+       "reason": ""
+      }
+     ],
+     "ghost": false
+    },
+    {
+     "text": "The site was confirmed to be temporarily offline on October 18",
+     "classification": "observed",
+     "citations": [
+      {
+       "sentence_id": "A45:s1",
+       "quote": "We'll be right back.",
+       "valid": true,
+       "reason": ""
+      }
+     ],
+     "ghost": false
+    }
+   ],
+   "unresolved_questions": [
+    "The archive does not state the ultimate cause of the server failure on October 17, only that Ray attributed it to 'hardware' (A51:s12) and that the backup failed due to tape errors (A28:s8, A28:s10).",
+    "The archive does not explain the specific reasons keeper removed material on October 16 (A39:s11), stating the explanation 'belongs to someone else' (A39:s12)."
+   ],
+   "meta": {
+    "model": "gemma4:e4b",
+    "prompt_version": "2026-10-27.1",
+    "evidence_ids": [
+     "A01",
+     "A02",
+     "A03",
+     "A04",
+     "A05",
+     "A06",
+     "A07",
+     "A08",
+     "A09",
+     "A10",
+     "A11",
+     "A12",
+     "A13",
+     "A14",
+     "A15",
+     "A16",
+     "A17",
+     "A18",
+     "A19",
+     "A20",
+     "A21",
+     "A22",
+     "A23",
+     "A24",
+     "A25",
+     "A26",
+     "A27",
+     "A28",
+     "A29",
+     "A30",
+     "A31",
+     "A32",
+     "A33",
+     "A34",
+     "A35",
+     "A36",
+     "A37",
+     "A38",
+     "A39",
+     "A40",
+     "A41",
+     "A42",
+     "A43",
+     "A44",
+     "A45",
+     "A46",
+     "A47",
+     "A48",
+     "A49",
+     "A50",
+     "A51",
+     "A52",
+     "A53",
+     "A54",
+     "A55",
+     "A56",
+     "A57",
+     "A58"
+    ],
+    "seconds": 509.8,
+    "num_ctx": 32768,
+    "temperature": 0.0,
+    "seed": 7,
+    "think": false
+   },
+   "ollama": {
+    "prompt_eval_count": 27829,
+    "prompt_eval_cached_count": 27806,
+    "prompt_eval_duration": 2707031000,
+    "eval_count": 1761,
+    "eval_duration": 506824890000,
+    "total_duration": 509748742239,
+    "load_duration": 2879907,
+    "thinking_chars": 0
+   }
+  }
+ ],
+ "form": [
+  {
+   "question": "Q1",
+   "choice": "fabricated",
+   "classification": "inferred",
+   "reasoning": "The archive contains conflicting evidence regarding the authenticity of the Cape Sorrow recording. Elias Ward claims the recording is genuine and authentic, stating he was there (A47:s4, A47:s5). However, Dot Okafor provided technical analysis suggesting the recording is a splice of older tape recordings, including mains hum and reel-to-reel wow (A36:s10-s13, A36:s14-s17).",
+   "citations": [
+    {
+     "sentence_id": "A47:s4",
+     "quote": "I was there.",
+     "valid": false,
+     "reason": "quote not found in that sentence"
+    },
+    {
+     "sentence_id": "A47:s5",
+     "quote": "I know what I heard.",
+     "valid": false,
+     "reason": "quote not found in that sentence"
+    },
+    {
+     "sentence_id": "A36:s10",
+     "quote": "1. There is 60 Hz hum, with harmonics at 120 and 180, under the voice and only under the voice.",
+     "valid": true,
+     "reason": ""
+    },
+    {
+     "sentence_id": "A36:s13",
+     "quote": "A splice.",
+     "valid": true,
+     "reason": ""
+    }
+   ],
+   "supported": true,
+   "meta": {
+    "model": "gemma4:e4b",
+    "prompt_version": "2026-10-27.1",
+    "closed_book": false,
+    "seconds": 99.6,
+    "num_ctx": 32768,
+    "temperature": 0.0,
+    "seed": 7,
+    "think": false
+   },
+   "ollama": {
+    "prompt_eval_count": 27895,
+    "prompt_eval_cached_count": 27800,
+    "prompt_eval_duration": 6001292000,
+    "eval_count": 270,
+    "eval_duration": 93423455000,
+    "total_duration": 99628425860,
+    "load_duration": 4487023,
+    "thinking_chars": 0
+   }
+  },
+  {
+   "question": "Q3",
+   "choice": "unknown",
+   "classification": "observed",
+   "reasoning": "The archive shows that 'nightjar' logged hearing the voice from Astoria on September 4, 1999 (A22:s5). Later, the digest confirms that 'nightjar' was the one who heard the voice from Astoria (A42:s13). However, there is no direct link in the archive connecting the handle 'nightjar' to Elias Ward, Jun Park, or any other named individual.",
+   "citations": [
+    {
+     "sentence_id": "A22:s5",
+     "quote": "Location : Astoria, OR",
+     "valid": true,
+     "reason": ""
+    },
+    {
+     "sentence_id": "A42:s13",
+     "quote": "I live in Astoria and I was up late friday with my Sangean on 2182 and I heard it. the same words.",
+     "valid": true,
+     "reason": ""
+    }
+   ],
+   "supported": true,
+   "meta": {
+    "model": "gemma4:e4b",
+    "prompt_version": "2026-10-27.1",
+    "closed_book": false,
+    "seconds": 80.7,
+    "num_ctx": 32768,
+    "temperature": 0.0,
+    "seed": 7,
+    "think": false
+   },
+   "ollama": {
+    "prompt_eval_count": 27914,
+    "prompt_eval_cached_count": 27804,
+    "prompt_eval_duration": 5648377000,
+    "eval_count": 205,
+    "eval_duration": 74854092000,
+    "total_duration": 80683247522,
+    "load_duration": 6694516,
+    "thinking_chars": 0
+   }
+  },
+  {
+   "question": "Q10",
+   "choice": "unknown",
+   "classification": "unknown",
+   "reasoning": "The archive documents Elias Ward's involvement up until the network went dark in October 1999, but it does not contain any information about his activities after that date. The last mention of him is in October 1999, where he was communicating with Mara Quinlan regarding the situation (A37:s1).",
+   "citations": [
+    {
+     "sentence_id": "A37:s1",
+     "quote": "From: Elias Ward <eward@coastlink.net>",
+     "valid": true,
+     "reason": ""
+    }
+   ],
+   "supported": true,
+   "meta": {
+    "model": "gemma4:e4b",
+    "prompt_version": "2026-10-27.1",
+    "closed_book": false,
+    "seconds": 63.3,
+    "num_ctx": 32768,
+    "temperature": 0.0,
+    "seed": 7,
+    "think": false
+   },
+   "ollama": {
+    "prompt_eval_count": 27906,
+    "prompt_eval_cached_count": 27804,
+    "prompt_eval_duration": 5786390000,
+    "eval_count": 137,
+    "eval_duration": 57144376000,
+    "total_duration": 63249589045,
+    "load_duration": 6140141,
+    "thinking_chars": 0
+   }
+  }
+ ],
+ "errors": [],
+ "summary": {
+  "valid_json": "6/6",
+  "citation_validity": "29/33 (87%)",
+  "ghost_claims": "2/18",
+  "avg_seconds_per_call": 191.8
+ }
+}
