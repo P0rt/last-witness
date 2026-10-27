@@ -72,6 +72,15 @@ def thump(dur=1.6):
     return np.sin(ph) * np.exp(-tt * 3.2)
 
 
+def read_voice(path):
+    """A mono WAV, resampled to SR and peak-normalized."""
+    with wave.open(path) as w:
+        sr, ch, n = w.getframerate(), w.getnchannels(), w.getnframes()
+        x = np.frombuffer(w.readframes(n), dtype="<i2").astype(float).reshape(-1, ch).mean(axis=1)
+    x = np.interp(np.arange(int(len(x) * SR / sr)) * sr / SR, np.arange(len(x)), x)
+    return x / (np.abs(x).max() + 1e-9)
+
+
 def place(buf, sig, at, gain):
     i = int(at * SR)
     j = min(len(buf), i + len(sig))
@@ -110,6 +119,22 @@ def main():
             place(right, th, c["start"] + .15, .55)
         if c["name"] == "partner":
             place(left, morse("CS"), c["start"] + .3, .06)
+
+    # the voice-over sits on top; the music ducks under it
+    voice = np.zeros(n)
+    duck = np.ones(n)
+    for c in cues["cues"]:
+        if not c.get("vo"):
+            continue
+        v = read_voice(c["vo"])
+        place(voice, v, c["vo_at"], 1.0)
+        i, j = int((c["vo_at"] - .25) * SR), int((c["vo_at"] + len(v) / SR + .3) * SR)
+        duck[max(0, i):j] = .38
+    k = int(.25 * SR)
+    duck = np.convolve(duck, np.ones(k) / k, mode="same")
+    music_peak = max(np.abs(left).max(), np.abs(right).max(), 1e-9)
+    left, right = left / music_peak * .55 * duck, right / music_peak * .55 * duck
+    left, right = left + voice * .9, right + voice * .9
 
     fade = env(n, .8, 3.5)
     st = np.stack([left * fade, right * fade], axis=1)
