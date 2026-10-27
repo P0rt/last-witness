@@ -38,25 +38,30 @@ RESULTS = ROOT / "benchmarks" / "results.md"
 CONDITIONS = ("closed_book", "archive", "validated")
 
 
-def run(model: str, repeats: int, temperature: float, num_ctx: int | None, only: list[str] | None) -> Path:
+def run(model: str, repeats: int, temperature: float, num_ctx: int | None, only: list[str] | None,
+        think: bool | None = None) -> Path:
     if model == "echo":
         raise SystemExit("echo is not a model; benchmark a real one")
     questions = json.loads((ROOT / "dataset" / "questions.json").read_text(encoding="utf-8"))
     if only:
         questions = [q for q in questions if q["id"] in only]
     stamp = time.strftime("%Y%m%d-%H%M%S")
-    out = RUNS / f"bench-{model.replace(':', '_').replace('/', '_')}-{stamp}.json"
+    tag = "" if think is None else ("-think" if think else "-nothink")
+    out = RUNS / f"bench-{model.replace(':', '_').replace('/', '_')}{tag}-{stamp}.json"
     RUNS.mkdir(parents=True, exist_ok=True)
     log = {"model": model, "started": stamp, "repeats": repeats, "temperature": temperature,
            "questions": [q["id"] for q in questions], "calls": []}
 
-    for rep in range(repeats):
-        llm = Ollama(model=model, num_ctx=num_ctx, temperature=temperature, seed=1000 + rep)
-        log["config"] = llm.config() | {"seed": "1000 + repeat"}
-        inv = Investigator(llm)
-        for q in questions:
-            for closed in (True, False):
-                cond = "closed_book" if closed else "archive"
+    # All archive calls first, then all closed-book ones. Every archive call starts with the
+    # same ~28K-token prefix (system prompt + archive), so Ollama's prompt cache reads the
+    # archive once; interleaving closed-book calls would evict it and re-read it every time.
+    for closed in (False, True):
+        cond = "closed_book" if closed else "archive"
+        for rep in range(repeats):
+            llm = Ollama(model=model, num_ctx=num_ctx, temperature=temperature, seed=1000 + rep, think=think)
+            log["config"] = llm.config() | {"seed": "1000 + repeat"}
+            inv = Investigator(llm)
+            for q in questions:
                 t0 = time.time()
                 try:
                     r = inv.answer(q, closed_book=closed)
@@ -64,6 +69,7 @@ def run(model: str, repeats: int, temperature: float, num_ctx: int | None, only:
                 except LLMError as e:
                     entry = {"repeat": rep, "condition": cond, "question": q["id"], "error": str(e)}
                 entry["wall_seconds"] = round(time.time() - t0, 1)
+                entry["ollama"] = getattr(llm, "last_stats", {})
                 log["calls"].append(entry)
                 out.write_text(json.dumps(log, ensure_ascii=False, indent=1), encoding="utf-8")
                 print(f"[{model} r{rep}] {q['id']:4} {cond:11} -> {entry.get('choice', 'ERROR'):12} "
@@ -109,7 +115,9 @@ def score(log: dict) -> dict:
             "per_question": {r["id"]: [g["rows"][i]["grade"] for g in grades] for i, r in enumerate(grades[0]["rows"])},
         }
     secs = [c["wall_seconds"] for c in log["calls"] if "error" not in c]
-    return {"model": log["model"], "file": None, "conditions": out,
+    think = log.get("config", {}).get("think")
+    label = log["model"] + ("" if think in (None, "model default") else (" (thinking)" if think else " (no thinking)"))
+    return {"model": label, "file": None, "conditions": out,
             "errors": sum("error" in c for c in log["calls"]),
             "avg_seconds": round(sum(secs) / len(secs), 1) if secs else None}
 
@@ -159,11 +167,14 @@ def main() -> int:
     ap.add_argument("--temperature", type=float, default=0.6)
     ap.add_argument("--num-ctx", type=int, default=None)
     ap.add_argument("--only", nargs="*", help="question ids, e.g. Q1 Q3")
+    ap.add_argument("--think", choices=["on", "off"], default=None,
+                    help="force the model's thinking on or off (default: the model's own default)")
     ap.add_argument("--summarize", action="store_true", help="only rebuild results.md from saved runs")
     args = ap.parse_args()
     if not args.summarize:
         for m in args.models:
-            print("saved", run(m, args.repeats, args.temperature, args.num_ctx, args.only))
+            think = None if args.think is None else args.think == "on"
+            print("saved", run(m, args.repeats, args.temperature, args.num_ctx, args.only, think))
     print(summarize())
     return 0
 
