@@ -1,11 +1,12 @@
 #!/usr/bin/env python3
-"""The promo's soundtrack, synthesized: tape hiss and Morse over the cold open,
-then the music from music.py, with the voice-over on top. No samples, so
-nothing to license.
+"""The promo's soundtrack: the voice-over, a Morse call sign on the cold open
+and, with LW_BED=music, tape hiss and the music from music.py underneath.
+No samples, so nothing to license.
 
     python3 video/sound.py video/out/cues.json video/out/score.wav
 """
 import json
+import os
 import sys
 import wave
 from pathlib import Path
@@ -88,28 +89,22 @@ def main():
     n = int(SR * total)
     t = np.arange(n) / SR
 
-    sys.path.insert(0, str(Path(__file__).parent))
-    from music import score
-    m_left, m_right, m_start = score(n, cues["cues"])
-    peak = max(np.abs(m_left).max(), np.abs(m_right).max(), 1e-9)
-    m_left, m_right = m_left / peak, m_right / peak
-
-    # the tape hiss carries the cold open, then gives way to the music
-    hiss_level = np.clip(1 - (t - m_start) / 5.0, 0.1, 1.0)
-    hiss = lowpass(rng.standard_normal(n) * .6 + brown(n) * .4, 3200)
-    hiss = hiss / (np.sqrt((hiss ** 2).mean()) + 1e-9) * .09 * hiss_level
-
-    left = hiss + m_left
-    right = hiss * .95 + m_right
-
-    radio = morse("LW LW")
-    place(left, radio, .6, .12)
-    place(right, radio, .6, .12)
-    for c in cues["cues"]:
-        if c["name"] == "tape":
-            th = thump()
-            place(left, th, c["start"] + .15, .5)
-            place(right, th, c["start"] + .15, .5)
+    # LW_BED=music lays the tape hiss and the music from music.py under the voice;
+    # the default is the voice alone, with only the Morse call sign on the cold open
+    left, right = np.zeros(n), np.zeros(n)
+    if os.environ.get("LW_BED", "none") == "music":
+        sys.path.insert(0, str(Path(__file__).parent))
+        from music import score
+        m_left, m_right, m_start = score(n, cues["cues"])
+        peak = max(np.abs(m_left).max(), np.abs(m_right).max(), 1e-9)
+        hiss_level = np.clip(1 - (t - m_start) / 5.0, 0.1, 1.0)
+        hiss = lowpass(rng.standard_normal(n) * .6 + brown(n) * .4, 3200)
+        hiss = hiss / (np.sqrt((hiss ** 2).mean()) + 1e-9) * .09 * hiss_level
+        left, right = hiss + m_left / peak, hiss * .95 + m_right / peak
+        for c in cues["cues"]:
+            if c["name"] == "tape":
+                place(left, thump(), c["start"] + .15, .5)
+                place(right, thump(), c["start"] + .15, .5)
 
     # the voice-over sits on top; the music ducks under it
     voice = np.zeros(n)
@@ -123,9 +118,12 @@ def main():
         duck[max(0, i):j] = .45
     k = int(.25 * SR)
     duck = np.convolve(duck, np.ones(k) / k, mode="same")
-    music_peak = max(np.abs(left).max(), np.abs(right).max(), 1e-9)
-    left, right = left / music_peak * .55 * duck, right / music_peak * .55 * duck
+    bed_peak = max(np.abs(left).max(), np.abs(right).max(), 1e-9)
+    left, right = left / bed_peak * .55 * duck, right / bed_peak * .55 * duck
     left, right = left + voice * .9, right + voice * .9
+    radio = morse("LW LW")
+    place(left, radio, .6, .14)
+    place(right, radio, .6, .14)
 
     fade = env(n, .8, 3.5)
     st = np.stack([left * fade, right * fade], axis=1)
