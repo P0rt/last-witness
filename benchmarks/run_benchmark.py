@@ -115,8 +115,7 @@ def score(log: dict) -> dict:
             "per_question": {r["id"]: [g["rows"][i]["grade"] for g in grades] for i, r in enumerate(grades[0]["rows"])},
         }
     secs = [c["wall_seconds"] for c in log["calls"] if "error" not in c]
-    think = log.get("config", {}).get("think")
-    label = log["model"] + {True: " (thinking)", False: " (no thinking)"}.get(think, "")
+    label = log["model"] + (" (thinking)" if log.get("config", {}).get("think") is True else "")
     return {"model": label, "file": None, "conditions": out,
             "errors": sum("error" in c for c in log["calls"]),
             "avg_seconds": round(sum(secs) / len(secs), 1) if secs else None}
