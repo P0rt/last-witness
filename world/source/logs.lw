@@ -1,0 +1,128 @@
+@@@ log-0905
+type: log
+title: access_log (fragment) — 05/Sep/1999
+author: beacon
+date: 1999-09-05T22:50:00-07:00
+path: /logs/access_log.1999-09-05
+role: critical
+---
+198.51.100.23 - - [05/Sep/1999:22:31:07 -0700] "GET /logbook/LB-212.html HTTP/1.0" 200 1388 "-" "Mozilla/4.0 (compatible; MSIE 4.01; Windows 98)"
+203.0.113.5 - - [05/Sep/1999:22:31:44 -0700] "GET /signals/CS-0903.wav HTTP/1.0" 200 2117420 "-" "Mozilla/4.5 [en] (Win95; I)"
+ppp-117.tillamook.coastlink.net - eward [05/Sep/1999:22:33:02 -0700] "POST /cgi-bin/forum/login.cgi HTTP/1.0" 302 0 "-" "Mozilla/4.08 [en] (Win98; I)"
+ppp-117.tillamook.coastlink.net - eward [05/Sep/1999:22:33:05 -0700] "GET /forum/signals/thread_041.html HTTP/1.0" 200 18211 "-" "Mozilla/4.08 [en] (Win98; I)"
+ppp-117.tillamook.coastlink.net - eward [05/Sep/1999:22:35:40 -0700] "GET /cgi-bin/forum/logout.cgi HTTP/1.0" 302 0 "-" "Mozilla/4.08 [en] (Win98; I)"
+ppp-117.tillamook.coastlink.net - - [05/Sep/1999:22:36:12 -0700] "GET /guestbook/sign.html HTTP/1.0" 200 2210 "-" "Mozilla/4.08 [en] (Win98; I)"
+ppp-117.tillamook.coastlink.net - - [05/Sep/1999:22:37:51 -0700] "POST /cgi-bin/guestbook.cgi HTTP/1.0" 200 512 "name=nightjar&from=Astoria%2C+OR" "Mozilla/4.08 [en] (Win98; I)"
+ppp-117.tillamook.coastlink.net - - [05/Sep/1999:22:39:20 -0700] "POST /cgi-bin/forum/register.cgi HTTP/1.0" 302 0 "user=nightjar" "Mozilla/4.08 [en] (Win98; I)"
+ppp-117.tillamook.coastlink.net - nightjar [05/Sep/1999:22:41:03 -0700] "POST /cgi-bin/forum/post.cgi HTTP/1.0" 302 0 "board=signals&thread=new" "Mozilla/4.08 [en] (Win98; I)"
+dsl-44.eug.pacbell.example - - [05/Sep/1999:22:44:18 -0700] "GET /forum/signals/thread_044.html HTTP/1.0" 200 3104 "-" "Mozilla/4.61 [en] (X11; I; Linux 2.2.12 i686)"
+192.0.2.77 - - [05/Sep/1999:22:46:01 -0700] "GET /signals/CS-0903.wav HTTP/1.0" 200 2117420 "-" "RealPlayer G2"
+
+@@@ log-1015
+type: log
+title: access_log (fragment) — 15/Oct/1999
+author: beacon
+date: 1999-10-15T23:59:00-07:00
+path: /logs/access_log.1999-10-15
+role: critical
+---
+gw1.cledger.com - - [15/Oct/1999:09:02:11 -0700] "GET /signals/CS-0903.wav HTTP/1.0" 200 2117420 "-" "Mozilla/4.0 (compatible; MSIE 5.0; Windows NT)"
+gw1.cledger.com - - [15/Oct/1999:09:14:40 -0700] "GET /signals/CS-0903.wav HTTP/1.0" 200 2117420 "-" "Mozilla/4.0 (compatible; MSIE 5.0; Windows NT)"
+gw1.cledger.com - - [15/Oct/1999:09:15:02 -0700] "GET /signals/README.txt HTTP/1.0" 200 788 "-" "Mozilla/4.0 (compatible; MSIE 5.0; Windows NT)"
+gw1.cledger.com - - [15/Oct/1999:10:31:57 -0700] "GET /signals/CS-0903.wav HTTP/1.0" 200 2117420 "-" "Mozilla/4.0 (compatible; MSIE 5.0; Windows NT)"
+[... 31 similar lines from gw1.cledger.com between 10:32 and 16:48 ...]
+gw1.cledger.com - - [15/Oct/1999:16:48:30 -0700] "GET /signals/CS-0903.wav HTTP/1.0" 200 2117420 "-" "SoundForge/4.5"
+dsl-44.eug.pacbell.example - - [15/Oct/1999:17:05:12 -0700] "GET /stats/ HTTP/1.0" 200 6620 "-" "Mozilla/4.61 [en] (X11; I; Linux 2.2.12 i686)"
+dsl-44.eug.pacbell.example - - [15/Oct/1999:17:05:40 -0700] "GET /stats/top_files.html HTTP/1.0" 200 3110 "-" "Mozilla/4.61 [en] (X11; I; Linux 2.2.12 i686)"
+SUMMARY 15/Oct/1999: /signals/CS-0903.wav served 41 times, 38 to gw1.cledger.com
+
+@@@ log-1016
+type: log
+title: access_log (fragment) — 16/Oct/1999
+author: beacon
+date: 1999-10-16T23:59:00-07:00
+path: /logs/access_log.1999-10-16
+role: critical
+---
+dialup-9.newport.newportnet.com - hvale [16/Oct/1999:21:02:33 -0700] "POST /cgi-bin/forum/login.cgi HTTP/1.0" 302 0 "-" "Mozilla/3.04 (Win95; I)"
+dialup-9.newport.newportnet.com - hvale [16/Oct/1999:21:02:40 -0700] "GET /forum/signals/thread_047.html HTTP/1.0" 200 4410 "-" "Mozilla/3.04 (Win95; I)"
+dialup-9.newport.newportnet.com - hvale [16/Oct/1999:21:09:15 -0700] "GET /cgi-bin/forum/logout.cgi HTTP/1.0" 302 0 "-" "Mozilla/3.04 (Win95; I)"
+cb-dsl-12.coosbay.harbornet.example - keeper [16/Oct/1999:23:38:50 -0700] "POST /cgi-bin/forum/login.cgi HTTP/1.0" 302 0 "-" "Mozilla/4.7 [en] (Win98; I)"
+cb-dsl-12.coosbay.harbornet.example - keeper [16/Oct/1999:23:41:12 -0700] "POST /cgi-bin/forum/admin.cgi HTTP/1.0" 200 401 "action=purge&thread=041" "Mozilla/4.7 [en] (Win98; I)"
+cb-dsl-12.coosbay.harbornet.example - keeper [16/Oct/1999:23:43:30 -0700] "POST /cgi-bin/forum/admin.cgi HTTP/1.0" 200 401 "action=purge&thread=044" "Mozilla/4.7 [en] (Win98; I)"
+cb-dsl-12.coosbay.harbornet.example - keeper [16/Oct/1999:23:45:02 -0700] "POST /cgi-bin/forum/admin.cgi HTTP/1.0" 200 401 "action=purge&thread=047" "Mozilla/4.7 [en] (Win98; I)"
+cb-dsl-12.coosbay.harbornet.example - keeper [16/Oct/1999:23:49:57 -0700] "POST /cgi-bin/filemgr.cgi HTTP/1.0" 200 233 "action=delete&file=/signals/CS-0903.wav" "Mozilla/4.7 [en] (Win98; I)"
+cb-dsl-12.coosbay.harbornet.example - keeper [16/Oct/1999:23:50:20 -0700] "POST /cgi-bin/filemgr.cgi HTTP/1.0" 200 233 "action=delete&file=/logbook/LB-212.html" "Mozilla/4.7 [en] (Win98; I)"
+cb-dsl-12.coosbay.harbornet.example - keeper [16/Oct/1999:23:52:41 -0700] "GET /cgi-bin/forum/logout.cgi HTTP/1.0" 302 0 "-" "Mozilla/4.7 [en] (Win98; I)"
+
+@@@ log-backup-1017
+type: log
+title: backup.log — 17/Oct/1999
+author: beacon
+date: 1999-10-17T02:04:00-07:00
+path: /logs/backup.log.1999-10-17
+role: critical
+---
+Sun Oct 17 01:04:58 PDT 1999  backup: starting FULL backup to /dev/st0 (HP DAT24)
+Sun Oct 17 01:04:58 PDT 1999  backup: label BEACON FULL 17-OCT-99
+tar: Removing leading `/' from member names
+home/httpd/html/index.html
+home/httpd/html/about.html
+[... 9,412 lines ...]
+var/lib/webbbs/signals/thread_049.dat
+st0: Error with sense data: Current error st09:00: sense key Medium Error
+st0: Additional sense indicates Write error
+tar: /dev/st0: Cannot write: Input/output error
+tar: Error is not recoverable: exiting now
+Sun Oct 17 02:03:41 PDT 1999  backup: tar exited with status 2
+Sun Oct 17 02:03:41 PDT 1999  backup: done.
+
+@@@ log-colo-1019
+type: log
+title: access_log (new server) — 19/Oct/1999
+author: northcoast
+date: 1999-10-19T23:59:00-07:00
+path: /logs/colo/access_log.1999-10-19
+role: critical
+---
+198.51.100.23 - - [19/Oct/1999:08:12:44 -0700] "GET / HTTP/1.0" 200 612 "-" "Mozilla/4.0 (compatible; MSIE 4.01; Windows 98)"
+198.51.100.23 - - [19/Oct/1999:08:12:51 -0700] "GET /forum/ HTTP/1.0" 404 290 "-" "Mozilla/4.0 (compatible; MSIE 4.01; Windows 98)"
+dsl-44.eug.pacbell.example - - [19/Oct/1999:22:40:09 -0700] "GET / HTTP/1.0" 200 612 "-" "Mozilla/4.61 [en] (X11; I; Linux 2.2.12 i686)"
+dsl-44.eug.pacbell.example - - [19/Oct/1999:22:40:30 -0700] "GET /signals/CS-0903.wav HTTP/1.0" 404 290 "-" "Mozilla/4.61 [en] (X11; I; Linux 2.2.12 i686)"
+dsl-44.eug.pacbell.example - - [19/Oct/1999:22:44:02 -0700] "POST /cgi-bin/guestbook.cgi HTTP/1.0" 200 512 "name=junebug&from=Eugene%2C+OR" "Mozilla/4.61 [en] (X11; I; Linux 2.2.12 i686)"
+192.0.2.140 - - [19/Oct/1999:23:01:15 -0700] "GET /robots.txt HTTP/1.0" 404 290 "-" "Scooter/3.2"
+SUMMARY 19/Oct/1999: 148 requests, 131 errors (404). Placeholder index.html served 17 times.
+
+@@@ colo-placeholder
+type: html_page
+title: Lighthouse Network — temporarily offline
+author: sysop_ray
+date: 1999-10-18T23:10:00-07:00
+path: /colo/index.html
+role: critical
+---
+<html>
+<head><title>Lighthouse Network - temporarily offline</title></head>
+<body bgcolor="#ffffff" text="#000000">
+<h2>We'll be right back.</h2>
+<p>The Lighthouse Network moved to a new server this weekend and the move did not go well. We are working on restoring the forum and the Log Book.</p>
+<p>The guestbook still works: <a href="/guestbook/">sign it</a> so we know you're out there.</p>
+<p>&mdash; Ray</p>
+<img src="/img/construction.gif" alt="UNDER CONSTRUCTION">
+</body>
+</html>
+
+@@@ kernel-0829
+type: log
+title: kernel messages — August 1999
+author: beacon
+date: 1999-08-29T04:10:00-07:00
+path: /logs/messages.1999-08
+role: flavor
+---
+Aug 29 03:58:12 beacon kernel: hda: dma_intr: status=0x51 { DriveReady SeekComplete Error }
+Aug 29 03:58:12 beacon kernel: hda: dma_intr: error=0x40 { UncorrectableError }, LBAsect=2210345, sector=2210280
+Aug 29 03:58:12 beacon kernel: end_request: I/O error, dev 03:03 (hda), sector 2210280
+Aug 29 04:02:40 beacon kernel: hda: dma_intr: status=0x51 { DriveReady SeekComplete Error }
+Aug 29 04:02:40 beacon kernel: hda: dma_intr: error=0x40 { UncorrectableError }, LBAsect=2210351, sector=2210286
+Aug 29 04:10:01 beacon kernel: hda: drive not ready for command

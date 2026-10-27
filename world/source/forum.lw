@@ -1,0 +1,361 @@
+@@@ forum-index
+type: html_page
+title: Lighthouse Forum — index
+author: -
+date: 1999-10-17T00:58:00-07:00
+path: /forum/index.html
+role: critical
+---
+<html>
+<head><title>Lighthouse Forum</title></head>
+<body bgcolor="#000033" text="#e0e0c0" link="#ffcc33">
+<h2>Lighthouse Forum</h2>
+<p><font size="2">Powered by WebBBS 4.2 &middot; generated 10/17/99 00:58</font></p>
+<h3><a href="/forum/signals/">Signals</a> &mdash; logs, recordings, what did I just hear</h3>
+<ul>
+<li><a href="/forum/signals/thread_049.html">where did the Cape Sorrow threads go??</a> &mdash; junebug, 10/17/99</li>
+<li><a href="/forum/signals/thread_048.html">Re: 4.625 buzzer schedule change</a> &mdash; qrp_anna, 10/15/99</li>
+<li><a href="/forum/signals/thread_046.html">Cape Sorrow &mdash; some doubts</a> &mdash; hvale, 9/20/99</li>
+<li><a href="/forum/signals/thread_045.html">PROJECT LANTERN &mdash; read this before you decide</a> &mdash; junebug, 9/12/99</li>
+<li><a href="/forum/signals/thread_043.html">Can someone in Coos Bay try 2182 tonight?</a> &mdash; eward, 9/4/99</li>
+<li><a href="/forum/signals/thread_040.html">Cape Sorrow road access closed?</a> &mdash; saltmarsh, 9/1/99</li>
+<li><a href="/forum/signals/thread_038.html">Carrier on 2182 again (LB-208)</a> &mdash; eward, 8/21/99</li>
+<li><a href="/forum/signals/thread_036.html">Numbers schedule, summer 99</a> &mdash; hvale, 7/30/99</li>
+</ul>
+<h3><a href="/forum/general/">General</a> &mdash; everything else</h3>
+<ul>
+<li><a href="/forum/general/thread_022.html">Halloween at Cape Sorrow?</a> &mdash; junebug, 10/5/99</li>
+<li><a href="/forum/general/thread_021.html">server slow?</a> &mdash; qrp_anna, 9/9/99</li>
+<li><a href="/forum/general/thread_019.html">Henrik?</a> &mdash; qrp_anna, 9/25/99</li>
+<li><a href="/forum/general/thread_014.html">Is anyone still here?</a> &mdash; keeper, 8/2/99</li>
+<li><a href="/forum/general/thread_011.html">QSL cards you're proudest of</a> &mdash; saltmarsh, 5/16/99</li>
+</ul>
+<h3><a href="/forum/admin/">Admin</a> &mdash; private (keeper, sysop_ray)</h3>
+<p><font size="2">3 boards &middot; 1,206 posts &middot; 64 registered users</font></p>
+</body>
+</html>
+
+@@@ forum-038
+type: forum_thread
+title: Carrier on 2182 again (LB-208)
+author: eward
+date: 1999-08-21T23:47:00-07:00
+path: /forum/signals/thread_038.html
+role: critical
+links: /logbook/LB-208.html
+---
+[eward | 08/21/99 23:47]
+Second time this month. Carrier on 2182, and this time I swear there was a voice under it for a second. Logged as LB-208.
+Is anybody else even listening anymore? I posted LB-204 two weeks ago and got zero replies.
+This place used to be alive. In 1998 a log like this would have had twenty replies by morning.
+
+[saltmarsh | 08/22/99 07:12]
+I'm here, Eli. Summer is slow. Everyone's outside.
+
+[eward | 08/22/99 09:40]
+I know. Sorry. It's been a bad year. I just don't want this place to go quiet too.
+
+[keeper | 08/22/99 12:03]
+We're not going anywhere. Keep logging. If it's there, it'll come back.
+
+@@@ forum-040
+type: forum_thread
+title: Cape Sorrow road access closed?
+author: saltmarsh
+date: 1999-09-01T17:20:00-07:00
+path: /forum/signals/thread_040.html
+role: herring
+---
+[saltmarsh | 09/01/99 17:20]
+Drove down to Cape Sorrow today to try 2182 from the bluff. The access road gate is chained and there is a new sign: ROAD CLOSED - SLIDE DAMAGE. Has been since the spring storms apparently, per the guy at the gas station.
+So nobody's parking below the light for a while.
+
+[junebug | 09/01/99 18:02]
+closed "for slide damage". sure. ;)
+
+[saltmarsh | 09/01/99 18:30]
+Jun, there was a slide. I saw it. Half the road is on the beach.
+
+@@@ forum-043
+type: forum_thread
+title: Can someone in Coos Bay try 2182 tonight?
+author: eward
+date: 1999-09-04T19:05:00-07:00
+path: /forum/signals/thread_043.html
+role: flavor
+---
+[eward | 09/04/99 19:05]
+After last night (see LB-212 and the big thread) - can anyone south of Florence try 2182 tonight between 2300 and 0100 local? I want to know how far it reaches.
+
+[keeper | 09/04/99 21:10]
+I'll be up. Coos Bay, longwire, I'll log either way.
+
+[keeper | 09/05/99 01:30]
+Nothing here, Eli. Some QRN, no carrier. Sorry.
+
+[eward | 09/05/99 08:02]
+It doesn't have to come back every night. It was there.
+
+@@@ forum-045
+type: forum_thread
+title: PROJECT LANTERN — read this before you decide
+author: junebug
+date: 1999-09-12T01:14:00-07:00
+path: /forum/signals/thread_045.html
+role: herring
+links: /~junebug/lantern.html
+---
+[junebug | 09/12/99 01:14]
+ok so hear me out. Everyone is asking WHO is transmitting on 2182 from a station that's been dead since 1987. I think I know.
+There's a Navy relay site 9 miles inland from Cape Sorrow. I found it on a 1972 topo map. It's not on the new maps. In the 70s it was part of something called LANTERN (I found the word in a library book about cold war coastal radar, page 211, I can scan it).
+"The light is out" is a CODE PHRASE. Four seven is a station number. Someone switched something back on.
+Full writeup on my page: /~junebug/lantern.html
+Also: the access road got closed THIS YEAR. coincidence?
+
+[saltmarsh | 09/12/99 08:40]
+Jun, the road is closed because it fell into the sea. I posted a photo.
+
+[qrp_anna | 09/12/99 09:15]
+I love you Jun but "a word in a library book" is not a signal log. Rule 1.
+
+[junebug | 09/12/99 10:02]
+rule 1 is how they get you to stop looking
+
+[keeper | 09/12/99 11:30]
+Let's keep it friendly. Jun, post the scan when you have it. Everyone else, more logs on 2182 please.
+
+@@@ forum-046
+type: forum_thread
+title: Cape Sorrow — some doubts
+author: hvale
+date: 1999-09-20T20:30:00-07:00
+path: /forum/signals/thread_046.html
+role: herring
+---
+[hvale | 09/20/99 20:30]
+I have listened to CS-0903 about forty times now. I'll say it plainly because nobody else will. I don't believe it.
+1. The voice is too clean. 2182 at night from a dead station with no antenna maintenance in twelve years should sound like soup. This sounds like it was recorded in a room.
+2. The procedure is wrong for 1999. "Cape Sorrow radio, the light is out" is how a station talked in the seventies, not now.
+3. Lou sat in Florence three nights and heard nothing. Florence is closer.
+I'm not accusing anyone of anything. I'm saying rule 1.
+
+[eward | 09/20/99 21:02]
+You weren't there, Henrik. I was. You can doubt me all you like but the file is the file.
+
+[junebug | 09/20/99 21:15]
+"recorded in a room" ... or transmitted from a modern site using an old script. LANTERN.
+
+[hvale | 09/20/99 22:40]
+Jun, please.
+
+[eward | 09/21/99 00:11]
+I'm not going to defend myself against a man who has never once left his house to log anything.
+
+[hvale | 09/24/99 18:05]
+I've been a member here since 1997 and I won't be part of whatever this is turning into. I'm removing my posts and my page. Mara, Ray, thank you for everything. 73.
+▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ [3 posts in this thread were deleted by their author]
+
+@@@ forum-049
+type: forum_thread
+title: where did the Cape Sorrow threads go??
+author: junebug
+date: 1999-10-17T00:20:00-07:00
+path: /forum/signals/thread_049.html
+role: herring
+links: /forum/signals/thread_041.html, /forum/signals/thread_044.html, /forum/signals/thread_047.html
+---
+[junebug | 10/17/99 00:20]
+The original Cape Sorrow thread (041) is GONE. So is 044 (the Astoria one) and Dot's thread from Thursday (047). They just say "removed by an administrator".
+And the WAV is 404 too. I had it bookmarked.
+I'm not saying anything. I'm just saying 3 threads and the recording vanished on the same night.
+Mods??
+
+[qrp_anna | 10/17/99 00:41]
+Probably a spam cleanup, Jun. Ask Mara in the morning.
+
+[junebug | 10/17/99 00:52]
+it's not spam. they're deleting the evidence. somebody got to them.
+
+@@@ forum-014
+type: forum_thread
+title: Is anyone still here?
+author: keeper
+date: 1999-08-02T22:00:00-07:00
+path: /forum/general/thread_014.html
+role: critical
+---
+[keeper | 08/02/99 22:00]
+Forum traffic is down to a few posts a week. That's fine, summer always is. But I wanted to say: if you're reading this and you haven't posted in a while, say hi.
+
+[qrp_anna | 08/02/99 23:15]
+hi :) still here, still QRP, still losing to the static.
+
+[saltmarsh | 08/03/99 06:50]
+Here. Logging NDBs, as ever.
+
+[eward | 08/03/99 21:12]
+Here. I've been away. My dad died in February and I haven't had the heart for the radio. I'm going to try to get back into it.
+
+[keeper | 08/03/99 21:40]
+Oh Eli. I'm so sorry. Take whatever time you need. The light stays on.
+
+@@@ forum-019
+type: forum_thread
+title: Henrik?
+author: qrp_anna
+date: 1999-09-25T10:30:00-07:00
+path: /forum/general/thread_019.html
+role: herring
+---
+[qrp_anna | 09/25/99 10:30]
+Henrik's page is gone and all his posts in 046 are deleted. Did something happen?
+
+[junebug | 09/25/99 11:02]
+he deleted EVERYTHING. 2 years of logs. who does that?? someone who's hiding something thats who.
+He also still knows the admin password from when he was a moderator in 98, I bet.
+
+[keeper | 09/25/99 13:20]
+Henrik left on his own and removed his own posts, which is his right. He has not been a moderator since last year and his old moderator access was removed then. Please don't speculate about members who aren't here to answer.
+
+@@@ forum-021
+type: forum_thread
+title: server slow?
+author: qrp_anna
+date: 1999-09-09T20:00:00-07:00
+path: /forum/general/thread_021.html
+role: flavor
+---
+[qrp_anna | 09/09/99 20:00]
+Is the site slow for everyone or just me? Pages take forever.
+
+[sysop_ray | 09/09/99 21:30]
+It's the Cape Sorrow file. 2 MB times a thousand downloads on a garage DSL line. Also beacon's disk is old and grumpy. Already planned: we're moving to a proper colo box next month. Bear with me.
+
+@@@ forum-022
+type: forum_thread
+title: Halloween at Cape Sorrow?
+author: junebug
+date: 1999-10-05T16:40:00-07:00
+path: /forum/general/thread_022.html
+role: flavor
+---
+[junebug | 10/05/99 16:40]
+Who wants to camp near Cape Sorrow on Halloween and listen on 2182 all night? I'll bring the thermos.
+
+[saltmarsh | 10/05/99 17:10]
+The road is still in the ocean, Jun.
+
+[junebug | 10/05/99 17:12]
+we walk. it's 2 miles.
+
+[eward | 10/05/99 22:30]
+I'm not sure I'll make it. Lot going on.
+
+[qrp_anna | 10/06/99 08:00]
+I'm in if there's a thermos.
+
+@@@ forum-011
+type: forum_thread
+title: QSL cards you're proudest of
+author: saltmarsh
+date: 1999-05-16T14:00:00-07:00
+path: /forum/general/thread_011.html
+role: critical
+---
+[saltmarsh | 05/16/99 14:00]
+Post your favourite QSL. Mine is a hand-drawn card from a fishing boat radio operator in the Aleutians, 1994.
+
+[eward | 05/16/99 20:40]
+Mine isn't mine. It's my dad's: a card from a ship off Japan confirming a contact he made from Station Cape Sorrow in 1976. He was a radioman there for seven years. It's on my wall.
+
+[qrp_anna | 05/17/99 07:30]
+That's beautiful, Eli.
+
+@@@ forum-036
+type: forum_thread
+title: Numbers schedule, summer 99
+author: hvale
+date: 1999-07-30T19:00:00-07:00
+path: /forum/signals/thread_036.html
+role: flavor
+---
+[hvale | 07/30/99 19:00]
+Updated schedule for the German and Spanish 5-figure stations, from my own logs June-July. ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
+[post deleted by author 09/24/99]
+
+@@@ forum-048
+type: forum_thread
+title: Re: 4.625 buzzer schedule change
+author: qrp_anna
+date: 1999-10-15T22:00:00-07:00
+path: /forum/signals/thread_048.html
+role: flavor
+---
+[qrp_anna | 10/15/99 22:00]
+The buzzer had a voice break again tonight at 2140 UTC. Three words, Russian. Logged.
+Quiet in here lately. Feels like everyone's waiting for something.
+
+@@@ admin-003
+type: forum_thread
+title: [admin] hosting move — dates
+author: sysop_ray
+date: 1999-08-30T22:15:00-07:00
+path: /forum/admin/thread_003.html
+role: critical
+---
+[sysop_ray | 08/30/99 22:15]
+Mara - beacon's disk is dying. Kernel log is full of "hda: dma_intr: status=0x51 { DriveReady SeekComplete Error }". It's the original 1996 drive.
+Plan: move everything to a rack box at NorthCoast Colo in Seattle. They can give me a slot the weekend of Oct 16-17.
+I'll do a full backup to DAT tape Saturday night, restore it on the new box Sunday. Expect a few hours down. Nothing will be lost.
+
+[keeper | 08/31/99 07:40]
+Thank you Ray. Weekend of the 16th is fine. Do we need to tell people?
+
+[sysop_ray | 08/31/99 08:02]
+Put a line on the front page closer to the date. And please don't let anyone upload huge files before then, the disk is full-ish.
+
+@@@ admin-005
+type: forum_thread
+title: [admin] press
+author: keeper
+date: 1999-09-29T21:00:00-07:00
+path: /forum/admin/thread_005.html
+role: critical
+---
+[keeper | 09/29/99 21:00]
+A reporter from The Coastal Ledger emailed me. Sam Reyes. They want to do a story on the Cape Sorrow recording, "local radio club hears ghost lighthouse", for the Halloween issue.
+I don't know how I feel about this. It would bring people here. It would also bring people here.
+
+[sysop_ray | 09/29/99 22:30]
+Up to you. Just make sure Eli is okay with it, it's his recording. And if they link the WAV directly, the garage line will melt.
+
+[keeper | 09/30/99 08:10]
+Eli is thrilled. Of course he is. I said yes to a phone interview.
+
+@@@ admin-007
+type: forum_thread
+title: [admin] the recording
+author: keeper
+date: 1999-10-12T23:05:00-07:00
+path: /forum/admin/thread_007.html
+role: critical
+---
+[keeper | 10/12/99 23:05]
+Ray, Dot sent me something tonight about CS-0903. Please read your mail before you reply here. I don't want to write it on a board, even this one.
+
+[sysop_ray | 10/13/99 07:15]
+Read it. Jesus. Are you sure? Dot is careful, but this is a big thing to be wrong about.
+
+[keeper | 10/13/99 08:00]
+I'm not sure of anything. I'm going to talk to Eli first.
+
+[keeper | 10/15/99 23:30]
+The Ledger was in the logs today pulling the WAV over and over. Sam said they're having "an expert" listen. If Dot can hear it, their expert can hear it.
+
+[keeper | 10/16/99 22:58]
+Talked to E▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒. He admits it. ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ I'm not going to put his name on the front page of a newspaper ▒▒▒▒▒▒▒▒▒▒▒▒▒▒
+I'm pulling the recording and the threads tonight. ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ before the Ledger runs anything.
+Ray, the move is still on for tomorrow? Don't change anything because of this.
+
+[sysop_ray | 10/16/99 23:20]
+Still on. Backup starts around 1am. ▒▒▒▒▒▒▒▒▒▒▒▒▒▒

@@ -1,0 +1,242 @@
+@@@ home-keeper
+type: html_page
+title: keeper's page
+author: keeper
+date: 1999-04-11T15:00:00-07:00
+path: /~keeper/index.html
+role: flavor
+---
+<html>
+<head><title>keeper's page</title></head>
+<body bgcolor="#f5f0e1" text="#222222" link="#003366">
+<h2>Mara Quinlan</h2>
+<img src="grandpa.jpg" alt="my grandfather, Thomas Quinlan, on the gallery at Heceta Head, 1951" width="240">
+<p>I live in Coos Bay with two cats and a Kenwood R-5000 that is older than both of them.</p>
+<p>My grandfather Thomas kept the light at Heceta Head from 1946 to 1957. He kept a log every night, even on nights when nothing happened. <i>Especially</i> on nights when nothing happened. "If you only write down the interesting nights," he told me, "you'll end up believing the sea is more interesting than it is."</p>
+<p>That's more or less the whole philosophy of this site.</p>
+<p><a href="/">Back to the Lighthouse Network</a></p>
+<!-- his logbooks are in the closet. someday i will type them all in. -->
+</body>
+</html>
+
+@@@ home-eward
+type: html_page
+title: Elias Ward — 2182
+author: eward
+date: 1999-08-20T21:30:00-07:00
+path: /~eward/index.html
+role: critical
+links: /~eward/gear.html
+---
+<html>
+<head><title>Elias Ward - 2182</title></head>
+<body bgcolor="#000000" text="#33ff33" link="#66ffff">
+<center>
+<h1>2182</h1>
+<p>Elias Ward &middot; Tillamook, Oregon</p>
+</center>
+<p>I listen to maritime HF. Mostly the old distress and calling frequency, 2182 kHz, which nobody is required to watch anymore.</p>
+<p>My <a href="gear.html">gear page</a> has what I use.</p>
+<hr>
+<h3>In memory of Robert J. Ward</h3>
+<img src="dad.jpg" alt="Dad at the radio desk, Station Cape Sorrow, 1978" width="200">
+<p>U.S. Coast Guard radioman, 1961&ndash;1989.<br>
+Station Cape Sorrow, 1974&ndash;1981.<br>
+Died February 11, 1999.</p>
+<p>He taught me the phonetic alphabet before I could read. He kept every tape.</p>
+<hr>
+<p><a href="/">Lighthouse Network</a></p>
+<!-- 73 dad. you were the best operator on the coast. -->
+<!-- tapes: box 1-4 in the garage. box 3 = the cape sorrow drills, 77-79 -->
+</body>
+</html>
+
+@@@ home-eward-gear
+type: html_page
+title: Elias's gear
+author: eward
+date: 1999-06-12T19:00:00-07:00
+path: /~eward/gear.html
+role: critical
+---
+<html>
+<head><title>gear</title></head>
+<body bgcolor="#000000" text="#33ff33">
+<h2>What I use</h2>
+<ul>
+<li>Receiver: Realistic DX-394</li>
+<li>Antenna: 60 ft longwire off the back fence, 9:1 unun</li>
+<li>Portable: Sony cassette recorder (for field trips)</li>
+<li>Dad's TEAC A-3340S reel-to-reel. Still runs. Needs a wall socket and two people to lift it.</li>
+<li>PC: Pentium 166, Sound Blaster 16, Cool Edit 96 for cleaning up recordings</li>
+</ul>
+<p><a href="index.html">back</a></p>
+</body>
+</html>
+
+@@@ home-dot
+type: html_page
+title: dotmatrix
+author: dotmatrix
+date: 1999-05-02T12:00:00-07:00
+path: /~dot/index.html
+role: flavor
+links: /~dot/hum.html
+---
+<html>
+<head><title>dotmatrix</title></head>
+<body bgcolor="#ffffff" text="#000000" link="#0000cc">
+<h2>Dot Okafor</h2>
+<p>Day job: mastering engineer at a small studio in Portland. Night job: beacons.</p>
+<p>I like signals that tell you where they came from. Every recording carries fingerprints of the room, the machine and the wall socket it was made with, if you know where to look.</p>
+<ul>
+<li><a href="hum.html">Mains hum: the fingerprint of the wall socket</a></li>
+<li><a href="spectro.html">Reading a spectrogram for beginners</a></li>
+</ul>
+</body>
+</html>
+
+@@@ home-dot-hum
+type: html_page
+title: Mains hum: the fingerprint of the wall socket
+author: dotmatrix
+date: 1999-03-20T16:00:00-08:00
+path: /~dot/hum.html
+role: critical
+---
+<html>
+<head><title>Mains hum</title></head>
+<body bgcolor="#ffffff" text="#000000">
+<h2>Mains hum: the fingerprint of the wall socket</h2>
+<p>Anything plugged into the wall in North America leaks a little 60 Hz into the recording, plus its harmonics at 120, 180 and 240 Hz. In Europe it's 50 Hz. You can't hear it most of the time. A spectrogram shows it as thin, perfectly straight lines.</p>
+<p>Two things follow:</p>
+<ol>
+<li>If a recording claims to come from a battery radio in a field, it should not have 60 Hz lines in it.</li>
+<li>If the hum appears in one part of a recording and not in another, those parts were probably not recorded on the same machine at the same time. That's a splice.</li>
+</ol>
+<p>Reel-to-reel decks also leave a slow wobble ("wow") around 0.5 Hz from the capstan. Cassette wobble is faster. Tape has a fingerprint too.</p>
+</body>
+</html>
+
+@@@ home-ray
+type: html_page
+title: beacon status
+author: sysop_ray
+date: 1999-10-10T09:00:00-07:00
+path: /~ray/index.html
+role: flavor
+links: /~ray/.plan
+---
+<html>
+<head><title>beacon</title></head>
+<body bgcolor="#c0c0c0" text="#000000">
+<h2>beacon.lighthouse.net</h2>
+<pre>
+hardware : Pentium Pro 200, 64 MB, Quantum Fireball 2.1 GB (1996)
+os       : Red Hat 5.2, kernel 2.0.36
+httpd    : Apache 1.3.6
+backup   : HP SureStore DAT24, 12/24 GB tapes
+location : my garage, under the bench, next to the paint
+uptime   : 214 days
+</pre>
+<p>Moving to NorthCoast Colo (Seattle) weekend of Oct 16-17. Old disk will be retired.</p>
+<p>My <a href=".plan">.plan</a> is where I complain.</p>
+</body>
+</html>
+
+@@@ home-ray-plan
+type: text_file
+title: .plan (sysop_ray)
+author: sysop_ray
+date: 1999-10-20T03:12:00-07:00
+path: /~ray/.plan
+role: critical
+---
+Plan:
+10/20/99
+
+The move failed. My fault, nobody else's.
+
+Saturday night 1am I ran the full backup to DAT like I planned in August.
+I did not verify the tape. I piped tar's output to a file and went to bed.
+Sunday morning I shut beacon down, pulled the old drive, and ran mke2fs
+on it so I could reuse it in the new box for swap. Then I drove to Seattle.
+
+On the new box, the restore died at 38%. Read errors on the tape past
+block 41,000-something. The tape drive had been throwing write errors
+all night. It's in the log file I never read.
+
+So: what's on the new server is whatever came off the first 38% of the
+tape. The forum database is in pieces. Most of the homepages are gone.
+The old disk is wiped.
+
+I put a placeholder page up so people know we're not dead.
+I'm so sorry, everyone. Ten years of doing backups for a living.
+-r
+
+@@@ home-junebug
+type: html_page
+title: JUNEBUG'S X-FILES
+author: junebug
+date: 1999-07-04T14:00:00-07:00
+path: /~junebug/index.html
+role: flavor
+links: /~junebug/lantern.html
+---
+<html>
+<head><title>JUNEBUG'S X-FILES</title></head>
+<body bgcolor="#000000" text="#00ff00" link="#ff00ff" background="stars.gif">
+<center>
+<blink><h1>THE TRUTH IS OUT THERE</h1></blink>
+<img src="ufo.gif" alt="spinning UFO">
+<p>Jun Park, 17, Eugene OR. I listen to stuff they don't want you to hear.</p>
+<p><a href="lantern.html">THE LANTERN FILES</a> | <a href="links.html">LINKS</a></p>
+<p><img src="/cgi-bin/counter.cgi?jun" alt="000913"> people know.</p>
+</center>
+</body>
+</html>
+
+@@@ home-junebug-lantern
+type: html_page
+title: THE LANTERN FILES
+author: junebug
+date: 1999-10-19T23:30:00-07:00
+path: /~junebug/lantern.html
+role: herring
+---
+<html>
+<head><title>THE LANTERN FILES</title></head>
+<body bgcolor="#000000" text="#00ff00">
+<h1>THE LANTERN FILES</h1>
+<p><b>UPDATED 10/19/99 - THE NETWORK IS DOWN. READ THIS.</b></p>
+<p>Timeline (everything here I saw myself):</p>
+<ul>
+<li>Sept 3 - Eli records the voice at Cape Sorrow. "The light is out." Two numbers: four seven.</li>
+<li>Sept 5 - nightjar hears it from Astoria. Independent confirmation!!</li>
+<li>Sept 24 - Henrik, who had admin access in 1998, deletes ALL his posts and disappears.</li>
+<li>Oct 15 - somebody downloads the WAV dozens of times in one day from a gateway I don't recognize. I saw it in the public stats page.</li>
+<li>Oct 16 - the recording and every thread about it are deleted overnight.</li>
+<li>Oct 17 - THE WHOLE SERVER GOES DOWN. Ray says "hardware".</li>
+</ul>
+<p>Four separate "accidents" in six weeks. The light is out. Somebody turned it off.</p>
+<p>I have a copy of the WAV on a floppy. I'm not putting it online. Not yet.</p>
+<!-- if something happens to me this page is the reason lol -->
+</body>
+</html>
+
+@@@ home-hvale
+type: html_page
+title: Henrik Vale — HF utility listening
+author: hvale
+date: 1999-07-01T10:00:00-07:00
+path: /~hvale/index.html
+role: removed
+---
+<html>
+<head><title>Henrik Vale</title></head>
+<body bgcolor="#ffffff" text="#000000">
+<h2>Henrik Vale</h2>
+<p>Retired telephone company engineer, Newport. Listening since 1961. I log numbers stations and HF utility traffic, and I believe almost nothing I hear until I've heard it twice.</p>
+<p><a href="numbers.html">Numbers station schedule</a></p>
+</body>
+</html>
