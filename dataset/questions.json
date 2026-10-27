@@ -1,0 +1,105 @@
+[
+ {
+  "id": "Q1",
+  "text": "Was the Cape Sorrow recording a genuine radio signal?",
+  "options": {
+   "genuine": "Yes, a genuine signal received off the air",
+   "fabricated": "No, it was fabricated from other recordings",
+   "unknown": "Cannot be determined from the archive"
+  }
+ },
+ {
+  "id": "Q2",
+  "text": "Who created the recording?",
+  "options": {
+   "elias": "Elias Ward (eward)",
+   "jun": "Jun Park (junebug)",
+   "henrik": "Henrik Vale (hvale)",
+   "outsider": "Someone outside the community",
+   "unknown": "Cannot be determined from the archive"
+  }
+ },
+ {
+  "id": "Q3",
+  "text": "Who was 'nightjar', the listener who heard the voice from Astoria?",
+  "options": {
+   "independent": "An independent listener in Astoria",
+   "elias": "Elias Ward, under another name",
+   "jun": "Jun Park, under another name",
+   "sam": "Sam Reyes, the reporter",
+   "unknown": "Cannot be determined from the archive"
+  }
+ },
+ {
+  "id": "Q4",
+  "text": "Who first found technical proof that the recording was not genuine?",
+  "options": {
+   "dot": "Dot Okafor (dotmatrix)",
+   "henrik": "Henrik Vale (hvale)",
+   "mara": "Mara Quinlan (keeper)",
+   "ledger": "The Coastal Ledger's engineer",
+   "unknown": "Cannot be determined from the archive"
+  }
+ },
+ {
+  "id": "Q5",
+  "text": "Who removed the recording and the threads about it?",
+  "options": {
+   "mara": "Mara Quinlan (keeper)",
+   "ray": "Ray Tillman (sysop_ray)",
+   "henrik": "Henrik Vale (hvale)",
+   "outside": "An outside party (agency, hacker)",
+   "unknown": "Cannot be determined from the archive"
+  }
+ },
+ {
+  "id": "Q6",
+  "text": "What destroyed most of the archive?",
+  "options": {
+   "deliberate": "Someone deliberately deleted the whole site",
+   "migration": "A failed backup during a server migration",
+   "takedown": "An outside takedown",
+   "unknown": "Cannot be determined from the archive"
+  }
+ },
+ {
+  "id": "Q7",
+  "text": "When was the server migration decided?",
+  "options": {
+   "before": "Weeks earlier, before anyone questioned the recording",
+   "after": "After the recording was questioned, as a reaction to it",
+   "unknown": "Cannot be determined from the archive"
+  }
+ },
+ {
+  "id": "Q8",
+  "text": "Who downloaded the recording dozens of times on October 15?",
+  "options": {
+   "agency": "A government agency",
+   "ledger": "The Coastal Ledger newspaper",
+   "henrik": "Henrik Vale",
+   "jun": "Jun Park",
+   "unknown": "Cannot be determined from the archive"
+  }
+ },
+ {
+  "id": "Q9",
+  "text": "Whose voice is on the recording?",
+  "options": {
+   "elias": "Elias Ward himself",
+   "father": "Elias's late father, from an old Coast Guard tape",
+   "operator": "A live radio operator in 1999",
+   "unknown": "Cannot be determined from the archive"
+  }
+ },
+ {
+  "id": "Q10",
+  "text": "What did Elias do after the network closed?",
+  "options": {
+   "quit": "He gave up radio for good",
+   "archivist": "He became an archivist of old radio tapes",
+   "returned": "He rejoined the hobby under a new name",
+   "unknown": "Cannot be determined from the archive"
+  }
+ }
+]

@@ -1,0 +1,25 @@
+# Files known to have existed (from links, listings and the backup log)
+# that were not recovered. One per line: path | title (if known) | author | date
+# Brace ranges expand: thread_{001..049}. Already-authored paths are skipped.
+/forum/signals/thread_{001..049}.html | (thread, title not recovered) | - | 1998-1999
+/forum/general/thread_{001..022}.html | (thread, title not recovered) | - | 1997-1999
+/forum/admin/thread_{001..008}.html | (admin thread, title not recovered) | - | 1998-1999
+/forum/signals/index.html | Signals board index | - | 1999-10-17
+/forum/general/index.html | General board index | - | 1999-10-17
+/forum/admin/index.html | Admin board index | - | 1999-10-17
+/logbook/older.html | Log Book: entries LB-001 to LB-186 | keeper | 1999
+/logbook/LB-193.html | LB-193 — 4.625 MHz buzzer | qrp_anna | 1999-06-30
+/logbook/LB-208.html | LB-208 — carrier again, faint voice? | eward | 1999-08-21
+/signals/index.html | Index of /signals | - | 1999
+/guestbook/index.html | Guestbook (latest) | - | 1999
+/guestbook/page{1..2}.html | Guestbook, older pages | - | 1997-1998
+/~dot/spectro.html | Reading a spectrogram for beginners | dotmatrix | 1999
+/~hvale/numbers.html | Numbers station schedule | hvale | 1999
+/~junebug/links.html | LINKS | junebug | 1999
+/~saltmarsh/index.html | saltmarsh's NDB list | saltmarsh | 1998
+/~qrp_anna/index.html | qrp_anna | qrp_anna | 1998
+/ring/prev.html | Coastal Radio Ring (previous) | - | 1999
+/ring/next.html | Coastal Radio Ring (next) | - | 1999
+/stats/index.html | Site statistics | - | 1999-10-15
+/stats/top_files.html | Top files | - | 1999-10-15
+/mail/keeper/1999-10-1{6..7}_unread.eml | (message, unreadable) | - | 1999-10
