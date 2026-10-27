@@ -32,20 +32,20 @@ class Ollama(LLM):
         self.host = (host or os.environ.get("OLLAMA_HOST", "http://127.0.0.1:11434")).rstrip("/")
         if not self.host.startswith("http"):
             self.host = "http://" + self.host
-        self.num_ctx = num_ctx or int(os.environ.get("LW_NUM_CTX", "32768"))
+        # The archive alone is ~28K tokens; history, the question and the answer need room on top.
+        self.num_ctx = num_ctx or int(os.environ.get("LW_NUM_CTX", "40960"))
         self.temperature = temperature
         self.seed = seed
         # A cold call on a CPU reads the whole archive (~28K tokens) first: that alone is minutes.
         self.timeout = timeout or float(os.environ.get("LW_TIMEOUT", "3600"))
-        # Gemma 4 thinks by default. None leaves that to the model; LW_THINK=0/1 forces it.
-        env_think = os.environ.get("LW_THINK", "").strip().lower()
-        self.think = think if think is not None else (
-            None if not env_think else env_think not in ("0", "false", "no", "off"))
+        # Gemma 4 thinks by default in Ollama. On a CPU that is ~1,400 extra tokens (minutes) per
+        # answer, so the game turns it off unless LW_THINK=1.
+        self.think = think if think is not None else \
+            os.environ.get("LW_THINK", "0").strip().lower() not in ("", "0", "false", "no", "off")
         self.last_stats: dict = {}
 
     def config(self) -> dict:
-        return {"num_ctx": self.num_ctx, "temperature": self.temperature, "seed": self.seed,
-                "think": "model default" if self.think is None else self.think}
+        return {"num_ctx": self.num_ctx, "temperature": self.temperature, "seed": self.seed, "think": self.think}
 
     def chat(self, messages: list[dict], schema: dict) -> dict:
         body = {
@@ -55,10 +55,9 @@ class Ollama(LLM):
             "stream": False,
             "options": {"temperature": self.temperature, "seed": self.seed, "num_ctx": self.num_ctx},
         }
-        if self.think is not None:
-            body["think"] = self.think
+        body["think"] = self.think
         self.last_stats = {}
-        req =urllib.request.Request(f"{self.host}/api/chat", data=json.dumps(body).encode(),
+        req = urllib.request.Request(f"{self.host}/api/chat", data=json.dumps(body).encode(),
                                      headers={"Content-Type": "application/json"})
         try:
             with urllib.request.urlopen(req, timeout=self.timeout) as r:

@@ -116,7 +116,7 @@ def score(log: dict) -> dict:
         }
     secs = [c["wall_seconds"] for c in log["calls"] if "error" not in c]
     think = log.get("config", {}).get("think")
-    label = log["model"] + ("" if think in (None, "model default") else (" (thinking)" if think else " (no thinking)"))
+    label = log["model"] + {True: " (thinking)", False: " (no thinking)"}.get(think, "")
     return {"model": label, "file": None, "conditions": out,
             "errors": sum("error" in c for c in log["calls"]),
             "avg_seconds": round(sum(secs) / len(secs), 1) if secs else None}
@@ -168,7 +168,7 @@ def main() -> int:
     ap.add_argument("--num-ctx", type=int, default=None)
     ap.add_argument("--only", nargs="*", help="question ids, e.g. Q1 Q3")
     ap.add_argument("--think", choices=["on", "off"], default=None,
-                    help="force the model's thinking on or off (default: the model's own default)")
+                    help="Gemma 4 thinking (default: LW_THINK, off unless set)")
     ap.add_argument("--summarize", action="store_true", help="only rebuild results.md from saved runs")
     args = ap.parse_args()
     if not args.summarize:

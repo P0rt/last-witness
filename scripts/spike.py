@@ -38,7 +38,7 @@ def main() -> int:
     ap.add_argument("--model", default=None)
     ap.add_argument("--num-ctx", type=int, default=None)
     ap.add_argument("--think", choices=["on", "off"], default=None,
-                    help="force the model's thinking on or off (default: the model's own default)")
+                    help="Gemma 4 thinking (default: LW_THINK, off unless set)")
     args = ap.parse_args()
 
     llm = Ollama(model=args.model, num_ctx=args.num_ctx,
