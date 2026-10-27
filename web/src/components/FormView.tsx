@@ -16,6 +16,7 @@ export default function FormView(props: {
   const choose = async (qid: string, opt: string) => {
     const next = { ...answers, [qid]: opt };
     setAnswers(next);
+    setInv({ ...inv, form_player: next }); // the Reveal gate counts these
     await api.formPlayer(inv.id, next).catch((e) => setErr(e.message));
   };
 
