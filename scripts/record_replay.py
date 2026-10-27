@@ -97,7 +97,8 @@ def main() -> int:
 
     OUT.mkdir(parents=True, exist_ok=True)
     meta["recorded"] = {"model": args.model, "at": time.strftime("%Y-%m-%d %H:%M UTC", time.gmtime()),
-                        "minutes": round((time.time() - t0) / 60, 1), "questions": QUESTIONS}
+                        "minutes": round((time.time() - t0) / 60, 1), "questions": QUESTIONS,
+                        "config": appmod.get_llm().config()}
     (OUT / "meta.json").write_text(json.dumps(meta, ensure_ascii=False, indent=1))
     (OUT / "artifacts.json").write_text(json.dumps(archive.load(), ensure_ascii=False))
     (OUT / "session.json").write_text(json.dumps(session, ensure_ascii=False, indent=1))

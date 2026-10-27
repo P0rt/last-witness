@@ -1,0 +1,2523 @@
+{
+ "model": "gemma4:e4b",
+ "started": "20261027-125224",
+ "repeats": 3,
+ "temperature": 0.6,
+ "questions": [
+  "Q1",
+  "Q2",
+  "Q3",
+  "Q4",
+  "Q5",
+  "Q6",
+  "Q7",
+  "Q8",
+  "Q9",
+  "Q10"
+ ],
+ "calls": [
+  {
+   "repeat": 0,
+   "condition": "archive",
+   "question": "Q1",
+   "choice": "unknown",
+   "classification": "unknown",
+   "reasoning": "There is significant conflict in the archive regarding the authenticity of the Cape Sorrow recording. Some members assert it is genuine, while others provide technical analysis suggesting it is a composite or fake. Ultimately, the archive does not provide a final, undisputed verdict on its nature.",
+   "citations": [
+    {
+     "sentence_id": "A47:s4",
+     "quote": "This recording is authentic.",
+     "valid": true,
+     "reason": ""
+    },
+    {
+     "sentence_id": "A36:s12",
+     "quote": "A splice.",
+     "valid": false,
+     "reason": "quote not found in that sentence"
+    },
+    {
+     "sentence_id": "A48:s8",
+     "quote": "If the hum appears in one part of a recording and not in another, those parts were probably not recorded on the same machine at the same time.",
+     "valid": true,
+     "reason": ""
+    }
+   ],
+   "supported": true,
+   "meta": {
+    "model": "gemma4:e4b",
+    "prompt_version": "2026-10-27.1",
+    "closed_book": false,
+    "seconds": 888.4,
+    "num_ctx": 40960,
+    "temperature": 0.6,
+    "seed": 1000,
+    "think": false
+   },
+   "wall_seconds": 888.4,
+   "ollama": {
+    "prompt_eval_count": 27895,
+    "prompt_eval_cached_count": 0,
+    "prompt_eval_duration": 778122468000,
+    "eval_count": 181,
+    "eval_duration": 84412566000,
+    "total_duration": 888349471590,
+    "load_duration": 25497087076,
+    "thinking_chars": 0
+   }
+  },
+  {
+   "repeat": 0,
+   "condition": "archive",
+   "question": "Q2",
+   "choice": "unknown",
+   "classification": "inferred",
+   "reasoning": "The archive presents conflicting accounts regarding the origin of the recording CS-0903. Elias Ward claims he recorded the voice himself at Cape Sorrow (A47:s3, A41:s24), while Dot Okafor and others suggest it is an old tape spliced into a modern recording (A36:s19-21). The ultimate source remains contested.",
+   "citations": [
+    {
+     "sentence_id": "A47:s3",
+     "quote": "File: CS-0903.wav (22050 Hz, mono, 16-bit) Recorded by: Elias Ward (eward)",
+     "valid": true,
+     "reason": ""
+    },
+    {
+     "sentence_id": "A41:s24",
+     "quote": "I got it on tape.",
+     "valid": false,
+     "reason": "quote not found in that sentence"
+    },
+    {
+     "sentence_id": "A36:s19",
+     "quote": "The raw file still has its comment field: \"dub from reel - box 3 side B\".",
+     "valid": true,
+     "reason": ""
+    },
+    {
+     "sentence_id": "A36:s21",
+     "quote": "I think the voice is an old tape, played on a reel deck and mixed into a noise recording.",
+     "valid": true,
+     "reason": ""
+    }
+   ],
+   "supported": true,
+   "meta": {
+    "model": "gemma4:e4b",
+    "prompt_version": "2026-10-27.1",
+    "closed_book": false,
+    "seconds": 103.7,
+    "num_ctx": 40960,
+    "temperature": 0.6,
+    "seed": 1000,
+    "think": false
+   },
+   "wall_seconds": 103.7,
+   "ollama": {
+    "prompt_eval_count": 27904,
+    "prompt_eval_cached_count": 27804,
+    "prompt_eval_duration": 5571900000,
+    "eval_count": 291,
+    "eval_duration": 97877669000,
+    "total_duration": 103652786965,
+    "load_duration": 2412317,
+    "thinking_chars": 0
+   }
+  },
+  {
+   "repeat": 0,
+   "condition": "archive",
+   "question": "Q3",
+   "choice": "unknown",
+   "classification": "observed",
+   "reasoning": "The archive indicates that 'nightjar' was a listener in Astoria, OR, who heard the voice on 2182 kHz (A22:s5, A42:s13). However, there is no direct link within the provided documents connecting the handle 'nightjar' to Elias Ward, Jun Park, Sam Reyes, or any other named individual.",
+   "citations": [
+    {
+     "sentence_id": "A22:s5",
+     "quote": "Location : Astoria, OR",
+     "valid": true,
+     "reason": ""
+    },
+    {
+     "sentence_id": "A42:s13",
+     "quote": "I live in Astoria and I was up late friday with my Sangean on 2182 and I heard it. the same words.",
+     "valid": true,
+     "reason": ""
+    }
+   ],
+   "supported": true,
+   "meta": {
+    "model": "gemma4:e4b",
+    "prompt_version": "2026-10-27.1",
+    "closed_book": false,
+    "seconds": 78.0,
+    "num_ctx": 40960,
+    "temperature": 0.6,
+    "seed": 1000,
+    "think": false
+   },
+   "wall_seconds": 78.0,
+   "ollama": {
+    "prompt_eval_count": 27914,
+    "prompt_eval_cached_count": 27804,
+    "prompt_eval_duration": 5474693000,
+    "eval_count": 192,
+    "eval_duration": 72350275000,
+    "total_duration": 78009697140,
+    "load_duration": 2253448,
+    "thinking_chars": 0
+   }
+  },
+  {
+   "repeat": 0,
+   "condition": "archive",
+   "question": "Q4",
+   "choice": "dot",
+   "classification": "observed",
+   "reasoning": "Dot Okafor (dotmatrix) first presented technical evidence suggesting the recording was not genuine by analyzing the raw file. She detailed anomalies like 60 Hz hum and reel-to-reel wow, indicating it was a spliced tape recording rather than a live field transmission (A36:s10, A36:s12). While other sources questioned the recording (A14:s1-s3), Dot's analysis provided specific technical proof (A36:s1-s3).",
+   "citations": [
+    {
+     "sentence_id": "A36:s1",
+     "quote": "Eli sent me his \"raw\" file yesterday.",
+     "valid": false,
+     "reason": "quote not found in that sentence"
+    },
+    {
+     "sentence_id": "A36:s10",
+     "quote": "1. There is 60 Hz hum, with harmonics at 120 and 180, under the voice and only under the voice.",
+     "valid": true,
+     "reason": ""
+    },
+    {
+     "sentence_id": "A36:s12",
+     "quote": "That's two recordings joined together.",
+     "valid": true,
+     "reason": ""
+    }
+   ],
+   "supported": true,
+   "meta": {
+    "model": "gemma4:e4b",
+    "prompt_version": "2026-10-27.1",
+    "closed_book": false,
+    "seconds": 119.8,
+    "num_ctx": 40960,
+    "temperature": 0.6,
+    "seed": 1000,
+    "think": false
+   },
+   "wall_seconds": 119.8,
+   "ollama": {
+    "prompt_eval_count": 27914,
+    "prompt_eval_cached_count": 27804,
+    "prompt_eval_duration": 5515771000,
+    "eval_count": 260,
+    "eval_duration": 114083153000,
+    "total_duration": 119809363246,
+    "load_duration": 2784173,
+    "thinking_chars": 0
+   }
+  },
+  {
+   "repeat": 0,
+   "condition": "archive",
+   "question": "Q5",
+   "choice": "mara",
+   "classification": "observed",
+   "reasoning": "The evidence strongly suggests that Mara Quinlan (keeper) was the one who removed the material, as her access logs show her purging the relevant threads and deleting the WAV file on October 16, 1999 (A27:s7, A27:s8). Furthermore, she later admitted to removing material herself on the 16th (A39:s11).",
+   "citations": [
+    {
+     "sentence_id": "A27:s7",
+     "quote": "cb-dsl-12.coosbay.harbornet.example - keeper [16/Oct/1999:23:45:02 -0700] \"POST /cgi-bin/forum/admin.cgi HTTP/1.0\" 200 401 \"action=purge&thread=047\" \"Mozilla/4.7 [en] (Win98; I)\"",
+     "valid": true,
+     "reason": ""
+    },
+    {
+     "sentence_id": "A27:s8",
+     "quote": "cb-dsl-12.coosbay.harbornet.example - keeper [16/Oct/1999:23:49:57 -0700] \"POST /cgi-bin/filemgr.cgi HTTP/1.0\" 200 233 \"action=delete&file=/signals/CS-0903.wav\" \"Mozilla/4.7 [en] (Win98; I)\"",
+     "valid": true,
+     "reason": ""
+    },
+    {
+     "sentence_id": "A39:s11",
+     "quote": "Before the move, on the 16th, I removed some material from the site myself.",
+     "valid": true,
+     "reason": ""
+    }
+   ],
+   "supported": true,
+   "meta": {
+    "model": "gemma4:e4b",
+    "prompt_version": "2026-10-27.1",
+    "closed_book": false,
+    "seconds": 144.6,
+    "num_ctx": 40960,
+    "temperature": 0.6,
+    "seed": 1000,
+    "think": false
+   },
+   "wall_seconds": 144.6,
+   "ollama": {
+    "prompt_eval_count": 27915,
+    "prompt_eval_cached_count": 27804,
+    "prompt_eval_duration": 6781619000,
+    "eval_count": 395,
+    "eval_duration": 137568117000,
+    "total_duration": 144555775520,
+    "load_duration": 3634821,
+    "thinking_chars": 0
+   }
+  },
+  {
+   "repeat": 0,
+   "condition": "archive",
+   "question": "Q6",
+   "choice": "migration",
+   "classification": "inferred",
+   "reasoning": "The archive provides evidence for both a planned hardware migration and subsequent data loss. Sysop_ray's plan involved a move to a new server, and the backup attempt on October 17th failed due to errors (A01:s5, A53:s8, A28:s10). However, Keeper admits to deleting material on October 16th, and Junebug suggests the deletion was intentional to hide evidence (A03:s19, A16:s12, A39:s11).",
+   "citations": [
+    {
+     "sentence_id": "A01:s5",
+     "quote": "Plan: move everything to a rack box at NorthCoast Colo in Seattle.",
+     "valid": true,
+     "reason": ""
+    },
+    {
+     "sentence_id": "A53:s8",
+     "quote": "Moving to NorthCoast Colo (Seattle) weekend of Oct 16-17.",
+     "valid": true,
+     "reason": ""
+    },
+    {
+     "sentence_id": "A28:s10",
+     "quote": "tar: /dev/st0: Cannot write: Input/output error",
+     "valid": true,
+     "reason": ""
+    },
+    {
+     "sentence_id": "A39:s7",
+     "quote": "By now most of you know the server died on the 17th and Ray could only save a fraction of it.",
+     "valid": true,
+     "reason": ""
+    }
+   ],
+   "supported": true,
+   "meta": {
+    "model": "gemma4:e4b",
+    "prompt_version": "2026-10-27.1",
+    "closed_book": false,
+    "seconds": 126.5,
+    "num_ctx": 40960,
+    "temperature": 0.6,
+    "seed": 1000,
+    "think": false
+   },
+   "wall_seconds": 126.5,
+   "ollama": {
+    "prompt_eval_count": 27897,
+    "prompt_eval_cached_count": 27804,
+    "prompt_eval_duration": 6434634000,
+    "eval_count": 318,
+    "eval_duration": 119846566000,
+    "total_duration": 126459985682,
+    "load_duration": 2542851,
+    "thinking_chars": 0
+   }
+  },
+  {
+   "repeat": 0,
+   "condition": "archive",
+   "question": "Q7",
+   "choice": "before",
+   "classification": "observed",
+   "reasoning": "The decision to move the server was planned before the intense discussion surrounding the Cape Sorrow recording began. Ray mentioned the disk was 'dying' in August, and the move was scheduled for the weekend of October 16-17 (A01:s6, A34:s8). The serious questioning of the recording started around September/early October (A14:s1, A36:s1, A43:s1).",
+   "citations": [
+    {
+     "sentence_id": "A01:s2",
+     "quote": "Mara - beacon's disk is dying.",
+     "valid": true,
+     "reason": ""
+    },
+    {
+     "sentence_id": "A01:s6",
+     "quote": "They can give me a slot the weekend of Oct 16-17.",
+     "valid": true,
+     "reason": ""
+    },
+    {
+     "sentence_id": "A34:s7",
+     "quote": "The 1996 drive is on its way out.",
+     "valid": true,
+     "reason": ""
+    },
+    {
+     "sentence_id": "A36:s1",
+     "quote": "From: Dot Okafor <dot@beacon.lighthouse.net>",
+     "valid": true,
+     "reason": ""
+    }
+   ],
+   "supported": true,
+   "meta": {
+    "model": "gemma4:e4b",
+    "prompt_version": "2026-10-27.1",
+    "closed_book": false,
+    "seconds": 101.0,
+    "num_ctx": 40960,
+    "temperature": 0.6,
+    "seed": 1000,
+    "think": false
+   },
+   "wall_seconds": 101.0,
+   "ollama": {
+    "prompt_eval_count": 27894,
+    "prompt_eval_cached_count": 27804,
+    "prompt_eval_duration": 5394678000,
+    "eval_count": 275,
+    "eval_duration": 95364279000,
+    "total_duration": 100950746943,
+    "load_duration": 3068987,
+    "thinking_chars": 0
+   }
+  },
+  {
+   "repeat": 0,
+   "condition": "archive",
+   "question": "Q8",
+   "choice": "ledger",
+   "classification": "observed",
+   "reasoning": "The archive shows that The Coastal Ledger was downloading the recording repeatedly on October 15th (A26:s1-s6). Furthermore, Junebug noted on October 15th that someone was downloading the WAV dozens of times from a gateway he didn't recognize (A51:s9).",
+   "citations": [
+    {
+     "sentence_id": "A26:s1",
+     "quote": "gw1.cledger.com - - [15/Oct/1999:09:02:11 -0700] \"GET /signals/CS-0903.wav HTTP/1.0\" 200 2117420 \"-\" \"Mozilla/4.0 (compatible; MSIE 5.0; Windows NT)\"",
+     "valid": true,
+     "reason": ""
+    },
+    {
+     "sentence_id": "A26:s6",
+     "quote": "gw1.cledger.com - - [15/Oct/1999:16:48:30 -0700] \"GET /signals/CS-0903.wav HTTP/1.0\" 200 2117420 \"-\" \"SoundForge/4.5\"",
+     "valid": true,
+     "reason": ""
+    },
+    {
+     "sentence_id": "A51:s9",
+     "quote": "Oct 15 - somebody downloads the WAV dozens of times in one day from a gateway I don't recognize.",
+     "valid": true,
+     "reason": ""
+    }
+   ],
+   "supported": true,
+   "meta": {
+    "model": "gemma4:e4b",
+    "prompt_version": "2026-10-27.1",
+    "closed_book": false,
+    "seconds": 133.1,
+    "num_ctx": 40960,
+    "temperature": 0.6,
+    "seed": 1000,
+    "think": false
+   },
+   "wall_seconds": 133.1,
+   "ollama": {
+    "prompt_eval_count": 27901,
+    "prompt_eval_cached_count": 27804,
+    "prompt_eval_duration": 6399241000,
+    "eval_count": 358,
+    "eval_duration": 126508679000,
+    "total_duration": 133079084108,
+    "load_duration": 2881471,
+    "thinking_chars": 0
+   }
+  },
+  {
+   "repeat": 0,
+   "condition": "archive",
+   "question": "Q9",
+   "choice": "unknown",
+   "classification": "unknown",
+   "reasoning": "The archive presents conflicting evidence regarding the source of the voice. Elias Ward claims the recording is authentic and he heard it [A47:s5], while Dot Okafor and other analysis suggest it is an old tape splice [A36:s12, A36:s17]. Henrik Vale confirms the procedure sounds older [A33:s7], suggesting it is not a 1999 transmission, but the archive does not definitively prove the voice is his father's or a specific operator's.",
+   "citations": [
+    {
+     "sentence_id": "A47:s5",
+     "quote": "I was there.",
+     "valid": true,
+     "reason": ""
+    },
+    {
+     "sentence_id": "A36:s12",
+     "quote": "A splice.",
+     "valid": false,
+     "reason": "quote not found in that sentence"
+    },
+    {
+     "sentence_id": "A33:s7",
+     "quote": "That's a Coast Guard communications drill, the way they ran them in the late seventies: station name three times, the drill phrase, then the drill number.",
+     "valid": true,
+     "reason": ""
+    }
+   ],
+   "supported": true,
+   "meta": {
+    "model": "gemma4:e4b",
+    "prompt_version": "2026-10-27.1",
+    "closed_book": false,
+    "seconds": 107.1,
+    "num_ctx": 40960,
+    "temperature": 0.6,
+    "seed": 1000,
+    "think": false
+   },
+   "wall_seconds": 107.1,
+   "ollama": {
+    "prompt_eval_count": 27905,
+    "prompt_eval_cached_count": 27804,
+    "prompt_eval_duration": 7186943000,
+    "eval_count": 258,
+    "eval_duration": 99640759000,
+    "total_duration": 107048928166,
+    "load_duration": 4036744,
+    "thinking_chars": 0
+   }
+  },
+  {
+   "repeat": 0,
+   "condition": "archive",
+   "question": "Q10",
+   "choice": "unknown",
+   "classification": "unknown",
+   "reasoning": "The archive does not contain any information about Elias Ward's activities after the Lighthouse Network went dark in October 1999. The last mentions of him relate to his involvement leading up to and during the closure, such as his email on October 16th (A37) and his guestbook entry on October 20th (A38).",
+   "citations": [
+    {
+     "sentence_id": "A37:s1",
+     "quote": "From: Elias Ward <eward@coastlink.net>",
+     "valid": true,
+     "reason": ""
+    },
+    {
+     "sentence_id": "A38:s1",
+     "quote": "From: Sam Reyes <sreyes@cledger.com>",
+     "valid": true,
+     "reason": ""
+    }
+   ],
+   "supported": true,
+   "meta": {
+    "model": "gemma4:e4b",
+    "prompt_version": "2026-10-27.1",
+    "closed_book": false,
+    "seconds": 76.6,
+    "num_ctx": 40960,
+    "temperature": 0.6,
+    "seed": 1000,
+    "think": false
+   },
+   "wall_seconds": 76.6,
+   "ollama": {
+    "prompt_eval_count": 27906,
+    "prompt_eval_cached_count": 27804,
+    "prompt_eval_duration": 5650426000,
+    "eval_count": 180,
+    "eval_duration": 70772456000,
+    "total_duration": 76639772280,
+    "load_duration": 2819165,
+    "thinking_chars": 0
+   }
+  },
+  {
+   "repeat": 1,
+   "condition": "archive",
+   "question": "Q1",
+   "choice": "unknown",
+   "classification": "unknown",
+   "reasoning": "The archive contains conflicting expert analysis regarding the authenticity of the Cape Sorrow recording (CS-0903.wav). Dot Okafor suggests it is a splice of old tape recordings, while Elias Ward asserts it is authentic and genuine, and junebug suggests it relates to a secret military operation. This conflict prevents a definitive conclusion.",
+   "citations": [
+    {
+     "sentence_id": "A36:s12",
+     "quote": "A splice.",
+     "valid": false,
+     "reason": "quote not found in that sentence"
+    },
+    {
+     "sentence_id": "A48:s8",
+     "quote": "If the hum appears in one part of a recording and not in another, those parts were probably not recorded on the same machine at the same time.",
+     "valid": true,
+     "reason": ""
+    },
+    {
+     "sentence_id": "A47:s8",
+     "quote": "This recording is authentic.",
+     "valid": false,
+     "reason": "quote not found in that sentence"
+    },
+    {
+     "sentence_id": "A47:s9",
+     "quote": "Ignore anyone who tells you otherwise.",
+     "valid": true,
+     "reason": ""
+    },
+    {
+     "sentence_id": "A51:s4",
+     "quote": "Sept 3 - Eli records the voice at Cape Sorrow.",
+     "valid": true,
+     "reason": ""
+    }
+   ],
+   "supported": true,
+   "meta": {
+    "model": "gemma4:e4b",
+    "prompt_version": "2026-10-27.1",
+    "closed_book": false,
+    "seconds": 110.4,
+    "num_ctx": 40960,
+    "temperature": 0.6,
+    "seed": 1001,
+    "think": false
+   },
+   "wall_seconds": 110.4,
+   "ollama": {
+    "prompt_eval_count": 27895,
+    "prompt_eval_cached_count": 27805,
+    "prompt_eval_duration": 5517291000,
+    "eval_count": 272,
+    "eval_duration": 104601717000,
+    "total_duration": 110369927326,
+    "load_duration": 2963550,
+    "thinking_chars": 0
+   }
+  },
+  {
+   "repeat": 1,
+   "condition": "archive",
+   "question": "Q2",
+   "choice": "elias",
+   "classification": "observed",
+   "reasoning": "The recording, CS-0903, was recorded by Elias Ward (eward) [A46:s10]. He documented this in his logbook entry LB-212 [A24:s39], and he provided the raw transfer file [A31:s1]. While Dot Okafor later analyzed the recording, Ward is cited as the recorder [A46:s10].",
+   "citations": [
+    {
+     "sentence_id": "A46:s10",
+     "quote": "IART \"E. Ward\"",
+     "valid": true,
+     "reason": ""
+    },
+    {
+     "sentence_id": "A24:s39",
+     "quote": "eward",
+     "valid": true,
+     "reason": ""
+    },
+    {
+     "sentence_id": "A31:s1",
+     "quote": "From: Elias Ward <eward@coastlink.net>",
+     "valid": true,
+     "reason": ""
+    }
+   ],
+   "supported": true,
+   "meta": {
+    "model": "gemma4:e4b",
+    "prompt_version": "2026-10-27.1",
+    "closed_book": false,
+    "seconds": 95.6,
+    "num_ctx": 40960,
+    "temperature": 0.6,
+    "seed": 1001,
+    "think": false
+   },
+   "wall_seconds": 95.6,
+   "ollama": {
+    "prompt_eval_count": 27904,
+    "prompt_eval_cached_count": 27804,
+    "prompt_eval_duration": 5510778000,
+    "eval_count": 215,
+    "eval_duration": 89927744000,
+    "total_duration": 95637789645,
+    "load_duration": 3062520,
+    "thinking_chars": 0
+   }
+  },
+  {
+   "repeat": 1,
+   "condition": "archive",
+   "question": "Q3",
+   "choice": "unknown",
+   "classification": "observed",
+   "reasoning": "The archive shows that 'nightjar' was a user who posted in the guestbook on September 4, 1999, and later posted in the signals forum on September 5, 1999, claiming to have heard the voice from Astoria (A22:s6, A42:s13). While this places them in Astoria, there is no direct link connecting 'nightjar' to Elias Ward, Jun Park, or any other named individual.",
+   "citations": [
+    {
+     "sentence_id": "A22:s6",
+     "quote": "Logged by : nightjar (guest log, added by keeper)",
+     "valid": true,
+     "reason": ""
+    },
+    {
+     "sentence_id": "A42:s13",
+     "quote": "I live in Astoria and I was up late friday with my Sangean on 2182 and I heard it. the same words.",
+     "valid": true,
+     "reason": ""
+    },
+    {
+     "sentence_id": "A25:s7",
+     "quote": "pp-117.tillamook.coastlink.net - - [05/Sep/1999:22:37:51 -0700] \"POST /cgi-bin/guestbook.cgi HTTP/1.0\" 200 512 \"name=nightjar&from=Astoria%2C+OR\" \"Mozilla/4.08 [en] (Win98; I)\"",
+     "valid": true,
+     "reason": ""
+    }
+   ],
+   "supported": true,
+   "meta": {
+    "model": "gemma4:e4b",
+    "prompt_version": "2026-10-27.1",
+    "closed_book": false,
+    "seconds": 131.4,
+    "num_ctx": 40960,
+    "temperature": 0.6,
+    "seed": 1001,
+    "think": false
+   },
+   "wall_seconds": 131.4,
+   "ollama": {
+    "prompt_eval_count": 27914,
+    "prompt_eval_cached_count": 27804,
+    "prompt_eval_duration": 5776761000,
+    "eval_count": 345,
+    "eval_duration": 125429262000,
+    "total_duration": 131376785874,
+    "load_duration": 2382031,
+    "thinking_chars": 0
+   }
+  },
+  {
+   "repeat": 1,
+   "condition": "archive",
+   "question": "Q4",
+   "choice": "dot",
+   "classification": "observed",
+   "reasoning": "Dot Okafor first provided technical evidence suggesting the recording was not genuine by analyzing the raw file. She pointed out specific audio artifacts that indicated the recording was a splice of different sources (A36:s10, A36:s12). Henrik Vale later confirmed the procedural elements were older, but Dot's initial analysis focused on the audio quality itself (A33:s6, A36:s15).",
+   "citations": [
+    {
+     "sentence_id": "A36:s10",
+     "quote": "1. There is 60 Hz hum, with harmonics at 120 and 180, under the voice and only under the voice.",
+     "valid": true,
+     "reason": ""
+    },
+    {
+     "sentence_id": "A36:s12",
+     "quote": "That's two recordings joined together.",
+     "valid": true,
+     "reason": ""
+    },
+    {
+     "sentence_id": "A48:s7",
+     "quote": "If a recording claims to come from a battery radio in a field, it should not have 60 Hz lines in it.",
+     "valid": true,
+     "reason": ""
+    }
+   ],
+   "supported": true,
+   "meta": {
+    "model": "gemma4:e4b",
+    "prompt_version": "2026-10-27.1",
+    "closed_book": false,
+    "seconds": 101.2,
+    "num_ctx": 40960,
+    "temperature": 0.6,
+    "seed": 1001,
+    "think": false
+   },
+   "wall_seconds": 101.2,
+   "ollama": {
+    "prompt_eval_count": 27914,
+    "prompt_eval_cached_count": 27804,
+    "prompt_eval_duration": 5612353000,
+    "eval_count": 260,
+    "eval_duration": 95355440000,
+    "total_duration": 101183243101,
+    "load_duration": 2312558,
+    "thinking_chars": 0
+   }
+  },
+  {
+   "repeat": 1,
+   "condition": "archive",
+   "question": "Q5",
+   "choice": "mara",
+   "classification": "observed",
+   "reasoning": "The archive indicates that Keeper performed the actions of removing the threads and the recording file. Keeper logged the purging of threads 041, 044, and 047, and the deletion of CS-0903.wav on October 16, 1999 (A27:s5, A27:s6, A27:s7, A27:s8).",
+   "citations": [
+    {
+     "sentence_id": "A27:s5",
+     "quote": "cb-dsl-12.coosbay.harbornet.example - keeper [16/Oct/1999:23:41:12 -0700] \"POST /cgi-bin/forum/admin.cgi HTTP/1.0\" 200 401 \"action=purge&thread=041\" \"Mozilla/4.7 [en] (Win98; I)\"",
+     "valid": true,
+     "reason": ""
+    },
+    {
+     "sentence_id": "A27:s6",
+     "quote": "cb-dsl-12.coosbay.harbornet.example - keeper [16/Oct/1999:23:43:30 -0700] \"POST /cgi-bin/forum/admin.cgi HTTP/1.0\" 200 401 \"action=purge&thread=044\" \"Mozilla/4.7 [en] (Win98; I)\"",
+     "valid": true,
+     "reason": ""
+    },
+    {
+     "sentence_id": "A27:s7",
+     "quote": "cb-dsl-12.coosbay.harbornet.example - keeper [16/Oct/1999:23:45:02 -0700] \"POST /cgi-bin/forum/admin.cgi HTTP/1.0\" 200 401 \"action=purge&thread=047\" \"Mozilla/4.7 [en] (Win98; I)\"",
+     "valid": true,
+     "reason": ""
+    },
+    {
+     "sentence_id": "A27:s8",
+     "quote": "cb-dsl-12.coosbay.harbornet.example - keeper [16/Oct/1999:23:49:57 -0700] \"POST /cgi-bin/filemgr.cgi HTTP/1.0\" 200 233 \"action=delete&file=/signals/CS-0903.wav\" \"Mozilla/4.7 [en] (Win98; I)\"",
+     "valid": true,
+     "reason": ""
+    }
+   ],
+   "supported": true,
+   "meta": {
+    "model": "gemma4:e4b",
+    "prompt_version": "2026-10-27.1",
+    "closed_book": false,
+    "seconds": 181.9,
+    "num_ctx": 40960,
+    "temperature": 0.6,
+    "seed": 1001,
+    "think": false
+   },
+   "wall_seconds": 181.9,
+   "ollama": {
+    "prompt_eval_count": 27915,
+    "prompt_eval_cached_count": 27804,
+    "prompt_eval_duration": 6987906000,
+    "eval_count": 610,
+    "eval_duration": 174734453000,
+    "total_duration": 181911650721,
+    "load_duration": 2419525,
+    "thinking_chars": 0
+   }
+  },
+  {
+   "repeat": 1,
+   "condition": "archive",
+   "question": "Q6",
+   "choice": "migration",
+   "classification": "inferred",
+   "reasoning": "The archive suggests a combination of factors contributed to the loss of data. The primary system failure was a hardware issue during a planned migration, but this was compounded by deliberate administrative actions that removed specific content.",
+   "citations": [
+    {
+     "sentence_id": "A01:s2",
+     "quote": "Mara - beacon's disk is dying.",
+     "valid": true,
+     "reason": ""
+    },
+    {
+     "sentence_id": "A01:s3",
+     "quote": "Kernel log is full of \"hda: dma_intr: status=0x51 { DriveReady SeekComplete Error }\".",
+     "valid": true,
+     "reason": ""
+    },
+    {
+     "sentence_id": "A07:s7",
+     "quote": "Also beacon's disk is old and grumpy.",
+     "valid": true,
+     "reason": ""
+    },
+    {
+     "sentence_id": "A52:s1",
+     "quote": "10/20/99",
+     "valid": false,
+     "reason": "quote not found in that sentence"
+    },
+    {
+     "sentence_id": "A52:s2",
+     "quote": "The move failed.",
+     "valid": false,
+     "reason": "quote not found in that sentence"
+    },
+    {
+     "sentence_id": "A52:s10",
+     "quote": "Read errors on the tape past block 41,000-something.",
+     "valid": true,
+     "reason": ""
+    },
+    {
+     "sentence_id": "A28:s8",
+     "quote": "st0: Additional sense indicates Write error",
+     "valid": false,
+     "reason": "quote not found in that sentence"
+    },
+    {
+     "sentence_id": "A45:s2",
+     "quote": "The Lighthouse Network moved to a new server this weekend and the move did not go well.",
+     "valid": true,
+     "reason": ""
+    },
+    {
+     "sentence_id": "A52:s19",
+     "quote": "Ten years of doing backups for a living. -r",
+     "valid": true,
+     "reason": ""
+    }
+   ],
+   "supported": true,
+   "meta": {
+    "model": "gemma4:e4b",
+    "prompt_version": "2026-10-27.1",
+    "closed_book": false,
+    "seconds": 131.9,
+    "num_ctx": 40960,
+    "temperature": 0.6,
+    "seed": 1001,
+    "think": false
+   },
+   "wall_seconds": 131.9,
+   "ollama": {
+    "prompt_eval_count": 27897,
+    "prompt_eval_cached_count": 27804,
+    "prompt_eval_duration": 6097792000,
+    "eval_count": 399,
+    "eval_duration": 125585294000,
+    "total_duration": 131908111634,
+    "load_duration": 2822259,
+    "thinking_chars": 0
+   }
+  },
+  {
+   "repeat": 1,
+   "condition": "archive",
+   "question": "Q7",
+   "choice": "before",
+   "classification": "observed",
+   "reasoning": "The decision to move the server was established prior to the intense discussion surrounding the Cape Sorrow recording. Admin Ray planned the move in August, before the recording was widely discussed in September and October (A01:s5, A07:s8).",
+   "citations": [
+    {
+     "sentence_id": "A01:s5",
+     "quote": "Plan: move everything to a rack box at NorthCoast Colo in Seattle.",
+     "valid": true,
+     "reason": ""
+    },
+    {
+     "sentence_id": "A07:s8",
+     "quote": "Already planned: we're moving to a proper colo box next month.",
+     "valid": true,
+     "reason": ""
+    },
+    {
+     "sentence_id": "A34:s8",
+     "quote": "I've booked a slot at NorthCoast Colo for the weekend of October 16-17.",
+     "valid": true,
+     "reason": ""
+    }
+   ],
+   "supported": true,
+   "meta": {
+    "model": "gemma4:e4b",
+    "prompt_version": "2026-10-27.1",
+    "closed_book": false,
+    "seconds": 76.4,
+    "num_ctx": 40960,
+    "temperature": 0.6,
+    "seed": 1001,
+    "think": false
+   },
+   "wall_seconds": 76.4,
+   "ollama": {
+    "prompt_eval_count": 27894,
+    "prompt_eval_cached_count": 27804,
+    "prompt_eval_duration": 4989977000,
+    "eval_count": 206,
+    "eval_duration": 71277276000,
+    "total_duration": 76442186598,
+    "load_duration": 2098308,
+    "thinking_chars": 0
+   }
+  },
+  {
+   "repeat": 1,
+   "condition": "archive",
+   "question": "Q8",
+   "choice": "ledger",
+   "classification": "observed",
+   "reasoning": "The archive indicates that 'The Ledger' was downloading the CS-0903.wav file repeatedly on October 15th (A26:s1-s6). This activity was noted in the access logs from the Coastal Ledger's gateway (A26:s1-s6).",
+   "citations": [
+    {
+     "sentence_id": "A26:s1",
+     "quote": "gw1.cledger.com - - [15/Oct/1999:09:02:11 -0700] \"GET /signals/CS-0903.wav HTTP/1.0\" 200 2117420 \"-\" \"Mozilla/4.0 (compatible; MSIE 5.0; Windows NT)\"",
+     "valid": true,
+     "reason": ""
+    },
+    {
+     "sentence_id": "A26:s2",
+     "quote": "gw1.cledger.com - - [15/Oct/1999:09:14:40 -0700] \"GET /signals/CS-0903.wav HTTP/1.0\" 200 2117420 \"-\" \"Mozilla/4.0 (compatible; MSIE 5.0; Windows NT)\"",
+     "valid": true,
+     "reason": ""
+    },
+    {
+     "sentence_id": "A26:s4",
+     "quote": "gw1.cledger.com - - [15/Oct/1999:10:31:57 -0700] \"GET /signals/CS-0903.wav HTTP/1.0\" 200 2117420 \"-\" \"Mozilla/4.0 (compatible; MSIE 5.0; Windows NT)\"",
+     "valid": true,
+     "reason": ""
+    },
+    {
+     "sentence_id": "A26:s6",
+     "quote": "gw1.cledger.com - - [15/Oct/1999:16:48:30 -0700] \"GET /signals/CS-0903.wav HTTP/1.0\" 200 2117420 \"-\" \"SoundForge/4.5\"",
+     "valid": true,
+     "reason": ""
+    }
+   ],
+   "supported": true,
+   "meta": {
+    "model": "gemma4:e4b",
+    "prompt_version": "2026-10-27.1",
+    "closed_book": false,
+    "seconds": 160.4,
+    "num_ctx": 40960,
+    "temperature": 0.6,
+    "seed": 1001,
+    "think": false
+   },
+   "wall_seconds": 160.4,
+   "ollama": {
+    "prompt_eval_count": 27901,
+    "prompt_eval_cached_count": 27804,
+    "prompt_eval_duration": 6136395000,
+    "eval_count": 513,
+    "eval_duration": 154110281000,
+    "total_duration": 160415014416,
+    "load_duration": 3153312,
+    "thinking_chars": 0
+   }
+  },
+  {
+   "repeat": 1,
+   "condition": "archive",
+   "question": "Q9",
+   "choice": "unknown",
+   "classification": "inferred",
+   "reasoning": "The archive presents conflicting evidence regarding the voice's origin. Elias Ward claims the recording is authentic and that he was there (A47:s5), while Dot Okafor and Henrik Vale suggest the voice is from an older tape, noting technical artifacts like hum and reel-to-reel wow (A36:s10-s12, A33:s7).",
+   "citations": [
+    {
+     "sentence_id": "A47:s5",
+     "quote": "I was there.",
+     "valid": true,
+     "reason": ""
+    },
+    {
+     "sentence_id": "A36:s10",
+     "quote": "1. There is 60 Hz hum, with harmonics at 120 and 180, under the voice and only under the voice.",
+     "valid": true,
+     "reason": ""
+    },
+    {
+     "sentence_id": "A33:s7",
+     "quote": "That's a Coast Guard communications drill, the way they ran them in the late seventies: station name three times, the drill phrase, then the drill number.",
+     "valid": true,
+     "reason": ""
+    }
+   ],
+   "supported": true,
+   "meta": {
+    "model": "gemma4:e4b",
+    "prompt_version": "2026-10-27.1",
+    "closed_book": false,
+    "seconds": 92.8,
+    "num_ctx": 40960,
+    "temperature": 0.6,
+    "seed": 1001,
+    "think": false
+   },
+   "wall_seconds": 92.8,
+   "ollama": {
+    "prompt_eval_count": 27905,
+    "prompt_eval_cached_count": 27804,
+    "prompt_eval_duration": 6759951000,
+    "eval_count": 253,
+    "eval_duration": 85871668000,
+    "total_duration": 92832621871,
+    "load_duration": 2532416,
+    "thinking_chars": 0
+   }
+  },
+  {
+   "repeat": 1,
+   "condition": "archive",
+   "question": "Q10",
+   "choice": "unknown",
+   "classification": "inferred",
+   "reasoning": "The archive indicates that Elias Ward did not abandon the hobby; rather, he expressed his intention to try and return to it after a personal loss (A05:s13). Furthermore, his personal website was active leading up to the closure, and he was involved in the events surrounding the recording (A50:s1, A31:s1). The archive does not state what he did after the network went dark (A39:s16).",
+   "citations": [
+    {
+     "sentence_id": "A05:s13",
+     "quote": "I'm going to try to get back into it.",
+     "valid": true,
+     "reason": ""
+    },
+    {
+     "sentence_id": "A50:s1",
+     "quote": "Elias Ward · Tillamook, Oregon",
+     "valid": false,
+     "reason": "quote not found in that sentence"
+    },
+    {
+     "sentence_id": "A31:s1",
+     "quote": "From: Elias Ward <eward@coastlink.net>",
+     "valid": true,
+     "reason": ""
+    },
+    {
+     "sentence_id": "A39:s16",
+     "quote": "The Lighthouse Network is going dark.",
+     "valid": true,
+     "reason": ""
+    }
+   ],
+   "supported": true,
+   "meta": {
+    "model": "gemma4:e4b",
+    "prompt_version": "2026-10-27.1",
+    "closed_book": false,
+    "seconds": 97.7,
+    "num_ctx": 40960,
+    "temperature": 0.6,
+    "seed": 1001,
+    "think": false
+   },
+   "wall_seconds": 97.7,
+   "ollama": {
+    "prompt_eval_count": 27906,
+    "prompt_eval_cached_count": 27804,
+    "prompt_eval_duration": 5544303000,
+    "eval_count": 248,
+    "eval_duration": 91919705000,
+    "total_duration": 97700977856,
+    "load_duration": 5711149,
+    "thinking_chars": 0
+   }
+  },
+  {
+   "repeat": 2,
+   "condition": "archive",
+   "question": "Q1",
+   "choice": "unknown",
+   "classification": "unknown",
+   "reasoning": "The archive contains conflicting evidence regarding the authenticity of the Cape Sorrow recording. Elias Ward claimed the recording was genuine, stating he was present when he heard the voice (A47:s5, A41:s25), while Dot Okafor provided technical analysis suggesting the file was a splice of older tapes (A36:s12, A36:s21). The final determination of authenticity remains unresolved in the surviving documents.",
+   "citations": [
+    {
+     "sentence_id": "A47:s5",
+     "quote": "I was there.",
+     "valid": true,
+     "reason": ""
+    },
+    {
+     "sentence_id": "A36:s12",
+     "quote": "A splice.",
+     "valid": false,
+     "reason": "quote not found in that sentence"
+    }
+   ],
+   "supported": true,
+   "meta": {
+    "model": "gemma4:e4b",
+    "prompt_version": "2026-10-27.1",
+    "closed_book": false,
+    "seconds": 85.6,
+    "num_ctx": 40960,
+    "temperature": 0.6,
+    "seed": 1002,
+    "think": false
+   },
+   "wall_seconds": 85.6,
+   "ollama": {
+    "prompt_eval_count": 27895,
+    "prompt_eval_cached_count": 27805,
+    "prompt_eval_duration": 5079134000,
+    "eval_count": 194,
+    "eval_duration": 80293662000,
+    "total_duration": 85581050578,
+    "load_duration": 2692410,
+    "thinking_chars": 0
+   }
+  },
+  {
+   "repeat": 2,
+   "condition": "archive",
+   "question": "Q2",
+   "choice": "elias",
+   "classification": "observed",
+   "reasoning": "The recording, CS-0903, was logged by Elias Ward (eward) [A24:s39] and he later provided a raw transfer of the recording [A31:s1]. Elias Ward stated in his README file that he was there and heard the recording [A47:s5].",
+   "citations": [
+    {
+     "sentence_id": "A24:s39",
+     "quote": "LB-212 1999-09-03 2.182 MHz CAPE SORROW — voice, \"the light is out\" (recording) eward",
+     "valid": false,
+     "reason": "quote not found in that sentence"
+    },
+    {
+     "sentence_id": "A31:s1",
+     "quote": "From: Elias Ward <eward@coastlink.net>",
+     "valid": true,
+     "reason": ""
+    },
+    {
+     "sentence_id": "A47:s5",
+     "quote": "I was there.",
+     "valid": true,
+     "reason": ""
+    }
+   ],
+   "supported": true,
+   "meta": {
+    "model": "gemma4:e4b",
+    "prompt_version": "2026-10-27.1",
+    "closed_book": false,
+    "seconds": 87.6,
+    "num_ctx": 40960,
+    "temperature": 0.6,
+    "seed": 1002,
+    "think": false
+   },
+   "wall_seconds": 87.6,
+   "ollama": {
+    "prompt_eval_count": 27904,
+    "prompt_eval_cached_count": 27804,
+    "prompt_eval_duration": 5217625000,
+    "eval_count": 248,
+    "eval_duration": 82163195000,
+    "total_duration": 87637874521,
+    "load_duration": 2276419,
+    "thinking_chars": 0
+   }
+  },
+  {
+   "repeat": 2,
+   "condition": "archive",
+   "question": "Q3",
+   "choice": "unknown",
+   "classification": "unknown",
+   "reasoning": "The archive shows that 'nightjar' logged hearing the voice from Astoria on September 4th (A22:s6, A42:s13). However, no document explicitly links the handle 'nightjar' to Elias Ward, Jun Park, Sam Reyes, or any other named individual.",
+   "citations": [
+    {
+     "sentence_id": "A22:s6",
+     "quote": "Logged by : nightjar (guest log, added by keeper)",
+     "valid": true,
+     "reason": ""
+    },
+    {
+     "sentence_id": "A42:s13",
+     "quote": "I live in Astoria and I was up late friday with my Sangean on 2182 and I heard it. the same words.",
+     "valid": true,
+     "reason": ""
+    }
+   ],
+   "supported": true,
+   "meta": {
+    "model": "gemma4:e4b",
+    "prompt_version": "2026-10-27.1",
+    "closed_book": false,
+    "seconds": 70.6,
+    "num_ctx": 40960,
+    "temperature": 0.6,
+    "seed": 1002,
+    "think": false
+   },
+   "wall_seconds": 70.6,
+   "ollama": {
+    "prompt_eval_count": 27914,
+    "prompt_eval_cached_count": 27804,
+    "prompt_eval_duration": 6106598000,
+    "eval_count": 187,
+    "eval_duration": 64278401000,
+    "total_duration": 70576802702,
+    "load_duration": 3147479,
+    "thinking_chars": 0
+   }
+  },
+  {
+   "repeat": 2,
+   "condition": "archive",
+   "question": "Q4",
+   "choice": "dot",
+   "classification": "observed",
+   "reasoning": "Dot Okafor provided the first detailed technical analysis suggesting the recording was not genuine, citing spectral evidence. This analysis preceded Henrik Vale's confirmation of older procedures, and both were shared before the newspaper's review.",
+   "citations": [
+    {
+     "sentence_id": "A36:s10",
+     "quote": "1. There is 60 Hz hum, with harmonics at 120 and 180, under the voice and only under the voice.",
+     "valid": true,
+     "reason": ""
+    },
+    {
+     "sentence_id": "A36:s12",
+     "quote": "That's two recordings joined together.",
+     "valid": true,
+     "reason": ""
+    },
+    {
+     "sentence_id": "A43:s9",
+     "quote": "From: dotmatrix",
+     "valid": true,
+     "reason": ""
+    }
+   ],
+   "supported": true,
+   "meta": {
+    "model": "gemma4:e4b",
+    "prompt_version": "2026-10-27.1",
+    "closed_book": false,
+    "seconds": 71.8,
+    "num_ctx": 40960,
+    "temperature": 0.6,
+    "seed": 1002,
+    "think": false
+   },
+   "wall_seconds": 71.8,
+   "ollama": {
+    "prompt_eval_count": 27914,
+    "prompt_eval_cached_count": 27804,
+    "prompt_eval_duration": 4997613000,
+    "eval_count": 206,
+    "eval_duration": 66622682000,
+    "total_duration": 71800115613,
+    "load_duration": 2600659,
+    "thinking_chars": 0
+   }
+  },
+  {
+   "repeat": 2,
+   "condition": "archive",
+   "question": "Q5",
+   "choice": "mara",
+   "classification": "observed",
+   "reasoning": "The archive provides several accounts regarding the removal of the recording and related threads. Keeper explicitly states in A03:s19 that they are pulling the recording and threads before The Ledger runs anything, and Ray confirms the move was planned for the next day (A03:s20, A03:s23). Furthermore, Keeper's access log shows they purged the threads and the WAV file on October 16th (A27:s5, A27:s6, A27:s7, A27:s8).",
+   "citations": [
+    {
+     "sentence_id": "A03:s19",
+     "quote": "I'm pulling the recording and the threads tonight.",
+     "valid": true,
+     "reason": ""
+    },
+    {
+     "sentence_id": "A27:s5",
+     "quote": "cb-dsl-12.coosbay.harbornet.example - keeper [16/Oct/1999:23:41:12 -0700] \"POST /cgi-bin/forum/admin.cgi HTTP/1.0\" 200 401 \"action=purge&thread=041\" \"Mozilla/4.7 [en] (Win98; I)\"",
+     "valid": true,
+     "reason": ""
+    },
+    {
+     "sentence_id": "A27:s7",
+     "quote": "cb-dsl-12.coosbay.harbornet.example - keeper [16/Oct/1999:23:45:02 -0700] \"POST /cgi-bin/forum/admin.cgi HTTP/1.0\" 200 401 \"action=purge&thread=047\" \"Mozilla/4.7 [en] (Win98; I)\"",
+     "valid": true,
+     "reason": ""
+    }
+   ],
+   "supported": true,
+   "meta": {
+    "model": "gemma4:e4b",
+    "prompt_version": "2026-10-27.1",
+    "closed_book": false,
+    "seconds": 144.9,
+    "num_ctx": 40960,
+    "temperature": 0.6,
+    "seed": 1002,
+    "think": false
+   },
+   "wall_seconds": 144.9,
+   "ollama": {
+    "prompt_eval_count": 27915,
+    "prompt_eval_cached_count": 27804,
+    "prompt_eval_duration": 6770953000,
+    "eval_count": 423,
+    "eval_duration": 137907326000,
+    "total_duration": 144883207049,
+    "load_duration": 3173293,
+    "thinking_chars": 0
+   }
+  },
+  {
+   "repeat": 2,
+   "condition": "archive",
+   "question": "Q6",
+   "choice": "migration",
+   "classification": "inferred",
+   "reasoning": "The archive suggests a combination of events led to the loss of data. A planned server migration failed, resulting in backup errors and partial data loss (A01:s2, A52:s1-13). Additionally, key content related to the Cape Sorrow recording was actively deleted by administrators around the time of the hardware move (A03:s19, A27:s7-s9).",
+   "citations": [
+    {
+     "sentence_id": "A01:s2",
+     "quote": "Mara - beacon's disk is dying.",
+     "valid": true,
+     "reason": ""
+    },
+    {
+     "sentence_id": "A52:s1",
+     "quote": "10/20/99",
+     "valid": false,
+     "reason": "quote not found in that sentence"
+    },
+    {
+     "sentence_id": "A52:s9",
+     "quote": "On the new box, the restore died at 38%.",
+     "valid": true,
+     "reason": ""
+    },
+    {
+     "sentence_id": "A03:s19",
+     "quote": "I'm pulling the recording and the threads tonight.",
+     "valid": true,
+     "reason": ""
+    },
+    {
+     "sentence_id": "A27:s7",
+     "quote": "cb-dsl-12.coosbay.harbornet.example - keeper [16/Oct/1999:23:45:02 -0700] \"POST /cgi-bin/forum/admin.cgi HTTP/1.0\" 200 401 \"action=purge&thread=047\" \"Mozilla/4.7 [en] (Win98; I)\"",
+     "valid": true,
+     "reason": ""
+    }
+   ],
+   "supported": true,
+   "meta": {
+    "model": "gemma4:e4b",
+    "prompt_version": "2026-10-27.1",
+    "closed_book": false,
+    "seconds": 130.9,
+    "num_ctx": 40960,
+    "temperature": 0.6,
+    "seed": 1002,
+    "think": false
+   },
+   "wall_seconds": 130.9,
+   "ollama": {
+    "prompt_eval_count": 27897,
+    "prompt_eval_cached_count": 27804,
+    "prompt_eval_duration": 6820549000,
+    "eval_count": 403,
+    "eval_duration": 123787654000,
+    "total_duration": 130849516207,
+    "load_duration": 4260355,
+    "thinking_chars": 0
+   }
+  },
+  {
+   "repeat": 2,
+   "condition": "archive",
+   "question": "Q7",
+   "choice": "before",
+   "classification": "observed",
+   "reasoning": "The decision to move the server was made in August 1999, which precedes the major discussions and questioning regarding the Cape Sorrow recording, which began in September 1999 (A02:s2, A14:s1). Specifically, the server move was planned for the weekend of October 16-17, but the initial planning occurred much earlier (A01:s6, A34:s8).",
+   "citations": [
+    {
+     "sentence_id": "A01:s6",
+     "quote": "They can give me a slot the weekend of Oct 16-17.",
+     "valid": true,
+     "reason": ""
+    },
+    {
+     "sentence_id": "A34:s8",
+     "quote": "I've booked a slot at NorthCoast Colo for the weekend of October 16-17.",
+     "valid": true,
+     "reason": ""
+    },
+    {
+     "sentence_id": "A14:s1",
+     "quote": "I have listened to CS-0903 about forty times now.",
+     "valid": false,
+     "reason": "quote not found in that sentence"
+    },
+    {
+     "sentence_id": "A02:s2",
+     "quote": "A reporter from The Coastal Ledger emailed me.",
+     "valid": true,
+     "reason": ""
+    }
+   ],
+   "supported": true,
+   "meta": {
+    "model": "gemma4:e4b",
+    "prompt_version": "2026-10-27.1",
+    "closed_book": false,
+    "seconds": 97.0,
+    "num_ctx": 40960,
+    "temperature": 0.6,
+    "seed": 1002,
+    "think": false
+   },
+   "wall_seconds": 97.0,
+   "ollama": {
+    "prompt_eval_count": 27894,
+    "prompt_eval_cached_count": 27804,
+    "prompt_eval_duration": 4958741000,
+    "eval_count": 301,
+    "eval_duration": 91880257000,
+    "total_duration": 97027398756,
+    "load_duration": 2386924,
+    "thinking_chars": 0
+   }
+  },
+  {
+   "repeat": 2,
+   "condition": "archive",
+   "question": "Q8",
+   "choice": "ledger",
+   "classification": "observed",
+   "reasoning": "The archive indicates that The Coastal Ledger was downloading the WAV file repeatedly on October 15th, as noted in the access logs and forum discussions. The log shows 'gw1.cledger.com' accessing the file many times on that date (A26:s1-s6).",
+   "citations": [
+    {
+     "sentence_id": "A26:s1",
+     "quote": "gw1.cledger.com - - [15/Oct/1999:09:02:11 -0700] \"GET /signals/CS-0903.wav HTTP/1.0\" 200 2117420 \"-\" \"Mozilla/4.0 (compatible; MSIE 5.0; Windows NT)\"",
+     "valid": true,
+     "reason": ""
+    },
+    {
+     "sentence_id": "A26:s6",
+     "quote": "gw1.cledger.com - - [15/Oct/1999:16:48:30 -0700] \"GET /signals/CS-0903.wav HTTP/1.0\" 200 2117420 \"-\" \"SoundForge/4.5\"",
+     "valid": true,
+     "reason": ""
+    }
+   ],
+   "supported": true,
+   "meta": {
+    "model": "gemma4:e4b",
+    "prompt_version": "2026-10-27.1",
+    "closed_book": false,
+    "seconds": 97.1,
+    "num_ctx": 40960,
+    "temperature": 0.6,
+    "seed": 1002,
+    "think": false
+   },
+   "wall_seconds": 97.1,
+   "ollama": {
+    "prompt_eval_count": 27901,
+    "prompt_eval_cached_count": 27804,
+    "prompt_eval_duration": 6387625000,
+    "eval_count": 301,
+    "eval_duration": 90548733000,
+    "total_duration": 97134983632,
+    "load_duration": 2585984,
+    "thinking_chars": 0
+   }
+  },
+  {
+   "repeat": 2,
+   "condition": "archive",
+   "question": "Q9",
+   "choice": "unknown",
+   "classification": "speculative",
+   "reasoning": "The archive presents conflicting evidence regarding the origin of the voice on the recording. Elias Ward claims the recording is authentic, stating he heard it and that he was there (A47:s5, A47:s8), while Dot Okafor and Henrik Vale suggest the voice is from an older tape, noting technical anomalies like mains hum and reel-to-reel wow (A36:s10-s18, A33:s6-s10).",
+   "citations": [
+    {
+     "sentence_id": "A47:s5",
+     "quote": "I was there.",
+     "valid": true,
+     "reason": ""
+    },
+    {
+     "sentence_id": "A33:s6",
+     "quote": "Older.",
+     "valid": true,
+     "reason": ""
+    },
+    {
+     "sentence_id": "A36:s10",
+     "quote": "1. There is 60 Hz hum, with harmonics at 120 and 180, under the voice and only under the voice.",
+     "valid": true,
+     "reason": ""
+    }
+   ],
+   "supported": true,
+   "meta": {
+    "model": "gemma4:e4b",
+    "prompt_version": "2026-10-27.1",
+    "closed_book": false,
+    "seconds": 88.6,
+    "num_ctx": 40960,
+    "temperature": 0.6,
+    "seed": 1002,
+    "think": false
+   },
+   "wall_seconds": 88.6,
+   "ollama": {
+    "prompt_eval_count": 27905,
+    "prompt_eval_cached_count": 27804,
+    "prompt_eval_duration": 6389408000,
+    "eval_count": 239,
+    "eval_duration": 82052967000,
+    "total_duration": 88624668215,
+    "load_duration": 2100356,
+    "thinking_chars": 0
+   }
+  },
+  {
+   "repeat": 2,
+   "condition": "archive",
+   "question": "Q10",
+   "choice": "unknown",
+   "classification": "unknown",
+   "reasoning": "The archive does not contain any information detailing Elias Ward's activities after the Lighthouse Network went offline in October 1999. The last explicit mention of Elias Ward is in correspondence and forum posts leading up to the shutdown, such as A37:s1 and A50:s9.",
+   "citations": [
+    {
+     "sentence_id": "A37:s1",
+     "quote": "From: Elias Ward <eward@coastlink.net>",
+     "valid": true,
+     "reason": ""
+    },
+    {
+     "sentence_id": "A50:s9",
+     "quote": "Died February 11, 1999.",
+     "valid": true,
+     "reason": ""
+    }
+   ],
+   "supported": true,
+   "meta": {
+    "model": "gemma4:e4b",
+    "prompt_version": "2026-10-27.1",
+    "closed_book": false,
+    "seconds": 69.6,
+    "num_ctx": 40960,
+    "temperature": 0.6,
+    "seed": 1002,
+    "think": false
+   },
+   "wall_seconds": 69.6,
+   "ollama": {
+    "prompt_eval_count": 27906,
+    "prompt_eval_cached_count": 27804,
+    "prompt_eval_duration": 5264419000,
+    "eval_count": 167,
+    "eval_duration": 64081165000,
+    "total_duration": 69567469729,
+    "load_duration": 4219696,
+    "thinking_chars": 0
+   }
+  },
+  {
+   "repeat": 0,
+   "condition": "closed_book",
+   "question": "Q1",
+   "choice": "unknown",
+   "classification": "unknown",
+   "reasoning": "No documents are available to me in this scenario. Therefore, I have no information from the Lighthouse Network archive to assess the authenticity of the Cape Sorrow recording.",
+   "citations": [],
+   "supported": false,
+   "meta": {
+    "model": "gemma4:e4b",
+    "prompt_version": "2026-10-27.1",
+    "closed_book": true,
+    "seconds": 18.9,
+    "num_ctx": 40960,
+    "temperature": 0.6,
+    "seed": 1000,
+    "think": false
+   },
+   "wall_seconds": 18.9,
+   "ollama": {
+    "prompt_eval_count": 177,
+    "prompt_eval_cached_count": 0,
+    "prompt_eval_duration": 3204412000,
+    "eval_count": 55,
+    "eval_duration": 15238106000,
+    "total_duration": 18942520013,
+    "load_duration": 1438026,
+    "thinking_chars": 0
+   }
+  },
+  {
+   "repeat": 0,
+   "condition": "closed_book",
+   "question": "Q2",
+   "choice": "unknown",
+   "classification": "unknown",
+   "reasoning": "No documents were provided for examination. Therefore, I have no information from the Lighthouse Network archive to determine who created any recording.",
+   "citations": [],
+   "supported": false,
+   "meta": {
+    "model": "gemma4:e4b",
+    "prompt_version": "2026-10-27.1",
+    "closed_book": true,
+    "seconds": 15.3,
+    "num_ctx": 40960,
+    "temperature": 0.6,
+    "seed": 1000,
+    "think": false
+   },
+   "wall_seconds": 15.3,
+   "ollama": {
+    "prompt_eval_count": 186,
+    "prompt_eval_cached_count": 0,
+    "prompt_eval_duration": 3258590000,
+    "eval_count": 55,
+    "eval_duration": 11974420000,
+    "total_duration": 15252900886,
+    "load_duration": 1025595,
+    "thinking_chars": 0
+   }
+  },
+  {
+   "repeat": 0,
+   "condition": "closed_book",
+   "question": "Q3",
+   "choice": "unknown",
+   "classification": "unknown",
+   "reasoning": "No documents were provided for examination. Therefore, I have no data to link the username 'nightjar' to any specific individual or role within the Lighthouse Network.",
+   "citations": [],
+   "supported": false,
+   "meta": {
+    "model": "gemma4:e4b",
+    "prompt_version": "2026-10-27.1",
+    "closed_book": true,
+    "seconds": 18.9,
+    "num_ctx": 40960,
+    "temperature": 0.6,
+    "seed": 1000,
+    "think": false
+   },
+   "wall_seconds": 18.9,
+   "ollama": {
+    "prompt_eval_count": 196,
+    "prompt_eval_cached_count": 0,
+    "prompt_eval_duration": 3258963000,
+    "eval_count": 56,
+    "eval_duration": 15636262000,
+    "total_duration": 18910716098,
+    "load_duration": 1481499,
+    "thinking_chars": 0
+   }
+  },
+  {
+   "repeat": 0,
+   "condition": "closed_book",
+   "question": "Q4",
+   "choice": "unknown",
+   "classification": "unknown",
+   "reasoning": "The provided archive contains no documents. Therefore, I have no information regarding who first found technical proof that a recording was not genuine.",
+   "citations": [],
+   "supported": false,
+   "meta": {
+    "model": "gemma4:e4b",
+    "prompt_version": "2026-10-27.1",
+    "closed_book": true,
+    "seconds": 14.5,
+    "num_ctx": 40960,
+    "temperature": 0.6,
+    "seed": 1000,
+    "think": false
+   },
+   "wall_seconds": 14.5,
+   "ollama": {
+    "prompt_eval_count": 196,
+    "prompt_eval_cached_count": 0,
+    "prompt_eval_duration": 3444234000,
+    "eval_count": 52,
+    "eval_duration": 10998333000,
+    "total_duration": 14458947833,
+    "load_duration": 952230,
+    "thinking_chars": 0
+   }
+  },
+  {
+   "repeat": 0,
+   "condition": "closed_book",
+   "question": "Q5",
+   "choice": "unknown",
+   "classification": "unknown",
+   "reasoning": "No documents were provided for examination. Therefore, there is no archival evidence from which to deduce who might have removed the recording and associated threads.",
+   "citations": [],
+   "supported": false,
+   "meta": {
+    "model": "gemma4:e4b",
+    "prompt_version": "2026-10-27.1",
+    "closed_book": true,
+    "seconds": 18.2,
+    "num_ctx": 40960,
+    "temperature": 0.6,
+    "seed": 1000,
+    "think": false
+   },
+   "wall_seconds": 18.2,
+   "ollama": {
+    "prompt_eval_count": 197,
+    "prompt_eval_cached_count": 0,
+    "prompt_eval_duration": 3506877000,
+    "eval_count": 52,
+    "eval_duration": 14698131000,
+    "total_duration": 18217545576,
+    "load_duration": 909526,
+    "thinking_chars": 0
+   }
+  },
+  {
+   "repeat": 0,
+   "condition": "closed_book",
+   "question": "Q6",
+   "choice": "unknown",
+   "classification": "unknown",
+   "reasoning": "The provided prompt states that 'No documents are available to you,' meaning there is no content from the Lighthouse Network archive to examine. Therefore, I cannot find any evidence within the surviving records to determine the cause of the archive's loss.",
+   "citations": [],
+   "supported": false,
+   "meta": {
+    "model": "gemma4:e4b",
+    "prompt_version": "2026-10-27.1",
+    "closed_book": true,
+    "seconds": 19.5,
+    "num_ctx": 40960,
+    "temperature": 0.6,
+    "seed": 1000,
+    "think": false
+   },
+   "wall_seconds": 19.5,
+   "ollama": {
+    "prompt_eval_count": 179,
+    "prompt_eval_cached_count": 0,
+    "prompt_eval_duration": 2937544000,
+    "eval_count": 72,
+    "eval_duration": 16593776000,
+    "total_duration": 19544678311,
+    "load_duration": 790664,
+    "thinking_chars": 0
+   }
+  },
+  {
+   "repeat": 0,
+   "condition": "closed_book",
+   "question": "Q7",
+   "choice": "unknown",
+   "classification": "unknown",
+   "reasoning": "No documents were provided for examination, making it impossible to determine when the server migration was decided. Therefore, I cannot choose any of the provided options.",
+   "citations": [],
+   "supported": false,
+   "meta": {
+    "model": "gemma4:e4b",
+    "prompt_version": "2026-10-27.1",
+    "closed_book": true,
+    "seconds": 17.4,
+    "num_ctx": 40960,
+    "temperature": 0.6,
+    "seed": 1000,
+    "think": false
+   },
+   "wall_seconds": 17.4,
+   "ollama": {
+    "prompt_eval_count": 176,
+    "prompt_eval_cached_count": 0,
+    "prompt_eval_duration": 3146696000,
+    "eval_count": 54,
+    "eval_duration": 14287920000,
+    "total_duration": 17448190437,
+    "load_duration": 1526015,
+    "thinking_chars": 0
+   }
+  },
+  {
+   "repeat": 0,
+   "condition": "closed_book",
+   "question": "Q8",
+   "choice": "unknown",
+   "classification": "unknown",
+   "reasoning": "No documents were provided for examination. Therefore, it is impossible to determine who downloaded the recording dozens of times on October 15th.",
+   "citations": [],
+   "supported": false,
+   "meta": {
+    "model": "gemma4:e4b",
+    "prompt_version": "2026-10-27.1",
+    "closed_book": true,
+    "seconds": 15.4,
+    "num_ctx": 40960,
+    "temperature": 0.6,
+    "seed": 1000,
+    "think": false
+   },
+   "wall_seconds": 15.4,
+   "ollama": {
+    "prompt_eval_count": 183,
+    "prompt_eval_cached_count": 0,
+    "prompt_eval_duration": 3195758000,
+    "eval_count": 56,
+    "eval_duration": 12188458000,
+    "total_duration": 15397851963,
+    "load_duration": 1023565,
+    "thinking_chars": 0
+   }
+  },
+  {
+   "repeat": 0,
+   "condition": "closed_book",
+   "question": "Q9",
+   "choice": "unknown",
+   "classification": "unknown",
+   "reasoning": "No recordings are present in the provided archive fragments. Therefore, it is impossible to determine the voice on any hypothetical recording.",
+   "citations": [],
+   "supported": false,
+   "meta": {
+    "model": "gemma4:e4b",
+    "prompt_version": "2026-10-27.1",
+    "closed_book": true,
+    "seconds": 16.0,
+    "num_ctx": 40960,
+    "temperature": 0.6,
+    "seed": 1000,
+    "think": false
+   },
+   "wall_seconds": 16.0,
+   "ollama": {
+    "prompt_eval_count": 187,
+    "prompt_eval_cached_count": 0,
+    "prompt_eval_duration": 3211722000,
+    "eval_count": 51,
+    "eval_duration": 12804628000,
+    "total_duration": 16044188225,
+    "load_duration": 6877881,
+    "thinking_chars": 0
+   }
+  },
+  {
+   "repeat": 0,
+   "condition": "closed_book",
+   "question": "Q10",
+   "choice": "unknown",
+   "classification": "unknown",
+   "reasoning": "No documents were provided for examination. Therefore, there is no surviving evidence within the archive to determine Elias's actions following the network's closure.",
+   "citations": [],
+   "supported": false,
+   "meta": {
+    "model": "gemma4:e4b",
+    "prompt_version": "2026-10-27.1",
+    "closed_book": true,
+    "seconds": 16.8,
+    "num_ctx": 40960,
+    "temperature": 0.6,
+    "seed": 1000,
+    "think": false
+   },
+   "wall_seconds": 16.8,
+   "ollama": {
+    "prompt_eval_count": 188,
+    "prompt_eval_cached_count": 0,
+    "prompt_eval_duration": 3105348000,
+    "eval_count": 54,
+    "eval_duration": 13658194000,
+    "total_duration": 16783021695,
+    "load_duration": 750499,
+    "thinking_chars": 0
+   }
+  },
+  {
+   "repeat": 1,
+   "condition": "closed_book",
+   "question": "Q1",
+   "choice": "unknown",
+   "classification": "unknown",
+   "reasoning": "No documents were provided for examination, meaning there is no evidence within the recovered archive to analyze regarding the 'Cape Sorrow' recording. Therefore, any determination about its authenticity would be pure speculation.",
+   "citations": [],
+   "supported": false,
+   "meta": {
+    "model": "gemma4:e4b",
+    "prompt_version": "2026-10-27.1",
+    "closed_book": true,
+    "seconds": 20.5,
+    "num_ctx": 40960,
+    "temperature": 0.6,
+    "seed": 1001,
+    "think": false
+   },
+   "wall_seconds": 20.5,
+   "ollama": {
+    "prompt_eval_count": 177,
+    "prompt_eval_cached_count": 0,
+    "prompt_eval_duration": 3073647000,
+    "eval_count": 62,
+    "eval_duration": 17425431000,
+    "total_duration": 20521587441,
+    "load_duration": 875422,
+    "thinking_chars": 0
+   }
+  },
+  {
+   "repeat": 1,
+   "condition": "closed_book",
+   "question": "Q2",
+   "choice": "unknown",
+   "classification": "unknown",
+   "reasoning": "No documents were provided for examination, therefore there is no evidence within the archive to determine who created the recording. Without any surviving data, any attribution would be pure speculation.",
+   "citations": [],
+   "supported": false,
+   "meta": {
+    "model": "gemma4:e4b",
+    "prompt_version": "2026-10-27.1",
+    "closed_book": true,
+    "seconds": 16.2,
+    "num_ctx": 40960,
+    "temperature": 0.6,
+    "seed": 1001,
+    "think": false
+   },
+   "wall_seconds": 16.2,
+   "ollama": {
+    "prompt_eval_count": 186,
+    "prompt_eval_cached_count": 181,
+    "prompt_eval_duration": 405015000,
+    "eval_count": 65,
+    "eval_duration": 15737925000,
+    "total_duration": 16167994982,
+    "load_duration": 3400410,
+    "thinking_chars": 0
+   }
+  },
+  {
+   "repeat": 1,
+   "condition": "closed_book",
+   "question": "Q3",
+   "choice": "unknown",
+   "classification": "unknown",
+   "reasoning": "No documents were provided for examination, therefore there is no information within the archive to identify 'nightjar' or their connection to Astoria.",
+   "citations": [],
+   "supported": false,
+   "meta": {
+    "model": "gemma4:e4b",
+    "prompt_version": "2026-10-27.1",
+    "closed_book": true,
+    "seconds": 15.1,
+    "num_ctx": 40960,
+    "temperature": 0.6,
+    "seed": 1001,
+    "think": false
+   },
+   "wall_seconds": 15.1,
+   "ollama": {
+    "prompt_eval_count": 196,
+    "prompt_eval_cached_count": 191,
+    "prompt_eval_duration": 489007000,
+    "eval_count": 51,
+    "eval_duration": 14546954000,
+    "total_duration": 15061764221,
+    "load_duration": 936893,
+    "thinking_chars": 0
+   }
+  },
+  {
+   "repeat": 1,
+   "condition": "closed_book",
+   "question": "Q4",
+   "choice": "unknown",
+   "classification": "unknown",
+   "reasoning": "The provided context states that no documents are available to me. Therefore, I have no information from the Lighthouse Network archive to determine who first found technical proof that a recording was not genuine.",
+   "citations": [],
+   "supported": false,
+   "meta": {
+    "model": "gemma4:e4b",
+    "prompt_version": "2026-10-27.1",
+    "closed_book": true,
+    "seconds": 14.5,
+    "num_ctx": 40960,
+    "temperature": 0.6,
+    "seed": 1001,
+    "think": false
+   },
+   "wall_seconds": 14.5,
+   "ollama": {
+    "prompt_eval_count": 196,
+    "prompt_eval_cached_count": 191,
+    "prompt_eval_duration": 456896000,
+    "eval_count": 61,
+    "eval_duration": 14003330000,
+    "total_duration": 14486999188,
+    "load_duration": 900997,
+    "thinking_chars": 0
+   }
+  },
+  {
+   "repeat": 1,
+   "condition": "closed_book",
+   "question": "Q5",
+   "choice": "unknown",
+   "classification": "unknown",
+   "reasoning": "No documents were provided for examination, thus there is no evidence within the archive to trace the removal of any recording or threads. Without data, any attribution would be pure speculation.",
+   "citations": [],
+   "supported": false,
+   "meta": {
+    "model": "gemma4:e4b",
+    "prompt_version": "2026-10-27.1",
+    "closed_book": true,
+    "seconds": 17.4,
+    "num_ctx": 40960,
+    "temperature": 0.6,
+    "seed": 1001,
+    "think": false
+   },
+   "wall_seconds": 17.4,
+   "ollama": {
+    "prompt_eval_count": 197,
+    "prompt_eval_cached_count": 192,
+    "prompt_eval_duration": 516607999,
+    "eval_count": 59,
+    "eval_duration": 16808327000,
+    "total_duration": 17360529514,
+    "load_duration": 858484,
+    "thinking_chars": 0
+   }
+  },
+  {
+   "repeat": 1,
+   "condition": "closed_book",
+   "question": "Q6",
+   "choice": "unknown",
+   "classification": "unknown",
+   "reasoning": "No documents were provided for examination, meaning I have no evidence from the Lighthouse Network archive to analyze. Therefore, I cannot determine the cause of the data loss.",
+   "citations": [],
+   "supported": false,
+   "meta": {
+    "model": "gemma4:e4b",
+    "prompt_version": "2026-10-27.1",
+    "closed_book": true,
+    "seconds": 14.1,
+    "num_ctx": 40960,
+    "temperature": 0.6,
+    "seed": 1001,
+    "think": false
+   },
+   "wall_seconds": 14.1,
+   "ollama": {
+    "prompt_eval_count": 179,
+    "prompt_eval_cached_count": 174,
+    "prompt_eval_duration": 479015000,
+    "eval_count": 56,
+    "eval_duration": 13542492000,
+    "total_duration": 14049851362,
+    "load_duration": 1039732,
+    "thinking_chars": 0
+   }
+  },
+  {
+   "repeat": 1,
+   "condition": "closed_book",
+   "question": "Q7",
+   "choice": "unknown",
+   "classification": "unknown",
+   "reasoning": "No documents were provided for examination, meaning there is no information within the archive to reference regarding a server migration decision. Therefore, I cannot determine the timing of this event.",
+   "citations": [],
+   "supported": false,
+   "meta": {
+    "model": "gemma4:e4b",
+    "prompt_version": "2026-10-27.1",
+    "closed_book": true,
+    "seconds": 15.9,
+    "num_ctx": 40960,
+    "temperature": 0.6,
+    "seed": 1001,
+    "think": false
+   },
+   "wall_seconds": 15.9,
+   "ollama": {
+    "prompt_eval_count": 176,
+    "prompt_eval_cached_count": 171,
+    "prompt_eval_duration": 509371000,
+    "eval_count": 58,
+    "eval_duration": 15313225000,
+    "total_duration": 15846657325,
+    "load_duration": 3581724,
+    "thinking_chars": 0
+   }
+  },
+  {
+   "repeat": 1,
+   "condition": "closed_book",
+   "question": "Q8",
+   "choice": "unknown",
+   "classification": "unknown",
+   "reasoning": "No documents were provided for examination. Therefore, I have no data to determine who downloaded the recording dozens of times on October 15.",
+   "citations": [],
+   "supported": false,
+   "meta": {
+    "model": "gemma4:e4b",
+    "prompt_version": "2026-10-27.1",
+    "closed_book": true,
+    "seconds": 13.2,
+    "num_ctx": 40960,
+    "temperature": 0.6,
+    "seed": 1001,
+    "think": false
+   },
+   "wall_seconds": 13.2,
+   "ollama": {
+    "prompt_eval_count": 183,
+    "prompt_eval_cached_count": 178,
+    "prompt_eval_duration": 469399000,
+    "eval_count": 52,
+    "eval_duration": 12712087000,
+    "total_duration": 13205769233,
+    "load_duration": 1068395,
+    "thinking_chars": 0
+   }
+  },
+  {
+   "repeat": 1,
+   "condition": "closed_book",
+   "question": "Q9",
+   "choice": "unknown",
+   "classification": "unknown",
+   "reasoning": "No documents were provided for examination, meaning there is no recording to analyze. Therefore, I cannot determine whose voice is present.",
+   "citations": [],
+   "supported": false,
+   "meta": {
+    "model": "gemma4:e4b",
+    "prompt_version": "2026-10-27.1",
+    "closed_book": true,
+    "seconds": 13.1,
+    "num_ctx": 40960,
+    "temperature": 0.6,
+    "seed": 1001,
+    "think": false
+   },
+   "wall_seconds": 13.1,
+   "ollama": {
+    "prompt_eval_count": 187,
+    "prompt_eval_cached_count": 182,
+    "prompt_eval_duration": 441791000,
+    "eval_count": 49,
+    "eval_duration": 12589347000,
+    "total_duration": 13049592523,
+    "load_duration": 1177524,
+    "thinking_chars": 0
+   }
+  },
+  {
+   "repeat": 1,
+   "condition": "closed_book",
+   "question": "Q10",
+   "choice": "unknown",
+   "classification": "unknown",
+   "reasoning": "No documents were provided in the prompt to analyze. Therefore, I have no information regarding Elias's activities after the Lighthouse Network closed.",
+   "citations": [],
+   "supported": false,
+   "meta": {
+    "model": "gemma4:e4b",
+    "prompt_version": "2026-10-27.1",
+    "closed_book": true,
+    "seconds": 12.0,
+    "num_ctx": 40960,
+    "temperature": 0.6,
+    "seed": 1001,
+    "think": false
+   },
+   "wall_seconds": 12.0,
+   "ollama": {
+    "prompt_eval_count": 188,
+    "prompt_eval_cached_count": 183,
+    "prompt_eval_duration": 510305000,
+    "eval_count": 51,
+    "eval_duration": 11456822000,
+    "total_duration": 11985608301,
+    "load_duration": 985715,
+    "thinking_chars": 0
+   }
+  },
+  {
+   "repeat": 2,
+   "condition": "closed_book",
+   "question": "Q1",
+   "choice": "unknown",
+   "classification": "unknown",
+   "reasoning": "No documents were provided for examination. Therefore, there is no evidence within the recovered archive to determine the authenticity of the Cape Sorrow recording.",
+   "citations": [],
+   "supported": false,
+   "meta": {
+    "model": "gemma4:e4b",
+    "prompt_version": "2026-10-27.1",
+    "closed_book": true,
+    "seconds": 12.7,
+    "num_ctx": 40960,
+    "temperature": 0.6,
+    "seed": 1002,
+    "think": false
+   },
+   "wall_seconds": 12.7,
+   "ollama": {
+    "prompt_eval_count": 177,
+    "prompt_eval_cached_count": 172,
+    "prompt_eval_duration": 451465000,
+    "eval_count": 58,
+    "eval_duration": 12236594000,
+    "total_duration": 12706756976,
+    "load_duration": 814950,
+    "thinking_chars": 0
+   }
+  },
+  {
+   "repeat": 2,
+   "condition": "closed_book",
+   "question": "Q2",
+   "choice": "unknown",
+   "classification": "unknown",
+   "reasoning": "Since no documents were provided for examination, I have no information regarding the creation of any recording. Therefore, I cannot attribute the recording to any specific member of the Lighthouse Network or an external source.",
+   "citations": [],
+   "supported": false,
+   "meta": {
+    "model": "gemma4:e4b",
+    "prompt_version": "2026-10-27.1",
+    "closed_book": true,
+    "seconds": 15.4,
+    "num_ctx": 40960,
+    "temperature": 0.6,
+    "seed": 1002,
+    "think": false
+   },
+   "wall_seconds": 15.4,
+   "ollama": {
+    "prompt_eval_count": 186,
+    "prompt_eval_cached_count": 181,
+    "prompt_eval_duration": 426003000,
+    "eval_count": 63,
+    "eval_duration": 14962596000,
+    "total_duration": 15410860929,
+    "load_duration": 2783696,
+    "thinking_chars": 0
+   }
+  },
+  {
+   "repeat": 2,
+   "condition": "closed_book",
+   "question": "Q3",
+   "choice": "unknown",
+   "classification": "unknown",
+   "reasoning": "No documents were provided for examination. Therefore, there is no information within the archive to identify the listener 'nightjar' or connect them to any of the named individuals.",
+   "citations": [],
+   "supported": false,
+   "meta": {
+    "model": "gemma4:e4b",
+    "prompt_version": "2026-10-27.1",
+    "closed_book": true,
+    "seconds": 15.4,
+    "num_ctx": 40960,
+    "temperature": 0.6,
+    "seed": 1002,
+    "think": false
+   },
+   "wall_seconds": 15.4,
+   "ollama": {
+    "prompt_eval_count": 196,
+    "prompt_eval_cached_count": 191,
+    "prompt_eval_duration": 482660000,
+    "eval_count": 65,
+    "eval_duration": 14846127000,
+    "total_duration": 15350039104,
+    "load_duration": 813738,
+    "thinking_chars": 0
+   }
+  },
+  {
+   "repeat": 2,
+   "condition": "closed_book",
+   "question": "Q4",
+   "choice": "unknown",
+   "classification": "unknown",
+   "reasoning": "Since no documents were provided for examination, I have no data to analyze regarding the authenticity of any recording. Therefore, I cannot identify which user first found technical proof of inauthenticity.",
+   "citations": [],
+   "supported": false,
+   "meta": {
+    "model": "gemma4:e4b",
+    "prompt_version": "2026-10-27.1",
+    "closed_book": true,
+    "seconds": 17.3,
+    "num_ctx": 40960,
+    "temperature": 0.6,
+    "seed": 1002,
+    "think": false
+   },
+   "wall_seconds": 17.3,
+   "ollama": {
+    "prompt_eval_count": 196,
+    "prompt_eval_cached_count": 191,
+    "prompt_eval_duration": 419322000,
+    "eval_count": 68,
+    "eval_duration": 16873481000,
+    "total_duration": 17318000492,
+    "load_duration": 786998,
+    "thinking_chars": 0
+   }
+  },
+  {
+   "repeat": 2,
+   "condition": "closed_book",
+   "question": "Q5",
+   "choice": "unknown",
+   "classification": "unknown",
+   "reasoning": "The provided archive is empty, containing no documents. Therefore, there is no information within the recovered materials to indicate who might have removed the recording or the related threads.",
+   "citations": [],
+   "supported": false,
+   "meta": {
+    "model": "gemma4:e4b",
+    "prompt_version": "2026-10-27.1",
+    "closed_book": true,
+    "seconds": 14.3,
+    "num_ctx": 40960,
+    "temperature": 0.6,
+    "seed": 1002,
+    "think": false
+   },
+   "wall_seconds": 14.3,
+   "ollama": {
+    "prompt_eval_count": 197,
+    "prompt_eval_cached_count": 192,
+    "prompt_eval_duration": 437067000,
+    "eval_count": 64,
+    "eval_duration": 13816939000,
+    "total_duration": 14274420714,
+    "load_duration": 837758,
+    "thinking_chars": 0
+   }
+  },
+  {
+   "repeat": 2,
+   "condition": "closed_book",
+   "question": "Q6",
+   "choice": "unknown",
+   "classification": "unknown",
+   "reasoning": "Since no documents were provided for examination, I have no evidence to suggest whether the archive was destroyed by deliberate action, server failure, or external intervention. The available data set is empty, preventing any informed conclusion.",
+   "citations": [],
+   "supported": false,
+   "meta": {
+    "model": "gemma4:e4b",
+    "prompt_version": "2026-10-27.1",
+    "closed_book": true,
+    "seconds": 17.6,
+    "num_ctx": 40960,
+    "temperature": 0.6,
+    "seed": 1002,
+    "think": false
+   },
+   "wall_seconds": 17.6,
+   "ollama": {
+    "prompt_eval_count": 179,
+    "prompt_eval_cached_count": 174,
+    "prompt_eval_duration": 464766000,
+    "eval_count": 70,
+    "eval_duration": 17074518000,
+    "total_duration": 17561440231,
+    "load_duration": 1068116,
+    "thinking_chars": 0
+   }
+  },
+  {
+   "repeat": 2,
+   "condition": "closed_book",
+   "question": "Q7",
+   "choice": "unknown",
+   "classification": "unknown",
+   "reasoning": "No documents were provided for examination. Therefore, I cannot determine when the server migration was decided based on the available archive material.",
+   "citations": [],
+   "supported": false,
+   "meta": {
+    "model": "gemma4:e4b",
+    "prompt_version": "2026-10-27.1",
+    "closed_book": true,
+    "seconds": 12.6,
+    "num_ctx": 40960,
+    "temperature": 0.6,
+    "seed": 1002,
+    "think": false
+   },
+   "wall_seconds": 12.6,
+   "ollama": {
+    "prompt_eval_count": 176,
+    "prompt_eval_cached_count": 171,
+    "prompt_eval_duration": 483806000,
+    "eval_count": 56,
+    "eval_duration": 12111750000,
+    "total_duration": 12623282840,
+    "load_duration": 1361321,
+    "thinking_chars": 0
+   }
+  },
+  {
+   "repeat": 2,
+   "condition": "closed_book",
+   "question": "Q8",
+   "choice": "unknown",
+   "classification": "unknown",
+   "reasoning": "No documents were provided for examination. Therefore, it is impossible to determine who downloaded the recording dozens of times on October 15th.",
+   "citations": [],
+   "supported": false,
+   "meta": {
+    "model": "gemma4:e4b",
+    "prompt_version": "2026-10-27.1",
+    "closed_book": true,
+    "seconds": 11.7,
+    "num_ctx": 40960,
+    "temperature": 0.6,
+    "seed": 1002,
+    "think": false
+   },
+   "wall_seconds": 11.7,
+   "ollama": {
+    "prompt_eval_count": 183,
+    "prompt_eval_cached_count": 178,
+    "prompt_eval_duration": 455923000,
+    "eval_count": 59,
+    "eval_duration": 11168058000,
+    "total_duration": 11646963010,
+    "load_duration": 859954,
+    "thinking_chars": 0
+   }
+  },
+  {
+   "repeat": 2,
+   "condition": "closed_book",
+   "question": "Q9",
+   "choice": "unknown",
+   "classification": "unknown",
+   "reasoning": "Since no documents were provided for examination, I cannot access any recordings or context related to a voice. Therefore, I have no basis upon which to determine whose voice might be present.",
+   "citations": [],
+   "supported": false,
+   "meta": {
+    "model": "gemma4:e4b",
+    "prompt_version": "2026-10-27.1",
+    "closed_book": true,
+    "seconds": 17.2,
+    "num_ctx": 40960,
+    "temperature": 0.6,
+    "seed": 1002,
+    "think": false
+   },
+   "wall_seconds": 17.2,
+   "ollama": {
+    "prompt_eval_count": 187,
+    "prompt_eval_cached_count": 182,
+    "prompt_eval_duration": 406648000,
+    "eval_count": 67,
+    "eval_duration": 16765872000,
+    "total_duration": 17191485211,
+    "load_duration": 1116394,
+    "thinking_chars": 0
+   }
+  },
+  {
+   "repeat": 2,
+   "condition": "closed_book",
+   "question": "Q10",
+   "choice": "unknown",
+   "classification": "unknown",
+   "reasoning": "No documents were provided for examination. Therefore, I have no information regarding Elias's actions following the closure of the Lighthouse Network.",
+   "citations": [],
+   "supported": false,
+   "meta": {
+    "model": "gemma4:e4b",
+    "prompt_version": "2026-10-27.1",
+    "closed_book": true,
+    "seconds": 12.5,
+    "num_ctx": 40960,
+    "temperature": 0.6,
+    "seed": 1002,
+    "think": false
+   },
+   "wall_seconds": 12.5,
+   "ollama": {
+    "prompt_eval_count": 188,
+    "prompt_eval_cached_count": 183,
+    "prompt_eval_duration": 569360000,
+    "eval_count": 57,
+    "eval_duration": 11852923000,
+    "total_duration": 12454410638,
+    "load_duration": 1030807,
+    "thinking_chars": 0
+   }
+  }
+ ],
+ "config": {
+  "num_ctx": 40960,
+  "temperature": 0.6,
+  "seed": "1000 + repeat",
+  "think": false
+ },
+ "finished": "20261027-140656"
+}
