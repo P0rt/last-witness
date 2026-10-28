@@ -1,0 +1,17 @@
+{
+ "note": "Voice-over for the Last Witness promo. One WAV per line, file name = <voice>/<id>.wav, mono, 24 kHz. Speed 1.0, no added silence.",
+ "voices": ["bm_george", "am_michael", "af_heart"],
+ "lines": [
+  {"id": "cold",    "text": "In October 1999, a small online community of radio listeners on the Oregon coast vanished in a single weekend."},
+  {"id": "tape",    "text": "Twenty-seven years later, their backup tape turns up at an auction. Only fifty-eight of a hundred and fifty-one files can still be read."},
+  {"id": "explore", "text": "Last Witness lets you dig through what survived: forum threads, mail, server logs, and home pages exactly as they looked in 1999. Some clues are hidden in the page source."},
+  {"id": "partner", "text": "You don't dig alone. Your partner is Gemma 4, an open model running on your own machine. It has never been told what happened, and it only reads the documents you open."},
+  {"id": "ask",     "text": "Ask it anything. Every claim must quote the archive, word for word, and point to the exact sentence. Click a citation, and that sentence lights up."},
+  {"id": "rule",    "text": "If the quote isn't in that sentence, the claim has no evidence behind it. We call that a ghost."},
+  {"id": "reason",  "text": "It rebuilds the timeline, and weighs four competing explanations as you find more."},
+  {"id": "reveal",  "text": "When you think you know, fill in your reconstruction, and press Reveal."},
+  {"id": "verdict", "text": "The sealed truth is laid next to your answers and the AI's. The ghosts fade away. And the people of the Lighthouse Network are remembered, accurately."},
+  {"id": "numbers", "text": "On a laptop CPU, Gemma never gave a wrong answer, and never invented a fact. But it never called the liar a liar, either. That part is your job."},
+  {"id": "end",     "text": "Last Witness. Open source, and free to play in your browser. The internet forgets. The evidence doesn't."}
+ ]
+}

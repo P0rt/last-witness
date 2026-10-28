@@ -1,12 +1,15 @@
 #!/usr/bin/env python3
-"""The promo's score, synthesized: tape hiss, a low radio drone, Morse, and a
-thump on the big cards. No samples, so nothing to license.
+"""The promo's soundtrack: the voice-over, a Morse call sign on the cold open
+and, with LW_BED=music, tape hiss and the music from music.py underneath.
+No samples, so nothing to license.
 
     python3 video/sound.py video/out/cues.json video/out/score.wav
 """
 import json
+import os
 import sys
 import wave
+from pathlib import Path
 
 import numpy as np
 
@@ -38,14 +41,6 @@ def brown(n):
     return b / (np.abs(b).max() + 1e-9)
 
 
-def drone(n, t):
-    out = np.zeros(n)
-    for f, g in [(55.0, .5), (55.4, .35), (82.41, .3), (110.0, .18), (130.81, .12), (164.81, .06)]:
-        lfo = .65 + .35 * np.sin(2 * np.pi * (0.05 + f / 4000) * t + f)
-        out += g * lfo * np.sin(2 * np.pi * f * t + rng.uniform(0, 6.28))
-    return out / 1.5
-
-
 MORSE = {"L": ".-..", "W": ".--", "C": "-.-.", "S": "..."}
 
 
@@ -72,6 +67,15 @@ def thump(dur=1.6):
     return np.sin(ph) * np.exp(-tt * 3.2)
 
 
+def read_voice(path):
+    """A mono WAV, resampled to SR and peak-normalized."""
+    with wave.open(path) as w:
+        sr, ch, n = w.getframerate(), w.getnchannels(), w.getnframes()
+        x = np.frombuffer(w.readframes(n), dtype="<i2").astype(float).reshape(-1, ch).mean(axis=1)
+    x = np.interp(np.arange(int(len(x) * SR / sr)) * sr / SR, np.arange(len(x)), x)
+    return x / (np.abs(x).max() + 1e-9)
+
+
 def place(buf, sig, at, gain):
     i = int(at * SR)
     j = min(len(buf), i + len(sig))
@@ -85,31 +89,41 @@ def main():
     n = int(SR * total)
     t = np.arange(n) / SR
 
-    # hiss louder on title cards, quieter under the game footage
-    card_level = np.full(n, .35)
+    # LW_BED=music lays the tape hiss and the music from music.py under the voice;
+    # the default is the voice alone, with only the Morse call sign on the cold open
+    left, right = np.zeros(n), np.zeros(n)
+    if os.environ.get("LW_BED", "none") == "music":
+        sys.path.insert(0, str(Path(__file__).parent))
+        from music import score
+        m_left, m_right, m_start = score(n, cues["cues"])
+        peak = max(np.abs(m_left).max(), np.abs(m_right).max(), 1e-9)
+        hiss_level = np.clip(1 - (t - m_start) / 5.0, 0.1, 1.0)
+        hiss = lowpass(rng.standard_normal(n) * .6 + brown(n) * .4, 3200)
+        hiss = hiss / (np.sqrt((hiss ** 2).mean()) + 1e-9) * .09 * hiss_level
+        left, right = hiss + m_left / peak, hiss * .95 + m_right / peak
+        for c in cues["cues"]:
+            if c["name"] == "tape":
+                place(left, thump(), c["start"] + .15, .5)
+                place(right, thump(), c["start"] + .15, .5)
+
+    # the voice-over sits on top; the music ducks under it
+    voice = np.zeros(n)
+    duck = np.ones(n)
     for c in cues["cues"]:
-        i, j = int(c["start"] * SR), int((c["start"] + c["dur"]) * SR)
-        card_level[i:j] = 1.0 if c["card"] else .45
-    card_level = np.convolve(card_level, np.ones(SR // 2) / (SR // 2), mode="same")
-    hiss = lowpass(rng.standard_normal(n) * .6 + brown(n) * .4, 3200) * card_level * .10
-
-    pad = drone(n, t) * env(n, 4.0, 5.0) * .22
-    # the drone opens up for the second half
-    pad *= np.clip(.55 + t / total, 0, 1.2)
-
-    left = hiss + pad
-    right = hiss * .9 + np.roll(pad, int(.012 * SR))
-
+        if not c.get("vo"):
+            continue
+        v = read_voice(c["vo"])
+        place(voice, v, c["vo_at"], 1.0)
+        i, j = int((c["vo_at"] - .25) * SR), int((c["vo_at"] + len(v) / SR + .3) * SR)
+        duck[max(0, i):j] = .45
+    k = int(.25 * SR)
+    duck = np.convolve(duck, np.ones(k) / k, mode="same")
+    bed_peak = max(np.abs(left).max(), np.abs(right).max(), 1e-9)
+    left, right = left / bed_peak * .55 * duck, right / bed_peak * .55 * duck
+    left, right = left + voice * .9, right + voice * .9
     radio = morse("LW LW")
-    place(left, radio, .6, .10)
-    place(right, radio, .6, .10)
-    for c in cues["cues"]:
-        if c["name"] in ("tape", "reveal", "numbers", "end"):
-            th = thump()
-            place(left, th, c["start"] + .15, .55)
-            place(right, th, c["start"] + .15, .55)
-        if c["name"] == "partner":
-            place(left, morse("CS"), c["start"] + .3, .06)
+    place(left, radio, .6, .14)
+    place(right, radio, .6, .14)
 
     fade = env(n, .8, 3.5)
     st = np.stack([left * fade, right * fade], axis=1)
