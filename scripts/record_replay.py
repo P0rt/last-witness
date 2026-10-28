@@ -17,6 +17,12 @@ model named in meta.json, and the truth ships in the bundle (it has to, there is
 no server). The live game keeps it sealed.
 
     python scripts/record_replay.py --model gemma4:e4b
+    python scripts/record_replay.py --model gemma4:e4b --db replay.sqlite   # resumable
+
+On a CPU a full recording takes hours. With --db the investigation is kept in
+that SQLite file, and running the same command again resumes it: questions
+already asked, objections already made, hypotheses, timeline and form answers
+already in the file are not asked again.
 """
 from __future__ import annotations
 
@@ -49,9 +55,10 @@ QUESTIONS = [
 def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--model", default=os.environ.get("LW_MODEL", "gemma4:e4b"))
+    ap.add_argument("--db", help="SQLite file to keep the investigation in; rerun with it to resume")
     args = ap.parse_args()
     os.environ["LW_MODEL"] = args.model
-    os.environ["LW_DB"] = str(Path(tempfile.mkdtemp()) / "replay.sqlite")
+    os.environ["LW_DB"] = str(Path(args.db).resolve() if args.db else Path(tempfile.mkdtemp()) / "replay.sqlite")
 
     from fastapi.testclient import TestClient
     from lastwitness import app as appmod
@@ -68,24 +75,43 @@ def main() -> int:
         return r.json()
 
     t0 = time.time()
-    inv = ok(c.post("/api/investigations"))
-    iid = inv["id"]
+    with store._conn() as db:
+        open_ids = [r[0] for r in db.execute("SELECT id, state FROM investigations ORDER BY created")
+                    if json.loads(r[1])["status"] == "open"]
+    resumed = bool(open_ids)
+    iid = open_ids[-1] if resumed else ok(c.post("/api/investigations"))["id"]
+    if resumed:
+        print("resuming", iid, "from", os.environ["LW_DB"], flush=True)
     for a in archive.artifacts():
         ok(c.post(f"/api/investigations/{iid}/open",
                   json={"artifact": a["id"], "source": a["type"] == "html_page"}))
+    state = ok(c.get(f"/api/investigations/{iid}"))
+    asked = {m["text"] for m in state["messages"] if m["role"] == "player"}
     for q in QUESTIONS:
+        if q in asked:
+            continue
         print(">>", q, flush=True)
         r = ok(c.post(f"/api/investigations/{iid}/ask", json={"question": q}))
         for cl in r["claims"]:
             if cl["ghost"]:
                 print("   objection:", cl["text"][:80], flush=True)
                 ok(c.post(f"/api/investigations/{iid}/claims/{cl['id']}/objection"))
-    print(">> hypotheses", flush=True)
-    ok(c.post(f"/api/investigations/{iid}/hypotheses"))
-    print(">> timeline", flush=True)
-    ok(c.post(f"/api/investigations/{iid}/timeline"))
+    # A ghost from an interrupted run that never got its objection.
+    for cl in ok(c.get(f"/api/investigations/{iid}"))["claims"]:
+        if cl["ghost"] and not cl["history"]:
+            print("   objection:", cl["text"][:80], flush=True)
+            ok(c.post(f"/api/investigations/{iid}/claims/{cl['id']}/objection"))
+    state = ok(c.get(f"/api/investigations/{iid}"))
+    if not state["hypotheses"]:
+        print(">> hypotheses", flush=True)
+        ok(c.post(f"/api/investigations/{iid}/hypotheses"))
+    if not state["timeline"]:
+        print(">> timeline", flush=True)
+        ok(c.post(f"/api/investigations/{iid}/timeline"))
     meta = ok(c.get("/api/meta"))
     for q in meta["questions"]:
+        if q["id"] in state["form_ai"]:
+            continue
         print(">> form", q["id"], flush=True)
         ok(c.post(f"/api/investigations/{iid}/form/ai/{q['id']}"))
     session = ok(c.get(f"/api/investigations/{iid}"))
@@ -96,9 +122,10 @@ def main() -> int:
            for q, row in zip(truth["questions"], evaluation["ai"]["rows"])}
 
     OUT.mkdir(parents=True, exist_ok=True)
+    model_seconds = sum(r.get("seconds", 0) for r in session.get("runs", []))
     meta["recorded"] = {"model": args.model, "at": time.strftime("%Y-%m-%d %H:%M UTC", time.gmtime()),
-                        "minutes": round((time.time() - t0) / 60, 1), "questions": QUESTIONS,
-                        "config": appmod.get_llm().config()}
+                        "minutes": round((model_seconds or time.time() - t0) / 60, 1), "questions": QUESTIONS,
+                        "config": appmod.get_llm().config(), "resumed": resumed}
     (OUT / "meta.json").write_text(json.dumps(meta, ensure_ascii=False, indent=1))
     (OUT / "artifacts.json").write_text(json.dumps(archive.load(), ensure_ascii=False))
     (OUT / "session.json").write_text(json.dumps(session, ensure_ascii=False, indent=1))

@@ -61,7 +61,7 @@ def guess(llm, q: dict) -> dict:
 
 
 def run(model: str, repeats: int, temperature: float, num_ctx: int | None, only: list[str] | None,
-        think: bool | None = None, conditions: tuple[str, ...] = RUN_CONDITIONS) -> Path:
+        think: bool | None = None, conditions: tuple[str, ...] = RUN_CONDITIONS, resume: Path | None = None) -> Path:
     if model == "echo":
         raise SystemExit("echo is not a model; benchmark a real one")
     questions = json.loads((ROOT / "dataset" / "questions.json").read_text(encoding="utf-8"))
@@ -73,6 +73,14 @@ def run(model: str, repeats: int, temperature: float, num_ctx: int | None, only:
     RUNS.mkdir(parents=True, exist_ok=True)
     log = {"model": model, "started": stamp, "repeats": repeats, "temperature": temperature,
            "questions": [q["id"] for q in questions], "calls": []}
+    if resume:
+        # Pick up an interrupted run: keep its answers, redo only what is missing or failed.
+        out, log = resume, json.loads(resume.read_text(encoding="utf-8"))
+        if log["model"] != model:
+            raise SystemExit(f"{resume.name} is a run of {log['model']}, not {model}")
+        log["calls"] = [c for c in log["calls"] if "error" not in c]
+        log.setdefault("resumed", []).append(stamp)
+    done = {(c["condition"], c["repeat"], c["question"]) for c in log["calls"]}
 
     # All archive calls first, then the ones without documents. Every archive call starts with
     # the same ~28K-token prefix (system prompt + archive), so Ollama's prompt cache reads the
@@ -83,6 +91,8 @@ def run(model: str, repeats: int, temperature: float, num_ctx: int | None, only:
             log["config"] = llm.config() | {"seed": "1000 + repeat"}
             inv = Investigator(llm)
             for q in questions:
+                if (cond, rep, q["id"]) in done:
+                    continue
                 t0 = time.time()
                 try:
                     r = guess(llm, q) if cond == "guess" else inv.answer(q, closed_book=cond == "closed_book")
@@ -209,13 +219,14 @@ def main() -> int:
                     help="Gemma 4 thinking (default: LW_THINK, off unless set)")
     ap.add_argument("--conditions", nargs="+", choices=RUN_CONDITIONS, default=list(RUN_CONDITIONS),
                     help="which conditions to run (validated is computed from archive)")
+    ap.add_argument("--resume", type=Path, help="an interrupted run file to complete (one model)")
     ap.add_argument("--summarize", action="store_true", help="only rebuild results.md from saved runs")
     args = ap.parse_args()
     if not args.summarize:
         for m in args.models:
             think = None if args.think is None else args.think == "on"
             print("saved", run(m, args.repeats, args.temperature, args.num_ctx, args.only, think,
-                               tuple(args.conditions)))
+                               tuple(args.conditions), args.resume))
     print(summarize())
     return 0
 

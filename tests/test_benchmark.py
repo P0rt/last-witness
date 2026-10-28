@@ -40,3 +40,28 @@ def test_benchmark_scoring(tmp_path, monkeypatch):
     assert s["closed_book"]["ghosts"] > 0
     md = bench.summarize()
     assert "| fake | validated |" in md
+
+
+def test_benchmark_resume_skips_answered_calls(tmp_path, monkeypatch):
+    spec = importlib.util.spec_from_file_location("bench", ROOT / "benchmarks/run_benchmark.py")
+    bench = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(bench)
+    monkeypatch.setattr(bench, "RUNS", tmp_path)
+
+    from lastwitness.llm import Ollama
+    calls = []
+
+    def chat(self, messages, schema):
+        calls.append(messages[-1]["content"][:12])
+        return {"reasoning": "", "choice": "unknown", "classification": "unknown", "citations": []}
+
+    monkeypatch.setattr(Ollama, "chat", chat)
+    f = bench.run("fake", repeats=1, temperature=0.0, num_ctx=None, only=["Q1", "Q2"], conditions=("archive",))
+    log = json.loads(f.read_text())
+    log["calls"][1] = {"repeat": 0, "condition": "archive", "question": "Q2", "error": "Ollama went away"}
+    f.write_text(json.dumps(log))
+    calls.clear()
+    bench.run("fake", repeats=1, temperature=0.0, num_ctx=None, only=["Q1", "Q2"], conditions=("archive",), resume=f)
+    log = json.loads(f.read_text())
+    assert len(calls) == 1 and sorted(c["question"] for c in log["calls"]) == ["Q1", "Q2"]
+    assert all("error" not in c for c in log["calls"]) and log["resumed"]
