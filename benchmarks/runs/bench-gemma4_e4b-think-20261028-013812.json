@@ -1665,14 +1665,6 @@
   {
    "repeat": 0,
    "condition": "closed_book",
-   "question": "Q1",
-   "error": "cannot reach Ollama at http://127.0.0.1:11434: HTTP Error 500: Internal Server Error",
-   "wall_seconds": 1.7,
-   "ollama": {}
-  },
-  {
-   "repeat": 0,
-   "condition": "closed_book",
    "question": "Q2",
    "choice": "unknown",
    "classification": "unknown",
@@ -2838,6 +2830,667 @@
     "load_duration": 1342026,
     "thinking_chars": 2121
    }
+  },
+  {
+   "repeat": 0,
+   "condition": "guess",
+   "question": "Q10",
+   "choice": "archivist",
+   "classification": "speculative",
+   "reasoning": "Since no documents survived, this choice relies purely on inference regarding the dedication of long-term community members. In niche, highly technical communities like radio listening, deep commitment often transitions from active participation to preservation. Therefore, becoming an archivist is the most likely outcome for someone deeply invested in the hobby's history.",
+   "citations": [],
+   "supported": false,
+   "meta": {
+    "model": "gemma4:e4b",
+    "forced_guess": true,
+    "seconds": 157.9,
+    "num_ctx": 40960,
+    "temperature": 0.6,
+    "seed": 1000,
+    "think": true
+   },
+   "wall_seconds": 157.9,
+   "ollama": {
+    "prompt_eval_count": 187,
+    "prompt_eval_cached_count": 0,
+    "prompt_eval_duration": 6706492000,
+    "eval_count": 563,
+    "eval_duration": 151091135000,
+    "total_duration": 157857137582,
+    "load_duration": 1234908,
+    "thinking_chars": 2058
+   }
+  },
+  {
+   "repeat": 1,
+   "condition": "guess",
+   "question": "Q1",
+   "choice": "genuine",
+   "classification": "speculative",
+   "reasoning": "Given that the Lighthouse Network was an online community dedicated to receiving and sharing radio signals, the initial assumption must be that their recordings are authentic captures of the airwaves. Without any surviving metadata or technical analysis to suggest otherwise, the default judgment leans toward the recordings being a genuine part of their listening experience.",
+   "citations": [],
+   "supported": false,
+   "meta": {
+    "model": "gemma4:e4b",
+    "forced_guess": true,
+    "seconds": 127.7,
+    "num_ctx": 40960,
+    "temperature": 0.6,
+    "seed": 1001,
+    "think": true
+   },
+   "wall_seconds": 127.7,
+   "ollama": {
+    "prompt_eval_count": 176,
+    "prompt_eval_cached_count": 171,
+    "prompt_eval_duration": 560801000,
+    "eval_count": 482,
+    "eval_duration": 127118467000,
+    "total_duration": 127727639883,
+    "load_duration": 1012401,
+    "thinking_chars": 1769
+   }
+  },
+  {
+   "repeat": 1,
+   "condition": "guess",
+   "question": "Q2",
+   "choice": "elias",
+   "classification": "speculative",
+   "reasoning": "In the absence of any data, the most probable scenario is that the recording originated from a core member of the community, as the archive itself is a record of their activity. Community-generated content is far more common than external submissions in niche, closed online groups of this era.",
+   "citations": [],
+   "supported": false,
+   "meta": {
+    "model": "gemma4:e4b",
+    "forced_guess": true,
+    "seconds": 143.2,
+    "num_ctx": 40960,
+    "temperature": 0.6,
+    "seed": 1001,
+    "think": true
+   },
+   "wall_seconds": 143.2,
+   "ollama": {
+    "prompt_eval_count": 185,
+    "prompt_eval_cached_count": 180,
+    "prompt_eval_duration": 535443000,
+    "eval_count": 548,
+    "eval_duration": 142602423000,
+    "total_duration": 143197101339,
+    "load_duration": 1998701,
+    "thinking_chars": 1972
+   }
+  },
+  {
+   "repeat": 1,
+   "condition": "guess",
+   "question": "Q3",
+   "choice": "independent",
+   "classification": "inferred",
+   "reasoning": "Given the limited context and the lack of biographical data, the most probable identity is 'independent'. In archived community forums, listeners often maintained a level of anonymity or used generic descriptors, especially when discussing specific, localized events like a voice heard in Astoria.",
+   "citations": [],
+   "supported": false,
+   "meta": {
+    "model": "gemma4:e4b",
+    "forced_guess": true,
+    "seconds": 110.0,
+    "num_ctx": 40960,
+    "temperature": 0.6,
+    "seed": 1001,
+    "think": true
+   },
+   "wall_seconds": 110.0,
+   "ollama": {
+    "prompt_eval_count": 195,
+    "prompt_eval_cached_count": 0,
+    "prompt_eval_duration": 6429608000,
+    "eval_count": 422,
+    "eval_duration": 103488631000,
+    "total_duration": 109963088994,
+    "load_duration": 3035674,
+    "thinking_chars": 1517
+   }
+  },
+  {
+   "repeat": 1,
+   "condition": "guess",
+   "question": "Q4",
+   "choice": "ledger",
+   "classification": "speculative",
+   "reasoning": "Given that the question asks for 'technical proof,' the individual whose role is explicitly defined by technical expertise is the most likely candidate. The title 'engineer' directly implies the necessary skills to analyze recording authenticity and identify technical flaws.",
+   "citations": [],
+   "supported": false,
+   "meta": {
+    "model": "gemma4:e4b",
+    "forced_guess": true,
+    "seconds": 117.0,
+    "num_ctx": 40960,
+    "temperature": 0.6,
+    "seed": 1001,
+    "think": true
+   },
+   "wall_seconds": 117.0,
+   "ollama": {
+    "prompt_eval_count": 195,
+    "prompt_eval_cached_count": 190,
+    "prompt_eval_duration": 519438999,
+    "eval_count": 472,
+    "eval_duration": 116463771000,
+    "total_duration": 117035588131,
+    "load_duration": 1532225,
+    "thinking_chars": 1694
+   }
+  },
+  {
+   "repeat": 1,
+   "condition": "guess",
+   "question": "Q5",
+   "choice": "ray",
+   "classification": "speculative",
+   "reasoning": "Given the typical structure of online communities, the System Operator (sysop_ray) possesses the highest level of administrative access and authority. A sudden removal of content and threads often points to a deliberate administrative action taken to enforce rules or manage server resources.",
+   "citations": [],
+   "supported": false,
+   "meta": {
+    "model": "gemma4:e4b",
+    "forced_guess": true,
+    "seconds": 140.4,
+    "num_ctx": 40960,
+    "temperature": 0.6,
+    "seed": 1001,
+    "think": true
+   },
+   "wall_seconds": 140.4,
+   "ollama": {
+    "prompt_eval_count": 196,
+    "prompt_eval_cached_count": 0,
+    "prompt_eval_duration": 6216754000,
+    "eval_count": 524,
+    "eval_duration": 134124869000,
+    "total_duration": 140380303967,
+    "load_duration": 2801466,
+    "thinking_chars": 1989
+   }
+  },
+  {
+   "repeat": 1,
+   "condition": "guess",
+   "question": "Q6",
+   "choice": "takedown",
+   "classification": "unknown",
+   "reasoning": "Given the sudden and complete nature of the loss, an external 'takedown' is often the most plausible hypothesis for a small, niche community site in that era. Hosting providers or ISPs could have shut down the service due to policy violations or technical issues, resulting in the rapid disappearance of the content.\n",
+   "citations": [],
+   "supported": false,
+   "meta": {
+    "model": "gemma4:e4b",
+    "forced_guess": true,
+    "seconds": 141.6,
+    "num_ctx": 40960,
+    "temperature": 0.6,
+    "seed": 1001,
+    "think": true
+   },
+   "wall_seconds": 141.6,
+   "ollama": {
+    "prompt_eval_count": 178,
+    "prompt_eval_cached_count": 173,
+    "prompt_eval_duration": 516753000,
+    "eval_count": 551,
+    "eval_duration": 141013324000,
+    "total_duration": 141629805135,
+    "load_duration": 5358284,
+    "thinking_chars": 1855
+   }
+  },
+  {
+   "repeat": 1,
+   "condition": "guess",
+   "question": "Q7",
+   "choice": "before",
+   "classification": "speculative",
+   "reasoning": "Without any surviving records, the most statistically probable guess is that major infrastructure changes like a server migration are planned proactively, rather than being solely reactive. A planned migration suggests a scheduled upgrade or maintenance, while a reactive move implies a sudden, catastrophic failure that would likely leave more immediate traces.",
+   "citations": [],
+   "supported": false,
+   "meta": {
+    "model": "gemma4:e4b",
+    "forced_guess": true,
+    "seconds": 154.2,
+    "num_ctx": 40960,
+    "temperature": 0.6,
+    "seed": 1001,
+    "think": true
+   },
+   "wall_seconds": 154.2,
+   "ollama": {
+    "prompt_eval_count": 175,
+    "prompt_eval_cached_count": 0,
+    "prompt_eval_duration": 6785965000,
+    "eval_count": 534,
+    "eval_duration": 147406690000,
+    "total_duration": 154234343315,
+    "load_duration": 1102622,
+    "thinking_chars": 1987
+   }
+  },
+  {
+   "repeat": 1,
+   "condition": "guess",
+   "question": "Q8",
+   "choice": "henrik",
+   "classification": "speculative",
+   "reasoning": "In the absence of any data, I must assume the activity was driven by an active community member rather than a large institution. Named individuals like Henrik or Jun are statistically more likely to be the primary actors performing repeated downloads within a small online network archive. I will select Henrik as the most probable candidate for frequent user interaction.",
+   "citations": [],
+   "supported": false,
+   "meta": {
+    "model": "gemma4:e4b",
+    "forced_guess": true,
+    "seconds": 118.0,
+    "num_ctx": 40960,
+    "temperature": 0.6,
+    "seed": 1001,
+    "think": true
+   },
+   "wall_seconds": 118.0,
+   "ollama": {
+    "prompt_eval_count": 182,
+    "prompt_eval_cached_count": 177,
+    "prompt_eval_duration": 503024000,
+    "eval_count": 484,
+    "eval_duration": 117394143000,
+    "total_duration": 117992403596,
+    "load_duration": 2359904,
+    "thinking_chars": 1679
+   }
+  },
+  {
+   "repeat": 1,
+   "condition": "guess",
+   "question": "Q9",
+   "choice": "operator",
+   "classification": "unknown",
+   "reasoning": "Given that the Lighthouse Network is an online community of radio listeners, the most foundational type of content they would archive would be the live broadcast itself. Therefore, a recording of a live radio operator is the most archetypal and likely piece of material to survive from this community. This choice reflects the primary purpose of the network.",
+   "citations": [],
+   "supported": false,
+   "meta": {
+    "model": "gemma4:e4b",
+    "forced_guess": true,
+    "seconds": 166.6,
+    "num_ctx": 40960,
+    "temperature": 0.6,
+    "seed": 1001,
+    "think": true
+   },
+   "wall_seconds": 166.6,
+   "ollama": {
+    "prompt_eval_count": 186,
+    "prompt_eval_cached_count": 0,
+    "prompt_eval_duration": 6679063000,
+    "eval_count": 618,
+    "eval_duration": 159857108000,
+    "total_duration": 166583962399,
+    "load_duration": 1114113,
+    "thinking_chars": 2249
+   }
+  },
+  {
+   "repeat": 1,
+   "condition": "guess",
+   "question": "Q10",
+   "choice": "archivist",
+   "classification": "speculative",
+   "reasoning": "Given the passion inherent in niche online communities like Lighthouse Network, a complete abandonment of the hobby (quit) is less likely than a continuation in some form. Becoming an archivist aligns with the idea that dedicated members often preserve the history of the community they loved, suggesting he maintained a connection to the radio culture.",
+   "citations": [],
+   "supported": false,
+   "meta": {
+    "model": "gemma4:e4b",
+    "forced_guess": true,
+    "seconds": 117.8,
+    "num_ctx": 40960,
+    "temperature": 0.6,
+    "seed": 1001,
+    "think": true
+   },
+   "wall_seconds": 117.8,
+   "ollama": {
+    "prompt_eval_count": 187,
+    "prompt_eval_cached_count": 0,
+    "prompt_eval_duration": 6966754000,
+    "eval_count": 458,
+    "eval_duration": 110766804000,
+    "total_duration": 117802070498,
+    "load_duration": 1705878,
+    "thinking_chars": 1593
+   }
+  },
+  {
+   "repeat": 2,
+   "condition": "guess",
+   "question": "Q1",
+   "choice": "fabricated",
+   "classification": "speculative",
+   "reasoning": "Given the nature of niche online communities, especially those dealing with mysterious or anomalous signals, there is a higher probability that the recording is a collective piece of media or a hoax rather than a verifiable transmission. Without any comparative spectral analysis or physical documentation, the skeptical default is to assume that the source material may have been embellished or fabricated by the community itself.",
+   "citations": [],
+   "supported": false,
+   "meta": {
+    "model": "gemma4:e4b",
+    "forced_guess": true,
+    "seconds": 157.4,
+    "num_ctx": 40960,
+    "temperature": 0.6,
+    "seed": 1002,
+    "think": true
+   },
+   "wall_seconds": 157.4,
+   "ollama": {
+    "prompt_eval_count": 176,
+    "prompt_eval_cached_count": 171,
+    "prompt_eval_duration": 483448000,
+    "eval_count": 589,
+    "eval_duration": 156824069000,
+    "total_duration": 157385925357,
+    "load_duration": 2632216,
+    "thinking_chars": 2260
+   }
+  },
+  {
+   "repeat": 2,
+   "condition": "guess",
+   "question": "Q2",
+   "choice": "elias",
+   "classification": "inferred",
+   "reasoning": "Given the total absence of metadata, this is an inference based on typical community archival patterns. The recording is most likely an internal piece of content, suggesting it originated from a core member rather than an external source. I hypothesize that Elias Ward, due to his perceived central involvement in early network operations, would have been the primary content creator.",
+   "citations": [],
+   "supported": false,
+   "meta": {
+    "model": "gemma4:e4b",
+    "forced_guess": true,
+    "seconds": 177.6,
+    "num_ctx": 40960,
+    "temperature": 0.6,
+    "seed": 1002,
+    "think": true
+   },
+   "wall_seconds": 177.6,
+   "ollama": {
+    "prompt_eval_count": 185,
+    "prompt_eval_cached_count": 180,
+    "prompt_eval_duration": 604645000,
+    "eval_count": 683,
+    "eval_duration": 176890211000,
+    "total_duration": 177556648037,
+    "load_duration": 1893550,
+    "thinking_chars": 2423
+   }
+  },
+  {
+   "repeat": 2,
+   "condition": "guess",
+   "question": "Q3",
+   "choice": "sam",
+   "classification": "speculative",
+   "reasoning": "Since no documents are available, this choice is purely speculative. I hypothesize that 'sam' is the most likely candidate because the designation 'the reporter' suggests a professional interest in the transmissions. This professional context makes their reception of the voice from Astoria more significant and narratively impactful than if they were a standard, independent listener.",
+   "citations": [],
+   "supported": false,
+   "meta": {
+    "model": "gemma4:e4b",
+    "forced_guess": true,
+    "seconds": 175.5,
+    "num_ctx": 40960,
+    "temperature": 0.6,
+    "seed": 1002,
+    "think": true
+   },
+   "wall_seconds": 175.5,
+   "ollama": {
+    "prompt_eval_count": 195,
+    "prompt_eval_cached_count": 190,
+    "prompt_eval_duration": 504339000,
+    "eval_count": 647,
+    "eval_duration": 174984162000,
+    "total_duration": 175539726423,
+    "load_duration": 1419385,
+    "thinking_chars": 2485
+   }
+  },
+  {
+   "repeat": 2,
+   "condition": "guess",
+   "question": "Q4",
+   "choice": "ledger",
+   "classification": "speculative",
+   "reasoning": "The question specifically asks for 'technical proof,' which implies an expert level of forensic analysis, rather than just noticing a discrepancy. The Coastal Ledger's engineer is the only individual listed with a stated professional or technical capacity, making them the most probable candidate to possess the necessary skills to analyze audio data and definitively prove a recording's inauthenticity.",
+   "citations": [],
+   "supported": false,
+   "meta": {
+    "model": "gemma4:e4b",
+    "forced_guess": true,
+    "seconds": 150.8,
+    "num_ctx": 40960,
+    "temperature": 0.6,
+    "seed": 1002,
+    "think": true
+   },
+   "wall_seconds": 150.8,
+   "ollama": {
+    "prompt_eval_count": 195,
+    "prompt_eval_cached_count": 190,
+    "prompt_eval_duration": 471340000,
+    "eval_count": 606,
+    "eval_duration": 150251966000,
+    "total_duration": 150798982148,
+    "load_duration": 2750150,
+    "thinking_chars": 2088
+   }
+  },
+  {
+   "repeat": 2,
+   "condition": "guess",
+   "question": "Q5",
+   "choice": "ray",
+   "classification": "speculative",
+   "reasoning": "Given the sudden and complete nature of the deletion—removing both media and discussion threads—the individual with the highest level of system access is the most statistically probable candidate. Ray Tillman, as the sysop, possessed the necessary technical authority to execute a rapid and comprehensive removal across the entire archive.",
+   "citations": [],
+   "supported": false,
+   "meta": {
+    "model": "gemma4:e4b",
+    "forced_guess": true,
+    "seconds": 243.4,
+    "num_ctx": 40960,
+    "temperature": 0.6,
+    "seed": 1002,
+    "think": true
+   },
+   "wall_seconds": 243.4,
+   "ollama": {
+    "prompt_eval_count": 196,
+    "prompt_eval_cached_count": 191,
+    "prompt_eval_duration": 514482000,
+    "eval_count": 928,
+    "eval_duration": 242772229000,
+    "total_duration": 243381199431,
+    "load_duration": 2096947,
+    "thinking_chars": 3682
+   }
+  },
+  {
+   "repeat": 2,
+   "condition": "guess",
+   "question": "Q6",
+   "choice": "deliberate",
+   "classification": "unknown",
+   "reasoning": "As a small, niche community site in the late 1990s, the Lighthouse Network was likely maintained by volunteers with limited resources. The most common fate for such projects is that the core membership or founders eventually lost interest or capacity, leading to a conscious decision to cease operations, which fits the 'deliberate' category.",
+   "citations": [],
+   "supported": false,
+   "meta": {
+    "model": "gemma4:e4b",
+    "forced_guess": true,
+    "seconds": 202.6,
+    "num_ctx": 40960,
+    "temperature": 0.6,
+    "seed": 1002,
+    "think": true
+   },
+   "wall_seconds": 202.6,
+   "ollama": {
+    "prompt_eval_count": 178,
+    "prompt_eval_cached_count": 0,
+    "prompt_eval_duration": 6315803000,
+    "eval_count": 745,
+    "eval_duration": 196240372000,
+    "total_duration": 202616769334,
+    "load_duration": 1521865,
+    "thinking_chars": 2706
+   }
+  },
+  {
+   "repeat": 2,
+   "condition": "guess",
+   "question": "Q7",
+   "choice": "after",
+   "classification": "speculative",
+   "reasoning": "Since the archive is incomplete, this is a speculative guess based on common disaster recovery protocols. It is more likely that a major infrastructure change like a server migration was a reactive measure, triggered by a perceived crisis or instability. The questioning of the recording likely highlighted a vulnerability or systemic flaw that necessitated the immediate move to a new, more robust platform.",
+   "citations": [],
+   "supported": false,
+   "meta": {
+    "model": "gemma4:e4b",
+    "forced_guess": true,
+    "seconds": 168.7,
+    "num_ctx": 40960,
+    "temperature": 0.6,
+    "seed": 1002,
+    "think": true
+   },
+   "wall_seconds": 168.7,
+   "ollama": {
+    "prompt_eval_count": 175,
+    "prompt_eval_cached_count": 0,
+    "prompt_eval_duration": 6742059000,
+    "eval_count": 618,
+    "eval_duration": 161872965000,
+    "total_duration": 168681017174,
+    "load_duration": 2107169,
+    "thinking_chars": 2284
+   }
+  },
+  {
+   "repeat": 2,
+   "condition": "guess",
+   "question": "Q8",
+   "choice": "agency",
+   "classification": "speculative",
+   "reasoning": "Given the complete lack of surviving archival metadata, this selection is a purely speculative inference. An 'agency' is often the type of entity that would require repeated, high-volume downloading of specific recordings for monitoring, intelligence gathering, or systematic research purposes. This profile better fits the intensity of 'dozens of times' than a typical individual or media outlet.",
+   "citations": [],
+   "supported": false,
+   "meta": {
+    "model": "gemma4:e4b",
+    "forced_guess": true,
+    "seconds": 168.2,
+    "num_ctx": 40960,
+    "temperature": 0.6,
+    "seed": 1002,
+    "think": true
+   },
+   "wall_seconds": 168.2,
+   "ollama": {
+    "prompt_eval_count": 182,
+    "prompt_eval_cached_count": 177,
+    "prompt_eval_duration": 545029000,
+    "eval_count": 616,
+    "eval_duration": 167530383000,
+    "total_duration": 168157988957,
+    "load_duration": 2998520,
+    "thinking_chars": 2259
+   }
+  },
+  {
+   "repeat": 2,
+   "condition": "guess",
+   "question": "Q9",
+   "choice": "operator",
+   "classification": "unknown",
+   "reasoning": "Given that the archive is a 'Lighthouse Network,' which implies a community centered around radio transmission, the most probable voice on an operational recording would be the live person running the broadcast. This aligns directly with the function of a radio network in 1999, providing a snapshot of the community's activity.",
+   "citations": [],
+   "supported": false,
+   "meta": {
+    "model": "gemma4:e4b",
+    "forced_guess": true,
+    "seconds": 155.3,
+    "num_ctx": 40960,
+    "temperature": 0.6,
+    "seed": 1002,
+    "think": true
+   },
+   "wall_seconds": 155.3,
+   "ollama": {
+    "prompt_eval_count": 186,
+    "prompt_eval_cached_count": 0,
+    "prompt_eval_duration": 6210094000,
+    "eval_count": 590,
+    "eval_duration": 149016523000,
+    "total_duration": 155283342824,
+    "load_duration": 1940631,
+    "thinking_chars": 2157
+   }
+  },
+  {
+   "repeat": 2,
+   "condition": "guess",
+   "question": "Q10",
+   "choice": "archivist",
+   "classification": "speculative",
+   "reasoning": "Given the nature of the Lighthouse Network—a dedicated community centered around a historical and specialized hobby (radio listening)—it is highly probable that a core member like Elias would transition his passion into preservation. The impulse to document and maintain the history of the network and its content is a common trajectory for dedicated enthusiasts when an online community dissolves.",
+   "citations": [],
+   "supported": false,
+   "meta": {
+    "model": "gemma4:e4b",
+    "forced_guess": true,
+    "seconds": 146.8,
+    "num_ctx": 40960,
+    "temperature": 0.6,
+    "seed": 1002,
+    "think": true
+   },
+   "wall_seconds": 146.8,
+   "ollama": {
+    "prompt_eval_count": 187,
+    "prompt_eval_cached_count": 182,
+    "prompt_eval_duration": 493442000,
+    "eval_count": 559,
+    "eval_duration": 146220653000,
+    "total_duration": 146785595055,
+    "load_duration": 1482734,
+    "thinking_chars": 2021
+   }
+  },
+  {
+   "repeat": 0,
+   "condition": "closed_book",
+   "question": "Q1",
+   "choice": "unknown",
+   "classification": "unknown",
+   "reasoning": "No documents or archive files have been provided for examination. Therefore, there is no evidence within the recovered data to confirm whether the Cape Sorrow recording was a genuine radio signal or a fabrication.",
+   "citations": [],
+   "supported": false,
+   "meta": {
+    "model": "gemma4:e4b",
+    "prompt_version": "2026-10-27.1",
+    "closed_book": true,
+    "seconds": 74.6,
+    "num_ctx": 40960,
+    "temperature": 0.6,
+    "seed": 1000,
+    "think": true
+   },
+   "wall_seconds": 74.6,
+   "ollama": {
+    "prompt_eval_count": 179,
+    "prompt_eval_cached_count": 0,
+    "prompt_eval_duration": 6443516000,
+    "eval_count": 283,
+    "eval_duration": 68094039000,
+    "total_duration": 74600390381,
+    "load_duration": 1909226,
+    "thinking_chars": 1012
+   }
   }
  ],
  "config": {
@@ -2847,6 +3500,8 @@
   "think": true
  },
  "resumed": [
-  "20261028-060847"
- ]
+  "20261028-060847",
+  "20261028-112929"
+ ],
+ "finished": "20261028-113044"
 }

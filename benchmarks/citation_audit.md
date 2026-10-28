@@ -5,25 +5,35 @@ A citation is valid only when its quote is (nearly) verbatim in the exact senten
 
 | model | run | citations | valid | neighbour sentence | runs into next sentence | same document | other document | not in archive |
 |---|---|---|---|---|---|---|---|---|
+| gemma4:e2b | bench-gemma4_e2b-nothink-20261028-113429.json | 102 | 91 (89%) | 5 | 5 | 1 | 0 | 0 |
 | gemma4:e4b | bench-gemma4_e4b-nothink-20261027-125224.json | 101 | 87 (86%) | 11 | 0 | 3 | 0 | 0 |
+| gemma4:e4b (thinking) | bench-gemma4_e4b-think-20261028-013812.json | 98 | 88 (89%) | 4 | 1 | 5 | 0 | 0 |
 | gemma4:e4b | spike-gemma4_e4b-20261027-125224.json | 33 | 29 (87%) | 2 | 1 | 1 | 0 | 0 |
-| all runs |  | 134 | 116 (86%) | 13 | 1 | 4 | 0 | 0 |
+| all runs |  | 334 | 295 (88%) | 22 | 7 | 10 | 0 | 0 |
 
-Of 18 rejected citations, 18 (100%) quote text that exists in the archive under a different sentence id; 0 quote text that is not in the archive at all.
+Of 39 rejected citations, 39 (100%) quote text that exists in the archive under a different sentence id; 0 quote text that is not in the archive at all.
 
 ## Examples
 
-- **neighbour** (bench-gemma4_e4b-nothink-20261027-125224.json): cited `A36:s12` with "A splice."
-  - `A36:s12` actually says: "That's two recordings joined together."
-- **neighbour** (bench-gemma4_e4b-nothink-20261027-125224.json): cited `A41:s24` with "I got it on tape."
-  - `A41:s24` actually says: "It's uploaded as /signals/CS-0903.wav and logged as LB-212."
+- **neighbour** (bench-gemma4_e2b-nothink-20261028-113429.json): cited `A43:s29` with "things she can't explain as a radio signal" = it was NOT a normal transmission. this is what I've been saying since LANTERN"
+  - `A43:s29` actually says: "End of lighthouse-l Digest V3 #214"
+- **spans** (bench-gemma4_e2b-nothink-20261028-113429.json): cited `A42:s9` with "From: nightjar
+Subject: [forum] Heard it too - Astoria
+Thread: /forum/signals/thread_044.html"
+  - `A42:s9` actually says: "From: nightjar"
+- **neighbour** (bench-gemma4_e2b-nothink-20261028-113429.json): cited `A34:s9` with "Plan: Sat night - full tar to DAT (all of /home/httpd, the forum db, mail) Sun - power down beacon, haul the tape to Seattle, restore Sun night - DNS points at "
+  - `A34:s9` actually says: "Plan:"
+- **spans** (bench-gemma4_e2b-nothink-20261028-113429.json): cited `A01:s15` with "Put a line on the front page closer to the date. And please don't let anyone upload huge files before then, the disk is full-ish."
+  - `A01:s15` actually says: "Put a line on the front page closer to the date."
+- **same_document** (bench-gemma4_e2b-nothink-20261028-113429.json): cited `A47:s8` with "The Cape Sorrow recording is genuine."
+  - `A47:s8` actually says: "recording is genuine."
+- **spans** (bench-gemma4_e2b-nothink-20261028-113429.json): cited `A42:s9` with "From: nightjar
+Subject: [forum] Heard it too - Astoria
+Thread: /forum/signals/thread_044.html"
+  - `A42:s9` actually says: "From: nightjar"
+- **neighbour** (bench-gemma4_e2b-nothink-20261028-113429.json): cited `A34:s9` with "Plan: Sat night - full tar to DAT (all of /home/httpd, the forum db, mail) Sun - power down beacon, haul the tape to Seattle, restore Sun night - DNS points at "
+  - `A34:s9` actually says: "Plan:"
 - **same_document** (bench-gemma4_e4b-nothink-20261027-125224.json): cited `A36:s1` with "Eli sent me his "raw" file yesterday."
   - `A36:s1` actually says: "From: Dot Okafor <dot@beacon.lighthouse.net>"
-- **neighbour** (bench-gemma4_e4b-nothink-20261027-125224.json): cited `A36:s12` with "A splice."
-  - `A36:s12` actually says: "That's two recordings joined together."
 - **same_document** (bench-gemma4_e4b-nothink-20261027-125224.json): cited `A47:s8` with "This recording is authentic."
   - `A47:s8` actually says: "recording is genuine."
-- **same_document** (bench-gemma4_e4b-nothink-20261027-125224.json): cited `A24:s39` with "LB-212 1999-09-03 2.182 MHz CAPE SORROW — voice, "the light is out" (recording) eward"
-  - `A24:s39` actually says: "eward"
-- **spans** (spike-gemma4_e4b-20261027-125224.json): cited `A42:s13` with "I live in Astoria and I was up late friday with my Sangean on 2182 and I heard it. the same words. "the light is out". then four seven."
-  - `A42:s13` actually says: "I live in Astoria and I was up late friday with my Sangean on 2182 and I heard it. the same words."
