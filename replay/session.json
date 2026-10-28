@@ -1,0 +1,3409 @@
+{
+ "id": "bc93bad21324",
+ "created": 1793119508.8911724,
+ "status": "open",
+ "discovered": [
+  "A54",
+  "A01",
+  "A02",
+  "A03",
+  "A04",
+  "A05",
+  "A06",
+  "A07",
+  "A08",
+  "A09",
+  "A10",
+  "A11",
+  "A12",
+  "A13",
+  "A14",
+  "A15",
+  "A16",
+  "A17",
+  "A18",
+  "A19",
+  "A20",
+  "A21",
+  "A22",
+  "A23",
+  "A24",
+  "A25",
+  "A26",
+  "A27",
+  "A28",
+  "A29",
+  "A30",
+  "A31",
+  "A32",
+  "A33",
+  "A34",
+  "A35",
+  "A36",
+  "A37",
+  "A38",
+  "A39",
+  "A40",
+  "A41",
+  "A42",
+  "A43",
+  "A44",
+  "A45",
+  "A46",
+  "A47",
+  "A48",
+  "A49",
+  "A50",
+  "A51",
+  "A52",
+  "A53",
+  "A55",
+  "A56",
+  "A57",
+  "A58"
+ ],
+ "source_viewed": [
+  "A08",
+  "A11",
+  "A12",
+  "A15",
+  "A20",
+  "A21",
+  "A22",
+  "A23",
+  "A24",
+  "A45",
+  "A48",
+  "A49",
+  "A50",
+  "A51",
+  "A53",
+  "A55",
+  "A56",
+  "A57",
+  "A58"
+ ],
+ "messages": [
+  {
+   "role": "player",
+   "text": "Why did the Lighthouse Network disappear?"
+  },
+  {
+   "role": "investigator",
+   "answer": "The Lighthouse Network went offline in October 1999, and the exact reason is unknown (A54:s18).",
+   "claims": [
+    "c1",
+    "c2",
+    "c3"
+   ],
+   "unresolved_questions": [
+    "The archive does not provide a definitive reason for the network's disappearance."
+   ]
+  },
+  {
+   "role": "player",
+   "text": "What is the Cape Sorrow recording, and is it genuine?"
+  },
+  {
+   "role": "investigator",
+   "answer": "The Cape Sorrow recording, identified as CS-0903.wav, is a recording of a voice transmission heard on 2182 kHz, which is associated with the Cape Sorrow lighthouse (A24:s38, A41:s24). The transmission reportedly contained the phrase, \"Cape Sorrow radio, the light is out,\" followed by the numbers \"four seven, four seven\" (A41:s20-22, A22:s7).",
+   "claims": [
+    "c4",
+    "c5"
+   ],
+   "unresolved_questions": [
+    "Whether the recording is genuine is disputed by multiple members.",
+    "The archive contains conflicting analyses regarding the recording's authenticity."
+   ]
+  },
+  {
+   "role": "player",
+   "text": "Who is nightjar?"
+  },
+  {
+   "role": "investigator",
+   "answer": "Nightjar is a member of the Lighthouse Network who logged a transmission on 2182 kHz from Astoria, OR, on September 4, 1999, hearing the phrase \"the light is out\" (A22:s7, A42:s13). Nightjar was also listed as a member of the network (A25:s7, A42:s12).",
+   "claims": [
+    "c6",
+    "c7"
+   ],
+   "unresolved_questions": [
+    "Unknown: No information is provided regarding Nightjar's full name or other personal details."
+   ]
+  },
+  {
+   "role": "player",
+   "text": "What happened on October 16 and 17, 1999?"
+  },
+  {
+   "role": "investigator",
+   "answer": "On October 16, 1999, several events occurred related to the Cape Sorrow recording and the network's infrastructure. On this date, keeper deleted several threads, including thread 041, thread 044, and thread 047, and also deleted the file /signals/CS-0903.wav (A27:s5-s9). This action was taken after keeper spoke with an individual who admitted something (A03:s17-s18). The move to a new server was still scheduled for October 16-17, and sysop_ray confirmed the backup was still on for the next day (A03:s20-s23). On October 17, 1999, the entire server went down (A51:s12). Ray Tillman attempted a full backup to DAT tape on this day, but the backup failed due to write errors on the tape (A28:s1-s13). Following the server failure, the network was temporarily offline, and a placeholder page was put up (A45:s1-s4, A52:s17).",
+   "claims": [
+    "c8",
+    "c9",
+    "c10",
+    "c11"
+   ],
+   "unresolved_questions": [
+    "The specific reason for the server failure on October 17th is attributed by Ray Tillman to 'hardware' issues (A51:s12, A45:s2), but the failure of the backup tape (A28:s8-s10) suggests hardware problems were present prior to or during the move."
+   ]
+  },
+  {
+   "role": "player",
+   "text": "Who deleted the Cape Sorrow threads, and why?"
+  },
+  {
+   "role": "investigator",
+   "answer": "Keeper deleted the Cape Sorrow threads (thread 041, thread 044, and thread 047) on October 16, 1999 (A27:s5-s7). The reason for this deletion is not explicitly stated, but keeper mentioned that after speaking with an individual, 'He admits it' (A03:s17), and keeper stated, 'I'm pulling the recording and the threads tonight... before the Ledger runs anything' (A03:s19). This action occurred while the network was dealing with the controversy surrounding the recording, which The Coastal Ledger was planning to feature (A02:s4, A03:s13-s15).",
+   "claims": [
+    "c12",
+    "c13",
+    "c14",
+    "c15"
+   ],
+   "unresolved_questions": [
+    "The specific reason why keeper felt the need to delete the threads and recording, beyond preventing The Coastal Ledger from running anything, is unknown."
+   ]
+  },
+  {
+   "role": "player",
+   "text": "Was the server migration a reaction to the scandal?"
+  },
+  {
+   "role": "investigator",
+   "answer": "Inferred: The server migration was planned prior to the scandal, but the events surrounding the scandal coincided with and may have been exacerbated by the migration issues.",
+   "claims": [
+    "c16",
+    "c17",
+    "c18",
+    "c19",
+    "c20"
+   ],
+   "unresolved_questions": [
+    "Whether the deletion of the threads was a direct reaction to the impending server move or if the move was a reaction to the scandal."
+   ]
+  },
+  {
+   "role": "player",
+   "text": "Who downloaded the recording dozens of times on October 15?"
+  },
+  {
+   "role": "investigator",
+   "answer": "The access logs show that the file /signals/CS-0903.wav was downloaded dozens of times from the gateway gw1.cledger.com on October 15, 1999 (A26:s1-s6).",
+   "claims": [
+    "c21",
+    "c22",
+    "c23"
+   ],
+   "unresolved_questions": [
+    "The logs only show the IP address gw1.cledger.com, which is associated with The Coastal Ledger (A35:s1, A38:s1), but they do not identify the specific individual who performed the downloads."
+   ]
+  },
+  {
+   "role": "player",
+   "text": "Which documents contradict each other?"
+  },
+  {
+   "role": "investigator",
+   "answer": "Several documents present differing accounts or perspectives on the events, particularly regarding the Cape Sorrow recording and the server status:",
+   "claims": [
+    "c24",
+    "c25",
+    "c26",
+    "c27"
+   ],
+   "unresolved_questions": [
+    "Whether the hardware failure (A01:s3, A30:s1) was the primary cause of the network going offline, or if the deletion of content (A03:s19) was the primary action taken by administrators."
+   ]
+  },
+  {
+   "role": "player",
+   "text": "Whose voice is on the recording?"
+  },
+  {
+   "role": "investigator",
+   "answer": "The identity of the voice on the recording is a subject of debate within the archive.",
+   "claims": [
+    "c28",
+    "c29",
+    "c30",
+    "c31",
+    "c32"
+   ],
+   "unresolved_questions": [
+    "The archive does not provide definitive proof of the voice's origin, only conflicting expert and personal testimonies."
+   ]
+  },
+  {
+   "role": "player",
+   "text": "What happened to Elias Ward after 1999?"
+  },
+  {
+   "role": "investigator",
+   "answer": "The archive indicates that Elias Ward died in February 1999 (A50:s9).",
+   "claims": [
+    "c33"
+   ],
+   "unresolved_questions": [
+    "The archive does not contain information about Elias Ward after February 1999."
+   ]
+  }
+ ],
+ "claims": [
+  {
+   "text": "The Lighthouse Network was a small online community of radio listeners on the Oregon and Washington coast, 1997-1999.",
+   "classification": "observed",
+   "citations": [
+    {
+     "sentence_id": "A54:s16",
+     "quote": "The Lighthouse Network was a small online community of radio listeners on the Oregon and Washington coast, 1997-1999.",
+     "valid": true,
+     "reason": "",
+     "found_at": null
+    }
+   ],
+   "ghost": false,
+   "id": "c1",
+   "history": []
+  },
+  {
+   "text": "It went offline in October 1999.",
+   "classification": "observed",
+   "citations": [
+    {
+     "sentence_id": "A54:s17",
+     "quote": "It went offline in October 1999.",
+     "valid": true,
+     "reason": "",
+     "found_at": null
+    }
+   ],
+   "ghost": false,
+   "id": "c2",
+   "history": []
+  },
+  {
+   "text": "Nobody wrote down why.",
+   "classification": "observed",
+   "citations": [
+    {
+     "sentence_id": "A54:s18",
+     "quote": "Nobody wrote down why.",
+     "valid": true,
+     "reason": "",
+     "found_at": null
+    }
+   ],
+   "ghost": false,
+   "id": "c3",
+   "history": []
+  },
+  {
+   "text": "The Cape Sorrow recording, identified as CS-0903.wav, is a recording of a voice transmission heard on 2182 kHz, which is associated with the Cape Sorrow lighthouse",
+   "classification": "observed",
+   "citations": [
+    {
+     "sentence_id": "A24:s38",
+     "quote": "CAPE SORROW — voice, \"the light is out\" (recording)",
+     "valid": true,
+     "reason": "",
+     "found_at": null
+    },
+    {
+     "sentence_id": "A41:s24",
+     "quote": "It's uploaded as /signals/CS-0903.wav and logged as LB-212.",
+     "valid": true,
+     "reason": "",
+     "found_at": null
+    }
+   ],
+   "ghost": false,
+   "id": "c4",
+   "history": []
+  },
+  {
+   "text": "The transmission reportedly contained the phrase, \"Cape Sorrow radio, the light is out,\" followed by the numbers \"four seven, four seven\"",
+   "classification": "observed",
+   "citations": [
+    {
+     "sentence_id": "A41:s20",
+     "quote": "\"Cape Sorrow, Cape Sorrow, Cape Sorrow.",
+     "valid": false,
+     "reason": "quote not found in that sentence; the words are real, at A41:s19",
+     "found_at": "A41:s19"
+    },
+    {
+     "sentence_id": "A41:s21",
+     "quote": "The light is out.",
+     "valid": true,
+     "reason": "",
+     "found_at": null
+    },
+    {
+     "sentence_id": "A41:s22",
+     "quote": "I say again, the light is out.\" Then \"four seven, four seven.\"",
+     "valid": true,
+     "reason": "",
+     "found_at": null
+    }
+   ],
+   "ghost": false,
+   "id": "c5",
+   "history": []
+  },
+  {
+   "text": "Nightjar is a member of the Lighthouse Network who logged a transmission on 2182 kHz from Astoria, OR, on September 4, 1999, hearing the phrase \"the light is out\"",
+   "classification": "observed",
+   "citations": [
+    {
+     "sentence_id": "A22:s7",
+     "quote": "Heard the same voice the same night. \"the light is out\".",
+     "valid": true,
+     "reason": "",
+     "found_at": null
+    },
+    {
+     "sentence_id": "A42:s13",
+     "quote": "I live in Astoria and I was up late friday with my Sangean on 2182 and I heard it. the same words. \"the light is out\".",
+     "valid": true,
+     "reason": "",
+     "found_at": null
+    }
+   ],
+   "ghost": false,
+   "id": "c6",
+   "history": []
+  },
+  {
+   "text": "Nightjar was also listed as a member of the network",
+   "classification": "observed",
+   "citations": [
+    {
+     "sentence_id": "A25:s7",
+     "quote": "ppp-117.tillamook.coastlink.net - - [05/Sep/1999:22:37:51 -0700] \"POST /cgi-bin/guestbook.cgi HTTP/1.0\" 200 512 \"name=nightjar&from=Astoria%2C+OR\" \"Mozilla/4.08 [en] (Win98; I)\"",
+     "valid": true,
+     "reason": "",
+     "found_at": null
+    }
+   ],
+   "ghost": false,
+   "id": "c7",
+   "history": []
+  },
+  {
+   "text": "On October 16, 1999, several events occurred related to the Cape Sorrow recording and the network's infrastructure.",
+   "classification": "inferred",
+   "citations": [
+    {
+     "sentence_id": "A03:s12",
+     "quote": "The Ledger was in the logs today pulling the WAV over and over.",
+     "valid": false,
+     "reason": "quote not found in that sentence; the words are real, at A03:s13",
+     "found_at": "A03:s13"
+    },
+    {
+     "sentence_id": "A27:s2",
+     "quote": "dialup-9.newport.newportnet.com - hvale [16/Oct/1999:21:02:40 -0700] \"GET /forum/signals/thread_047.html HTTP/1.0\" 200 4410 \"Mozilla/3.04 (Win95; I)\"",
+     "valid": true,
+     "reason": "",
+     "found_at": null
+    },
+    {
+     "sentence_id": "A27:s5",
+     "quote": "cb-dsl-12.coosbay.harbornet.example - keeper [16/Oct/1999:23:41:12 -0700] \"POST /cgi-bin/forum/admin.cgi HTTP/1.0\" 200 401 \"action=purge&thread=041\" \"Mozilla/4.7 [en] (Win98; I)\"",
+     "valid": true,
+     "reason": "",
+     "found_at": null
+    },
+    {
+     "sentence_id": "A27:s6",
+     "quote": "cb-dsl-12.coosbay.harbornet.example - keeper [16/Oct/1999:23:43:30 -0700] \"POST /cgi-bin/forum/admin.cgi HTTP/1.0\" 200 401 \"action=purge&thread=044\" \"Mozilla/4.7 [en] (Win98; I)\"",
+     "valid": true,
+     "reason": "",
+     "found_at": null
+    },
+    {
+     "sentence_id": "A27:s7",
+     "quote": "cb-dsl-12.coosbay.harbornet.example - keeper [16/Oct/1999:23:45:02 -0700] \"POST /cgi-bin/forum/admin.cgi HTTP/1.0\" 200 401 \"action=purge&thread=047\" \"Mozilla/4.7 [en] (Win98; I)\"",
+     "valid": true,
+     "reason": "",
+     "found_at": null
+    },
+    {
+     "sentence_id": "A27:s8",
+     "quote": "cb-dsl-12.coosbay.harbornet.example - keeper [16/Oct/1999:23:49:57 -0700] \"POST /cgi-bin/filemgr.cgi HTTP/1.0\" 200 233 \"action=delete&file=/signals/CS-0903.wav\" \"Mozilla/4.7 [en] (Win98; I)\"",
+     "valid": true,
+     "reason": "",
+     "found_at": null
+    },
+    {
+     "sentence_id": "A03:s20",
+     "quote": "Ray, the move is still on for tomorrow?",
+     "valid": true,
+     "reason": "",
+     "found_at": null
+    },
+    {
+     "sentence_id": "A03:s23",
+     "quote": "Still on. Backup starts around 1am. ▒▒▒▒▒▒▒▒▒▒▒▒▒▒",
+     "valid": false,
+     "reason": "quote not found in that sentence",
+     "found_at": null
+    }
+   ],
+   "ghost": false,
+   "id": "c8",
+   "history": []
+  },
+  {
+   "text": "On October 17, 1999, the entire server went down (A51:s12).",
+   "classification": "observed",
+   "citations": [
+    {
+     "sentence_id": "A51:s12",
+     "quote": "Oct 17 - THE WHOLE SERVER GOES DOWN. Ray says \"hardware\".",
+     "valid": true,
+     "reason": "",
+     "found_at": null
+    }
+   ],
+   "ghost": false,
+   "id": "c9",
+   "history": []
+  },
+  {
+   "text": "Ray Tillman attempted a full backup to DAT tape on this day, but the backup failed due to write errors on the tape (A28:s1-s13).",
+   "classification": "observed",
+   "citations": [
+    {
+     "sentence_id": "A28:s1",
+     "quote": "Sun Oct 17 01:04:58 PDT 1999  backup: starting FULL backup to /dev/st0 (HP DAT24)",
+     "valid": true,
+     "reason": "",
+     "found_at": null
+    },
+    {
+     "sentence_id": "A28:s8",
+     "quote": "st0: Error with sense data: Current error st09:00: sense key Medium Error",
+     "valid": true,
+     "reason": "",
+     "found_at": null
+    },
+    {
+     "sentence_id": "A28:s10",
+     "quote": "tar: /dev/st0: Cannot write: Input/output error",
+     "valid": true,
+     "reason": "",
+     "found_at": null
+    }
+   ],
+   "ghost": false,
+   "id": "c10",
+   "history": []
+  },
+  {
+   "text": "Following the server failure, the network was temporarily offline, and a placeholder page was put up (A45:s1-s4, A52:s17).",
+   "classification": "observed",
+   "citations": [
+    {
+     "sentence_id": "A45:s1",
+     "quote": "We'll be right back.",
+     "valid": true,
+     "reason": "",
+     "found_at": null
+    },
+    {
+     "sentence_id": "A45:s2",
+     "quote": "The Lighthouse Network moved to a new server this weekend and the move did not go well.",
+     "valid": true,
+     "reason": "",
+     "found_at": null
+    },
+    {
+     "sentence_id": "A52:s17",
+     "quote": "I put a placeholder page up so people know we're not dead.",
+     "valid": true,
+     "reason": "",
+     "found_at": null
+    }
+   ],
+   "ghost": false,
+   "id": "c11",
+   "history": []
+  },
+  {
+   "text": "keeper deleted several threads, including thread 041, thread 044, and thread 047, and also deleted the file /signals/CS-0903.wav on October 16, 1999 (A27:s5-s7).",
+   "classification": "observed",
+   "citations": [
+    {
+     "sentence_id": "A27:s5",
+     "quote": "cb-dsl-12.coosbay.harbornet.example - keeper [16/Oct/1999:23:41:12 -0700] \"POST /cgi-bin/forum/admin.cgi HTTP/1.0\" 200 401 \"action=purge&thread=041\" \"Mozilla/4.7 [en] (Win98; I)\"",
+     "valid": true,
+     "reason": "",
+     "found_at": null
+    },
+    {
+     "sentence_id": "A27:s6",
+     "quote": "cb-dsl-12.coosbay.harbornet.example - keeper [16/Oct/1999:23:43:30 -0700] \"POST /cgi-bin/forum/admin.cgi HTTP/1.0\" 200 401 \"action=purge&thread=044\" \"Mozilla/4.7 [en] (Win98; I)\"",
+     "valid": true,
+     "reason": "",
+     "found_at": null
+    },
+    {
+     "sentence_id": "A27:s7",
+     "quote": "cb-dsl-12.coosbay.harbornet.example - keeper [16/Oct/1999:23:45:02 -0700] \"POST /cgi-bin/forum/admin.cgi HTTP/1.0\" 200 401 \"action=purge&thread=047\" \"Mozilla/4.7 [en] (Win98; I)\"",
+     "valid": true,
+     "reason": "",
+     "found_at": null
+    }
+   ],
+   "ghost": false,
+   "id": "c12",
+   "history": []
+  },
+  {
+   "text": "The reason for this deletion is not explicitly stated, but keeper mentioned that after speaking with an individual, 'He admits it' (A03:s17).",
+   "classification": "observed",
+   "citations": [
+    {
+     "sentence_id": "A03:s17",
+     "quote": "Talked to E▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒.",
+     "valid": false,
+     "reason": "quote not found in that sentence",
+     "found_at": null
+    }
+   ],
+   "ghost": false,
+   "id": "c13",
+   "history": [
+    {
+     "text": "The reason for this deletion is not explicitly stated, but keeper mentioned that after speaking with an individual, 'He admits it' (A03:s17).",
+     "classification": "observed",
+     "citations": [
+      {
+       "sentence_id": "A03:s17",
+       "quote": "Talked to E▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒.",
+       "valid": false,
+       "reason": "quote not found in that sentence",
+       "found_at": null
+      }
+     ],
+     "ghost": true,
+     "objection": "withdrawn",
+     "explanation": "The claim that 'keeper mentioned that after speaking with an individual, 'He admits it' (A03:s17)' is based on a misinterpretation of the archive. Sentence A03:s17 reads: '[keeper | 10/16/99 22:58] Talked to E▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒. He admits it. ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ I'm not going to put his name on the front page of a newspaper ▒▒▒▒▒▒▒▒▒▒▒▒▒▒' (A03:s17). While this sentence indicates that 'keeper' spoke to someone and that person 'admits it,' the archive does not specify *who* 'keeper' spoke to, nor does it explicitly state that this admission is the reason for the deletion of the recording/threads. The context is related to the Ledger pulling the WAV (A03:s13) and the subsequent decision to pull the recording and threads (A03:s19). Therefore, the claim cannot be factually supported as stated."
+    }
+   ],
+   "withdrawn": true
+  },
+  {
+   "text": "keeper stated, 'I'm pulling the recording and the threads tonight... before the Ledger runs anything' (A03:s19).",
+   "classification": "observed",
+   "citations": [
+    {
+     "sentence_id": "A03:s19",
+     "quote": "I'm pulling the recording and the threads tonight. ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ before the Ledger runs anything.",
+     "valid": false,
+     "reason": "quote not found in that sentence",
+     "found_at": null
+    }
+   ],
+   "ghost": false,
+   "id": "c14",
+   "history": [
+    {
+     "text": "keeper stated, 'I'm pulling the recording and the threads tonight... before the Ledger runs anything' (A03:s19).",
+     "classification": "observed",
+     "citations": [
+      {
+       "sentence_id": "A03:s19",
+       "quote": "I'm pulling the recording and the threads tonight. ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ before the Ledger runs anything.",
+       "valid": false,
+       "reason": "quote not found in that sentence",
+       "found_at": null
+      }
+     ],
+     "ghost": true,
+     "objection": "withdrawn",
+     "explanation": "The claim that 'keeper stated, \"I'm pulling the recording and the threads tonight... before the Ledger runs anything\" (A03:s19)' is withdrawn because the archive supports the following quote: [A03:s19] \"I'm pulling the recording and the threads tonight. ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ before the Ledger runs anything.\". The claim is factually supported by the citation, but the instruction requires me to quote the sentences that support the claim, and the original claim was presented as a factual statement based on that citation. Since the citation itself is present, I must re-evaluate the instruction. The instruction asks me to quote the sentences that support the claim. The claim is supported by A03:s19. I will revise the claim to reflect the exact quote."
+    }
+   ],
+   "withdrawn": true
+  },
+  {
+   "text": "This action occurred while the network was dealing with the controversy surrounding the recording, which The Coastal Ledger was planning to feature (A02:s4, A03:s13-s15).",
+   "classification": "inferred",
+   "citations": [
+    {
+     "sentence_id": "A02:s4",
+     "quote": "They want to do a story on the Cape Sorrow recording, \"local radio club hears ghost lighthouse\", for the Halloween issue.",
+     "valid": true,
+     "reason": "",
+     "found_at": null
+    },
+    {
+     "sentence_id": "A03:s13",
+     "quote": "The Ledger was in the logs today pulling the WAV over and over.",
+     "valid": true,
+     "reason": "",
+     "found_at": null
+    },
+    {
+     "sentence_id": "A03:s14",
+     "quote": "Sam said they're having \"an expert\" listen.",
+     "valid": true,
+     "reason": "",
+     "found_at": null
+    }
+   ],
+   "ghost": false,
+   "id": "c15",
+   "history": []
+  },
+  {
+   "text": "The move to a new server was planned due to hardware issues with the old disk, which was 'dying' (A01:s2, A01:s3, A01:s4).",
+   "classification": "observed",
+   "citations": [
+    {
+     "sentence_id": "A01:s2",
+     "quote": "Mara - beacon's disk is dying.",
+     "valid": true,
+     "reason": "",
+     "found_at": null
+    },
+    {
+     "sentence_id": "A01:s3",
+     "quote": "Kernel log is full of \"hda: dma_intr: status=0x51 { DriveReady SeekComplete Error }\".",
+     "valid": true,
+     "reason": "",
+     "found_at": null
+    },
+    {
+     "sentence_id": "A01:s4",
+     "quote": "It's the original 1996 drive.",
+     "valid": true,
+     "reason": "",
+     "found_at": null
+    }
+   ],
+   "ghost": false,
+   "id": "c16",
+   "history": []
+  },
+  {
+   "text": "The move was scheduled for the weekend of October 16-17 (A01:s6, A34:s8, A53:s8).",
+   "classification": "observed",
+   "citations": [
+    {
+     "sentence_id": "A01:s6",
+     "quote": "They can give me a slot the weekend of Oct 16-17.",
+     "valid": true,
+     "reason": "",
+     "found_at": null
+    },
+    {
+     "sentence_id": "A34:s8",
+     "quote": "I've booked a slot at NorthCoast Colo for the weekend of October 16-17.",
+     "valid": true,
+     "reason": "",
+     "found_at": null
+    },
+    {
+     "sentence_id": "A53:s8",
+     "quote": "Moving to NorthCoast Colo (Seattle) weekend of Oct 16-17.",
+     "valid": true,
+     "reason": "",
+     "found_at": null
+    }
+   ],
+   "ghost": false,
+   "id": "c17",
+   "history": []
+  },
+  {
+   "text": "The deletion of the threads and the recording occurred on October 16, 1999 (A03:s19, A27:s7).",
+   "classification": "observed",
+   "citations": [
+    {
+     "sentence_id": "A03:s19",
+     "quote": "I'm pulling the recording and the threads tonight.",
+     "valid": true,
+     "reason": "",
+     "found_at": null
+    },
+    {
+     "sentence_id": "A27:s7",
+     "quote": "cb-dsl-12.coosbay.harbornet.example - keeper [16/Oct/1999:23:45:02 -0700] \"POST /cgi-bin/forum/admin.cgi HTTP/1.0\" 200 401 \"action=purge&thread=047\" \"Mozilla/4.7 [en] (Win98; I)\"",
+     "valid": true,
+     "reason": "",
+     "found_at": null
+    }
+   ],
+   "ghost": false,
+   "id": "c18",
+   "history": []
+  },
+  {
+   "text": "The server ultimately failed on October 17, 1999 (A51:s12, A45:s2).",
+   "classification": "observed",
+   "citations": [
+    {
+     "sentence_id": "A51:s12",
+     "quote": "Oct 17 - THE WHOLE SERVER GOES DOWN. Ray says \"hardware\".",
+     "valid": true,
+     "reason": "",
+     "found_at": null
+    },
+    {
+     "sentence_id": "A45:s2",
+     "quote": "The Lighthouse Network moved to a new server this weekend and the move did not go well.",
+     "valid": true,
+     "reason": "",
+     "found_at": null
+    }
+   ],
+   "ghost": false,
+   "id": "c19",
+   "history": []
+  },
+  {
+   "text": "The archive notes that the two events (the deletion and the server failure) are not necessarily connected, though the timing is close (A39:s13).",
+   "classification": "observed",
+   "citations": [
+    {
+     "sentence_id": "A39:s13",
+     "quote": "The two things are not connected.",
+     "valid": true,
+     "reason": "",
+     "found_at": null
+    }
+   ],
+   "ghost": false,
+   "id": "c20",
+   "history": []
+  },
+  {
+   "text": "gw1.cledger.com - - [15/Oct/1999:09:02:11 -0700] \"GET /signals/CS-0903.wav HTTP/1.0\" 200 2117420 \"-\" \"Mozilla/4.0 (compatible; MSIE 5.0; Windows NT)\"",
+   "classification": "observed",
+   "citations": [
+    {
+     "sentence_id": "A26:s1",
+     "quote": "gw1.cledger.com - - [15/Oct/1999:09:02:11 -0700] \"GET /signals/CS-0903.wav HTTP/1.0\" 200 2117420 \"-\" \"Mozilla/4.0 (compatible; MSIE 5.0; Windows NT)\"",
+     "valid": true,
+     "reason": "",
+     "found_at": null
+    }
+   ],
+   "ghost": false,
+   "id": "c21",
+   "history": []
+  },
+  {
+   "text": "gw1.cledger.com - - [15/Oct/1999:16:48:30 -0700] \"GET /signals/CS-0903.wav HTTP/1.0\" 200 2117420 \"-\" \"SoundForge/4.5\"",
+   "classification": "observed",
+   "citations": [
+    {
+     "sentence_id": "A26:s6",
+     "quote": "gw1.cledger.com - - [15/Oct/1999:16:48:30 -0700] \"GET /signals/CS-0903.wav HTTP/1.0\" 200 2117420 \"-\" \"SoundForge/4.5\"",
+     "valid": true,
+     "reason": "",
+     "found_at": null
+    }
+   ],
+   "ghost": false,
+   "id": "c22",
+   "history": []
+  },
+  {
+   "text": "SUMMARY 15/Oct/1999: /signals/CS-0903.wav served 41 times, 38 to gw1.cledger.com",
+   "classification": "observed",
+   "citations": [
+    {
+     "sentence_id": "A26:s9",
+     "quote": "SUMMARY 15/Oct/1999: /signals/CS-0903.wav served 41 times, 38 to gw1.cledger.com",
+     "valid": true,
+     "reason": "",
+     "found_at": null
+    }
+   ],
+   "ghost": false,
+   "id": "c23",
+   "history": []
+  },
+  {
+   "text": "The reason for the server downtime/deletion is attributed to a hardware failure during the move.",
+   "classification": "observed",
+   "citations": [
+    {
+     "sentence_id": "A01:s2",
+     "quote": "Mara - beacon's disk is dying.",
+     "valid": true,
+     "reason": "",
+     "found_at": null
+    },
+    {
+     "sentence_id": "A07:s7",
+     "quote": "Also beacon's disk is old and grumpy.",
+     "valid": true,
+     "reason": "",
+     "found_at": null
+    },
+    {
+     "sentence_id": "A34:s7",
+     "quote": "The 1996 drive is on its way out.",
+     "valid": true,
+     "reason": "",
+     "found_at": null
+    },
+    {
+     "sentence_id": "A45:s2",
+     "quote": "The Lighthouse Network moved to a new server this weekend and the move did not go well.",
+     "valid": true,
+     "reason": "",
+     "found_at": null
+    },
+    {
+     "sentence_id": "A52:s10",
+     "quote": "Read errors on the tape past block 41,000-something.",
+     "valid": true,
+     "reason": "",
+     "found_at": null
+    },
+    {
+     "sentence_id": "A51:s12",
+     "quote": "Oct 17 - THE WHOLE SERVER GOES DOWN. Ray says \"hardware\".",
+     "valid": true,
+     "reason": "",
+     "found_at": null
+    }
+   ],
+   "ghost": false,
+   "id": "c24",
+   "history": []
+  },
+  {
+   "text": "The deletion of the threads and recording was a deliberate act to suppress evidence related to the recording.",
+   "classification": "inferred",
+   "citations": [
+    {
+     "sentence_id": "A03:s19",
+     "quote": "I'm pulling the recording and the threads tonight... before the Ledger runs anything.",
+     "valid": false,
+     "reason": "quote not found in that sentence",
+     "found_at": null
+    },
+    {
+     "sentence_id": "A16:s12",
+     "quote": "it's not spam. they're deleting the evidence. somebody got to them.",
+     "valid": true,
+     "reason": "",
+     "found_at": null
+    },
+    {
+     "sentence_id": "A51:s11",
+     "quote": "Oct 16 - the recording and every thread about it are deleted overnight.",
+     "valid": true,
+     "reason": "",
+     "found_at": null
+    }
+   ],
+   "ghost": false,
+   "id": "c25",
+   "history": []
+  },
+  {
+   "text": "The nature of the recording (CS-0903) is debated regarding its authenticity.",
+   "classification": "observed",
+   "citations": [
+    {
+     "sentence_id": "A14:s4",
+     "quote": "I don't believe it.",
+     "valid": true,
+     "reason": "",
+     "found_at": null
+    },
+    {
+     "sentence_id": "A36:s12",
+     "quote": "That's two recordings joined together. A splice.",
+     "valid": true,
+     "reason": "",
+     "found_at": null
+    },
+    {
+     "sentence_id": "A47:s4",
+     "quote": "This recording is authentic.",
+     "valid": true,
+     "reason": "",
+     "found_at": null
+    },
+    {
+     "sentence_id": "A43:s12",
+     "quote": "I've spent the last few days with CS-0903 in a spectrogram and I've found things in it that I can't explain as a radio signal received in the field.",
+     "valid": true,
+     "reason": "",
+     "found_at": null
+    }
+   ],
+   "ghost": false,
+   "id": "c26",
+   "history": []
+  },
+  {
+   "text": "The timing of the events suggests a connection between the recording controversy and the server issues.",
+   "classification": "inferred",
+   "citations": [
+    {
+     "sentence_id": "A03:s13",
+     "quote": "The Ledger was in the logs today pulling the WAV over and over.",
+     "valid": true,
+     "reason": "",
+     "found_at": null
+    },
+    {
+     "sentence_id": "A03:s16",
+     "quote": "Talked to E▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒.",
+     "valid": false,
+     "reason": "quote not found in that sentence",
+     "found_at": null
+    },
+    {
+     "sentence_id": "A03:s20",
+     "quote": "Ray, the move is still on for tomorrow?",
+     "valid": true,
+     "reason": "",
+     "found_at": null
+    },
+    {
+     "sentence_id": "A03:s21",
+     "quote": "Don't change anything because of this.",
+     "valid": true,
+     "reason": "",
+     "found_at": null
+    }
+   ],
+   "ghost": false,
+   "id": "c27",
+   "history": []
+  },
+  {
+   "text": "Elias Ward (eward) claims the recording is authentic, stating, 'I was there. I know what I heard.' (A47:s5)",
+   "classification": "observed",
+   "citations": [
+    {
+     "sentence_id": "A47:s5",
+     "quote": "I was there.",
+     "valid": true,
+     "reason": "",
+     "found_at": null
+    }
+   ],
+   "ghost": false,
+   "id": "c28",
+   "history": []
+  },
+  {
+   "text": "Dot Okafor (dotmatrix) suggests the voice is not a genuine field recording, pointing out technical anomalies like '60 Hz hum, with harmonics at 120 and 180, under the voice and only under the voice' (A36:s10). She concludes, 'I think the voice is an old tape, played on a reel deck and mixed into a noise recording' (A36:s21).",
+   "classification": "observed",
+   "citations": [
+    {
+     "sentence_id": "A36:s10",
+     "quote": "1. There is 60 Hz hum, with harmonics at 120 and 180, under the voice and only under the voice.",
+     "valid": true,
+     "reason": "",
+     "found_at": null
+    },
+    {
+     "sentence_id": "A36:s21",
+     "quote": "I think the voice is an old tape, played on a reel deck and mixed into a noise recording.",
+     "valid": true,
+     "reason": "",
+     "found_at": null
+    }
+   ],
+   "ghost": false,
+   "id": "c29",
+   "history": []
+  },
+  {
+   "text": "Henrik Vale (hvale) supports Dot's analysis, stating the procedure used in the recording is 'Older' and characteristic of 'Coast Guard communications drill, the way they ran them in the late seventies' (A33:s7).",
+   "classification": "observed",
+   "citations": [
+    {
+     "sentence_id": "A33:s7",
+     "quote": "That's a Coast Guard communications drill, the way they ran them in the late seventies: station name three times, the drill phrase, then the drill number.",
+     "valid": true,
+     "reason": "",
+     "found_at": null
+    }
+   ],
+   "ghost": false,
+   "id": "c30",
+   "history": []
+  },
+  {
+   "text": "Elias Ward (eward) disputes Dot's analysis, claiming that 'Whatever she thinks she sees is from my receiver and the tape deck' (A43:s20).",
+   "classification": "observed",
+   "citations": [
+    {
+     "sentence_id": "A43:s20",
+     "quote": "Dot is mistaken.",
+     "valid": true,
+     "reason": "",
+     "found_at": null
+    }
+   ],
+   "ghost": false,
+   "id": "c31",
+   "history": []
+  },
+  {
+   "text": "Junebug (junebug) suggests the voice might be from a 'modern site using an old script' (A14:s18).",
+   "classification": "observed",
+   "citations": [
+    {
+     "sentence_id": "A14:s18",
+     "quote": "\"recorded in a room\" ... or transmitted from a modern site using an old script.",
+     "valid": true,
+     "reason": "",
+     "found_at": null
+    }
+   ],
+   "ghost": false,
+   "id": "c32",
+   "history": []
+  },
+  {
+   "text": "Died February 11, 1999.",
+   "classification": "observed",
+   "citations": [
+    {
+     "sentence_id": "A50:s9",
+     "quote": "Died February 11, 1999.",
+     "valid": true,
+     "reason": "",
+     "found_at": null
+    }
+   ],
+   "ghost": false,
+   "id": "c33",
+   "history": []
+  }
+ ],
+ "hypotheses": [
+  {
+   "after_documents": 58,
+   "hypotheses": [
+    {
+     "id": "H1",
+     "status": "insufficient_evidence",
+     "reason": "There is evidence suggesting deliberate removal of content, but the ultimate cause of the network going offline is not definitively established as an external shutdown.",
+     "supporting": [
+      {
+       "sentence_id": "A16:s12",
+       "quote": "it's not spam. they're deleting the evidence. somebody got to them.",
+       "valid": true,
+       "reason": "",
+       "found_at": null
+      },
+      {
+       "sentence_id": "A19:s9",
+       "quote": "they took it.",
+       "valid": true,
+       "reason": "",
+       "found_at": null
+      },
+      {
+       "sentence_id": "A39:s11",
+       "quote": "Before the move, on the 16th, I removed some material from the site myself.",
+       "valid": true,
+       "reason": "",
+       "found_at": null
+      }
+     ],
+     "contradicting": [
+      {
+       "sentence_id": "A45:s2",
+       "quote": "The Lighthouse Network moved to a new server this weekend and the move did not go well.",
+       "valid": true,
+       "reason": "",
+       "found_at": null
+      },
+      {
+       "sentence_id": "A52:s18",
+       "quote": "I'm so sorry, everyone.",
+       "valid": true,
+       "reason": "",
+       "found_at": null
+      }
+     ],
+     "would_falsify": "Evidence showing the network went offline due to a non-malicious, purely technical failure, such as the hardware move described in A45:s2 and A52:s18."
+    },
+    {
+     "id": "H2",
+     "status": "insufficient_evidence",
+     "reason": "There is evidence of internal actions (deletions, data loss) that could be attributed to a member, but the intent or scope of sabotage is not confirmed.",
+     "supporting": [
+      {
+       "sentence_id": "A16:s12",
+       "quote": "it's not spam. they're deleting the evidence. somebody got to them.",
+       "valid": true,
+       "reason": "",
+       "found_at": null
+      },
+      {
+       "sentence_id": "A39:s11",
+       "quote": "Before the move, on the 16th, I removed some material from the site myself.",
+       "valid": true,
+       "reason": "",
+       "found_at": null
+      },
+      {
+       "sentence_id": "A51:s8",
+       "quote": "Sept 24 - Henrik, who had admin access in 1998, deletes ALL his posts and disappears.",
+       "valid": true,
+       "reason": "",
+       "found_at": null
+      }
+     ],
+     "contradicting": [
+      {
+       "sentence_id": "A14:s26",
+       "quote": "I'm removing my posts and my page.",
+       "valid": true,
+       "reason": "",
+       "found_at": null
+      },
+      {
+       "sentence_id": "A14:s27",
+       "quote": "Mara, Ray, thank you for everything.",
+       "valid": true,
+       "reason": "",
+       "found_at": null
+      }
+     ],
+     "would_falsify": "Evidence confirming that the deletions and data loss were solely the result of the hardware migration failure, as detailed in A52:s13 and A52:s14."
+    },
+    {
+     "id": "H3",
+     "status": "strongly_supported",
+     "reason": "Multiple documents detail severe hardware and data migration issues that coincide with the network's downtime.",
+     "supporting": [
+      {
+       "sentence_id": "A01:s2",
+       "quote": "Mara - beacon's disk is dying.",
+       "valid": true,
+       "reason": "",
+       "found_at": null
+      },
+      {
+       "sentence_id": "A01:s3",
+       "quote": "Kernel log is full of \"hda: dma_intr: status=0x51 { DriveReady SeekComplete Error }\".",
+       "valid": true,
+       "reason": "",
+       "found_at": null
+      },
+      {
+       "sentence_id": "A07:s7",
+       "quote": "Also beacon's disk is old and grumpy.",
+       "valid": true,
+       "reason": "",
+       "found_at": null
+      },
+      {
+       "sentence_id": "A30:s1",
+       "quote": "Aug 29 03:58:12 beacon kernel: hda: dma_intr: status=0x51 { DriveReady SeekComplete Error }",
+       "valid": true,
+       "reason": "",
+       "found_at": null
+      },
+      {
+       "sentence_id": "A34:s7",
+       "quote": "The 1996 drive is on its way out.",
+       "valid": true,
+       "reason": "",
+       "found_at": null
+      },
+      {
+       "sentence_id": "A53:s2",
+       "quote": "hardware : Pentium Pro 200, 64 MB, Quantum Fireball 2.1 GB (1996)",
+       "valid": true,
+       "reason": "",
+       "found_at": null
+      },
+      {
+       "sentence_id": "A52:s1",
+       "quote": "10/20/99",
+       "valid": false,
+       "reason": "quote not found in that sentence; the words are real, at A52:s2",
+       "found_at": "A52:s2"
+      },
+      {
+       "sentence_id": "A52:s9",
+       "quote": "On the new box, the restore died at 38%.",
+       "valid": true,
+       "reason": "",
+       "found_at": null
+      },
+      {
+       "sentence_id": "A52:s10",
+       "quote": "Read errors on the tape past block 41,000-something.",
+       "valid": true,
+       "reason": "",
+       "found_at": null
+      },
+      {
+       "sentence_id": "A45:s2",
+       "quote": "The Lighthouse Network moved to a new server this weekend and the move did not go well.",
+       "valid": true,
+       "reason": "",
+       "found_at": null
+      }
+     ],
+     "contradicting": [
+      {
+       "sentence_id": "A39:s11",
+       "quote": "Before the move, on the 16th, I removed some material from the site myself.",
+       "valid": true,
+       "reason": "",
+       "found_at": null
+      }
+     ],
+     "would_falsify": "Evidence showing that the data loss and deletion were entirely intentional acts, rather than a consequence of the hardware failure during the move."
+    },
+    {
+     "id": "H4",
+     "status": "strongly_supported",
+     "reason": "The timeline shows multiple, distinct events occurring in close proximity (late September to mid-October) that involve technical issues, content removal, and external media interest, suggesting a confluence of factors.",
+     "supporting": [
+      {
+       "sentence_id": "A07:s5",
+       "quote": "It's the Cape Sorrow file.",
+       "valid": true,
+       "reason": "",
+       "found_at": null
+      },
+      {
+       "sentence_id": "A26:s1",
+       "quote": "gw1.cledger.com - - [15/Oct/1999:09:02:11 -0700] \"GET /signals/CS-0903.wav HTTP/1.0\" 200 2117420 \"-\" \"Mozilla/4.0 (compatible; MSIE 5.0; Windows NT)\"",
+       "valid": true,
+       "reason": "",
+       "found_at": null
+      },
+      {
+       "sentence_id": "A35:s11",
+       "quote": "We would also like to have the audio checked by someone independent, so we may be downloading the file from your site a few times.",
+       "valid": true,
+       "reason": "",
+       "found_at": null
+      },
+      {
+       "sentence_id": "A13:s13",
+       "quote": "Also: the access road got closed THIS YEAR. coincidence?",
+       "valid": true,
+       "reason": "",
+       "found_at": null
+      },
+      {
+       "sentence_id": "A14:s25",
+       "quote": "I've been a member here since 1997 and I won't be part of whatever this is turning into.",
+       "valid": true,
+       "reason": "",
+       "found_at": null
+      },
+      {
+       "sentence_id": "A16:s7",
+       "quote": "I'm just saying 3 threads and the recording vanished on the same night.",
+       "valid": true,
+       "reason": "",
+       "found_at": null
+      },
+      {
+       "sentence_id": "A27:s7",
+       "quote": "cb-dsl-12.coosbay.harbornet.example - keeper [16/Oct/1999:23:45:02 -0700] \"POST /cgi-bin/forum/admin.cgi HTTP/1.0\" 200 401 \"action=purge&thread=047\" \"Mozilla/4.7 [en] (Win98; I)\"",
+       "valid": true,
+       "reason": "",
+       "found_at": null
+      }
+     ],
+     "contradicting": [
+      {
+       "sentence_id": "A39:s13",
+       "quote": "The two things are not connected.",
+       "valid": true,
+       "reason": "",
+       "found_at": null
+      }
+     ],
+     "would_falsify": "Evidence proving that the technical failure (H3) was the sole cause, or that the content removal (H2) was the sole cause, thereby isolating the events."
+    }
+   ]
+  }
+ ],
+ "timeline": [
+  {
+   "date": "1997-03-14",
+   "date_is_certain": true,
+   "description": "The Lighthouse Network was started by Mara Quinlan on March 14, 1997, as a single page on a free host with a guestbook and a list of frequencies.",
+   "classification": "observed",
+   "citations": [
+    {
+     "sentence_id": "A55:s2",
+     "quote": "The Lighthouse Network was started by Mara Quinlan on March 14, 1997, as a single page on a free host with a guestbook and a list of frequencies.",
+     "valid": true,
+     "reason": "",
+     "found_at": null
+    }
+   ],
+   "ghost": false
+  },
+  {
+   "date": "1997-04-02",
+   "date_is_certain": true,
+   "description": "The mailing list 'lighthouse-l' was established, welcoming users to the Lighthouse Network.",
+   "classification": "observed",
+   "citations": [
+    {
+     "sentence_id": "A44:s1",
+     "quote": "Welcome to lighthouse-l, the mailing list of the Lighthouse Network.",
+     "valid": true,
+     "reason": "",
+     "found_at": null
+    }
+   ],
+   "ghost": false
+  },
+  {
+   "date": "1998-08-14",
+   "date_is_certain": true,
+   "description": "The member list of the Lighthouse Network was updated.",
+   "classification": "observed",
+   "citations": [
+    {
+     "sentence_id": "A58:s3",
+     "quote": "Updated August 14, 1999.",
+     "valid": true,
+     "reason": "",
+     "found_at": null
+    }
+   ],
+   "ghost": false
+  },
+  {
+   "date": "1998-11",
+   "date_is_certain": false,
+   "description": "Ray Tillman offered the Lighthouse Network a home on his server, 'beacon', which was located in his garage in Tacoma.",
+   "classification": "observed",
+   "citations": [
+    {
+     "sentence_id": "A55:s7",
+     "quote": "In August 1997 Ray Tillman offered us a home on his own server, beacon, which lives in his garage in Tacoma and has been running ever since (mostly).",
+     "valid": true,
+     "reason": "",
+     "found_at": null
+    }
+   ],
+   "ghost": false
+  },
+  {
+   "date": "1999-03-20",
+   "date_is_certain": true,
+   "description": "Dot Okafor published a guide on mains hum, detailing how 60 Hz hum and harmonics can indicate a recording was made using wall-socket power.",
+   "classification": "observed",
+   "citations": [
+    {
+     "sentence_id": "A48:s1",
+     "quote": "Mains hum: the fingerprint of the wall socket",
+     "valid": true,
+     "reason": "",
+     "found_at": null
+    }
+   ],
+   "ghost": false
+  },
+  {
+   "date": "1999-04-02",
+   "date_is_certain": true,
+   "description": "A guestbook entry from 'Wilma T.' was posted.",
+   "classification": "observed",
+   "citations": [
+    {
+     "sentence_id": "A17:s1",
+     "quote": "#212 04/02/99 \"Wilma T.\" (Yachats, OR)",
+     "valid": true,
+     "reason": "",
+     "found_at": null
+    }
+   ],
+   "ghost": false
+  },
+  {
+   "date": "1999-05-16",
+   "date_is_certain": true,
+   "description": "A forum thread titled 'QSL cards you're proudest of' was started by 'saltmarsh'.",
+   "classification": "observed",
+   "citations": [
+    {
+     "sentence_id": "A04:s1",
+     "quote": "[saltmarsh | 05/16/99 14:00] Post your favourite QSL.",
+     "valid": false,
+     "reason": "quote runs past the end of that sentence",
+     "found_at": "A04:s1"
+    }
+   ],
+   "ghost": true
+  },
+  {
+   "date": "1999-06-12",
+   "date_is_certain": true,
+   "description": "Elias Ward posted about his radio gear, including his father's reel-to-reel recorder.",
+   "classification": "observed",
+   "citations": [
+    {
+     "sentence_id": "A49:s1",
+     "quote": "What I use",
+     "valid": true,
+     "reason": "",
+     "found_at": null
+    }
+   ],
+   "ghost": false
+  },
+  {
+   "date": "1999-07-18",
+   "date_is_certain": true,
+   "description": "A log entry (LB-199) was made by 'dotmatrix' noting that the NDB 'CSW' beacon was still keying, despite the light station being decommissioned in 1987.",
+   "classification": "observed",
+   "citations": [
+    {
+     "sentence_id": "A20:s1",
+     "quote": "LB-199",
+     "valid": true,
+     "reason": "",
+     "found_at": null
+    }
+   ],
+   "ghost": false
+  },
+  {
+   "date": "1999-08-02",
+   "date_is_certain": true,
+   "description": "The 'keeper' posted a message asking if anyone was still active on the forum.",
+   "classification": "observed",
+   "citations": [
+    {
+     "sentence_id": "A05:s1",
+     "quote": "[keeper | 08/02/99 22:00] Forum traffic is down to a few posts a week.",
+     "valid": false,
+     "reason": "quote runs past the end of that sentence",
+     "found_at": "A05:s1"
+    }
+   ],
+   "ghost": true
+  },
+  {
+   "date": "1999-08-03",
+   "date_is_certain": true,
+   "description": "A guestbook entry from 'eward' was posted, mentioning his father's passing in February.",
+   "classification": "observed",
+   "citations": [
+    {
+     "sentence_id": "A05:s12",
+     "quote": "My dad died in February and I haven't had the heart for the radio.",
+     "valid": true,
+     "reason": "",
+     "found_at": null
+    }
+   ],
+   "ghost": false
+  },
+  {
+   "date": "1999-08-09",
+   "date_is_certain": true,
+   "description": "A log entry (LB-204) was made by 'eward' recording an unmodulated carrier on 2182 kHz from Tillamook, OR.",
+   "classification": "observed",
+   "citations": [
+    {
+     "sentence_id": "A21:s1",
+     "quote": "LB-204",
+     "valid": true,
+     "reason": "",
+     "found_at": null
+    }
+   ],
+   "ghost": false
+  },
+  {
+   "date": "1999-08-21",
+   "date_is_certain": true,
+   "description": "A log entry (LB-208) was made by 'eward' noting a carrier on 2182 kHz with a faint voice.",
+   "classification": "observed",
+   "citations": [
+    {
+     "sentence_id": "A09:s1",
+     "quote": "[eward | 08/21/99 23:47] Second time this month.",
+     "valid": false,
+     "reason": "quote runs past the end of that sentence",
+     "found_at": "A09:s1"
+    }
+   ],
+   "ghost": true
+  },
+  {
+   "date": "1999-09-01",
+   "date_is_certain": true,
+   "description": "A forum thread was started by 'saltmarsh' regarding the closure of the Cape Sorrow access road due to slide damage.",
+   "classification": "observed",
+   "citations": [
+    {
+     "sentence_id": "A10:s1",
+     "quote": "[saltmarsh | 09/01/99 17:20] Drove down to Cape Sorrow today to try 2182 from the bluff.",
+     "valid": false,
+     "reason": "quote runs past the end of that sentence",
+     "found_at": "A10:s1"
+    }
+   ],
+   "ghost": true
+  },
+  {
+   "date": "1999-09-04",
+   "date_is_certain": true,
+   "description": "A guestbook entry from 'Craig D.' mentioned hearing about the Cape Sorrow recording.",
+   "classification": "observed",
+   "citations": [
+    {
+     "sentence_id": "A18:s1",
+     "quote": "#218 Craig D. (Portland, OR) Heard about the Cape Sorrow recording from a friend at work.",
+     "valid": false,
+     "reason": "quote not found in that sentence",
+     "found_at": null
+    }
+   ],
+   "ghost": true
+  },
+  {
+   "date": "1999-09-05",
+   "date_is_certain": true,
+   "description": "A log entry (LB-213) was made by 'nightjar' hearing the voice 'the light is out' from Astoria, OR.",
+   "classification": "observed",
+   "citations": [
+    {
+     "sentence_id": "A22:s1",
+     "quote": "LB-213",
+     "valid": true,
+     "reason": "",
+     "found_at": null
+    }
+   ],
+   "ghost": false
+  },
+  {
+   "date": "1999-09-06",
+   "date_is_certain": true,
+   "description": "A digest noted that 'nightjar' heard the voice from Astoria, confirming 'eward's report.",
+   "classification": "observed",
+   "citations": [
+    {
+     "sentence_id": "A42:s13",
+     "quote": "I live in Astoria and I was up late friday with my Sangean on 2182 and I heard it. the same words.",
+     "valid": true,
+     "reason": "",
+     "found_at": null
+    }
+   ],
+   "ghost": false
+  },
+  {
+   "date": "1999-09-07",
+   "date_is_certain": true,
+   "description": "A log entry (LB-214) by 'saltmarsh' noted silence on 2182 kHz from Florence, OR, for three nights.",
+   "classification": "observed",
+   "citations": [
+    {
+     "sentence_id": "A23:s1",
+     "quote": "LB-214",
+     "valid": true,
+     "reason": "",
+     "found_at": null
+    }
+   ],
+   "ghost": false
+  },
+  {
+   "date": "1999-09-12",
+   "date_is_certain": true,
+   "description": "A forum thread was started by 'junebug' proposing the 'LANTERN' theory regarding transmissions on 2182 from a Navy relay site near Cape Sorrow.",
+   "classification": "observed",
+   "citations": [
+    {
+     "sentence_id": "A13:s1",
+     "quote": "[junebug | 09/12/99 01:14] ok so hear me out.",
+     "valid": false,
+     "reason": "quote runs past the end of that sentence",
+     "found_at": "A13:s1"
+    }
+   ],
+   "ghost": true
+  },
+  {
+   "date": "1999-09-19",
+   "date_is_certain": true,
+   "description": "A guestbook entry from 'Bea' greeted 'Eli' and mentioned seeing his name on the radio site.",
+   "classification": "observed",
+   "citations": [
+    {
+     "sentence_id": "A18:s15",
+     "quote": "Hi Eli! Saw your name on the radio site.",
+     "valid": false,
+     "reason": "quote runs past the end of that sentence",
+     "found_at": "A18:s15"
+    }
+   ],
+   "ghost": true
+  },
+  {
+   "date": "1999-09-20",
+   "date_is_certain": true,
+   "description": "A forum thread was started by 'hvale' expressing doubt about the authenticity of the CS-0903 recording, citing procedural errors.",
+   "classification": "observed",
+   "citations": [
+    {
+     "sentence_id": "A14:s1",
+     "quote": "[hvale | 09/20/99 20:30] I have listened to CS-0903 about forty times now.",
+     "valid": false,
+     "reason": "quote runs past the end of that sentence",
+     "found_at": "A14:s1"
+    }
+   ],
+   "ghost": true
+  },
+  {
+   "date": "1999-09-24",
+   "date_is_certain": true,
+   "description": "Henrik Vale removed his posts and page from the forum, stating he was removing his posts and page.",
+   "classification": "observed",
+   "citations": [
+    {
+     "sentence_id": "A14:s26",
+     "quote": "I'm removing my posts and my page.",
+     "valid": true,
+     "reason": "",
+     "found_at": null
+    }
+   ],
+   "ghost": false
+  },
+  {
+   "date": "1999-09-25",
+   "date_is_certain": true,
+   "description": "A forum thread was started by 'qrp_anna' noting that Henrik's page was gone and his posts were deleted.",
+   "classification": "observed",
+   "citations": [
+    {
+     "sentence_id": "A06:s2",
+     "quote": "Henrik's page is gone and all his posts in 046 are deleted.",
+     "valid": true,
+     "reason": "",
+     "found_at": null
+    }
+   ],
+   "ghost": false
+  },
+  {
+   "date": "1999-09-28",
+   "date_is_certain": true,
+   "description": "Sam Reyes of The Coastal Ledger emailed 'keeper' requesting an interview about the Cape Sorrow signal for the Halloween edition.",
+   "classification": "observed",
+   "citations": [
+    {
+     "sentence_id": "A35:s1",
+     "quote": "From: Sam Reyes <sreyes@cledger.com>",
+     "valid": true,
+     "reason": "",
+     "found_at": null
+    }
+   ],
+   "ghost": false
+  },
+  {
+   "date": "1999-09-29",
+   "date_is_certain": true,
+   "description": "The 'keeper' confirmed to 'sysop_ray' that they agreed to a phone interview with Sam Reyes.",
+   "classification": "observed",
+   "citations": [
+    {
+     "sentence_id": "A02:s15",
+     "quote": "I said yes to a phone interview.",
+     "valid": true,
+     "reason": "",
+     "found_at": null
+    }
+   ],
+   "ghost": false
+  },
+  {
+   "date": "1999-10-02",
+   "date_is_certain": true,
+   "description": "A guestbook entry from 'Dale' asked for news regarding Cape Sorrow.",
+   "classification": "observed",
+   "citations": [
+    {
+     "sentence_id": "A19:s1",
+     "quote": "#224 10/02/99 \"Dale\" (Bend, OR) Any news on Cape Sorrow? Is the voice back?",
+     "valid": false,
+     "reason": "quote runs past the end of that sentence",
+     "found_at": "A19:s1"
+    }
+   ],
+   "ghost": true
+  },
+  {
+   "date": "1999-10-05",
+   "date_is_certain": true,
+   "description": "A forum thread was started by 'junebug' asking about Halloween coverage of Cape Sorrow.",
+   "classification": "observed",
+   "citations": [
+    {
+     "sentence_id": "A08:s13",
+     "quote": "Halloween at Cape Sorrow? — junebug, 10/5/99",
+     "valid": true,
+     "reason": "",
+     "found_at": null
+    }
+   ],
+   "ghost": false
+  },
+  {
+   "date": "1999-10-09",
+   "date_is_certain": true,
+   "description": "The Lighthouse Network homepage was updated, announcing the Cape Sorrow recording's popularity and mentioning planned server maintenance.",
+   "classification": "observed",
+   "citations": [
+    {
+     "sentence_id": "A56:s3",
+     "quote": "*** NEW: the Cape Sorrow recording is in the Log Book — 1,400+ downloads and counting! ***",
+     "valid": true,
+     "reason": "",
+     "found_at": null
+    }
+   ],
+   "ghost": false
+  },
+  {
+   "date": "1999-10-11",
+   "date_is_certain": true,
+   "description": "Elias Ward sent 'Dot Okafor' a raw, uncleaned version of the CS-0903 recording.",
+   "classification": "observed",
+   "citations": [
+    {
+     "sentence_id": "A31:s7",
+     "quote": "Here's the raw transfer before I cleaned it up (attached, cs_raw.wav, 6.4 MB).",
+     "valid": true,
+     "reason": "",
+     "found_at": null
+    }
+   ],
+   "ghost": false
+  },
+  {
+   "date": "1999-10-12",
+   "date_is_certain": true,
+   "description": "Dot Okafor sent a private message to 'keeper' regarding findings in the CS-0903 file, noting evidence of splicing and tape artifacts.",
+   "classification": "observed",
+   "citations": [
+    {
+     "sentence_id": "A36:s1",
+     "quote": "From: Dot Okafor <dot@beacon.lighthouse.net>",
+     "valid": true,
+     "reason": "",
+     "found_at": null
+    }
+   ],
+   "ghost": false
+  },
+  {
+   "date": "1999-10-13",
+   "date_is_certain": true,
+   "description": "Dot Okafor sent a private message to 'keeper' regarding the CS-0903 recording, asking 'keeper' to consult 'Henrik' about old radio procedures.",
+   "classification": "observed",
+   "citations": [
+    {
+     "sentence_id": "A32:s1",
+     "quote": "From: Dot Okafor <dot@beacon.lighthouse.net>",
+     "valid": true,
+     "reason": "",
+     "found_at": null
+    }
+   ],
+   "ghost": false
+  },
+  {
+   "date": "1999-10-14",
+   "date_is_certain": true,
+   "description": "Henrik Vale replied to Dot Okafor's inquiry, stating the procedure in CS-0903 sounded older, like a late seventies Coast Guard drill.",
+   "classification": "observed",
+   "citations": [
+    {
+     "sentence_id": "A33:s6",
+     "quote": "Older.",
+     "valid": true,
+     "reason": "",
+     "found_at": null
+    }
+   ],
+   "ghost": false
+  },
+  {
+   "date": "1999-10-15",
+   "date_is_certain": true,
+   "description": "The 'keeper' noted that The Coastal Ledger was repeatedly downloading the CS-0903 WAV file.",
+   "classification": "observed",
+   "citations": [
+    {
+     "sentence_id": "A03:s13",
+     "quote": "The Ledger was in the logs today pulling the WAV over and over.",
+     "valid": true,
+     "reason": "",
+     "found_at": null
+    }
+   ],
+   "ghost": false
+  },
+  {
+   "date": "1999-10-15",
+   "date_is_certain": true,
+   "description": "Dot Okafor informed the 'keeper' that she had spoken to 'Eli' (Elias Ward) and that he admitted something.",
+   "classification": "observed",
+   "citations": [
+    {
+     "sentence_id": "A03:s17",
+     "quote": "Talked to E▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒.",
+     "valid": false,
+     "reason": "quote not found in that sentence",
+     "found_at": null
+    }
+   ],
+   "ghost": true
+  },
+  {
+   "date": "1999-10-16",
+   "date_is_certain": true,
+   "description": "The 'keeper' stated they were pulling the recording and threads that night before The Ledger could access them.",
+   "classification": "observed",
+   "citations": [
+    {
+     "sentence_id": "A03:s19",
+     "quote": "I'm pulling the recording and the threads tonight.",
+     "valid": true,
+     "reason": "",
+     "found_at": null
+    }
+   ],
+   "ghost": false
+  },
+  {
+   "date": "1999-10-16",
+   "date_is_certain": true,
+   "description": "The 'keeper' confirmed to 'sysop_ray' that the planned hardware move was still scheduled for the next day.",
+   "classification": "observed",
+   "citations": [
+    {
+     "sentence_id": "A03:s21",
+     "quote": "Don't change anything because of this.",
+     "valid": true,
+     "reason": "",
+     "found_at": null
+    }
+   ],
+   "ghost": false
+  },
+  {
+   "date": "1999-10-16",
+   "date_is_certain": true,
+   "description": "The 'keeper' used administrative privileges to purge threads 041, 044, and 047, and deleted the CS-0903.wav file.",
+   "classification": "observed",
+   "citations": [
+    {
+     "sentence_id": "A27:s5",
+     "quote": "cb-dsl-12.coosbay.harbornet.example - keeper [16/Oct/1999:23:41:12 -0700] \"POST /cgi-bin/forum/admin.cgi HTTP/1.0\" 200 401 \"action=purge&thread=041\" \"Mozilla/4.7 [en] (Win98; I)\"",
+     "valid": true,
+     "reason": "",
+     "found_at": null
+    },
+    {
+     "sentence_id": "A27:s6",
+     "quote": "cb-dsl-12.coosbay.harbornet.example - keeper [16/Oct/1999:23:43:30 -0700] \"POST /cgi-bin/forum/admin.cgi HTTP/1.0\" 200 401 \"action=purge&thread=044\" \"Mozilla/4.7 [en] (Win98; I)\"",
+     "valid": true,
+     "reason": "",
+     "found_at": null
+    },
+    {
+     "sentence_id": "A27:s7",
+     "quote": "cb-dsl-12.coosbay.harbornet.example - keeper [16/Oct/1999:23:45:02 -0700] \"POST /cgi-bin/forum/admin.cgi HTTP/1.0\" 200 401 \"action=purge&thread=047\" \"Mozilla/4.7 [en] (Win98; I)\"",
+     "valid": true,
+     "reason": "",
+     "found_at": null
+    },
+    {
+     "sentence_id": "A27:s8",
+     "quote": "cb-dsl-12.coosbay.harbornet.example - keeper [16/Oct/1999:23:49:57 -0700] \"POST /cgi-bin/filemgr.cgi HTTP/1.0\" 200 233 \"action=delete&file=/signals/CS-0903.wav\" \"Mozilla/4.7 [en] (Win98; I)\"",
+     "valid": true,
+     "reason": "",
+     "found_at": null
+    }
+   ],
+   "ghost": false
+  },
+  {
+   "date": "1999-10-16",
+   "date_is_certain": true,
+   "description": "The 'keeper' sent an email to 'Elias Ward' stating that he meant what he said in their phone conversation and would not fight the outcome.",
+   "classification": "observed",
+   "citations": [
+    {
+     "sentence_id": "A37:s1",
+     "quote": "From: Elias Ward <eward@coastlink.net>",
+     "valid": true,
+     "reason": "",
+     "found_at": null
+    }
+   ],
+   "ghost": false
+  },
+  {
+   "date": "1999-10-17",
+   "date_is_certain": true,
+   "description": "The full backup of the 'beacon' server began at 01:04:58 PDT, but it failed due to write errors on the DAT24 tape.",
+   "classification": "observed",
+   "citations": [
+    {
+     "sentence_id": "A28:s1",
+     "quote": "Sun Oct 17 01:04:58 PDT 1999 backup: starting FULL backup to /dev/st0 (HP DAT24)",
+     "valid": true,
+     "reason": "",
+     "found_at": null
+    },
+    {
+     "sentence_id": "A28:s8",
+     "quote": "st0: Error with sense data: Current error st09:00: sense key Medium Error",
+     "valid": true,
+     "reason": "",
+     "found_at": null
+    }
+   ],
+   "ghost": false
+  },
+  {
+   "date": "1999-10-17",
+   "date_is_certain": true,
+   "description": "The 'sysop_ray' confirmed that the backup failed and that the restore on the new box died at 38% due to tape read errors.",
+   "classification": "observed",
+   "citations": [
+    {
+     "sentence_id": "A52:s9",
+     "quote": "On the new box, the restore died at 38%.",
+     "valid": true,
+     "reason": "",
+     "found_at": null
+    }
+   ],
+   "ghost": false
+  },
+  {
+   "date": "1999-10-17",
+   "date_is_certain": true,
+   "description": "The Lighthouse Network website was temporarily offline because the server move did not go well.",
+   "classification": "observed",
+   "citations": [
+    {
+     "sentence_id": "A45:s2",
+     "quote": "The Lighthouse Network moved to a new server this weekend and the move did not go well.",
+     "valid": true,
+     "reason": "",
+     "found_at": null
+    }
+   ],
+   "ghost": false
+  },
+  {
+   "date": "1999-10-19",
+   "date_is_certain": true,
+   "description": "A guestbook entry from 'junebug' stated that the site was down except for the guestbook, and that the Cape Sorrow material was deleted on the 16th and the server 'died' on the 17th.",
+   "classification": "observed",
+   "citations": [
+    {
+     "sentence_id": "A19:s7",
+     "quote": "the site is DOWN except this guestbook.",
+     "valid": true,
+     "reason": "",
+     "found_at": null
+    }
+   ],
+   "ghost": false
+  },
+  {
+   "date": "1999-10-19",
+   "date_is_certain": true,
+   "description": "A log entry from the new server showed that attempts to access CS-0903.wav resulted in a 404 error.",
+   "classification": "observed",
+   "citations": [
+    {
+     "sentence_id": "A29:s4",
+     "quote": "dsl-44.eug.pacbell.example - - [19/Oct/1999:22:40:30 -0700] \"GET /signals/CS-0903.wav HTTP/1.0\" 404 290 \"Mozilla/4.61 [en] (X11; I; Linux 2.2.12 i686)\"",
+     "valid": true,
+     "reason": "",
+     "found_at": null
+    }
+   ],
+   "ghost": false
+  },
+  {
+   "date": "1999-10-20",
+   "date_is_certain": true,
+   "description": "Sam Reyes informed the 'keeper' that The Coastal Ledger killed the story because the site was down and the recording link was dead.",
+   "classification": "observed",
+   "citations": [
+    {
+     "sentence_id": "A38:s6",
+     "quote": "Your site's been down since the weekend and the recording link is dead.",
+     "valid": true,
+     "reason": "",
+     "found_at": null
+    }
+   ],
+   "ghost": false
+  },
+  {
+   "date": "1999-10-22",
+   "date_is_certain": true,
+   "description": "The 'keeper' announced that the Lighthouse Network was going dark, stating that they removed some material from the site on the 16th for reasons belonging to someone else.",
+   "classification": "observed",
+   "citations": [
+    {
+     "sentence_id": "A39:s16",
+     "quote": "The Lighthouse Network is going dark.",
+     "valid": true,
+     "reason": "",
+     "found_at": null
+    }
+   ],
+   "ghost": false
+  }
+ ],
+ "form_ai": {
+  "Q1": {
+   "question": "Q1",
+   "choice": "fabricated",
+   "classification": "inferred",
+   "reasoning": "The archive contains conflicting evidence regarding the authenticity of the Cape Sorrow recording. Elias Ward asserts the recording is genuine and authentic, stating he was there (A47:s4, A47:s5). However, Dot Okafor provides technical analysis suggesting the recording is a splice of older tape material, including mains hum and reel-to-reel wow (A36:s10-s13, A36:s14-s18).",
+   "citations": [
+    {
+     "sentence_id": "A47:s4",
+     "quote": "I was there.",
+     "valid": false,
+     "reason": "quote not found in that sentence; the words are real, at A47:s5",
+     "found_at": "A47:s5"
+    },
+    {
+     "sentence_id": "A47:s5",
+     "quote": "I know what I heard.",
+     "valid": false,
+     "reason": "quote not found in that sentence; the words are real, at A47:s6",
+     "found_at": "A47:s6"
+    },
+    {
+     "sentence_id": "A36:s10",
+     "quote": "1. There is 60 Hz hum, with harmonics at 120 and 180, under the voice and only under the voice.",
+     "valid": true,
+     "reason": "",
+     "found_at": null
+    },
+    {
+     "sentence_id": "A36:s13",
+     "quote": "A splice.",
+     "valid": true,
+     "reason": "",
+     "found_at": null
+    },
+    {
+     "sentence_id": "A36:s14",
+     "quote": "2. Cape Sorrow has had no mains power since 1987.",
+     "valid": true,
+     "reason": "",
+     "found_at": null
+    }
+   ],
+   "supported": true,
+   "meta": {
+    "model": "gemma4:e4b",
+    "prompt_version": "2026-10-27.1",
+    "closed_book": false,
+    "seconds": 1229.8,
+    "num_ctx": 40960,
+    "temperature": 0.0,
+    "seed": 7,
+    "think": false
+   }
+  },
+  "Q2": {
+   "question": "Q2",
+   "choice": "elias",
+   "classification": "observed",
+   "reasoning": "The recording CS-0903 was logged by Elias Ward (eward) on 1999-09-04 (A24:s39, A41:s24). Furthermore, Elias Ward provided a README file stating, \"Recorded by: Elias Ward (eward)\" (A47:s3). However, Dot Okafor later presented evidence suggesting the recording was a splice of older tape material (A36:s12, A36:s19).",
+   "citations": [
+    {
+     "sentence_id": "A24:s39",
+     "quote": "LB-212\n1999-09-05\n2.182 MHz\nCAPE SORROW — voice, \"the light is out\" (recording)\neward",
+     "valid": false,
+     "reason": "quote not found in that sentence",
+     "found_at": null
+    },
+    {
+     "sentence_id": "A41:s24",
+     "quote": "It's uploaded as /signals/CS-0903.wav and logged as LB-212.",
+     "valid": true,
+     "reason": "",
+     "found_at": null
+    },
+    {
+     "sentence_id": "A47:s3",
+     "quote": "File: CS-0903.wav (22050 Hz, mono, 16-bit) Recorded by: Elias Ward (eward)",
+     "valid": true,
+     "reason": "",
+     "found_at": null
+    },
+    {
+     "sentence_id": "A36:s12",
+     "quote": "A splice.",
+     "valid": false,
+     "reason": "quote not found in that sentence; the words are real, at A36:s13",
+     "found_at": "A36:s13"
+    },
+    {
+     "sentence_id": "A36:s19",
+     "quote": "2. Cape Sorrow has had no mains power since 1987.",
+     "valid": false,
+     "reason": "quote not found in that sentence; the words are real, at A36:s14",
+     "found_at": "A36:s14"
+    }
+   ],
+   "supported": true,
+   "meta": {
+    "model": "gemma4:e4b",
+    "prompt_version": "2026-10-27.1",
+    "closed_book": false,
+    "seconds": 166.5,
+    "num_ctx": 40960,
+    "temperature": 0.0,
+    "seed": 7,
+    "think": false
+   }
+  },
+  "Q3": {
+   "question": "Q3",
+   "choice": "unknown",
+   "classification": "observed",
+   "reasoning": "The archive shows that 'nightjar' logged hearing the voice from Astoria on September 4, 1999 (A22:s5). Later, the digest confirms that 'nightjar' heard the same voice from Astoria on a Friday night (A42:s13). However, there is no direct evidence linking the handle 'nightjar' to Elias Ward, Jun Park, or any other named individual.",
+   "citations": [
+    {
+     "sentence_id": "A22:s5",
+     "quote": "Location : Astoria, OR",
+     "valid": true,
+     "reason": "",
+     "found_at": null
+    },
+    {
+     "sentence_id": "A42:s13",
+     "quote": "I live in Astoria and I was up late friday with my Sangean on 2182 and I heard it. the same words.",
+     "valid": true,
+     "reason": "",
+     "found_at": null
+    }
+   ],
+   "supported": true,
+   "meta": {
+    "model": "gemma4:e4b",
+    "prompt_version": "2026-10-27.1",
+    "closed_book": false,
+    "seconds": 93.9,
+    "num_ctx": 40960,
+    "temperature": 0.0,
+    "seed": 7,
+    "think": false
+   }
+  },
+  "Q4": {
+   "question": "Q4",
+   "choice": "dot",
+   "classification": "observed",
+   "reasoning": "Dot Okafor first presented technical evidence suggesting the recording was not genuine by analyzing the raw file. She pointed out specific audio artifacts that indicated the recording was a splice of different machines and sources (A36:s10, A36:s12, A36:s16). Henrik Vale later confirmed the procedural aspects were old, but Dot's initial analysis focused on the technical composition of the audio itself (A33:s7, A36:s14).",
+   "citations": [
+    {
+     "sentence_id": "A36:s10",
+     "quote": "1. There is 60 Hz hum, with harmonics at 120 and 180, under the voice and only under the voice.",
+     "valid": true,
+     "reason": "",
+     "found_at": null
+    },
+    {
+     "sentence_id": "A36:s12",
+     "quote": "A splice.",
+     "valid": false,
+     "reason": "quote not found in that sentence; the words are real, at A36:s13",
+     "found_at": "A36:s13"
+    },
+    {
+     "sentence_id": "A36:s16",
+     "quote": "2. Cape Sorrow has had no mains power since 1987.",
+     "valid": false,
+     "reason": "quote not found in that sentence; the words are real, at A36:s14",
+     "found_at": "A36:s14"
+    }
+   ],
+   "supported": true,
+   "meta": {
+    "model": "gemma4:e4b",
+    "prompt_version": "2026-10-27.1",
+    "closed_book": false,
+    "seconds": 124.8,
+    "num_ctx": 40960,
+    "temperature": 0.0,
+    "seed": 7,
+    "think": false
+   }
+  },
+  "Q5": {
+   "question": "Q5",
+   "choice": "mara",
+   "classification": "observed",
+   "reasoning": "The archive shows that keeper initiated the removal of the threads and the WAV file on October 16th (A27:s7, A27:s8). Furthermore, keeper later admitted to removing material from the site on the 16th (A39:s11). While junebug suspects an outside party (A16:s12), the direct administrative actions were performed by keeper.",
+   "citations": [
+    {
+     "sentence_id": "A27:s7",
+     "quote": "cb-dsl-12.coosbay.harbornet.example - keeper [16/Oct/1999:23:45:02 -0700] \"POST /cgi-bin/forum/admin.cgi HTTP/1.0\" 200 401 \"action=purge&thread=047\" \"Mozilla/4.7 [en] (Win98; I)\"",
+     "valid": true,
+     "reason": "",
+     "found_at": null
+    },
+    {
+     "sentence_id": "A27:s8",
+     "quote": "cb-dsl-12.coosbay.harbornet.example - keeper [16/Oct/1999:23:49:57 -0700] \"POST /cgi-bin/filemgr.cgi HTTP/1.0\" 200 233 \"action=delete&file=/signals/CS-0903.wav\" \"Mozilla/4.7 [en] (Win98; I)\"",
+     "valid": true,
+     "reason": "",
+     "found_at": null
+    },
+    {
+     "sentence_id": "A39:s11",
+     "quote": "Before the move, on the 16th, I removed some material from the site myself.",
+     "valid": true,
+     "reason": "",
+     "found_at": null
+    }
+   ],
+   "supported": true,
+   "meta": {
+    "model": "gemma4:e4b",
+    "prompt_version": "2026-10-27.1",
+    "closed_book": false,
+    "seconds": 172.4,
+    "num_ctx": 40960,
+    "temperature": 0.0,
+    "seed": 7,
+    "think": false
+   }
+  },
+  "Q6": {
+   "question": "Q6",
+   "choice": "migration",
+   "classification": "inferred",
+   "reasoning": "The archive presents conflicting accounts regarding the site's demise. Some sources point to a hardware failure during a planned move, while others suggest deliberate deletion of specific content. The final status is described as a combination of these events.",
+   "citations": [
+    {
+     "sentence_id": "A01:s2",
+     "quote": "Mara - beacon's disk is dying.",
+     "valid": true,
+     "reason": "",
+     "found_at": null
+    },
+    {
+     "sentence_id": "A01:s5",
+     "quote": "Plan: move everything to a rack box at NorthCoast Colo in Seattle.",
+     "valid": true,
+     "reason": "",
+     "found_at": null
+    },
+    {
+     "sentence_id": "A34:s7",
+     "quote": "The 1996 drive is on its way out.",
+     "valid": true,
+     "reason": "",
+     "found_at": null
+    },
+    {
+     "sentence_id": "A45:s2",
+     "quote": "The Lighthouse Network moved to a new server this weekend and the move did not go well.",
+     "valid": true,
+     "reason": "",
+     "found_at": null
+    },
+    {
+     "sentence_id": "A52:s9",
+     "quote": "On the new box, the restore died at 38%.",
+     "valid": true,
+     "reason": "",
+     "found_at": null
+    },
+    {
+     "sentence_id": "A52:s10",
+     "quote": "Read errors on the tape past block 41,000-something.",
+     "valid": true,
+     "reason": "",
+     "found_at": null
+    },
+    {
+     "sentence_id": "A52:s13",
+     "quote": "So: what's on the new server is whatever came off the first 38% of the tape.",
+     "valid": true,
+     "reason": "",
+     "found_at": null
+    },
+    {
+     "sentence_id": "A39:s7",
+     "quote": "By now most of you know the server died on the 17th and Ray could only save a fraction of it.",
+     "valid": true,
+     "reason": "",
+     "found_at": null
+    }
+   ],
+   "supported": true,
+   "meta": {
+    "model": "gemma4:e4b",
+    "prompt_version": "2026-10-27.1",
+    "closed_book": false,
+    "seconds": 160.9,
+    "num_ctx": 40960,
+    "temperature": 0.0,
+    "seed": 7,
+    "think": false
+   }
+  },
+  "Q7": {
+   "question": "Q7",
+   "choice": "before",
+   "classification": "observed",
+   "reasoning": "The decision to move the server was made before the intense focus on the Cape Sorrow recording. Sysop_ray mentioned the disk issue and the plan to move the hosting to NorthCoast Colo in Seattle in August 1999 (A01:s2, A01:s5, A34:s1). This predates the major discussions about the recording, which began in September 1999 (A07:s5, A14:s1).",
+   "citations": [
+    {
+     "sentence_id": "A01:s2",
+     "quote": "Mara - beacon's disk is dying.",
+     "valid": true,
+     "reason": "",
+     "found_at": null
+    },
+    {
+     "sentence_id": "A01:s5",
+     "quote": "Plan: move everything to a rack box at NorthCoast Colo in Seattle.",
+     "valid": true,
+     "reason": "",
+     "found_at": null
+    },
+    {
+     "sentence_id": "A34:s1",
+     "quote": "Mara, ... The 1996 drive is on its way out.",
+     "valid": false,
+     "reason": "quote not found in that sentence",
+     "found_at": null
+    }
+   ],
+   "supported": true,
+   "meta": {
+    "model": "gemma4:e4b",
+    "prompt_version": "2026-10-27.1",
+    "closed_book": false,
+    "seconds": 101.4,
+    "num_ctx": 40960,
+    "temperature": 0.0,
+    "seed": 7,
+    "think": false
+   }
+  },
+  "Q8": {
+   "question": "Q8",
+   "choice": "ledger",
+   "classification": "observed",
+   "reasoning": "The archive indicates that The Coastal Ledger was downloading the recording multiple times on October 15th (A26:s1-s6). This activity was noted in the access logs, which aligns with keeper's knowledge that The Ledger was pulling the WAV file repeatedly (A03:s13).",
+   "citations": [
+    {
+     "sentence_id": "A26:s1",
+     "quote": "gw1.cledger.com - - [15/Oct/1999:09:02:11 -0700] \"GET /signals/CS-0903.wav HTTP/1.0\" 200 2117420 \"-\" \"Mozilla/4.0 (compatible; MSIE 5.0; Windows NT)\"",
+     "valid": true,
+     "reason": "",
+     "found_at": null
+    },
+    {
+     "sentence_id": "A26:s2",
+     "quote": "gw1.cledger.com - - [15/Oct/1999:09:14:40 -0700] \"GET /signals/CS-0903.wav HTTP/1.0\" 200 2117420 \"-\" \"Mozilla/4.0 (compatible; MSIE 5.0; Windows NT)\"",
+     "valid": true,
+     "reason": "",
+     "found_at": null
+    },
+    {
+     "sentence_id": "A26:s4",
+     "quote": "gw1.cledger.com - - [15/Oct/1999:10:31:57 -0700] \"GET /signals/CS-0903.wav HTTP/1.0\" 200 2117420 \"-\" \"Mozilla/4.0 (compatible; MSIE 5.0; Windows NT)\"",
+     "valid": true,
+     "reason": "",
+     "found_at": null
+    },
+    {
+     "sentence_id": "A26:s6",
+     "quote": "gw1.cledger.com - - [15/Oct/1999:16:48:30 -0700] \"GET /signals/CS-0903.wav HTTP/1.0\" 200 2117420 \"-\" \"SoundForge/4.5\"",
+     "valid": true,
+     "reason": "",
+     "found_at": null
+    },
+    {
+     "sentence_id": "A03:s13",
+     "quote": "The Ledger was in the logs today pulling the WAV over and over.",
+     "valid": true,
+     "reason": "",
+     "found_at": null
+    }
+   ],
+   "supported": true,
+   "meta": {
+    "model": "gemma4:e4b",
+    "prompt_version": "2026-10-27.1",
+    "closed_book": false,
+    "seconds": 210.2,
+    "num_ctx": 40960,
+    "temperature": 0.0,
+    "seed": 7,
+    "think": false
+   }
+  },
+  "Q9": {
+   "question": "Q9",
+   "choice": "unknown",
+   "classification": "inferred",
+   "reasoning": "The archive presents conflicting evidence regarding the origin of the voice on the recording CS-0903. Elias Ward claims the recording is authentic and that he heard it live in 1999 (A47:s5, A41:s21), while Dot Okafor and Henrik Vale suggest it is an older tape recording (A36:s19, A33:s7).",
+   "citations": [
+    {
+     "sentence_id": "A47:s5",
+     "quote": "I was there.",
+     "valid": true,
+     "reason": "",
+     "found_at": null
+    },
+    {
+     "sentence_id": "A41:s21",
+     "quote": "The light is out.",
+     "valid": true,
+     "reason": "",
+     "found_at": null
+    },
+    {
+     "sentence_id": "A36:s19",
+     "quote": "Nobody types that about a radio signal.",
+     "valid": false,
+     "reason": "quote not found in that sentence; the words are real, at A36:s20",
+     "found_at": "A36:s20"
+    },
+    {
+     "sentence_id": "A33:s7",
+     "quote": "That's a Coast Guard communications drill, the way they ran them in the late seventies: station name three times, the drill phrase, then the drill number.",
+     "valid": true,
+     "reason": "",
+     "found_at": null
+    }
+   ],
+   "supported": true,
+   "meta": {
+    "model": "gemma4:e4b",
+    "prompt_version": "2026-10-27.1",
+    "closed_book": false,
+    "seconds": 116.5,
+    "num_ctx": 40960,
+    "temperature": 0.0,
+    "seed": 7,
+    "think": false
+   }
+  },
+  "Q10": {
+   "question": "Q10",
+   "choice": "unknown",
+   "classification": "unknown",
+   "reasoning": "The archive indicates that Elias Ward was involved in the network leading up to its closure, but it does not contain any information detailing his activities after the network went dark on October 1999. The last mention of him is in a guestbook entry from October 1999 (A19:s2).",
+   "citations": [
+    {
+     "sentence_id": "A19:s2",
+     "quote": "Any news on Cape Sorrow? Is the voice back?",
+     "valid": true,
+     "reason": "",
+     "found_at": null
+    }
+   ],
+   "supported": true,
+   "meta": {
+    "model": "gemma4:e4b",
+    "prompt_version": "2026-10-27.1",
+    "closed_book": false,
+    "seconds": 71.5,
+    "num_ctx": 40960,
+    "temperature": 0.0,
+    "seed": 7,
+    "think": false
+   }
+  }
+ },
+ "form_player": {},
+ "runs": [
+  {
+   "kind": "ask",
+   "model": "gemma4:e4b",
+   "prompt_version": "2026-10-27.1",
+   "evidence_ids": [
+    "A01",
+    "A02",
+    "A03",
+    "A04",
+    "A05",
+    "A06",
+    "A07",
+    "A08",
+    "A09",
+    "A10",
+    "A11",
+    "A12",
+    "A13",
+    "A14",
+    "A15",
+    "A16",
+    "A17",
+    "A18",
+    "A19",
+    "A20",
+    "A21",
+    "A22",
+    "A23",
+    "A24",
+    "A25",
+    "A26",
+    "A27",
+    "A28",
+    "A29",
+    "A30",
+    "A31",
+    "A32",
+    "A33",
+    "A34",
+    "A35",
+    "A36",
+    "A37",
+    "A38",
+    "A39",
+    "A40",
+    "A41",
+    "A42",
+    "A43",
+    "A44",
+    "A45",
+    "A46",
+    "A47",
+    "A48",
+    "A49",
+    "A50",
+    "A51",
+    "A52",
+    "A53",
+    "A54",
+    "A55",
+    "A56",
+    "A57",
+    "A58"
+   ],
+   "seconds": 1243.4,
+   "num_ctx": 40960,
+   "temperature": 0.0,
+   "seed": 7,
+   "think": false
+  },
+  {
+   "kind": "ask",
+   "model": "gemma4:e4b",
+   "prompt_version": "2026-10-27.1",
+   "evidence_ids": [
+    "A01",
+    "A02",
+    "A03",
+    "A04",
+    "A05",
+    "A06",
+    "A07",
+    "A08",
+    "A09",
+    "A10",
+    "A11",
+    "A12",
+    "A13",
+    "A14",
+    "A15",
+    "A16",
+    "A17",
+    "A18",
+    "A19",
+    "A20",
+    "A21",
+    "A22",
+    "A23",
+    "A24",
+    "A25",
+    "A26",
+    "A27",
+    "A28",
+    "A29",
+    "A30",
+    "A31",
+    "A32",
+    "A33",
+    "A34",
+    "A35",
+    "A36",
+    "A37",
+    "A38",
+    "A39",
+    "A40",
+    "A41",
+    "A42",
+    "A43",
+    "A44",
+    "A45",
+    "A46",
+    "A47",
+    "A48",
+    "A49",
+    "A50",
+    "A51",
+    "A52",
+    "A53",
+    "A54",
+    "A55",
+    "A56",
+    "A57",
+    "A58"
+   ],
+   "seconds": 201.9,
+   "num_ctx": 40960,
+   "temperature": 0.0,
+   "seed": 7,
+   "think": false
+  },
+  {
+   "kind": "ask",
+   "model": "gemma4:e4b",
+   "prompt_version": "2026-10-27.1",
+   "evidence_ids": [
+    "A01",
+    "A02",
+    "A03",
+    "A04",
+    "A05",
+    "A06",
+    "A07",
+    "A08",
+    "A09",
+    "A10",
+    "A11",
+    "A12",
+    "A13",
+    "A14",
+    "A15",
+    "A16",
+    "A17",
+    "A18",
+    "A19",
+    "A20",
+    "A21",
+    "A22",
+    "A23",
+    "A24",
+    "A25",
+    "A26",
+    "A27",
+    "A28",
+    "A29",
+    "A30",
+    "A31",
+    "A32",
+    "A33",
+    "A34",
+    "A35",
+    "A36",
+    "A37",
+    "A38",
+    "A39",
+    "A40",
+    "A41",
+    "A42",
+    "A43",
+    "A44",
+    "A45",
+    "A46",
+    "A47",
+    "A48",
+    "A49",
+    "A50",
+    "A51",
+    "A52",
+    "A53",
+    "A54",
+    "A55",
+    "A56",
+    "A57",
+    "A58"
+   ],
+   "seconds": 210.1,
+   "num_ctx": 40960,
+   "temperature": 0.0,
+   "seed": 7,
+   "think": false
+  },
+  {
+   "kind": "ask",
+   "model": "gemma4:e4b",
+   "prompt_version": "2026-10-27.1",
+   "evidence_ids": [
+    "A01",
+    "A02",
+    "A03",
+    "A04",
+    "A05",
+    "A06",
+    "A07",
+    "A08",
+    "A09",
+    "A10",
+    "A11",
+    "A12",
+    "A13",
+    "A14",
+    "A15",
+    "A16",
+    "A17",
+    "A18",
+    "A19",
+    "A20",
+    "A21",
+    "A22",
+    "A23",
+    "A24",
+    "A25",
+    "A26",
+    "A27",
+    "A28",
+    "A29",
+    "A30",
+    "A31",
+    "A32",
+    "A33",
+    "A34",
+    "A35",
+    "A36",
+    "A37",
+    "A38",
+    "A39",
+    "A40",
+    "A41",
+    "A42",
+    "A43",
+    "A44",
+    "A45",
+    "A46",
+    "A47",
+    "A48",
+    "A49",
+    "A50",
+    "A51",
+    "A52",
+    "A53",
+    "A54",
+    "A55",
+    "A56",
+    "A57",
+    "A58"
+   ],
+   "seconds": 597.4,
+   "num_ctx": 40960,
+   "temperature": 0.0,
+   "seed": 7,
+   "think": false
+  },
+  {
+   "kind": "ask",
+   "model": "gemma4:e4b",
+   "prompt_version": "2026-10-27.1",
+   "evidence_ids": [
+    "A01",
+    "A02",
+    "A03",
+    "A04",
+    "A05",
+    "A06",
+    "A07",
+    "A08",
+    "A09",
+    "A10",
+    "A11",
+    "A12",
+    "A13",
+    "A14",
+    "A15",
+    "A16",
+    "A17",
+    "A18",
+    "A19",
+    "A20",
+    "A21",
+    "A22",
+    "A23",
+    "A24",
+    "A25",
+    "A26",
+    "A27",
+    "A28",
+    "A29",
+    "A30",
+    "A31",
+    "A32",
+    "A33",
+    "A34",
+    "A35",
+    "A36",
+    "A37",
+    "A38",
+    "A39",
+    "A40",
+    "A41",
+    "A42",
+    "A43",
+    "A44",
+    "A45",
+    "A46",
+    "A47",
+    "A48",
+    "A49",
+    "A50",
+    "A51",
+    "A52",
+    "A53",
+    "A54",
+    "A55",
+    "A56",
+    "A57",
+    "A58"
+   ],
+   "seconds": 512.3,
+   "num_ctx": 40960,
+   "temperature": 0.0,
+   "seed": 7,
+   "think": false
+  },
+  {
+   "kind": "objection",
+   "model": "gemma4:e4b",
+   "prompt_version": "2026-10-27.1",
+   "seconds": 195.0,
+   "num_ctx": 40960,
+   "temperature": 0.0,
+   "seed": 7,
+   "think": false
+  },
+  {
+   "kind": "objection",
+   "model": "gemma4:e4b",
+   "prompt_version": "2026-10-27.1",
+   "seconds": 143.3,
+   "num_ctx": 40960,
+   "temperature": 0.0,
+   "seed": 7,
+   "think": false
+  },
+  {
+   "kind": "ask",
+   "model": "gemma4:e4b",
+   "prompt_version": "2026-10-27.1",
+   "evidence_ids": [
+    "A01",
+    "A02",
+    "A03",
+    "A04",
+    "A05",
+    "A06",
+    "A07",
+    "A08",
+    "A09",
+    "A10",
+    "A11",
+    "A12",
+    "A13",
+    "A14",
+    "A15",
+    "A16",
+    "A17",
+    "A18",
+    "A19",
+    "A20",
+    "A21",
+    "A22",
+    "A23",
+    "A24",
+    "A25",
+    "A26",
+    "A27",
+    "A28",
+    "A29",
+    "A30",
+    "A31",
+    "A32",
+    "A33",
+    "A34",
+    "A35",
+    "A36",
+    "A37",
+    "A38",
+    "A39",
+    "A40",
+    "A41",
+    "A42",
+    "A43",
+    "A44",
+    "A45",
+    "A46",
+    "A47",
+    "A48",
+    "A49",
+    "A50",
+    "A51",
+    "A52",
+    "A53",
+    "A54",
+    "A55",
+    "A56",
+    "A57",
+    "A58"
+   ],
+   "seconds": 358.7,
+   "num_ctx": 40960,
+   "temperature": 0.0,
+   "seed": 7,
+   "think": false
+  },
+  {
+   "kind": "ask",
+   "model": "gemma4:e4b",
+   "prompt_version": "2026-10-27.1",
+   "evidence_ids": [
+    "A01",
+    "A02",
+    "A03",
+    "A04",
+    "A05",
+    "A06",
+    "A07",
+    "A08",
+    "A09",
+    "A10",
+    "A11",
+    "A12",
+    "A13",
+    "A14",
+    "A15",
+    "A16",
+    "A17",
+    "A18",
+    "A19",
+    "A20",
+    "A21",
+    "A22",
+    "A23",
+    "A24",
+    "A25",
+    "A26",
+    "A27",
+    "A28",
+    "A29",
+    "A30",
+    "A31",
+    "A32",
+    "A33",
+    "A34",
+    "A35",
+    "A36",
+    "A37",
+    "A38",
+    "A39",
+    "A40",
+    "A41",
+    "A42",
+    "A43",
+    "A44",
+    "A45",
+    "A46",
+    "A47",
+    "A48",
+    "A49",
+    "A50",
+    "A51",
+    "A52",
+    "A53",
+    "A54",
+    "A55",
+    "A56",
+    "A57",
+    "A58"
+   ],
+   "seconds": 271.4,
+   "num_ctx": 40960,
+   "temperature": 0.0,
+   "seed": 7,
+   "think": false
+  },
+  {
+   "kind": "ask",
+   "model": "gemma4:e4b",
+   "prompt_version": "2026-10-27.1",
+   "evidence_ids": [
+    "A01",
+    "A02",
+    "A03",
+    "A04",
+    "A05",
+    "A06",
+    "A07",
+    "A08",
+    "A09",
+    "A10",
+    "A11",
+    "A12",
+    "A13",
+    "A14",
+    "A15",
+    "A16",
+    "A17",
+    "A18",
+    "A19",
+    "A20",
+    "A21",
+    "A22",
+    "A23",
+    "A24",
+    "A25",
+    "A26",
+    "A27",
+    "A28",
+    "A29",
+    "A30",
+    "A31",
+    "A32",
+    "A33",
+    "A34",
+    "A35",
+    "A36",
+    "A37",
+    "A38",
+    "A39",
+    "A40",
+    "A41",
+    "A42",
+    "A43",
+    "A44",
+    "A45",
+    "A46",
+    "A47",
+    "A48",
+    "A49",
+    "A50",
+    "A51",
+    "A52",
+    "A53",
+    "A54",
+    "A55",
+    "A56",
+    "A57",
+    "A58"
+   ],
+   "seconds": 356.7,
+   "num_ctx": 40960,
+   "temperature": 0.0,
+   "seed": 7,
+   "think": false
+  },
+  {
+   "kind": "ask",
+   "model": "gemma4:e4b",
+   "prompt_version": "2026-10-27.1",
+   "evidence_ids": [
+    "A01",
+    "A02",
+    "A03",
+    "A04",
+    "A05",
+    "A06",
+    "A07",
+    "A08",
+    "A09",
+    "A10",
+    "A11",
+    "A12",
+    "A13",
+    "A14",
+    "A15",
+    "A16",
+    "A17",
+    "A18",
+    "A19",
+    "A20",
+    "A21",
+    "A22",
+    "A23",
+    "A24",
+    "A25",
+    "A26",
+    "A27",
+    "A28",
+    "A29",
+    "A30",
+    "A31",
+    "A32",
+    "A33",
+    "A34",
+    "A35",
+    "A36",
+    "A37",
+    "A38",
+    "A39",
+    "A40",
+    "A41",
+    "A42",
+    "A43",
+    "A44",
+    "A45",
+    "A46",
+    "A47",
+    "A48",
+    "A49",
+    "A50",
+    "A51",
+    "A52",
+    "A53",
+    "A54",
+    "A55",
+    "A56",
+    "A57",
+    "A58"
+   ],
+   "seconds": 280.8,
+   "num_ctx": 40960,
+   "temperature": 0.0,
+   "seed": 7,
+   "think": false
+  },
+  {
+   "kind": "ask",
+   "model": "gemma4:e4b",
+   "prompt_version": "2026-10-27.1",
+   "evidence_ids": [
+    "A01",
+    "A02",
+    "A03",
+    "A04",
+    "A05",
+    "A06",
+    "A07",
+    "A08",
+    "A09",
+    "A10",
+    "A11",
+    "A12",
+    "A13",
+    "A14",
+    "A15",
+    "A16",
+    "A17",
+    "A18",
+    "A19",
+    "A20",
+    "A21",
+    "A22",
+    "A23",
+    "A24",
+    "A25",
+    "A26",
+    "A27",
+    "A28",
+    "A29",
+    "A30",
+    "A31",
+    "A32",
+    "A33",
+    "A34",
+    "A35",
+    "A36",
+    "A37",
+    "A38",
+    "A39",
+    "A40",
+    "A41",
+    "A42",
+    "A43",
+    "A44",
+    "A45",
+    "A46",
+    "A47",
+    "A48",
+    "A49",
+    "A50",
+    "A51",
+    "A52",
+    "A53",
+    "A54",
+    "A55",
+    "A56",
+    "A57",
+    "A58"
+   ],
+   "seconds": 74.6,
+   "num_ctx": 40960,
+   "temperature": 0.0,
+   "seed": 7,
+   "think": false
+  },
+  {
+   "kind": "hypotheses",
+   "model": "gemma4:e4b",
+   "prompt_version": "2026-10-27.1",
+   "seconds": 713.2,
+   "num_ctx": 40960,
+   "temperature": 0.0,
+   "seed": 7,
+   "think": false
+  },
+  {
+   "kind": "timeline",
+   "model": "gemma4:e4b",
+   "prompt_version": "2026-10-27.1",
+   "seconds": 2262.8,
+   "num_ctx": 40960,
+   "temperature": 0.0,
+   "seed": 7,
+   "think": false
+  },
+  {
+   "kind": "form",
+   "model": "gemma4:e4b",
+   "prompt_version": "2026-10-27.1",
+   "closed_book": false,
+   "seconds": 1229.8,
+   "num_ctx": 40960,
+   "temperature": 0.0,
+   "seed": 7,
+   "think": false
+  },
+  {
+   "kind": "form",
+   "model": "gemma4:e4b",
+   "prompt_version": "2026-10-27.1",
+   "closed_book": false,
+   "seconds": 166.5,
+   "num_ctx": 40960,
+   "temperature": 0.0,
+   "seed": 7,
+   "think": false
+  },
+  {
+   "kind": "form",
+   "model": "gemma4:e4b",
+   "prompt_version": "2026-10-27.1",
+   "closed_book": false,
+   "seconds": 93.9,
+   "num_ctx": 40960,
+   "temperature": 0.0,
+   "seed": 7,
+   "think": false
+  },
+  {
+   "kind": "form",
+   "model": "gemma4:e4b",
+   "prompt_version": "2026-10-27.1",
+   "closed_book": false,
+   "seconds": 124.8,
+   "num_ctx": 40960,
+   "temperature": 0.0,
+   "seed": 7,
+   "think": false
+  },
+  {
+   "kind": "form",
+   "model": "gemma4:e4b",
+   "prompt_version": "2026-10-27.1",
+   "closed_book": false,
+   "seconds": 172.4,
+   "num_ctx": 40960,
+   "temperature": 0.0,
+   "seed": 7,
+   "think": false
+  },
+  {
+   "kind": "form",
+   "model": "gemma4:e4b",
+   "prompt_version": "2026-10-27.1",
+   "closed_book": false,
+   "seconds": 160.9,
+   "num_ctx": 40960,
+   "temperature": 0.0,
+   "seed": 7,
+   "think": false
+  },
+  {
+   "kind": "form",
+   "model": "gemma4:e4b",
+   "prompt_version": "2026-10-27.1",
+   "closed_book": false,
+   "seconds": 101.4,
+   "num_ctx": 40960,
+   "temperature": 0.0,
+   "seed": 7,
+   "think": false
+  },
+  {
+   "kind": "form",
+   "model": "gemma4:e4b",
+   "prompt_version": "2026-10-27.1",
+   "closed_book": false,
+   "seconds": 210.2,
+   "num_ctx": 40960,
+   "temperature": 0.0,
+   "seed": 7,
+   "think": false
+  },
+  {
+   "kind": "form",
+   "model": "gemma4:e4b",
+   "prompt_version": "2026-10-27.1",
+   "closed_book": false,
+   "seconds": 116.5,
+   "num_ctx": 40960,
+   "temperature": 0.0,
+   "seed": 7,
+   "think": false
+  },
+  {
+   "kind": "form",
+   "model": "gemma4:e4b",
+   "prompt_version": "2026-10-27.1",
+   "closed_book": false,
+   "seconds": 71.5,
+   "num_ctx": 40960,
+   "temperature": 0.0,
+   "seed": 7,
+   "think": false
+  }
+ ]
+}
