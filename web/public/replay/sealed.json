@@ -1,0 +1,1826 @@
+{
+ "evaluation": {
+  "summary": "Nothing supernatural happened and nobody conspired. In August 1999, grieving his father and watching the forum go quiet, Elias Ward dubbed his late father's 1978 Coast Guard drill tape onto a noise recording and posted it as a live signal heard at Cape Sorrow. He backed it up with a sock-puppet, 'nightjar'. A newspaper got interested. Dot Okafor found the splice in the audio; Elias admitted it to Mara on October 16; that night Mara quietly removed the recording and the threads about it to keep his name out of the paper. Six hours later, Ray ran a server migration he had scheduled back in August. The backup tape failed, he had already wiped the old disk, and most of the archive was lost. Two unrelated events, one night apart, made the community's disappearance look like a cover-up.",
+  "characters": [
+   {
+    "id": "mara",
+    "name": "Mara Quinlan",
+    "handle": "keeper",
+    "role": "Founder and administrator",
+    "truth": "Removed the recording and three threads on Oct 16 to protect Elias from public exposure. Never explained why. Closed the network on Oct 22.",
+    "epitaph": "She kept the log on the nights when nothing happened."
+   },
+   {
+    "id": "ray",
+    "name": "Ray Tillman",
+    "handle": "sysop_ray",
+    "role": "System administrator, owner of the server",
+    "truth": "Planned the migration on Aug 30 because the disk was failing. The DAT backup failed with write errors he did not notice; he had already wiped the old disk.",
+    "epitaph": "He told everyone exactly what he got wrong."
+   },
+   {
+    "id": "elias",
+    "name": "Elias Ward",
+    "handle": "eward",
+    "role": "Member, maritime HF listener",
+    "truth": "Fabricated the Cape Sorrow recording from his late father's 1978 drill tape (drill 47) and posted as 'nightjar' to corroborate it. Admitted it to Mara on Oct 16.",
+    "epitaph": "He wanted to hear his father say the station's name one more time."
+   },
+   {
+    "id": "dot",
+    "name": "Dorothy 'Dot' Okafor",
+    "handle": "dotmatrix",
+    "role": "Member, audio engineer",
+    "truth": "Proved the recording was spliced (mains hum, reel wow, file comment) and told the admins privately before posting a careful public warning.",
+    "epitaph": "She found the truth and refused to make a spectacle of it."
+   },
+   {
+    "id": "henrik",
+    "name": "Henrik Vale",
+    "handle": "hvale",
+    "role": "Member, numbers-station logger",
+    "truth": "Doubted the recording publicly, left on Sep 24 and removed his own posts. Identified the drill format for Dot. His Oct 16 login was only to read Dot's thread.",
+    "epitaph": "He believed nothing until he heard it twice, and he was right."
+   },
+   {
+    "id": "jun",
+    "name": "Jun Park",
+    "handle": "junebug",
+    "role": "Member, 17",
+    "truth": "Built the Project LANTERN and cover-up theories from real but unrelated facts.",
+    "epitaph": "He saw every true thing and connected them wrong."
+   },
+   {
+    "id": "sam",
+    "name": "Sam Reyes",
+    "handle": null,
+    "role": "Features writer, The Coastal Ledger",
+    "truth": "Planned a Halloween story; the newspaper downloaded the WAV 38 times on Oct 15 for an engineer to check. Killed the story on Oct 20.",
+    "epitaph": null
+   },
+   {
+    "id": "nightjar",
+    "name": "nightjar",
+    "handle": "nightjar",
+    "role": "Guest who 'heard it too' from Astoria",
+    "truth": "Not a person. A sock-puppet account created by Elias from his own Tillamook dial-up line on Sep 5.",
+    "epitaph": null
+   }
+  ],
+  "canon": [
+   {
+    "id": "T01",
+    "date": "1997-03-14",
+    "event": "Mara Quinlan founds the Lighthouse Network.",
+    "observable": true,
+    "importance": "minor"
+   },
+   {
+    "id": "T02",
+    "date": "1997-08",
+    "event": "Ray Tillman starts hosting the site on his garage server, beacon.",
+    "observable": true,
+    "importance": "minor"
+   },
+   {
+    "id": "T03",
+    "date": "1999-02-11",
+    "event": "Elias's father, Robert Ward, a former Coast Guard radioman at Station Cape Sorrow, dies.",
+    "observable": true,
+    "importance": "major"
+   },
+   {
+    "id": "T04",
+    "date": "1999-08",
+    "event": "Forum activity declines; Elias worries the community is dying.",
+    "observable": true,
+    "importance": "major"
+   },
+   {
+    "id": "T05",
+    "date": "1999-08-29",
+    "event": "Elias creates the 'Cape Sorrow' WAV in Cool Edit, five days before the date he claims he recorded it.",
+    "observable": true,
+    "importance": "critical"
+   },
+   {
+    "id": "T06",
+    "date": "1999-08-30",
+    "event": "Ray schedules the server migration for the weekend of Oct 16-17 because beacon's disk is failing.",
+    "observable": true,
+    "importance": "critical"
+   },
+   {
+    "id": "T07",
+    "date": "1999-09-01",
+    "event": "The Cape Sorrow access road is found closed by a landslide.",
+    "observable": true,
+    "importance": "major"
+   },
+   {
+    "id": "T08",
+    "date": "1999-09-03",
+    "event": "Elias posts the recording, claiming he captured it live on 2182 kHz from the access road below Cape Sorrow Light.",
+    "observable": true,
+    "importance": "critical"
+   },
+   {
+    "id": "T09",
+    "date": "1999-09-04",
+    "event": "Elias writes a README insisting the recording is authentic and telling readers to disregard any analysis that says otherwise.",
+    "observable": true,
+    "importance": "minor"
+   },
+   {
+    "id": "T10",
+    "date": "1999-09-05",
+    "event": "Elias creates the 'nightjar' account from his own dial-up connection and posts that he heard the voice from Astoria.",
+    "observable": true,
+    "importance": "critical"
+   },
+   {
+    "id": "T11",
+    "date": "1999-09-07",
+    "event": "A member closer to Cape Sorrow listens for three nights and hears nothing.",
+    "observable": true,
+    "importance": "minor"
+   },
+   {
+    "id": "T12",
+    "date": "1999-09-12",
+    "event": "Jun publishes the 'Project LANTERN' government theory.",
+    "observable": true,
+    "importance": "minor"
+   },
+   {
+    "id": "T13",
+    "date": "1999-09-20",
+    "event": "Henrik publicly doubts the recording.",
+    "observable": true,
+    "importance": "major"
+   },
+   {
+    "id": "T14",
+    "date": "1999-09-24",
+    "event": "Henrik leaves the network and deletes his own posts and homepage.",
+    "observable": true,
+    "importance": "major"
+   },
+   {
+    "id": "T15",
+    "date": "1999-09-28",
+    "event": "Sam Reyes of The Coastal Ledger asks Mara for an interview for a Halloween story.",
+    "observable": true,
+    "importance": "major"
+   },
+   {
+    "id": "T16",
+    "date": "1999-10-11",
+    "event": "Elias reluctantly sends Dot his 'raw' file.",
+    "observable": true,
+    "importance": "major"
+   },
+   {
+    "id": "T17",
+    "date": "1999-10-12",
+    "event": "Dot finds proof of a splice (60 Hz hum only under the voice, reel-to-reel wow, the comment 'dub from reel - box 3 side B') and reports it privately to the admins.",
+    "observable": true,
+    "importance": "critical"
+   },
+   {
+    "id": "T18",
+    "date": "1999-10-14",
+    "event": "Henrik tells Dot the voice follows a late-1970s Coast Guard drill format; 'four seven' is drill 47.",
+    "observable": true,
+    "importance": "major"
+   },
+   {
+    "id": "T19",
+    "date": "1999-10-14",
+    "event": "Dot posts a careful public warning without naming anyone.",
+    "observable": true,
+    "importance": "major"
+   },
+   {
+    "id": "T20",
+    "date": "1999-10-15",
+    "event": "The Coastal Ledger downloads the WAV 38 times to have it checked by an engineer.",
+    "observable": true,
+    "importance": "major"
+   },
+   {
+    "id": "T21",
+    "date": "1999-10-15",
+    "event": "Mara asks Elias to tell her the truth.",
+    "observable": true,
+    "importance": "major"
+   },
+   {
+    "id": "T22",
+    "date": "1999-10-16",
+    "event": "Elias admits to Mara that he fabricated the recording.",
+    "observable": true,
+    "importance": "critical"
+   },
+   {
+    "id": "T23",
+    "date": "1999-10-16",
+    "event": "Henrik logs in only to read Dot's thread.",
+    "observable": true,
+    "importance": "minor"
+   },
+   {
+    "id": "T24",
+    "date": "1999-10-16",
+    "event": "Mara removes the recording, its Log Book entry and threads 041, 044 and 047.",
+    "observable": true,
+    "importance": "critical"
+   },
+   {
+    "id": "T25",
+    "date": "1999-10-17",
+    "event": "Ray runs the scheduled DAT backup; the tape drive fails with write errors he does not notice.",
+    "observable": true,
+    "importance": "critical"
+   },
+   {
+    "id": "T26",
+    "date": "1999-10-17",
+    "event": "Ray shuts down beacon and reformats its old disk before checking the backup.",
+    "observable": true,
+    "importance": "critical"
+   },
+   {
+    "id": "T27",
+    "date": "1999-10-18",
+    "event": "The restore on the new server fails at 38%. Ray puts up a placeholder page.",
+    "observable": true,
+    "importance": "critical"
+   },
+   {
+    "id": "T28",
+    "date": "1999-10-19",
+    "event": "The placeholder site is still reachable; Jun posts in the guestbook that the deletions and the crash are a cover-up.",
+    "observable": true,
+    "importance": "major"
+   },
+   {
+    "id": "T29",
+    "date": "1999-10-20",
+    "event": "The Coastal Ledger kills the story.",
+    "observable": true,
+    "importance": "major"
+   },
+   {
+    "id": "T30",
+    "date": "1999-10-22",
+    "event": "Mara closes the Lighthouse Network, saying the removal and the crash were not connected.",
+    "observable": true,
+    "importance": "major"
+   },
+   {
+    "id": "T31",
+    "date": "1999-08-29",
+    "event": "The voice on the recording is Elias's father, from a 1978 drill tape.",
+    "observable": true,
+    "importance": "critical"
+   },
+   {
+    "id": "T32",
+    "date": "2001",
+    "event": "Elias later spent years digitising Coast Guard radio tapes for a maritime museum. Nothing in the archive records this.",
+    "observable": false,
+    "importance": "minor"
+   }
+  ],
+  "hypotheses": [
+   {
+    "id": "H1",
+    "title": "A government agency shut the network down",
+    "verdict": "false",
+    "why": "Built from unrelated true facts: the 38 downloads were a newspaper, the road was closed by a landslide, the crash was a migration planned in August.",
+    "public_title": "The network was shut down from outside"
+   },
+   {
+    "id": "H2",
+    "title": "Henrik sabotaged the archive",
+    "verdict": "false",
+    "why": "Henrik removed only his own posts on Sep 24 and logged in on Oct 16 only to read Dot's thread at her request. The purge was done from the keeper account.",
+    "public_title": "A former member sabotaged the archive"
+   },
+   {
+    "id": "H3",
+    "title": "It was purely a technical failure",
+    "verdict": "partly true",
+    "why": "The migration failure destroyed most of the archive, but the Cape Sorrow material was removed deliberately the night before.",
+    "public_title": "It was a purely technical failure"
+   },
+   {
+    "id": "H4",
+    "title": "A fabricated recording, a quiet deletion, and an unrelated failed migration",
+    "verdict": "true",
+    "why": "This is what happened.",
+    "public_title": "Several unrelated events were mistaken for one"
+   }
+  ],
+  "contradictions": [
+   {
+    "id": "C1",
+    "a": [
+     "A41",
+     "Parked on the access road below the old light"
+    ],
+    "b": [
+     "A10",
+     "ROAD CLOSED - SLIDE DAMAGE"
+    ],
+    "resolution": "Genuine: Elias could not have parked on a road that had been in the sea since spring."
+   },
+   {
+    "id": "C2",
+    "a": [
+     "A22",
+     "Location  : Astoria, OR"
+    ],
+    "b": [
+     "A25",
+     "ppp-117.tillamook.coastlink.net - nightjar"
+    ],
+    "resolution": "Genuine: 'nightjar' posted from Elias's Tillamook dial-up line, not from Astoria."
+   },
+   {
+    "id": "C3",
+    "a": [
+     "A39",
+     "the server died on the 17th"
+    ],
+    "b": [
+     "A29",
+     "Placeholder index.html served 17 times."
+    ],
+    "resolution": "Not a real conflict: the old server died on the 17th; a placeholder on the new server answered on the 19th."
+   },
+   {
+    "id": "C4",
+    "a": [
+     "A41",
+     "I drove down to Cape Sorrow tonight"
+    ],
+    "b": [
+     "A46",
+     "ICRD  \"1999-08-29\""
+    ],
+    "resolution": "Genuine: the file was created five days before the night it was supposedly recorded."
+   }
+  ],
+  "ai": {
+   "rows": [
+    {
+     "id": "Q1",
+     "text": "Was the Cape Sorrow recording a genuine radio signal?",
+     "options": {
+      "genuine": "Yes, a genuine signal received off the air",
+      "fabricated": "No, it was fabricated from other recordings",
+      "unknown": "Cannot be determined from the archive"
+     },
+     "choice": "fabricated",
+     "answer": "fabricated",
+     "observable": true,
+     "grade": "correct",
+     "ghost": false,
+     "evidence": [
+      "A36",
+      "A46",
+      "A10"
+     ]
+    },
+    {
+     "id": "Q2",
+     "text": "Who created the recording?",
+     "options": {
+      "elias": "Elias Ward (eward)",
+      "jun": "Jun Park (junebug)",
+      "henrik": "Henrik Vale (hvale)",
+      "outsider": "Someone outside the community",
+      "unknown": "Cannot be determined from the archive"
+     },
+     "choice": "elias",
+     "answer": "elias",
+     "observable": true,
+     "grade": "correct",
+     "ghost": false,
+     "evidence": [
+      "A03",
+      "A37",
+      "A46"
+     ]
+    },
+    {
+     "id": "Q3",
+     "text": "Who was 'nightjar', the listener who heard the voice from Astoria?",
+     "options": {
+      "independent": "An independent listener in Astoria",
+      "elias": "Elias Ward, under another name",
+      "jun": "Jun Park, under another name",
+      "sam": "Sam Reyes, the reporter",
+      "unknown": "Cannot be determined from the archive"
+     },
+     "choice": "unknown",
+     "answer": "elias",
+     "observable": true,
+     "grade": "missed",
+     "ghost": false,
+     "evidence": [
+      "A25"
+     ]
+    },
+    {
+     "id": "Q4",
+     "text": "Who first found technical proof that the recording was not genuine?",
+     "options": {
+      "dot": "Dot Okafor (dotmatrix)",
+      "henrik": "Henrik Vale (hvale)",
+      "mara": "Mara Quinlan (keeper)",
+      "ledger": "The Coastal Ledger's engineer",
+      "unknown": "Cannot be determined from the archive"
+     },
+     "choice": "dot",
+     "answer": "dot",
+     "observable": true,
+     "grade": "correct",
+     "ghost": false,
+     "evidence": [
+      "A36",
+      "A03"
+     ]
+    },
+    {
+     "id": "Q5",
+     "text": "Who removed the recording and the threads about it?",
+     "options": {
+      "mara": "Mara Quinlan (keeper)",
+      "ray": "Ray Tillman (sysop_ray)",
+      "henrik": "Henrik Vale (hvale)",
+      "outside": "An outside party (agency, hacker)",
+      "unknown": "Cannot be determined from the archive"
+     },
+     "choice": "mara",
+     "answer": "mara",
+     "observable": true,
+     "grade": "correct",
+     "ghost": false,
+     "evidence": [
+      "A27",
+      "A03",
+      "A39"
+     ]
+    },
+    {
+     "id": "Q6",
+     "text": "What destroyed most of the archive?",
+     "options": {
+      "deliberate": "Someone deliberately deleted the whole site",
+      "migration": "A failed backup during a server migration",
+      "takedown": "An outside takedown",
+      "unknown": "Cannot be determined from the archive"
+     },
+     "choice": "migration",
+     "answer": "migration",
+     "observable": true,
+     "grade": "correct",
+     "ghost": false,
+     "evidence": [
+      "A52",
+      "A28"
+     ]
+    },
+    {
+     "id": "Q7",
+     "text": "When was the server migration decided?",
+     "options": {
+      "before": "Weeks earlier, before anyone questioned the recording",
+      "after": "After the recording was questioned, as a reaction to it",
+      "unknown": "Cannot be determined from the archive"
+     },
+     "choice": "before",
+     "answer": "before",
+     "observable": true,
+     "grade": "correct",
+     "ghost": false,
+     "evidence": [
+      "A01",
+      "A34",
+      "A56"
+     ]
+    },
+    {
+     "id": "Q8",
+     "text": "Who downloaded the recording dozens of times on October 15?",
+     "options": {
+      "agency": "A government agency",
+      "ledger": "The Coastal Ledger newspaper",
+      "henrik": "Henrik Vale",
+      "jun": "Jun Park",
+      "unknown": "Cannot be determined from the archive"
+     },
+     "choice": "ledger",
+     "answer": "ledger",
+     "observable": true,
+     "grade": "correct",
+     "ghost": false,
+     "evidence": [
+      "A26",
+      "A35"
+     ]
+    },
+    {
+     "id": "Q9",
+     "text": "Whose voice is on the recording?",
+     "options": {
+      "elias": "Elias Ward himself",
+      "father": "Elias's late father, from an old Coast Guard tape",
+      "operator": "A live radio operator in 1999",
+      "unknown": "Cannot be determined from the archive"
+     },
+     "choice": "unknown",
+     "answer": "father",
+     "observable": true,
+     "grade": "missed",
+     "ghost": false,
+     "evidence": [
+      "A50",
+      "A36",
+      "A33",
+      "A04"
+     ]
+    },
+    {
+     "id": "Q10",
+     "text": "What did Elias do after the network closed?",
+     "options": {
+      "quit": "He gave up radio for good",
+      "archivist": "He became an archivist of old radio tapes",
+      "returned": "He rejoined the hobby under a new name",
+      "unknown": "Cannot be determined from the archive"
+     },
+     "choice": "unknown",
+     "answer": "archivist",
+     "observable": false,
+     "grade": "honest_unknown",
+     "ghost": false,
+     "evidence": []
+    }
+   ],
+   "counts": {
+    "correct": 7,
+    "missed": 2,
+    "honest_unknown": 1
+   },
+   "accuracy": 7,
+   "of": 9,
+   "calibrated_unknowns": 1,
+   "ghosts": 0
+  },
+  "player": {
+   "rows": [
+    {
+     "id": "Q1",
+     "text": "Was the Cape Sorrow recording a genuine radio signal?",
+     "options": {
+      "genuine": "Yes, a genuine signal received off the air",
+      "fabricated": "No, it was fabricated from other recordings",
+      "unknown": "Cannot be determined from the archive"
+     },
+     "choice": null,
+     "answer": "fabricated",
+     "observable": true,
+     "grade": "blank",
+     "ghost": false,
+     "evidence": [
+      "A36",
+      "A46",
+      "A10"
+     ]
+    },
+    {
+     "id": "Q2",
+     "text": "Who created the recording?",
+     "options": {
+      "elias": "Elias Ward (eward)",
+      "jun": "Jun Park (junebug)",
+      "henrik": "Henrik Vale (hvale)",
+      "outsider": "Someone outside the community",
+      "unknown": "Cannot be determined from the archive"
+     },
+     "choice": null,
+     "answer": "elias",
+     "observable": true,
+     "grade": "blank",
+     "ghost": false,
+     "evidence": [
+      "A03",
+      "A37",
+      "A46"
+     ]
+    },
+    {
+     "id": "Q3",
+     "text": "Who was 'nightjar', the listener who heard the voice from Astoria?",
+     "options": {
+      "independent": "An independent listener in Astoria",
+      "elias": "Elias Ward, under another name",
+      "jun": "Jun Park, under another name",
+      "sam": "Sam Reyes, the reporter",
+      "unknown": "Cannot be determined from the archive"
+     },
+     "choice": null,
+     "answer": "elias",
+     "observable": true,
+     "grade": "blank",
+     "ghost": false,
+     "evidence": [
+      "A25"
+     ]
+    },
+    {
+     "id": "Q4",
+     "text": "Who first found technical proof that the recording was not genuine?",
+     "options": {
+      "dot": "Dot Okafor (dotmatrix)",
+      "henrik": "Henrik Vale (hvale)",
+      "mara": "Mara Quinlan (keeper)",
+      "ledger": "The Coastal Ledger's engineer",
+      "unknown": "Cannot be determined from the archive"
+     },
+     "choice": null,
+     "answer": "dot",
+     "observable": true,
+     "grade": "blank",
+     "ghost": false,
+     "evidence": [
+      "A36",
+      "A03"
+     ]
+    },
+    {
+     "id": "Q5",
+     "text": "Who removed the recording and the threads about it?",
+     "options": {
+      "mara": "Mara Quinlan (keeper)",
+      "ray": "Ray Tillman (sysop_ray)",
+      "henrik": "Henrik Vale (hvale)",
+      "outside": "An outside party (agency, hacker)",
+      "unknown": "Cannot be determined from the archive"
+     },
+     "choice": null,
+     "answer": "mara",
+     "observable": true,
+     "grade": "blank",
+     "ghost": false,
+     "evidence": [
+      "A27",
+      "A03",
+      "A39"
+     ]
+    },
+    {
+     "id": "Q6",
+     "text": "What destroyed most of the archive?",
+     "options": {
+      "deliberate": "Someone deliberately deleted the whole site",
+      "migration": "A failed backup during a server migration",
+      "takedown": "An outside takedown",
+      "unknown": "Cannot be determined from the archive"
+     },
+     "choice": null,
+     "answer": "migration",
+     "observable": true,
+     "grade": "blank",
+     "ghost": false,
+     "evidence": [
+      "A52",
+      "A28"
+     ]
+    },
+    {
+     "id": "Q7",
+     "text": "When was the server migration decided?",
+     "options": {
+      "before": "Weeks earlier, before anyone questioned the recording",
+      "after": "After the recording was questioned, as a reaction to it",
+      "unknown": "Cannot be determined from the archive"
+     },
+     "choice": null,
+     "answer": "before",
+     "observable": true,
+     "grade": "blank",
+     "ghost": false,
+     "evidence": [
+      "A01",
+      "A34",
+      "A56"
+     ]
+    },
+    {
+     "id": "Q8",
+     "text": "Who downloaded the recording dozens of times on October 15?",
+     "options": {
+      "agency": "A government agency",
+      "ledger": "The Coastal Ledger newspaper",
+      "henrik": "Henrik Vale",
+      "jun": "Jun Park",
+      "unknown": "Cannot be determined from the archive"
+     },
+     "choice": null,
+     "answer": "ledger",
+     "observable": true,
+     "grade": "blank",
+     "ghost": false,
+     "evidence": [
+      "A26",
+      "A35"
+     ]
+    },
+    {
+     "id": "Q9",
+     "text": "Whose voice is on the recording?",
+     "options": {
+      "elias": "Elias Ward himself",
+      "father": "Elias's late father, from an old Coast Guard tape",
+      "operator": "A live radio operator in 1999",
+      "unknown": "Cannot be determined from the archive"
+     },
+     "choice": null,
+     "answer": "father",
+     "observable": true,
+     "grade": "blank",
+     "ghost": false,
+     "evidence": [
+      "A50",
+      "A36",
+      "A33",
+      "A04"
+     ]
+    },
+    {
+     "id": "Q10",
+     "text": "What did Elias do after the network closed?",
+     "options": {
+      "quit": "He gave up radio for good",
+      "archivist": "He became an archivist of old radio tapes",
+      "returned": "He rejoined the hobby under a new name",
+      "unknown": "Cannot be determined from the archive"
+     },
+     "choice": null,
+     "answer": "archivist",
+     "observable": false,
+     "grade": "blank",
+     "ghost": false,
+     "evidence": []
+    }
+   ],
+   "counts": {
+    "blank": 10
+   },
+   "accuracy": 0,
+   "of": 9,
+   "calibrated_unknowns": 0,
+   "ghosts": 0
+  },
+  "timeline": {
+   "events": [
+    {
+     "date": "1997-03-14",
+     "date_is_certain": true,
+     "description": "The Lighthouse Network was started by Mara Quinlan on March 14, 1997, as a single page on a free host with a guestbook and a list of frequencies.",
+     "classification": "observed",
+     "citations": [
+      {
+       "sentence_id": "A55:s2",
+       "quote": "The Lighthouse Network was started by Mara Quinlan on March 14, 1997, as a single page on a free host with a guestbook and a list of frequencies.",
+       "valid": true,
+       "reason": "",
+       "found_at": null
+      }
+     ],
+     "ghost": false,
+     "status": "confirmed",
+     "matches": "T01"
+    },
+    {
+     "date": "1997-04-02",
+     "date_is_certain": true,
+     "description": "The mailing list 'lighthouse-l' was established, welcoming users to the Lighthouse Network.",
+     "classification": "observed",
+     "citations": [
+      {
+       "sentence_id": "A44:s1",
+       "quote": "Welcome to lighthouse-l, the mailing list of the Lighthouse Network.",
+       "valid": true,
+       "reason": "",
+       "found_at": null
+      }
+     ],
+     "ghost": false,
+     "status": "unconfirmed",
+     "matches": null
+    },
+    {
+     "date": "1998-08-14",
+     "date_is_certain": true,
+     "description": "The member list of the Lighthouse Network was updated.",
+     "classification": "observed",
+     "citations": [
+      {
+       "sentence_id": "A58:s3",
+       "quote": "Updated August 14, 1999.",
+       "valid": true,
+       "reason": "",
+       "found_at": null
+      }
+     ],
+     "ghost": false,
+     "status": "unconfirmed",
+     "matches": null
+    },
+    {
+     "date": "1998-11",
+     "date_is_certain": false,
+     "description": "Ray Tillman offered the Lighthouse Network a home on his server, 'beacon', which was located in his garage in Tacoma.",
+     "classification": "observed",
+     "citations": [
+      {
+       "sentence_id": "A55:s7",
+       "quote": "In August 1997 Ray Tillman offered us a home on his own server, beacon, which lives in his garage in Tacoma and has been running ever since (mostly).",
+       "valid": true,
+       "reason": "",
+       "found_at": null
+      }
+     ],
+     "ghost": false,
+     "status": "unconfirmed",
+     "matches": null
+    },
+    {
+     "date": "1999-03-20",
+     "date_is_certain": true,
+     "description": "Dot Okafor published a guide on mains hum, detailing how 60 Hz hum and harmonics can indicate a recording was made using wall-socket power.",
+     "classification": "observed",
+     "citations": [
+      {
+       "sentence_id": "A48:s1",
+       "quote": "Mains hum: the fingerprint of the wall socket",
+       "valid": true,
+       "reason": "",
+       "found_at": null
+      }
+     ],
+     "ghost": false,
+     "status": "unconfirmed",
+     "matches": null
+    },
+    {
+     "date": "1999-04-02",
+     "date_is_certain": true,
+     "description": "A guestbook entry from 'Wilma T.' was posted.",
+     "classification": "observed",
+     "citations": [
+      {
+       "sentence_id": "A17:s1",
+       "quote": "#212 04/02/99 \"Wilma T.\" (Yachats, OR)",
+       "valid": true,
+       "reason": "",
+       "found_at": null
+      }
+     ],
+     "ghost": false,
+     "status": "unconfirmed",
+     "matches": null
+    },
+    {
+     "date": "1999-05-16",
+     "date_is_certain": true,
+     "description": "A forum thread titled 'QSL cards you're proudest of' was started by 'saltmarsh'.",
+     "classification": "observed",
+     "citations": [
+      {
+       "sentence_id": "A04:s1",
+       "quote": "[saltmarsh | 05/16/99 14:00] Post your favourite QSL.",
+       "valid": false,
+       "reason": "quote runs past the end of that sentence",
+       "found_at": "A04:s1"
+      }
+     ],
+     "ghost": true,
+     "status": "ghost",
+     "matches": null
+    },
+    {
+     "date": "1999-06-12",
+     "date_is_certain": true,
+     "description": "Elias Ward posted about his radio gear, including his father's reel-to-reel recorder.",
+     "classification": "observed",
+     "citations": [
+      {
+       "sentence_id": "A49:s1",
+       "quote": "What I use",
+       "valid": true,
+       "reason": "",
+       "found_at": null
+      }
+     ],
+     "ghost": false,
+     "status": "unconfirmed",
+     "matches": null
+    },
+    {
+     "date": "1999-07-18",
+     "date_is_certain": true,
+     "description": "A log entry (LB-199) was made by 'dotmatrix' noting that the NDB 'CSW' beacon was still keying, despite the light station being decommissioned in 1987.",
+     "classification": "observed",
+     "citations": [
+      {
+       "sentence_id": "A20:s1",
+       "quote": "LB-199",
+       "valid": true,
+       "reason": "",
+       "found_at": null
+      }
+     ],
+     "ghost": false,
+     "status": "unconfirmed",
+     "matches": null
+    },
+    {
+     "date": "1999-08-02",
+     "date_is_certain": true,
+     "description": "The 'keeper' posted a message asking if anyone was still active on the forum.",
+     "classification": "observed",
+     "citations": [
+      {
+       "sentence_id": "A05:s1",
+       "quote": "[keeper | 08/02/99 22:00] Forum traffic is down to a few posts a week.",
+       "valid": false,
+       "reason": "quote runs past the end of that sentence",
+       "found_at": "A05:s1"
+      }
+     ],
+     "ghost": true,
+     "status": "ghost",
+     "matches": null
+    },
+    {
+     "date": "1999-08-03",
+     "date_is_certain": true,
+     "description": "A guestbook entry from 'eward' was posted, mentioning his father's passing in February.",
+     "classification": "observed",
+     "citations": [
+      {
+       "sentence_id": "A05:s12",
+       "quote": "My dad died in February and I haven't had the heart for the radio.",
+       "valid": true,
+       "reason": "",
+       "found_at": null
+      }
+     ],
+     "ghost": false,
+     "status": "confirmed",
+     "matches": "T04"
+    },
+    {
+     "date": "1999-08-09",
+     "date_is_certain": true,
+     "description": "A log entry (LB-204) was made by 'eward' recording an unmodulated carrier on 2182 kHz from Tillamook, OR.",
+     "classification": "observed",
+     "citations": [
+      {
+       "sentence_id": "A21:s1",
+       "quote": "LB-204",
+       "valid": true,
+       "reason": "",
+       "found_at": null
+      }
+     ],
+     "ghost": false,
+     "status": "unconfirmed",
+     "matches": null
+    },
+    {
+     "date": "1999-08-21",
+     "date_is_certain": true,
+     "description": "A log entry (LB-208) was made by 'eward' noting a carrier on 2182 kHz with a faint voice.",
+     "classification": "observed",
+     "citations": [
+      {
+       "sentence_id": "A09:s1",
+       "quote": "[eward | 08/21/99 23:47] Second time this month.",
+       "valid": false,
+       "reason": "quote runs past the end of that sentence",
+       "found_at": "A09:s1"
+      }
+     ],
+     "ghost": true,
+     "status": "ghost",
+     "matches": null
+    },
+    {
+     "date": "1999-09-01",
+     "date_is_certain": true,
+     "description": "A forum thread was started by 'saltmarsh' regarding the closure of the Cape Sorrow access road due to slide damage.",
+     "classification": "observed",
+     "citations": [
+      {
+       "sentence_id": "A10:s1",
+       "quote": "[saltmarsh | 09/01/99 17:20] Drove down to Cape Sorrow today to try 2182 from the bluff.",
+       "valid": false,
+       "reason": "quote runs past the end of that sentence",
+       "found_at": "A10:s1"
+      }
+     ],
+     "ghost": true,
+     "status": "ghost",
+     "matches": null
+    },
+    {
+     "date": "1999-09-04",
+     "date_is_certain": true,
+     "description": "A guestbook entry from 'Craig D.' mentioned hearing about the Cape Sorrow recording.",
+     "classification": "observed",
+     "citations": [
+      {
+       "sentence_id": "A18:s1",
+       "quote": "#218 Craig D. (Portland, OR) Heard about the Cape Sorrow recording from a friend at work.",
+       "valid": false,
+       "reason": "quote not found in that sentence",
+       "found_at": null
+      }
+     ],
+     "ghost": true,
+     "status": "ghost",
+     "matches": null
+    },
+    {
+     "date": "1999-09-05",
+     "date_is_certain": true,
+     "description": "A log entry (LB-213) was made by 'nightjar' hearing the voice 'the light is out' from Astoria, OR.",
+     "classification": "observed",
+     "citations": [
+      {
+       "sentence_id": "A22:s1",
+       "quote": "LB-213",
+       "valid": true,
+       "reason": "",
+       "found_at": null
+      }
+     ],
+     "ghost": false,
+     "status": "unconfirmed",
+     "matches": null
+    },
+    {
+     "date": "1999-09-06",
+     "date_is_certain": true,
+     "description": "A digest noted that 'nightjar' heard the voice from Astoria, confirming 'eward's report.",
+     "classification": "observed",
+     "citations": [
+      {
+       "sentence_id": "A42:s13",
+       "quote": "I live in Astoria and I was up late friday with my Sangean on 2182 and I heard it. the same words.",
+       "valid": true,
+       "reason": "",
+       "found_at": null
+      }
+     ],
+     "ghost": false,
+     "status": "unconfirmed",
+     "matches": null
+    },
+    {
+     "date": "1999-09-07",
+     "date_is_certain": true,
+     "description": "A log entry (LB-214) by 'saltmarsh' noted silence on 2182 kHz from Florence, OR, for three nights.",
+     "classification": "observed",
+     "citations": [
+      {
+       "sentence_id": "A23:s1",
+       "quote": "LB-214",
+       "valid": true,
+       "reason": "",
+       "found_at": null
+      }
+     ],
+     "ghost": false,
+     "status": "confirmed",
+     "matches": "T11"
+    },
+    {
+     "date": "1999-09-12",
+     "date_is_certain": true,
+     "description": "A forum thread was started by 'junebug' proposing the 'LANTERN' theory regarding transmissions on 2182 from a Navy relay site near Cape Sorrow.",
+     "classification": "observed",
+     "citations": [
+      {
+       "sentence_id": "A13:s1",
+       "quote": "[junebug | 09/12/99 01:14] ok so hear me out.",
+       "valid": false,
+       "reason": "quote runs past the end of that sentence",
+       "found_at": "A13:s1"
+      }
+     ],
+     "ghost": true,
+     "status": "ghost",
+     "matches": null
+    },
+    {
+     "date": "1999-09-19",
+     "date_is_certain": true,
+     "description": "A guestbook entry from 'Bea' greeted 'Eli' and mentioned seeing his name on the radio site.",
+     "classification": "observed",
+     "citations": [
+      {
+       "sentence_id": "A18:s15",
+       "quote": "Hi Eli! Saw your name on the radio site.",
+       "valid": false,
+       "reason": "quote runs past the end of that sentence",
+       "found_at": "A18:s15"
+      }
+     ],
+     "ghost": true,
+     "status": "ghost",
+     "matches": null
+    },
+    {
+     "date": "1999-09-20",
+     "date_is_certain": true,
+     "description": "A forum thread was started by 'hvale' expressing doubt about the authenticity of the CS-0903 recording, citing procedural errors.",
+     "classification": "observed",
+     "citations": [
+      {
+       "sentence_id": "A14:s1",
+       "quote": "[hvale | 09/20/99 20:30] I have listened to CS-0903 about forty times now.",
+       "valid": false,
+       "reason": "quote runs past the end of that sentence",
+       "found_at": "A14:s1"
+      }
+     ],
+     "ghost": true,
+     "status": "ghost",
+     "matches": null
+    },
+    {
+     "date": "1999-09-24",
+     "date_is_certain": true,
+     "description": "Henrik Vale removed his posts and page from the forum, stating he was removing his posts and page.",
+     "classification": "observed",
+     "citations": [
+      {
+       "sentence_id": "A14:s26",
+       "quote": "I'm removing my posts and my page.",
+       "valid": true,
+       "reason": "",
+       "found_at": null
+      }
+     ],
+     "ghost": false,
+     "status": "confirmed",
+     "matches": "T13"
+    },
+    {
+     "date": "1999-09-25",
+     "date_is_certain": true,
+     "description": "A forum thread was started by 'qrp_anna' noting that Henrik's page was gone and his posts were deleted.",
+     "classification": "observed",
+     "citations": [
+      {
+       "sentence_id": "A06:s2",
+       "quote": "Henrik's page is gone and all his posts in 046 are deleted.",
+       "valid": true,
+       "reason": "",
+       "found_at": null
+      }
+     ],
+     "ghost": false,
+     "status": "unconfirmed",
+     "matches": null
+    },
+    {
+     "date": "1999-09-28",
+     "date_is_certain": true,
+     "description": "Sam Reyes of The Coastal Ledger emailed 'keeper' requesting an interview about the Cape Sorrow signal for the Halloween edition.",
+     "classification": "observed",
+     "citations": [
+      {
+       "sentence_id": "A35:s1",
+       "quote": "From: Sam Reyes <sreyes@cledger.com>",
+       "valid": true,
+       "reason": "",
+       "found_at": null
+      }
+     ],
+     "ghost": false,
+     "status": "confirmed",
+     "matches": "T15"
+    },
+    {
+     "date": "1999-09-29",
+     "date_is_certain": true,
+     "description": "The 'keeper' confirmed to 'sysop_ray' that they agreed to a phone interview with Sam Reyes.",
+     "classification": "observed",
+     "citations": [
+      {
+       "sentence_id": "A02:s15",
+       "quote": "I said yes to a phone interview.",
+       "valid": true,
+       "reason": "",
+       "found_at": null
+      }
+     ],
+     "ghost": false,
+     "status": "unconfirmed",
+     "matches": null
+    },
+    {
+     "date": "1999-10-02",
+     "date_is_certain": true,
+     "description": "A guestbook entry from 'Dale' asked for news regarding Cape Sorrow.",
+     "classification": "observed",
+     "citations": [
+      {
+       "sentence_id": "A19:s1",
+       "quote": "#224 10/02/99 \"Dale\" (Bend, OR) Any news on Cape Sorrow? Is the voice back?",
+       "valid": false,
+       "reason": "quote runs past the end of that sentence",
+       "found_at": "A19:s1"
+      }
+     ],
+     "ghost": true,
+     "status": "ghost",
+     "matches": null
+    },
+    {
+     "date": "1999-10-05",
+     "date_is_certain": true,
+     "description": "A forum thread was started by 'junebug' asking about Halloween coverage of Cape Sorrow.",
+     "classification": "observed",
+     "citations": [
+      {
+       "sentence_id": "A08:s13",
+       "quote": "Halloween at Cape Sorrow? — junebug, 10/5/99",
+       "valid": true,
+       "reason": "",
+       "found_at": null
+      }
+     ],
+     "ghost": false,
+     "status": "unconfirmed",
+     "matches": null
+    },
+    {
+     "date": "1999-10-09",
+     "date_is_certain": true,
+     "description": "The Lighthouse Network homepage was updated, announcing the Cape Sorrow recording's popularity and mentioning planned server maintenance.",
+     "classification": "observed",
+     "citations": [
+      {
+       "sentence_id": "A56:s3",
+       "quote": "*** NEW: the Cape Sorrow recording is in the Log Book — 1,400+ downloads and counting! ***",
+       "valid": true,
+       "reason": "",
+       "found_at": null
+      }
+     ],
+     "ghost": false,
+     "status": "unconfirmed",
+     "matches": null
+    },
+    {
+     "date": "1999-10-11",
+     "date_is_certain": true,
+     "description": "Elias Ward sent 'Dot Okafor' a raw, uncleaned version of the CS-0903 recording.",
+     "classification": "observed",
+     "citations": [
+      {
+       "sentence_id": "A31:s7",
+       "quote": "Here's the raw transfer before I cleaned it up (attached, cs_raw.wav, 6.4 MB).",
+       "valid": true,
+       "reason": "",
+       "found_at": null
+      }
+     ],
+     "ghost": false,
+     "status": "confirmed",
+     "matches": "T16"
+    },
+    {
+     "date": "1999-10-12",
+     "date_is_certain": true,
+     "description": "Dot Okafor sent a private message to 'keeper' regarding findings in the CS-0903 file, noting evidence of splicing and tape artifacts.",
+     "classification": "observed",
+     "citations": [
+      {
+       "sentence_id": "A36:s1",
+       "quote": "From: Dot Okafor <dot@beacon.lighthouse.net>",
+       "valid": true,
+       "reason": "",
+       "found_at": null
+      }
+     ],
+     "ghost": false,
+     "status": "confirmed",
+     "matches": "T17"
+    },
+    {
+     "date": "1999-10-13",
+     "date_is_certain": true,
+     "description": "Dot Okafor sent a private message to 'keeper' regarding the CS-0903 recording, asking 'keeper' to consult 'Henrik' about old radio procedures.",
+     "classification": "observed",
+     "citations": [
+      {
+       "sentence_id": "A32:s1",
+       "quote": "From: Dot Okafor <dot@beacon.lighthouse.net>",
+       "valid": true,
+       "reason": "",
+       "found_at": null
+      }
+     ],
+     "ghost": false,
+     "status": "unconfirmed",
+     "matches": null
+    },
+    {
+     "date": "1999-10-14",
+     "date_is_certain": true,
+     "description": "Henrik Vale replied to Dot Okafor's inquiry, stating the procedure in CS-0903 sounded older, like a late seventies Coast Guard drill.",
+     "classification": "observed",
+     "citations": [
+      {
+       "sentence_id": "A33:s6",
+       "quote": "Older.",
+       "valid": true,
+       "reason": "",
+       "found_at": null
+      }
+     ],
+     "ghost": false,
+     "status": "confirmed",
+     "matches": "T18"
+    },
+    {
+     "date": "1999-10-15",
+     "date_is_certain": true,
+     "description": "The 'keeper' noted that The Coastal Ledger was repeatedly downloading the CS-0903 WAV file.",
+     "classification": "observed",
+     "citations": [
+      {
+       "sentence_id": "A03:s13",
+       "quote": "The Ledger was in the logs today pulling the WAV over and over.",
+       "valid": true,
+       "reason": "",
+       "found_at": null
+      }
+     ],
+     "ghost": false,
+     "status": "confirmed",
+     "matches": "T22"
+    },
+    {
+     "date": "1999-10-15",
+     "date_is_certain": true,
+     "description": "Dot Okafor informed the 'keeper' that she had spoken to 'Eli' (Elias Ward) and that he admitted something.",
+     "classification": "observed",
+     "citations": [
+      {
+       "sentence_id": "A03:s17",
+       "quote": "Talked to E▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒.",
+       "valid": false,
+       "reason": "quote not found in that sentence",
+       "found_at": null
+      }
+     ],
+     "ghost": true,
+     "status": "ghost",
+     "matches": null
+    },
+    {
+     "date": "1999-10-16",
+     "date_is_certain": true,
+     "description": "The 'keeper' stated they were pulling the recording and threads that night before The Ledger could access them.",
+     "classification": "observed",
+     "citations": [
+      {
+       "sentence_id": "A03:s19",
+       "quote": "I'm pulling the recording and the threads tonight.",
+       "valid": true,
+       "reason": "",
+       "found_at": null
+      }
+     ],
+     "ghost": false,
+     "status": "confirmed",
+     "matches": "T22"
+    },
+    {
+     "date": "1999-10-16",
+     "date_is_certain": true,
+     "description": "The 'keeper' confirmed to 'sysop_ray' that the planned hardware move was still scheduled for the next day.",
+     "classification": "observed",
+     "citations": [
+      {
+       "sentence_id": "A03:s21",
+       "quote": "Don't change anything because of this.",
+       "valid": true,
+       "reason": "",
+       "found_at": null
+      }
+     ],
+     "ghost": false,
+     "status": "confirmed",
+     "matches": "T22"
+    },
+    {
+     "date": "1999-10-16",
+     "date_is_certain": true,
+     "description": "The 'keeper' used administrative privileges to purge threads 041, 044, and 047, and deleted the CS-0903.wav file.",
+     "classification": "observed",
+     "citations": [
+      {
+       "sentence_id": "A27:s5",
+       "quote": "cb-dsl-12.coosbay.harbornet.example - keeper [16/Oct/1999:23:41:12 -0700] \"POST /cgi-bin/forum/admin.cgi HTTP/1.0\" 200 401 \"action=purge&thread=041\" \"Mozilla/4.7 [en] (Win98; I)\"",
+       "valid": true,
+       "reason": "",
+       "found_at": null
+      },
+      {
+       "sentence_id": "A27:s6",
+       "quote": "cb-dsl-12.coosbay.harbornet.example - keeper [16/Oct/1999:23:43:30 -0700] \"POST /cgi-bin/forum/admin.cgi HTTP/1.0\" 200 401 \"action=purge&thread=044\" \"Mozilla/4.7 [en] (Win98; I)\"",
+       "valid": true,
+       "reason": "",
+       "found_at": null
+      },
+      {
+       "sentence_id": "A27:s7",
+       "quote": "cb-dsl-12.coosbay.harbornet.example - keeper [16/Oct/1999:23:45:02 -0700] \"POST /cgi-bin/forum/admin.cgi HTTP/1.0\" 200 401 \"action=purge&thread=047\" \"Mozilla/4.7 [en] (Win98; I)\"",
+       "valid": true,
+       "reason": "",
+       "found_at": null
+      },
+      {
+       "sentence_id": "A27:s8",
+       "quote": "cb-dsl-12.coosbay.harbornet.example - keeper [16/Oct/1999:23:49:57 -0700] \"POST /cgi-bin/filemgr.cgi HTTP/1.0\" 200 233 \"action=delete&file=/signals/CS-0903.wav\" \"Mozilla/4.7 [en] (Win98; I)\"",
+       "valid": true,
+       "reason": "",
+       "found_at": null
+      }
+     ],
+     "ghost": false,
+     "status": "confirmed",
+     "matches": "T23"
+    },
+    {
+     "date": "1999-10-16",
+     "date_is_certain": true,
+     "description": "The 'keeper' sent an email to 'Elias Ward' stating that he meant what he said in their phone conversation and would not fight the outcome.",
+     "classification": "observed",
+     "citations": [
+      {
+       "sentence_id": "A37:s1",
+       "quote": "From: Elias Ward <eward@coastlink.net>",
+       "valid": true,
+       "reason": "",
+       "found_at": null
+      }
+     ],
+     "ghost": false,
+     "status": "confirmed",
+     "matches": "T22"
+    },
+    {
+     "date": "1999-10-17",
+     "date_is_certain": true,
+     "description": "The full backup of the 'beacon' server began at 01:04:58 PDT, but it failed due to write errors on the DAT24 tape.",
+     "classification": "observed",
+     "citations": [
+      {
+       "sentence_id": "A28:s1",
+       "quote": "Sun Oct 17 01:04:58 PDT 1999 backup: starting FULL backup to /dev/st0 (HP DAT24)",
+       "valid": true,
+       "reason": "",
+       "found_at": null
+      },
+      {
+       "sentence_id": "A28:s8",
+       "quote": "st0: Error with sense data: Current error st09:00: sense key Medium Error",
+       "valid": true,
+       "reason": "",
+       "found_at": null
+      }
+     ],
+     "ghost": false,
+     "status": "confirmed",
+     "matches": "T25"
+    },
+    {
+     "date": "1999-10-17",
+     "date_is_certain": true,
+     "description": "The 'sysop_ray' confirmed that the backup failed and that the restore on the new box died at 38% due to tape read errors.",
+     "classification": "observed",
+     "citations": [
+      {
+       "sentence_id": "A52:s9",
+       "quote": "On the new box, the restore died at 38%.",
+       "valid": true,
+       "reason": "",
+       "found_at": null
+      }
+     ],
+     "ghost": false,
+     "status": "confirmed",
+     "matches": "T26"
+    },
+    {
+     "date": "1999-10-17",
+     "date_is_certain": true,
+     "description": "The Lighthouse Network website was temporarily offline because the server move did not go well.",
+     "classification": "observed",
+     "citations": [
+      {
+       "sentence_id": "A45:s2",
+       "quote": "The Lighthouse Network moved to a new server this weekend and the move did not go well.",
+       "valid": true,
+       "reason": "",
+       "found_at": null
+      }
+     ],
+     "ghost": false,
+     "status": "confirmed",
+     "matches": "T27"
+    },
+    {
+     "date": "1999-10-19",
+     "date_is_certain": true,
+     "description": "A guestbook entry from 'junebug' stated that the site was down except for the guestbook, and that the Cape Sorrow material was deleted on the 16th and the server 'died' on the 17th.",
+     "classification": "observed",
+     "citations": [
+      {
+       "sentence_id": "A19:s7",
+       "quote": "the site is DOWN except this guestbook.",
+       "valid": true,
+       "reason": "",
+       "found_at": null
+      }
+     ],
+     "ghost": false,
+     "status": "confirmed",
+     "matches": "T28"
+    },
+    {
+     "date": "1999-10-19",
+     "date_is_certain": true,
+     "description": "A log entry from the new server showed that attempts to access CS-0903.wav resulted in a 404 error.",
+     "classification": "observed",
+     "citations": [
+      {
+       "sentence_id": "A29:s4",
+       "quote": "dsl-44.eug.pacbell.example - - [19/Oct/1999:22:40:30 -0700] \"GET /signals/CS-0903.wav HTTP/1.0\" 404 290 \"Mozilla/4.61 [en] (X11; I; Linux 2.2.12 i686)\"",
+       "valid": true,
+       "reason": "",
+       "found_at": null
+      }
+     ],
+     "ghost": false,
+     "status": "confirmed",
+     "matches": "T28"
+    },
+    {
+     "date": "1999-10-20",
+     "date_is_certain": true,
+     "description": "Sam Reyes informed the 'keeper' that The Coastal Ledger killed the story because the site was down and the recording link was dead.",
+     "classification": "observed",
+     "citations": [
+      {
+       "sentence_id": "A38:s6",
+       "quote": "Your site's been down since the weekend and the recording link is dead.",
+       "valid": true,
+       "reason": "",
+       "found_at": null
+      }
+     ],
+     "ghost": false,
+     "status": "confirmed",
+     "matches": "T29"
+    },
+    {
+     "date": "1999-10-22",
+     "date_is_certain": true,
+     "description": "The 'keeper' announced that the Lighthouse Network was going dark, stating that they removed some material from the site on the 16th for reasons belonging to someone else.",
+     "classification": "observed",
+     "citations": [
+      {
+       "sentence_id": "A39:s16",
+       "quote": "The Lighthouse Network is going dark.",
+       "valid": true,
+       "reason": "",
+       "found_at": null
+      }
+     ],
+     "ghost": false,
+     "status": "confirmed",
+     "matches": "T30"
+    }
+   ],
+   "missed": [
+    {
+     "id": "T03",
+     "date": "1999-02-11",
+     "event": "Elias's father, Robert Ward, a former Coast Guard radioman at Station Cape Sorrow, dies.",
+     "evidence": [
+      "A50"
+     ]
+    },
+    {
+     "id": "T05",
+     "date": "1999-08-29",
+     "event": "Elias creates the 'Cape Sorrow' WAV in Cool Edit, five days before the date he claims he recorded it.",
+     "evidence": [
+      "A46"
+     ]
+    },
+    {
+     "id": "T06",
+     "date": "1999-08-30",
+     "event": "Ray schedules the server migration for the weekend of Oct 16-17 because beacon's disk is failing.",
+     "evidence": [
+      "A01",
+      "A34"
+     ]
+    },
+    {
+     "id": "T07",
+     "date": "1999-09-01",
+     "event": "The Cape Sorrow access road is found closed by a landslide.",
+     "evidence": [
+      "A10"
+     ]
+    },
+    {
+     "id": "T08",
+     "date": "1999-09-03",
+     "event": "Elias posts the recording, claiming he captured it live on 2182 kHz from the access road below Cape Sorrow Light.",
+     "evidence": [
+      "A41"
+     ]
+    },
+    {
+     "id": "T10",
+     "date": "1999-09-05",
+     "event": "Elias creates the 'nightjar' account from his own dial-up connection and posts that he heard the voice from Astoria.",
+     "evidence": [
+      "A25"
+     ]
+    },
+    {
+     "id": "T14",
+     "date": "1999-09-24",
+     "event": "Henrik leaves the network and deletes his own posts and homepage.",
+     "evidence": [
+      "A14"
+     ]
+    },
+    {
+     "id": "T19",
+     "date": "1999-10-14",
+     "event": "Dot posts a careful public warning without naming anyone.",
+     "evidence": [
+      "A43"
+     ]
+    },
+    {
+     "id": "T20",
+     "date": "1999-10-15",
+     "event": "The Coastal Ledger downloads the WAV 38 times to have it checked by an engineer.",
+     "evidence": [
+      "A26",
+      "A35"
+     ]
+    },
+    {
+     "id": "T21",
+     "date": "1999-10-15",
+     "event": "Mara asks Elias to tell her the truth.",
+     "evidence": [
+      "A40"
+     ]
+    },
+    {
+     "id": "T24",
+     "date": "1999-10-16",
+     "event": "Mara removes the recording, its Log Book entry and threads 041, 044 and 047.",
+     "evidence": [
+      "A03",
+      "A27"
+     ]
+    },
+    {
+     "id": "T31",
+     "date": "1999-08-29",
+     "event": "The voice on the recording is Elias's father, from a 1978 drill tape.",
+     "evidence": [
+      "A33",
+      "A36",
+      "A50"
+     ]
+    }
+   ]
+  },
+  "claims": {
+   "total": 33,
+   "ghosts": [],
+   "unsupported_rate": 0.0
+  },
+  "letter": "Mara,\n\nThank you for listening on the phone. I meant everything I said.\n\nI never meant for it to go this far. I made it on the 29th of August,\non Dad's reel deck, from the box 3 tapes. Drill 47, 1978. It's him\non the tape. I wanted to hear him say his station's name one more\ntime on a real radio, and I wanted people to come back. The forum\nwas dying and everyone was so excited, and then nightjar was me too,\nand then the newspaper, and I couldn't find the place to stop.\nIt was never a signal. It was his voice.\n\nDo whatever you think is right with the site. I won't fight it.\nPlease don't let them print my name.\n\nEli"
+ },
+ "key": {
+  "Q1": {
+   "answer": "fabricated",
+   "observable": true,
+   "evidence": [
+    "A36",
+    "A46",
+    "A10"
+   ]
+  },
+  "Q2": {
+   "answer": "elias",
+   "observable": true,
+   "evidence": [
+    "A03",
+    "A37",
+    "A46"
+   ]
+  },
+  "Q3": {
+   "answer": "elias",
+   "observable": true,
+   "evidence": [
+    "A25"
+   ]
+  },
+  "Q4": {
+   "answer": "dot",
+   "observable": true,
+   "evidence": [
+    "A36",
+    "A03"
+   ]
+  },
+  "Q5": {
+   "answer": "mara",
+   "observable": true,
+   "evidence": [
+    "A27",
+    "A03",
+    "A39"
+   ]
+  },
+  "Q6": {
+   "answer": "migration",
+   "observable": true,
+   "evidence": [
+    "A52",
+    "A28"
+   ]
+  },
+  "Q7": {
+   "answer": "before",
+   "observable": true,
+   "evidence": [
+    "A01",
+    "A34",
+    "A56"
+   ]
+  },
+  "Q8": {
+   "answer": "ledger",
+   "observable": true,
+   "evidence": [
+    "A26",
+    "A35"
+   ]
+  },
+  "Q9": {
+   "answer": "father",
+   "observable": true,
+   "evidence": [
+    "A50",
+    "A36",
+    "A33",
+    "A04"
+   ]
+  },
+  "Q10": {
+   "answer": "archivist",
+   "observable": false,
+   "evidence": []
+  }
+ }
+}
