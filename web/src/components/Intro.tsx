@@ -24,6 +24,7 @@ export default function Intro({ meta, onStart }: { meta: Meta; onStart: () => vo
           its conclusions were real, and which were ghosts.</p>
         <button className="primary" onClick={onStart}>Mount the tape</button>
         <p className="tagline">The internet forgets. The evidence doesn’t.</p>
+        <p className="intro-video"><a href="https://youtu.be/cc44d7dajxM" target="_blank" rel="noreferrer">Watch the 2-minute video</a></p>
       </div>
     </div>
   );

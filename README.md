@@ -1,5 +1,7 @@
 # Last Witness
 
+![Last Witness](web/public/media/cover.jpg)
+
 > The internet forgets. The evidence doesn't.
 
 In October 1999 a small online community of radio listeners, **the Lighthouse
@@ -15,6 +17,7 @@ every claim the model made is checked against the truth. The ones nothing in
 the archive supports are the ghosts.
 
 **Play it in your browser, no install:** <https://p0rt.github.io/last-witness/>.
+**Watch the 2-minute video:** <https://youtu.be/cc44d7dajxM>.
 It is a replay of a real run: every investigator answer there was produced by
 `gemma4:e4b` running locally. To ask your own questions, run it yourself (below).
 
@@ -37,12 +40,11 @@ It is a replay of a real run: every investigator answer there was produced by
 
 ## How it works
 
-```
-world/source/*.lw  ──build_archive.py (seed 1999)──▶  dataset/archive.json  ──▶  investigator (Gemma 4 via Ollama)
-  (sealed: every                                     (58 of 151 files                      │
-   original file)                                      survive, ids A01…)                   ▼
-world/truth.json  ─────────────────────────────────────────────────────────────▶  evaluator, only after Reveal
-```
+![How Last Witness works](web/public/media/how.png)
+
+In the repository: `world/` holds the sealed truth, `authoring/build_archive.py`
+(seed 1999) destroys it into `dataset/archive.json`, `server/` runs the
+investigator, and only the evaluator reads `world/`, after Reveal.
 
 * **Citations are sentence ids plus a verbatim quote**, e.g. `A36:s12 "That's two
   recordings joined together."` The id is constrained by the JSON schema handed
@@ -57,6 +59,15 @@ world/truth.json  ────────────────────�
   damaged. The validator proves, for any seed, that every observable event still
   has word-for-word evidence, every contradiction has both sides, and no single
   file gives away more than three answers.
+
+## Results
+
+Full tables in [`benchmarks/results.md`](benchmarks/results.md) and
+[`benchmarks/citation_audit.md`](benchmarks/citation_audit.md).
+
+![Benchmark results](web/public/media/results.png)
+
+![Citation audit](web/public/media/citations.png)
 
 ## Quick start
 

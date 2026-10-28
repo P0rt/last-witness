@@ -28,3 +28,10 @@ committed.
 ## Fonts
 
 See `fonts/README.md`. All are open-licensed.
+
+## Still figures
+
+`figures.html` holds the three images used in the README and the post (how it
+works, results, citation audit). `node video/render_figures.mjs` renders them to
+`web/public/media/`, which GitHub Pages also serves. The cover and the GIFs live
+there too.
