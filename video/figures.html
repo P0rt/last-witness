@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Last Witness figures</title>
+<!-- Still images for the README and the DEV post, in the promo's case-file style.
+     Rendered to web/public/media/ by video/render_figures.mjs. -->
+<style>
+  @font-face { font-family: "Special Elite"; src: url(fonts/special-elite-latin-400-normal.woff2) format("woff2"); }
+  @font-face { font-family: "Marker"; src: url(fonts/permanent-marker-latin-400-normal.woff2) format("woff2"); }
+  @font-face { font-family: "Plex"; src: url(fonts/ibm-plex-mono-latin-400-normal.woff2) format("woff2"); }
+  @font-face { font-family: "Plex"; font-weight: 600; src: url(fonts/ibm-plex-mono-latin-600-normal.woff2) format("woff2"); }
+  :root {
+    --ink: #2b2620; --dim: #6d6355; --paper: #ece4d2; --edge: #cfc4ab;
+    --right: #2f6b3a; --wrong: #b3261e; --unknown: #d9cfb8; --sealed: #1d1a16; --amber: #e8b04a;
+  }
+  * { box-sizing: border-box; margin: 0; }
+  body { background: #fff; font-family: "Plex", monospace; color: var(--ink); }
+  .fig { width: 1600px; padding: 56px 64px 52px; background: var(--paper); display: none; position: relative; }
+  .fig.on { display: block; }
+  .fig::after { content: ""; position: absolute; inset: 0; pointer-events: none;
+    background: radial-gradient(ellipse at 30% 20%, rgba(255,255,255,.35), transparent 60%),
+                radial-gradient(ellipse at 80% 90%, rgba(120,90,40,.10), transparent 60%); }
+  h2 { font-family: "Special Elite", monospace; font-weight: 400; font-size: 44px; letter-spacing: .5px; }
+  .sub { color: var(--dim); font-size: 22px; margin-top: 10px; }
+  .rule { height: 2px; background: var(--ink); opacity: .7; margin: 26px 0 34px; }
+  .marker { font-family: "Marker", cursive; color: var(--wrong); white-space: nowrap; line-height: 1.1; }
+
+  /* how it works */
+  .flow { display: grid; grid-template-columns: 1fr 70px 1fr 70px 1fr; align-items: stretch; }
+  .box { border: 2px solid var(--ink); background: #f5efe2; padding: 26px 26px 24px; border-radius: 4px; }
+  .box.sealed { background: var(--sealed); color: #efe6d2; border-color: var(--sealed); }
+  .box .k { font-size: 17px; letter-spacing: 2px; color: var(--dim); }
+  .box.sealed .k { color: var(--amber); }
+  .box .t { font-family: "Special Elite", monospace; font-size: 34px; margin: 10px 0 14px; }
+  .box ul { padding-left: 22px; font-size: 21px; line-height: 1.5; }
+  .arrow { display: flex; flex-direction: column; align-items: center; justify-content: center; font-size: 15px; color: var(--dim); text-align: center; }
+  .arrow b { font-size: 44px; color: var(--ink); font-weight: 400; line-height: 1; }
+  .cite { margin-top: 14px; padding: 10px 12px; background: #fffaf0; border-left: 4px solid var(--right); font-size: 18px; }
+  .lock { margin-top: 34px; display: grid; grid-template-columns: 1fr 70px 2fr 70px; align-items: center; }
+  .lock .line { grid-column: 1 / 2; border-top: 3px dashed var(--ink); position: relative; height: 0; }
+  .eval { grid-column: 3 / 4; border: 2px dashed var(--ink); padding: 18px 24px; font-size: 21px; line-height: 1.45; background: #f5efe2; }
+  .eval .t { font-family: "Special Elite", monospace; font-size: 30px; }
+
+  /* results */
+  .legend { display: flex; gap: 34px; font-size: 21px; margin-bottom: 26px; }
+  .legend span { display: inline-flex; align-items: center; gap: 10px; }
+  .sw { width: 22px; height: 22px; border-radius: 3px; display: inline-block; }
+  .row { display: grid; grid-template-columns: 430px 1fr 230px; gap: 26px; align-items: center; margin-bottom: 22px; }
+  .row .name { font-size: 22px; line-height: 1.3; }
+  .row .name small { display: block; color: var(--dim); font-size: 17px; }
+  .bar { display: flex; height: 54px; gap: 3px; }
+  .seg { height: 100%; display: flex; align-items: center; justify-content: center; font-weight: 600; font-size: 21px; color: #fff; }
+  .seg:first-child { border-radius: 4px 0 0 4px; } .seg:last-child { border-radius: 0 4px 4px 0; }
+  .seg.r { background: var(--right); } .seg.w { background: var(--wrong); }
+  .seg.u { background: var(--unknown); color: var(--ink); background-image: repeating-linear-gradient(45deg, transparent 0 9px, rgba(43,38,32,.08) 9px 11px); }
+  .note { font-size: 18px; color: var(--dim); line-height: 1.35; }
+  .note b { color: var(--ink); }
+  .group { font-size: 16px; letter-spacing: 2px; color: var(--dim); margin: 30px 0 14px; }
+  .axis { display: grid; grid-template-columns: 430px 1fr 230px; gap: 26px; font-size: 15px; color: var(--dim); }
+  .axis div:nth-child(2) { display: flex; justify-content: space-between; }
+  .foot { margin-top: 30px; display: flex; justify-content: space-between; align-items: flex-end; }
+  .foot p { font-size: 18px; color: var(--dim); max-width: 940px; line-height: 1.45; }
+
+  /* citations */
+  .cites { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: start; }
+  .big { font-size: 140px; line-height: 1; font-weight: 600; }
+  .big small { font-size: 50px; color: var(--dim); font-weight: 400; }
+  .lbl { font-size: 23px; margin-top: 8px; line-height: 1.4; }
+  .stack { display: flex; height: 64px; gap: 3px; margin: 30px 0 14px; }
+  .stack .seg { font-size: 19px; }
+  .kinds { font-size: 21px; line-height: 1.9; }
+  .kinds div { display: grid; grid-template-columns: 70px 1fr; }
+  .kinds b { text-align: right; padding-right: 18px; }
+  .ex { background: #fffaf0; border: 1px solid var(--edge); padding: 22px 24px; font-size: 20px; line-height: 1.5; }
+  .ex .bad { color: var(--wrong); }
+  .ex .good { color: var(--right); }
+</style>
+</head>
+<body>
+
+<!-- how it works -->
+<section class="fig" id="how">
+  <h2>HOW LAST WITNESS WORKS</h2>
+  <div class="sub">The truth is written first and sealed. The AI only ever sees what survived, and only what you open.</div>
+  <div class="rule"></div>
+  <div class="flow">
+    <div class="box sealed">
+      <div class="k">1 · SEALED</div>
+      <div class="t">The real history</div>
+      <ul>
+        <li>8 people, 32 dated events</li>
+        <li>151 original files from 1999</li>
+        <li>the answer key to 10 questions</li>
+      </ul>
+    </div>
+    <div class="arrow"><b>→</b>seeded<br>damage</div>
+    <div class="box">
+      <div class="k">2 · RECOVERED</div>
+      <div class="t">The archive</div>
+      <ul>
+        <li>the tape reads to 38%</li>
+        <li><b>58 of 151</b> files survive</li>
+        <li>split into sentences you can cite</li>
+      </ul>
+      <div class="cite">A36:s12 “That's two recordings joined together.”</div>
+    </div>
+    <div class="arrow"><b>→</b>only what<br>you open</div>
+    <div class="box">
+      <div class="k">3 · LOCAL AI</div>
+      <div class="t">The investigator</div>
+      <ul>
+        <li>Gemma 4 E4B on your machine</li>
+        <li>every claim quotes a sentence</li>
+        <li>quotes are checked word for word</li>
+      </ul>
+    </div>
+  </div>
+  <div class="eval" style="margin-top:34px"><span class="t">4 · Reveal</span> &nbsp;At the end, and only then, the sealed history is opened and laid next to your answers and the AI's.
+    Claims with no evidence behind them fade out: <b>those are the ghosts.</b></div>
+</section>
+
+<!-- results -->
+<section class="fig" id="results">
+  <h2>WHAT GEMMA GETS RIGHT, AND WHEN IT GUESSES</h2>
+  <div class="sub">9 answerable questions · mean of 3 runs · temperature 0.6 · 4-core CPU, no GPU</div>
+  <div class="rule"></div>
+  <div class="legend">
+    <span><i class="sw" style="background:var(--right)"></i>right</span>
+    <span><i class="sw" style="background:var(--unknown); border:1px solid var(--edge)"></i>“unknown”</span>
+    <span><i class="sw" style="background:var(--wrong)"></i>wrong</span>
+  </div>
+  <div class="group">WITHOUT THE ARCHIVE · GEMMA 4 E4B</div>
+  <div class="row">
+    <div class="name">Forced to guess<small>no documents, “unknown” not allowed</small></div>
+    <div class="bar"><div class="seg r" style="flex:2.33">2.3</div><div class="seg w" style="flex:6.67">6.7</div></div>
+    <div class="note">believes the cover story:<br><b>“genuine” 3 of 3</b></div>
+  </div>
+  <div class="row">
+    <div class="name">Closed book<small>no documents, “unknown” allowed</small></div>
+    <div class="bar"><div class="seg u" style="flex:9">9 × unknown</div></div>
+    <div class="note">knows it knows nothing</div>
+  </div>
+  <div class="group">WITH THE ARCHIVE · EVERY ANSWER MUST CITE</div>
+  <div class="row">
+    <div class="name">Gemma 4 E4B<small>thinking off, the game's default</small></div>
+    <div class="bar"><div class="seg r" style="flex:5.67">5.7</div><div class="seg u" style="flex:3.33">3.3</div></div>
+    <div class="note"><b>0 wrong</b> · 101 s an answer</div>
+  </div>
+  <div class="row">
+    <div class="name">Gemma 4 E4B<small>thinking on</small></div>
+    <div class="bar"><div class="seg r" style="flex:7.33">7.3</div><div class="seg u" style="flex:1.33">1.3</div><div class="seg w" style="flex:.33"></div></div>
+    <div class="note">0.3 wrong · <b>586 s</b> an answer</div>
+  </div>
+  <div class="row">
+    <div class="name">Gemma 4 E2B<small>the smaller model, thinking off</small></div>
+    <div class="bar"><div class="seg r" style="flex:6">6.0</div><div class="seg u" style="flex:1.67">1.7</div><div class="seg w" style="flex:1.33">1.3</div></div>
+    <div class="note"><b>1.3 wrong</b>, all with real quotes · 93 s</div>
+  </div>
+  <div class="axis"><div></div><div><span>0</span><span>9 questions</span></div><div></div></div>
+  <div class="foot">
+    <p>With the archive, no run invented a single quote, and every run answered “unknown” to the one question the surviving tape can't answer.</p>
+    <div class="marker" style="font-size:52px; transform:rotate(-3deg)">evidence beats instinct.</div>
+  </div>
+</section>
+
+<!-- citations -->
+<section class="fig" id="citations">
+  <h2>THE GHOSTS WERE IN THE POINTERS, NOT THE WORDS</h2>
+  <div class="sub">Every citation is checked: the quote must be in the exact sentence it names. All benchmark runs, both models.</div>
+  <div class="rule"></div>
+  <div class="cites">
+    <div>
+      <div class="big">334<small> citations</small></div>
+      <div class="stack"><div class="seg r" style="flex:295">295 valid (88%)</div><div class="seg w" style="flex:39">39</div></div>
+      <div class="lbl">Where the 39 rejected quotes really were:</div>
+      <div class="kinds" style="margin-top:10px">
+        <div><b>22</b><span>in the neighbouring sentence</span></div>
+        <div><b>7</b><span>ran on into the next sentence</span></div>
+        <div><b>10</b><span>elsewhere in the same document</span></div>
+        <div><b style="color:var(--wrong)">0</b><span><b>invented: not in the archive at all</b></span></div>
+      </div>
+    </div>
+    <div>
+      <div class="ex">
+        Gemma cited <b>A47:s4</b><br>
+        <span class="bad">✗ “I was there.”</span><br>
+        A47:s4 actually says <i>“This recording is authentic.”</i><br><br>
+        The words are real. They are one sentence later:<br>
+        <span class="good">✓ A47:s5 “I was there.”</span>
+      </div>
+      <div class="lbl" style="margin-top:22px">The game calls these <b>misfiled</b>: it links to where the words really are, and still counts the claim as a ghost.</div>
+      <div class="marker" style="font-size:50px; margin-top:34px; transform:rotate(-2deg)">the words were never the lie.</div>
+    </div>
+  </div>
+</section>
+
+<script>
+  document.getElementById(location.hash.slice(1) || "how").classList.add("on");
+</script>
+</body>
+</html>

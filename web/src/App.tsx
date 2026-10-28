@@ -116,7 +116,7 @@ export default function App() {
         <div className="replay-bar">
           Replay of a recorded run: every investigator answer here was produced by <b>{meta.model}</b> running locally
           {(meta as Meta & { recorded?: { at: string } }).recorded ? ` (${(meta as Meta & { recorded: { at: string } }).recorded.at})` : ""}.
-          This static version ships the truth in its files. <a href="https://github.com/P0rt/last-witness">Run it yourself</a> to ask your own questions.
+          This static version ships the truth in its files. <a href="https://github.com/P0rt/last-witness">Run it yourself</a> to ask your own questions. <a href="https://youtu.be/cc44d7dajxM" target="_blank" rel="noreferrer">Watch the video</a>.
         </div>
       )}
       {tab === "investigate" && (
