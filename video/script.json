@@ -11,7 +11,7 @@
   {"id": "reason",  "text": "It rebuilds the timeline, and weighs four competing explanations as you find more."},
   {"id": "reveal",  "text": "When you think you know, fill in your reconstruction, and press Reveal."},
   {"id": "verdict", "text": "The sealed truth is laid next to your answers and the AI's. The ghosts fade away. And the people of the Lighthouse Network are remembered, accurately."},
-  {"id": "numbers", "text": "On a laptop CPU, Gemma never gave a wrong answer, and never invented a fact. But it never called the liar a liar, either. That part is your job."},
+  {"id": "numbers", "text": "Asked blind, Gemma believes the cover story, and gets most answers wrong. Given the archive, it never gave a wrong answer, and never invented a quote. The evidence changed its mind."},
   {"id": "end",     "text": "Last Witness. Open source, and free to play in your browser. The internet forgets. The evidence doesn't."}
  ]
 }
