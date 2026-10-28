@@ -1,8 +1,122 @@
 [
  {
   "model": "gemma4:e4b",
-  "file": "bench-gemma4_e4b-nothink-20261027-125224.json",
+  "file": "bench-gemma4_e4b-nothink-20261027-125224.json, bench-gemma4_e4b-nothink-20261027-200533.json",
   "conditions": {
+   "guess": {
+    "repeats": 3,
+    "correct": 2.33,
+    "of": 9,
+    "honest_unknown": 0.0,
+    "ghosts": 0.33,
+    "wrong": 7.67,
+    "unsupported_answers": 10.0,
+    "per_question": {
+     "Q1": [
+      "wrong",
+      "wrong",
+      "wrong"
+     ],
+     "Q2": [
+      "wrong",
+      "wrong",
+      "correct"
+     ],
+     "Q3": [
+      "correct",
+      "wrong",
+      "wrong"
+     ],
+     "Q4": [
+      "wrong",
+      "wrong",
+      "wrong"
+     ],
+     "Q5": [
+      "wrong",
+      "correct",
+      "wrong"
+     ],
+     "Q6": [
+      "wrong",
+      "correct",
+      "wrong"
+     ],
+     "Q7": [
+      "correct",
+      "correct",
+      "correct"
+     ],
+     "Q8": [
+      "wrong",
+      "wrong",
+      "wrong"
+     ],
+     "Q9": [
+      "wrong",
+      "wrong",
+      "wrong"
+     ],
+     "Q10": [
+      "wrong",
+      "lucky",
+      "wrong"
+     ]
+    },
+    "choices": {
+     "Q1": [
+      "genuine",
+      "genuine",
+      "genuine"
+     ],
+     "Q2": [
+      "outsider",
+      "outsider",
+      "elias"
+     ],
+     "Q3": [
+      "elias",
+      "independent",
+      "sam"
+     ],
+     "Q4": [
+      "ledger",
+      "ledger",
+      "ledger"
+     ],
+     "Q5": [
+      "ray",
+      "mara",
+      "ray"
+     ],
+     "Q6": [
+      "takedown",
+      "migration",
+      "takedown"
+     ],
+     "Q7": [
+      "before",
+      "before",
+      "before"
+     ],
+     "Q8": [
+      "henrik",
+      "henrik",
+      "henrik"
+     ],
+     "Q9": [
+      "operator",
+      "operator",
+      "operator"
+     ],
+     "Q10": [
+      "returned",
+      "archivist",
+      "returned"
+     ]
+    },
+    "seconds": 22.1
+   },
    "closed_book": {
     "repeats": 3,
     "correct": 0.0,

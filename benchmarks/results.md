@@ -5,23 +5,24 @@ Ten reconstruction questions; nine are answerable from the surviving archive, on
 
 | model | condition | correct (of 9) | honest unknown (Q10) | wrong | ghosts | committed answers without a valid citation | s/call | run |
 |---|---|---|---|---|---|---|---|---|
-| gemma4:e4b | closed_book | 0.0 | 1.0 | 0.0 | 0.0 | 0.0 | 15.4 | bench-gemma4_e4b-nothink-20261027-125224.json |
-| gemma4:e4b | archive | 5.67 | 1.0 | 0.0 | 0.0 | 0.0 | 101.1 | bench-gemma4_e4b-nothink-20261027-125224.json |
-| gemma4:e4b | validated | 5.67 | 1.0 | 0.0 | 0.0 | 0.0 | 101.1 | bench-gemma4_e4b-nothink-20261027-125224.json |
+| gemma4:e4b | guess | 2.33 | 0.0 | 7.67 | 0.33 | 10.0 | 22.1 | bench-gemma4_e4b-nothink-20261027-125224.json, bench-gemma4_e4b-nothink-20261027-200533.json |
+| gemma4:e4b | closed_book | 0.0 | 1.0 | 0.0 | 0.0 | 0.0 | 15.4 | bench-gemma4_e4b-nothink-20261027-125224.json, bench-gemma4_e4b-nothink-20261027-200533.json |
+| gemma4:e4b | archive | 5.67 | 1.0 | 0.0 | 0.0 | 0.0 | 101.1 | bench-gemma4_e4b-nothink-20261027-125224.json, bench-gemma4_e4b-nothink-20261027-200533.json |
+| gemma4:e4b | validated | 5.67 | 1.0 | 0.0 | 0.0 | 0.0 | 101.1 | bench-gemma4_e4b-nothink-20261027-125224.json, bench-gemma4_e4b-nothink-20261027-200533.json |
 
 *guess*: no documents and `unknown` is not allowed, so it shows what the model would assume. *closed_book*: no documents, `unknown` allowed. *ghost*: a wrong answer stated as observed or inferred, with no citation that survives checking. *validated*: answers whose citations fail are turned into `unknown`, as the game does.
 
-## gemma4:e4b · bench-gemma4_e4b-nothink-20261027-125224.json
+## gemma4:e4b · bench-gemma4_e4b-nothink-20261027-125224.json, bench-gemma4_e4b-nothink-20261027-200533.json
 
 | question | guess | closed_book | archive | validated |
 |---|---|---|---|---|
-| Q1 |  | missed, missed, missed | missed, missed, missed | missed, missed, missed |
-| Q2 |  | missed, missed, missed | missed, correct, correct | missed, correct, correct |
-| Q3 |  | missed, missed, missed | missed, missed, missed | missed, missed, missed |
-| Q4 |  | missed, missed, missed | correct, correct, correct | correct, correct, correct |
-| Q5 |  | missed, missed, missed | correct, correct, correct | correct, correct, correct |
-| Q6 |  | missed, missed, missed | correct, correct, correct | correct, correct, correct |
-| Q7 |  | missed, missed, missed | correct, correct, correct | correct, correct, correct |
-| Q8 |  | missed, missed, missed | correct, correct, correct | correct, correct, correct |
-| Q9 |  | missed, missed, missed | missed, missed, missed | missed, missed, missed |
-| Q10 |  | honest_unknown, honest_unknown, honest_unknown | honest_unknown, honest_unknown, honest_unknown | honest_unknown, honest_unknown, honest_unknown |
+| Q1 | wrong (genuine), wrong (genuine), wrong (genuine) | missed, missed, missed | missed, missed, missed | missed, missed, missed |
+| Q2 | wrong (outsider), wrong (outsider), correct | missed, missed, missed | missed, correct, correct | missed, correct, correct |
+| Q3 | correct, wrong (independent), wrong (sam) | missed, missed, missed | missed, missed, missed | missed, missed, missed |
+| Q4 | wrong (ledger), wrong (ledger), wrong (ledger) | missed, missed, missed | correct, correct, correct | correct, correct, correct |
+| Q5 | wrong (ray), correct, wrong (ray) | missed, missed, missed | correct, correct, correct | correct, correct, correct |
+| Q6 | wrong (takedown), correct, wrong (takedown) | missed, missed, missed | correct, correct, correct | correct, correct, correct |
+| Q7 | correct, correct, correct | missed, missed, missed | correct, correct, correct | correct, correct, correct |
+| Q8 | wrong (henrik), wrong (henrik), wrong (henrik) | missed, missed, missed | correct, correct, correct | correct, correct, correct |
+| Q9 | wrong (operator), wrong (operator), wrong (operator) | missed, missed, missed | missed, missed, missed | missed, missed, missed |
+| Q10 | wrong (returned), lucky (archivist), wrong (returned) | honest_unknown, honest_unknown, honest_unknown | honest_unknown, honest_unknown, honest_unknown | honest_unknown, honest_unknown, honest_unknown |
