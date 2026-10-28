@@ -1,5 +1,468 @@
 [
  {
+  "model": "gemma4:e2b",
+  "file": "bench-gemma4_e2b-nothink-20261028-113429.json",
+  "conditions": {
+   "guess": {
+    "repeats": 3,
+    "correct": 2.67,
+    "of": 9,
+    "honest_unknown": 0.0,
+    "ghosts": 1.33,
+    "wrong": 7.33,
+    "unsupported_answers": 10.0,
+    "per_question": {
+     "Q1": [
+      "correct",
+      "correct",
+      "wrong"
+     ],
+     "Q2": [
+      "wrong",
+      "wrong",
+      "wrong"
+     ],
+     "Q3": [
+      "wrong",
+      "correct",
+      "wrong"
+     ],
+     "Q4": [
+      "wrong",
+      "wrong",
+      "wrong"
+     ],
+     "Q5": [
+      "wrong",
+      "wrong",
+      "wrong"
+     ],
+     "Q6": [
+      "correct",
+      "wrong",
+      "correct"
+     ],
+     "Q7": [
+      "correct",
+      "wrong",
+      "correct"
+     ],
+     "Q8": [
+      "wrong",
+      "correct",
+      "wrong"
+     ],
+     "Q9": [
+      "wrong",
+      "wrong",
+      "wrong"
+     ],
+     "Q10": [
+      "wrong",
+      "lucky",
+      "wrong"
+     ]
+    },
+    "choices": {
+     "Q1": [
+      "fabricated",
+      "fabricated",
+      "genuine"
+     ],
+     "Q2": [
+      "outsider",
+      "outsider",
+      "outsider"
+     ],
+     "Q3": [
+      "independent",
+      "elias",
+      "independent"
+     ],
+     "Q4": [
+      "mara",
+      "mara",
+      "ledger"
+     ],
+     "Q5": [
+      "outside",
+      "outside",
+      "outside"
+     ],
+     "Q6": [
+      "migration",
+      "takedown",
+      "migration"
+     ],
+     "Q7": [
+      "before",
+      "after",
+      "before"
+     ],
+     "Q8": [
+      "henrik",
+      "ledger",
+      "agency"
+     ],
+     "Q9": [
+      "elias",
+      "operator",
+      "operator"
+     ],
+     "Q10": [
+      "returned",
+      "archivist",
+      "returned"
+     ]
+    },
+    "seconds": 17.2
+   },
+   "closed_book": {
+    "repeats": 3,
+    "correct": 0.0,
+    "of": 9,
+    "honest_unknown": 1.0,
+    "ghosts": 0.0,
+    "wrong": 0.0,
+    "unsupported_answers": 0.0,
+    "per_question": {
+     "Q1": [
+      "missed",
+      "missed",
+      "missed"
+     ],
+     "Q2": [
+      "missed",
+      "missed",
+      "missed"
+     ],
+     "Q3": [
+      "missed",
+      "missed",
+      "missed"
+     ],
+     "Q4": [
+      "missed",
+      "missed",
+      "missed"
+     ],
+     "Q5": [
+      "missed",
+      "missed",
+      "missed"
+     ],
+     "Q6": [
+      "missed",
+      "missed",
+      "missed"
+     ],
+     "Q7": [
+      "missed",
+      "missed",
+      "missed"
+     ],
+     "Q8": [
+      "missed",
+      "missed",
+      "missed"
+     ],
+     "Q9": [
+      "missed",
+      "missed",
+      "missed"
+     ],
+     "Q10": [
+      "honest_unknown",
+      "honest_unknown",
+      "honest_unknown"
+     ]
+    },
+    "choices": {
+     "Q1": [
+      "unknown",
+      "unknown",
+      "unknown"
+     ],
+     "Q2": [
+      "unknown",
+      "unknown",
+      "unknown"
+     ],
+     "Q3": [
+      "unknown",
+      "unknown",
+      "unknown"
+     ],
+     "Q4": [
+      "unknown",
+      "unknown",
+      "unknown"
+     ],
+     "Q5": [
+      "unknown",
+      "unknown",
+      "unknown"
+     ],
+     "Q6": [
+      "unknown",
+      "unknown",
+      "unknown"
+     ],
+     "Q7": [
+      "unknown",
+      "unknown",
+      "unknown"
+     ],
+     "Q8": [
+      "unknown",
+      "unknown",
+      "unknown"
+     ],
+     "Q9": [
+      "unknown",
+      "unknown",
+      "unknown"
+     ],
+     "Q10": [
+      "unknown",
+      "unknown",
+      "unknown"
+     ]
+    },
+    "seconds": 16.4
+   },
+   "archive": {
+    "repeats": 3,
+    "correct": 6.0,
+    "of": 9,
+    "honest_unknown": 1.0,
+    "ghosts": 0.0,
+    "wrong": 1.33,
+    "unsupported_answers": 0.0,
+    "per_question": {
+     "Q1": [
+      "missed",
+      "missed",
+      "missed"
+     ],
+     "Q2": [
+      "correct",
+      "correct",
+      "correct"
+     ],
+     "Q3": [
+      "wrong",
+      "wrong",
+      "wrong"
+     ],
+     "Q4": [
+      "correct",
+      "correct",
+      "correct"
+     ],
+     "Q5": [
+      "correct",
+      "correct",
+      "correct"
+     ],
+     "Q6": [
+      "correct",
+      "correct",
+      "correct"
+     ],
+     "Q7": [
+      "correct",
+      "correct",
+      "correct"
+     ],
+     "Q8": [
+      "correct",
+      "correct",
+      "missed"
+     ],
+     "Q9": [
+      "wrong",
+      "correct",
+      "missed"
+     ],
+     "Q10": [
+      "honest_unknown",
+      "honest_unknown",
+      "honest_unknown"
+     ]
+    },
+    "choices": {
+     "Q1": [
+      "unknown",
+      "unknown",
+      "unknown"
+     ],
+     "Q2": [
+      "elias",
+      "elias",
+      "elias"
+     ],
+     "Q3": [
+      "independent",
+      "independent",
+      "independent"
+     ],
+     "Q4": [
+      "dot",
+      "dot",
+      "dot"
+     ],
+     "Q5": [
+      "mara",
+      "mara",
+      "mara"
+     ],
+     "Q6": [
+      "migration",
+      "migration",
+      "migration"
+     ],
+     "Q7": [
+      "before",
+      "before",
+      "before"
+     ],
+     "Q8": [
+      "ledger",
+      "ledger",
+      "unknown"
+     ],
+     "Q9": [
+      "elias",
+      "father",
+      "unknown"
+     ],
+     "Q10": [
+      "unknown",
+      "unknown",
+      "unknown"
+     ]
+    },
+    "seconds": 92.9
+   },
+   "validated": {
+    "repeats": 3,
+    "correct": 6.0,
+    "of": 9,
+    "honest_unknown": 1.0,
+    "ghosts": 0.0,
+    "wrong": 1.33,
+    "unsupported_answers": 0.0,
+    "per_question": {
+     "Q1": [
+      "missed",
+      "missed",
+      "missed"
+     ],
+     "Q2": [
+      "correct",
+      "correct",
+      "correct"
+     ],
+     "Q3": [
+      "wrong",
+      "wrong",
+      "wrong"
+     ],
+     "Q4": [
+      "correct",
+      "correct",
+      "correct"
+     ],
+     "Q5": [
+      "correct",
+      "correct",
+      "correct"
+     ],
+     "Q6": [
+      "correct",
+      "correct",
+      "correct"
+     ],
+     "Q7": [
+      "correct",
+      "correct",
+      "correct"
+     ],
+     "Q8": [
+      "correct",
+      "correct",
+      "missed"
+     ],
+     "Q9": [
+      "wrong",
+      "correct",
+      "missed"
+     ],
+     "Q10": [
+      "honest_unknown",
+      "honest_unknown",
+      "honest_unknown"
+     ]
+    },
+    "choices": {
+     "Q1": [
+      "unknown",
+      "unknown",
+      "unknown"
+     ],
+     "Q2": [
+      "elias",
+      "elias",
+      "elias"
+     ],
+     "Q3": [
+      "independent",
+      "independent",
+      "independent"
+     ],
+     "Q4": [
+      "dot",
+      "dot",
+      "dot"
+     ],
+     "Q5": [
+      "mara",
+      "mara",
+      "mara"
+     ],
+     "Q6": [
+      "migration",
+      "migration",
+      "migration"
+     ],
+     "Q7": [
+      "before",
+      "before",
+      "before"
+     ],
+     "Q8": [
+      "ledger",
+      "ledger",
+      "unknown"
+     ],
+     "Q9": [
+      "elias",
+      "father",
+      "unknown"
+     ],
+     "Q10": [
+      "unknown",
+      "unknown",
+      "unknown"
+     ]
+    },
+    "seconds": 92.9
+   }
+  },
+  "errors": 0
+ },
+ {
   "model": "gemma4:e4b",
   "file": "bench-gemma4_e4b-nothink-20261027-125224.json, bench-gemma4_e4b-nothink-20261027-200533.json",
   "conditions": {
@@ -458,6 +921,469 @@
      ]
     },
     "seconds": 101.1
+   }
+  },
+  "errors": 0
+ },
+ {
+  "model": "gemma4:e4b (thinking)",
+  "file": "bench-gemma4_e4b-think-20261028-013812.json",
+  "conditions": {
+   "guess": {
+    "repeats": 3,
+    "correct": 2.67,
+    "of": 9,
+    "honest_unknown": 0.0,
+    "ghosts": 0.67,
+    "wrong": 7.33,
+    "unsupported_answers": 10.0,
+    "per_question": {
+     "Q1": [
+      "correct",
+      "wrong",
+      "correct"
+     ],
+     "Q2": [
+      "wrong",
+      "correct",
+      "correct"
+     ],
+     "Q3": [
+      "correct",
+      "wrong",
+      "wrong"
+     ],
+     "Q4": [
+      "wrong",
+      "wrong",
+      "wrong"
+     ],
+     "Q5": [
+      "wrong",
+      "wrong",
+      "wrong"
+     ],
+     "Q6": [
+      "correct",
+      "wrong",
+      "wrong"
+     ],
+     "Q7": [
+      "correct",
+      "correct",
+      "wrong"
+     ],
+     "Q8": [
+      "wrong",
+      "wrong",
+      "wrong"
+     ],
+     "Q9": [
+      "wrong",
+      "wrong",
+      "wrong"
+     ],
+     "Q10": [
+      "lucky",
+      "lucky",
+      "lucky"
+     ]
+    },
+    "choices": {
+     "Q1": [
+      "fabricated",
+      "genuine",
+      "fabricated"
+     ],
+     "Q2": [
+      "henrik",
+      "elias",
+      "elias"
+     ],
+     "Q3": [
+      "elias",
+      "independent",
+      "sam"
+     ],
+     "Q4": [
+      "ledger",
+      "ledger",
+      "ledger"
+     ],
+     "Q5": [
+      "ray",
+      "ray",
+      "ray"
+     ],
+     "Q6": [
+      "migration",
+      "takedown",
+      "deliberate"
+     ],
+     "Q7": [
+      "before",
+      "before",
+      "after"
+     ],
+     "Q8": [
+      "henrik",
+      "henrik",
+      "agency"
+     ],
+     "Q9": [
+      "operator",
+      "operator",
+      "operator"
+     ],
+     "Q10": [
+      "archivist",
+      "archivist",
+      "archivist"
+     ]
+    },
+    "seconds": 152.5
+   },
+   "closed_book": {
+    "repeats": 3,
+    "correct": 0.0,
+    "of": 9,
+    "honest_unknown": 1.0,
+    "ghosts": 0.0,
+    "wrong": 0.0,
+    "unsupported_answers": 0.0,
+    "per_question": {
+     "Q1": [
+      "missed",
+      "missed",
+      "missed"
+     ],
+     "Q2": [
+      "missed",
+      "missed",
+      "missed"
+     ],
+     "Q3": [
+      "missed",
+      "missed",
+      "missed"
+     ],
+     "Q4": [
+      "missed",
+      "missed",
+      "missed"
+     ],
+     "Q5": [
+      "missed",
+      "missed",
+      "missed"
+     ],
+     "Q6": [
+      "missed",
+      "missed",
+      "missed"
+     ],
+     "Q7": [
+      "missed",
+      "missed",
+      "missed"
+     ],
+     "Q8": [
+      "missed",
+      "missed",
+      "missed"
+     ],
+     "Q9": [
+      "missed",
+      "missed",
+      "missed"
+     ],
+     "Q10": [
+      "honest_unknown",
+      "honest_unknown",
+      "honest_unknown"
+     ]
+    },
+    "choices": {
+     "Q1": [
+      "unknown",
+      "unknown",
+      "unknown"
+     ],
+     "Q2": [
+      "unknown",
+      "unknown",
+      "unknown"
+     ],
+     "Q3": [
+      "unknown",
+      "unknown",
+      "unknown"
+     ],
+     "Q4": [
+      "unknown",
+      "unknown",
+      "unknown"
+     ],
+     "Q5": [
+      "unknown",
+      "unknown",
+      "unknown"
+     ],
+     "Q6": [
+      "unknown",
+      "unknown",
+      "unknown"
+     ],
+     "Q7": [
+      "unknown",
+      "unknown",
+      "unknown"
+     ],
+     "Q8": [
+      "unknown",
+      "unknown",
+      "unknown"
+     ],
+     "Q9": [
+      "unknown",
+      "unknown",
+      "unknown"
+     ],
+     "Q10": [
+      "unknown",
+      "unknown",
+      "unknown"
+     ]
+    },
+    "seconds": 71.4
+   },
+   "archive": {
+    "repeats": 3,
+    "correct": 7.33,
+    "of": 9,
+    "honest_unknown": 1.0,
+    "ghosts": 0.0,
+    "wrong": 0.33,
+    "unsupported_answers": 0.0,
+    "per_question": {
+     "Q1": [
+      "correct",
+      "missed",
+      "missed"
+     ],
+     "Q2": [
+      "correct",
+      "correct",
+      "correct"
+     ],
+     "Q3": [
+      "missed",
+      "wrong",
+      "missed"
+     ],
+     "Q4": [
+      "correct",
+      "correct",
+      "correct"
+     ],
+     "Q5": [
+      "correct",
+      "correct",
+      "correct"
+     ],
+     "Q6": [
+      "correct",
+      "correct",
+      "correct"
+     ],
+     "Q7": [
+      "correct",
+      "correct",
+      "correct"
+     ],
+     "Q8": [
+      "correct",
+      "correct",
+      "correct"
+     ],
+     "Q9": [
+      "correct",
+      "correct",
+      "correct"
+     ],
+     "Q10": [
+      "honest_unknown",
+      "honest_unknown",
+      "honest_unknown"
+     ]
+    },
+    "choices": {
+     "Q1": [
+      "fabricated",
+      "unknown",
+      "unknown"
+     ],
+     "Q2": [
+      "elias",
+      "elias",
+      "elias"
+     ],
+     "Q3": [
+      "unknown",
+      "independent",
+      "unknown"
+     ],
+     "Q4": [
+      "dot",
+      "dot",
+      "dot"
+     ],
+     "Q5": [
+      "mara",
+      "mara",
+      "mara"
+     ],
+     "Q6": [
+      "migration",
+      "migration",
+      "migration"
+     ],
+     "Q7": [
+      "before",
+      "before",
+      "before"
+     ],
+     "Q8": [
+      "ledger",
+      "ledger",
+      "ledger"
+     ],
+     "Q9": [
+      "father",
+      "father",
+      "father"
+     ],
+     "Q10": [
+      "unknown",
+      "unknown",
+      "unknown"
+     ]
+    },
+    "seconds": 586.0
+   },
+   "validated": {
+    "repeats": 3,
+    "correct": 7.33,
+    "of": 9,
+    "honest_unknown": 1.0,
+    "ghosts": 0.0,
+    "wrong": 0.33,
+    "unsupported_answers": 0.0,
+    "per_question": {
+     "Q1": [
+      "correct",
+      "missed",
+      "missed"
+     ],
+     "Q2": [
+      "correct",
+      "correct",
+      "correct"
+     ],
+     "Q3": [
+      "missed",
+      "wrong",
+      "missed"
+     ],
+     "Q4": [
+      "correct",
+      "correct",
+      "correct"
+     ],
+     "Q5": [
+      "correct",
+      "correct",
+      "correct"
+     ],
+     "Q6": [
+      "correct",
+      "correct",
+      "correct"
+     ],
+     "Q7": [
+      "correct",
+      "correct",
+      "correct"
+     ],
+     "Q8": [
+      "correct",
+      "correct",
+      "correct"
+     ],
+     "Q9": [
+      "correct",
+      "correct",
+      "correct"
+     ],
+     "Q10": [
+      "honest_unknown",
+      "honest_unknown",
+      "honest_unknown"
+     ]
+    },
+    "choices": {
+     "Q1": [
+      "fabricated",
+      "unknown",
+      "unknown"
+     ],
+     "Q2": [
+      "elias",
+      "elias",
+      "elias"
+     ],
+     "Q3": [
+      "unknown",
+      "independent",
+      "unknown"
+     ],
+     "Q4": [
+      "dot",
+      "dot",
+      "dot"
+     ],
+     "Q5": [
+      "mara",
+      "mara",
+      "mara"
+     ],
+     "Q6": [
+      "migration",
+      "migration",
+      "migration"
+     ],
+     "Q7": [
+      "before",
+      "before",
+      "before"
+     ],
+     "Q8": [
+      "ledger",
+      "ledger",
+      "ledger"
+     ],
+     "Q9": [
+      "father",
+      "father",
+      "father"
+     ],
+     "Q10": [
+      "unknown",
+      "unknown",
+      "unknown"
+     ]
+    },
+    "seconds": 586.0
    }
   },
   "errors": 0

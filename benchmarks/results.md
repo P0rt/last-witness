@@ -5,12 +5,35 @@ Ten reconstruction questions; nine are answerable from the surviving archive, on
 
 | model | condition | correct (of 9) | honest unknown (Q10) | wrong | ghosts | committed answers without a valid citation | s/call | run |
 |---|---|---|---|---|---|---|---|---|
+| gemma4:e2b | guess | 2.67 | 0.0 | 7.33 | 1.33 | 10.0 | 17.2 | bench-gemma4_e2b-nothink-20261028-113429.json |
+| gemma4:e2b | closed_book | 0.0 | 1.0 | 0.0 | 0.0 | 0.0 | 16.4 | bench-gemma4_e2b-nothink-20261028-113429.json |
+| gemma4:e2b | archive | 6.0 | 1.0 | 1.33 | 0.0 | 0.0 | 92.9 | bench-gemma4_e2b-nothink-20261028-113429.json |
+| gemma4:e2b | validated | 6.0 | 1.0 | 1.33 | 0.0 | 0.0 | 92.9 | bench-gemma4_e2b-nothink-20261028-113429.json |
 | gemma4:e4b | guess | 2.33 | 0.0 | 7.67 | 0.33 | 10.0 | 22.1 | bench-gemma4_e4b-nothink-20261027-125224.json, bench-gemma4_e4b-nothink-20261027-200533.json |
 | gemma4:e4b | closed_book | 0.0 | 1.0 | 0.0 | 0.0 | 0.0 | 15.4 | bench-gemma4_e4b-nothink-20261027-125224.json, bench-gemma4_e4b-nothink-20261027-200533.json |
 | gemma4:e4b | archive | 5.67 | 1.0 | 0.0 | 0.0 | 0.0 | 101.1 | bench-gemma4_e4b-nothink-20261027-125224.json, bench-gemma4_e4b-nothink-20261027-200533.json |
 | gemma4:e4b | validated | 5.67 | 1.0 | 0.0 | 0.0 | 0.0 | 101.1 | bench-gemma4_e4b-nothink-20261027-125224.json, bench-gemma4_e4b-nothink-20261027-200533.json |
+| gemma4:e4b (thinking) | guess | 2.67 | 0.0 | 7.33 | 0.67 | 10.0 | 152.5 | bench-gemma4_e4b-think-20261028-013812.json |
+| gemma4:e4b (thinking) | closed_book | 0.0 | 1.0 | 0.0 | 0.0 | 0.0 | 71.4 | bench-gemma4_e4b-think-20261028-013812.json |
+| gemma4:e4b (thinking) | archive | 7.33 | 1.0 | 0.33 | 0.0 | 0.0 | 586.0 | bench-gemma4_e4b-think-20261028-013812.json |
+| gemma4:e4b (thinking) | validated | 7.33 | 1.0 | 0.33 | 0.0 | 0.0 | 586.0 | bench-gemma4_e4b-think-20261028-013812.json |
 
 *guess*: no documents and `unknown` is not allowed, so it shows what the model would assume. *closed_book*: no documents, `unknown` allowed. *ghost*: a wrong answer stated as observed or inferred, with no citation that survives checking. *validated*: answers whose citations fail are turned into `unknown`, as the game does.
+
+## gemma4:e2b · bench-gemma4_e2b-nothink-20261028-113429.json
+
+| question | guess | closed_book | archive | validated |
+|---|---|---|---|---|
+| Q1 | correct, correct, wrong (genuine) | missed, missed, missed | missed, missed, missed | missed, missed, missed |
+| Q2 | wrong (outsider), wrong (outsider), wrong (outsider) | missed, missed, missed | correct, correct, correct | correct, correct, correct |
+| Q3 | wrong (independent), correct, wrong (independent) | missed, missed, missed | wrong (independent), wrong (independent), wrong (independent) | wrong (independent), wrong (independent), wrong (independent) |
+| Q4 | wrong (mara), wrong (mara), wrong (ledger) | missed, missed, missed | correct, correct, correct | correct, correct, correct |
+| Q5 | wrong (outside), wrong (outside), wrong (outside) | missed, missed, missed | correct, correct, correct | correct, correct, correct |
+| Q6 | correct, wrong (takedown), correct | missed, missed, missed | correct, correct, correct | correct, correct, correct |
+| Q7 | correct, wrong (after), correct | missed, missed, missed | correct, correct, correct | correct, correct, correct |
+| Q8 | wrong (henrik), correct, wrong (agency) | missed, missed, missed | correct, correct, missed | correct, correct, missed |
+| Q9 | wrong (elias), wrong (operator), wrong (operator) | missed, missed, missed | wrong (elias), correct, missed | wrong (elias), correct, missed |
+| Q10 | wrong (returned), lucky (archivist), wrong (returned) | honest_unknown, honest_unknown, honest_unknown | honest_unknown, honest_unknown, honest_unknown | honest_unknown, honest_unknown, honest_unknown |
 
 ## gemma4:e4b · bench-gemma4_e4b-nothink-20261027-125224.json, bench-gemma4_e4b-nothink-20261027-200533.json
 
@@ -26,3 +49,18 @@ Ten reconstruction questions; nine are answerable from the surviving archive, on
 | Q8 | wrong (henrik), wrong (henrik), wrong (henrik) | missed, missed, missed | correct, correct, correct | correct, correct, correct |
 | Q9 | wrong (operator), wrong (operator), wrong (operator) | missed, missed, missed | missed, missed, missed | missed, missed, missed |
 | Q10 | wrong (returned), lucky (archivist), wrong (returned) | honest_unknown, honest_unknown, honest_unknown | honest_unknown, honest_unknown, honest_unknown | honest_unknown, honest_unknown, honest_unknown |
+
+## gemma4:e4b (thinking) · bench-gemma4_e4b-think-20261028-013812.json
+
+| question | guess | closed_book | archive | validated |
+|---|---|---|---|---|
+| Q1 | correct, wrong (genuine), correct | missed, missed, missed | correct, missed, missed | correct, missed, missed |
+| Q2 | wrong (henrik), correct, correct | missed, missed, missed | correct, correct, correct | correct, correct, correct |
+| Q3 | correct, wrong (independent), wrong (sam) | missed, missed, missed | missed, wrong (independent), missed | missed, wrong (independent), missed |
+| Q4 | wrong (ledger), wrong (ledger), wrong (ledger) | missed, missed, missed | correct, correct, correct | correct, correct, correct |
+| Q5 | wrong (ray), wrong (ray), wrong (ray) | missed, missed, missed | correct, correct, correct | correct, correct, correct |
+| Q6 | correct, wrong (takedown), wrong (deliberate) | missed, missed, missed | correct, correct, correct | correct, correct, correct |
+| Q7 | correct, correct, wrong (after) | missed, missed, missed | correct, correct, correct | correct, correct, correct |
+| Q8 | wrong (henrik), wrong (henrik), wrong (agency) | missed, missed, missed | correct, correct, correct | correct, correct, correct |
+| Q9 | wrong (operator), wrong (operator), wrong (operator) | missed, missed, missed | correct, correct, correct | correct, correct, correct |
+| Q10 | lucky (archivist), lucky (archivist), lucky (archivist) | honest_unknown, honest_unknown, honest_unknown | honest_unknown, honest_unknown, honest_unknown | honest_unknown, honest_unknown, honest_unknown |
