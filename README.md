@@ -14,6 +14,10 @@ the evidence shows from what merely sounds plausible. When you press **Reveal**,
 every claim the model made is checked against the truth. The ones nothing in
 the archive supports are the ghosts.
 
+**Play it in your browser, no install:** <https://p0rt.github.io/last-witness/>.
+It is a replay of a real run: every investigator answer there was produced by
+`gemma4:e4b` running locally. To ask your own questions, run it yourself (below).
+
 > Built for the DEV Hacktoberfest 2026 Open-Source AI Challenge, Week 4:
 > *Ghost in the Machine*. Work in progress; started October 27, 2026.
 
@@ -25,11 +29,11 @@ the archive supports are the ghosts.
 | ~70 authored artifacts: 1999 HTML pages, forum, mail, guestbook, logs | done |
 | Seeded controlled destruction + dataset validation | done |
 | Investigator core: sentence-id citations, quote checking, ghost detection | done |
-| Local model check (`scripts/spike.py`) | ready to run |
+| Local model check (`scripts/spike.py`) | done |
 | FastAPI server (investigation state, Objection, hypotheses, timeline, form, Reveal) | done |
 | Game UI: archive, 1999 pages + View Source, investigator, Objection, timeline, hypotheses, form, Reveal, In memoriam | done |
-| Ablation benchmark (`benchmarks/run_benchmark.py`) | ready to run |
-| Static replay on GitHub Pages (`scripts/record_replay.py`, `.github/workflows/pages.yml`) | waiting for a recorded Gemma run |
+| Ablation benchmark (`benchmarks/run_benchmark.py`) | done, see `benchmarks/results.md` |
+| Static replay on GitHub Pages (`scripts/record_replay.py`, `.github/workflows/pages.yml`) | live: <https://p0rt.github.io/last-witness/> |
 
 ## How it works
 
